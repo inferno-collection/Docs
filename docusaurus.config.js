@@ -70,7 +70,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Temp',
+            label: 'Tablet',
           },
           {
             href: 'https://github.com/inferno-collection/docs/',
@@ -86,8 +86,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Temp',
-                to: '/docs/intro',
+                label: 'Tablet',
+                to: '/docs/Tablet/',
               },
             ],
           },
