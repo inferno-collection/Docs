@@ -68,9 +68,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docs',
             position: 'left',
             label: 'Temp',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tablet',
+            position: 'left',
+            label: 'Tablet',            
           },
           {
             href: 'https://github.com/inferno-collection/docs/',
@@ -115,6 +121,7 @@ const config = {
       prism: {
         theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['lua']
       },
     }),
 };
