@@ -4,36 +4,54 @@ Applications can receive messages by the [window message event](https://develope
 
 ```js
 window.addEventListener('message', (event) => {
-    console.log(event.data)
-})
+    console.log(event.data);
+});
 ```
 
 ## System messages
 
-The tablet will send messages about events happening to your app, this will always be annotated by the `tabletAction` key.
+The tablet will send messages regarding events targeting your App, this will always be annotated by the `tabletAction` key.
 
 ```js
 {
-    tabletAction: 'onOpen'
+    tabletAction: '...' // Where `...` is a system message.
 }
 ```
 
-### onOpen
+### `onOpen`
 
-Sent when your app has been opened.
+Sent when your App has been opened.
 
-### onClose
+### `onClose`
 
-Sent when your app has been closed. This event does not mean your app will be unloaded.
+Sent when your App has been closed.
 
-### onBack
+:::note
+This event does not mean your app will be unloaded, only that the player returned to the home screen, or another app.
+:::
 
-Sent when the back navigation button is pressed and manual navigation has been enabled. See also [navigation](applications.md#navigation).
+### `onBack`
+
+Sent when the back navigation button is pressed and manual navigation has been enabled.
+
+:::info
+This event will not be sent unless `manualNavigation` has been set to `true` in the App's registration. See [navigation](applications.md#navigation) for more information.
+:::
 
 ## External messages
 
 The owning resource can send 'external' messages to your application. For this the `sendMessage` export exists on the client.
 
+### Sending messages
+
 ```lua
 exports['inferno-tablet']:sendMessage({ hello = "world!" })
 ```
+
+:::tip
+This export is the equivalent of the [`SendNuiMessage`](https://docs.fivem.net/natives/?_0x78608ACB) native, and works exactly the same way. If you are converting an existing resource to be compatible with Inferno Tablet, you can do a straight replacement from [`SendNuiMessage`](https://docs.fivem.net/natives/?_0x78608ACB) to `exports['inferno-tablet']:sendMessage()`.
+:::
+
+### Receiving messages
+
+Messages sent via the export are received in the NUI exactly the same as if they had been sent via [`SendNuiMessage`](https://docs.fivem.net/natives/?_0x78608ACB).
