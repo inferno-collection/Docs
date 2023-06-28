@@ -1,8 +1,8 @@
 # Exports
 
-The resource exports a couple of functions which can be used by external resources.
+The resource exports functions which can be used by external resources.
 
-## isTabletOpen
+## `isTabletOpen`
 
 Returns whether the tablet is currently open.
 
@@ -10,9 +10,9 @@ Returns whether the tablet is currently open.
 isTabletOpen(): boolean
 ```
 
-## registerApplication
+## `registerApplication`
 
-Registers an application, see [applications](applications.md#registering-applications) for more info about registering apps.
+Registers an application.
 
 ```ts
 interface Application {
@@ -24,13 +24,21 @@ interface Application {
     manualNavigation?: boolean
 }
 
-registerApplication(application: Application): bool
+registerApplication(application: Application): boolean
 ```
 
-## sendMessage
+:::info
+See [applications](applications.md#registering-applications) for more info about registering apps.
+:::
 
-Sends an external message to an application, see also [external messages](messages.md#external-messages).
+## `sendMessage`
+
+Sends an external message to an application.
 
 ```ts
 sendMessage(message: object): void
 ```
+
+:::info
+See [external messages](messages.md#external-messages) for more info about sending external messages.
+:::
