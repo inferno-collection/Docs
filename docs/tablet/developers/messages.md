@@ -28,7 +28,7 @@ Sent when your app has been closed. This event does not mean your app will be un
 
 ### onBack
 
-Sent when the back navigation button is pressed and manual navigation has been enabled. See also [navigation](apps.md#navigation).
+Sent when the back navigation button is pressed and manual navigation has been enabled. See also [navigation](applications.md#navigation).
 
 ## External messages
 

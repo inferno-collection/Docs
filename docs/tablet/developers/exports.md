@@ -12,7 +12,7 @@ isTabletOpen(): boolean
 
 ## registerApplication
 
-Registers an application, see [applications](apps.md#registering-applications) for more info about registering apps.
+Registers an application, see [applications](applications.md#registering-applications) for more info about registering apps.
 
 ```ts
 interface Application {
