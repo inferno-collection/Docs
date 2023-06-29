@@ -36,7 +36,7 @@ See [applications](applications.md#registering-applications) for more info about
 Sends an external message to an application.
 
 ```ts
-sendMessage(message: object): void
+sendMessage(applicationName: string, message: object): void
 ```
 
 :::info

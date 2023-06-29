@@ -45,11 +45,11 @@ The owning resource can send 'external' messages to your application. For this t
 ### Sending messages
 
 ```lua
-exports['inferno-tablet']:sendMessage({ hello = "world!" })
+exports['inferno-tablet']:sendMessage("application_name", { hello = "world!" })
 ```
 
 :::tip
-This export is the equivalent of the [`SendNuiMessage`](https://docs.fivem.net/natives/?_0x78608ACB) native, and works exactly the same way. If you are converting an existing resource to be compatible with Inferno Tablet, you can do a straight replacement from [`SendNuiMessage`](https://docs.fivem.net/natives/?_0x78608ACB) to `exports['inferno-tablet']:sendMessage()`.
+This export is the equivalent of the [`SendNUIMessage`](https://docs.fivem.net/docs/scripting-reference/runtimes/lua/functions/SendNUIMessage/) function, and works exactly the same way. If you are converting an existing resource to be compatible with Inferno Tablet, you can replace calls to `SendNUIMessage` with `exports['inferno-tablet']:sendMessage()` if you include your application name.
 :::
 
 ### Receiving messages
