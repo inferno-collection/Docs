@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Installation
 
 Installing the tablet is a straightforward process, releases are provided for easy installation.
