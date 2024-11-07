@@ -107,7 +107,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Inferno Collection, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Inferno Collection. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
