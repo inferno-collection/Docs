@@ -3,8 +3,5 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": "."
-  },
-  "include": [
-    "src/**/*.ts"
-  ]
+  }
 }
