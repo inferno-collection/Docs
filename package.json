@@ -12,7 +12,14 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint"
   },
   "dependencies": {
     "@docusaurus/core": "3.6.0",
@@ -27,7 +34,9 @@
     "@docusaurus/module-type-aliases": "3.6.0",
     "@docusaurus/tsconfig": "3.6.0",
     "@docusaurus/types": "3.6.0",
-    "typescript": "~5.6.2"
+    "typescript": "^5.6.3",
+    "gts": "^6.0.2",
+    "@types/node": "^22.7.5"
   },
   "browserslist": {
     "production": [
