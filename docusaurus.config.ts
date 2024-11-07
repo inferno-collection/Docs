@@ -52,7 +52,7 @@ const config: Config = {
 
 	themeConfig: {
 		// Replace with your project's social card
-		image: 'img/docusaurus-social-card.jpg',
+		image: 'img/banner.jpg',
 		colorMode: {
 			defaultMode: 'dark',
 			disableSwitch: true,
@@ -61,7 +61,7 @@ const config: Config = {
 			title: 'Inferno Collection',
 			logo: {
 				alt: 'Inferno Collection',
-				src: 'img/logo.svg',
+				src: 'img/logo.png',
 			},
 			items: [
 				{
