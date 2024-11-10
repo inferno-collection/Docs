@@ -8,27 +8,23 @@ FAR uses convars for config values. For information on how to correctly install 
 
 ## Overview
 
-|                                          Name                                           | Description                                                                        |         Default Value         |
-|:---------------------------------------------------------------------------------------:|------------------------------------------------------------------------------------|:-----------------------------:|
-|                 [`ic_far_disablePasscodes`](./#ic_far_disablepasscodes)                 | Completely disable the need for passcodes on all control panels                    |            `false`            |
-|                     [`ic_far_kickCheaters`](./#ic_far_kickcheaters)                     | Kick suspected cheaters                                                            |            `false`            |
-|                     [`ic_far_randomAlarms`](./#ic_far_randomalarms)                     | Randomly select an alarm system every configured interval and activate it          |            `true`             |
-|       [`ic_far_minutesBetweenRandomAlarms`](./#ic_far_minutesbetweenrandomalarms)       | How many minutes between each random alarm                                         |             `30`              |
-| [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](./#ic_far_randomalarmsonlyifnoactivealarms) | If there is any active system, do not trigger a random alarm                       |            `true`             |
-|                  [`ic_far_oxTargetSupport`](./#ic_far_oxtargetsupport)                  | Replace "Press E" interactions with [OxTarget](https://overextended.dev/ox_target) |            `false`            |
-|                [`ic_far_sonoranCADSupport`](./#ic_far_sonorancadsupport)                | Enable support for [Sonoran CAD](https://sonorancad.com/)                          |            `false`            |
-|                        `ic_far_defaultControlPanelDistanceCheck`                        | Distance to control panel before interaction option appear                         |              `2`              |
-|                        `ic_far_defaultPullStationDistanceCheck`                         | Distance to pull station before interaction option appear                          |              `1`              |
-|                           `ic_far_defaultControlPanelModels`                            | The default model to use for the Control Panel at each Alarm Status                |              tbd              |
-|                        `ic_far_defaultPullStationUnpulledModel`                         | The default model to use for the Pull Station when not triggered                   |    `prop_ic_pull_station`     |
-|                         `ic_far_defaultPullStationPulledModel`                          | The default model to use for the Pull Station when triggered                       | `prop_ic_pull_station_pulled` |
-|                              `ic_far_defaultSounderModel`                               | The default model to use for the Sounder                                           |       `prop_ic_sounder`       |
-|                              `ic_far_defaultDetectorModel`                              | The default model to use for the Detector when not triggered                       |      `prop_ic_detector`       |
-|                         `ic_far_defaultDetectorTriggeredModel`                          | The default model to use for the Detector when triggered                           | `prop_ic_detector_triggered`  |
-|                             `ic_far_defaultSprinklerModel`                              | The default model to use for the Sprinkler when not triggered                      |      `prop_ic_sprinkler`      |
-|                         `ic_far_defaultSprinklerTriggeredModel`                         | The default model to use for the Sprinkler when triggered                          | `prop_ic_sprinkler_triggered` |
-|                               `ic_far_defaultStrobeModel`                               | The default model to use for the Strobe                                            |       `prop_ic_strobe`        |
-|                            [`ic_far_debug`](./#ic_far_debug)                            | If the resource should run in debug mode.                                          |            `false`            |
+|                                          Name                                           | Description                                                                        |     Default Value      |
+|:---------------------------------------------------------------------------------------:|------------------------------------------------------------------------------------|:----------------------:|
+|                 [`ic_far_disablePasscodes`](./#ic_far_disablepasscodes)                 | Completely disable the need for passcodes on all control panels                    |        `false`         |
+|                     [`ic_far_kickCheaters`](./#ic_far_kickcheaters)                     | Kick suspected cheaters                                                            |        `false`         |
+|                     [`ic_far_randomAlarms`](./#ic_far_randomalarms)                     | Randomly select an alarm system every configured interval and activate it          |         `true`         |
+|       [`ic_far_minutesBetweenRandomAlarms`](./#ic_far_minutesbetweenrandomalarms)       | How many minutes between each random alarm                                         |          `30`          |
+| [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](./#ic_far_randomalarmsonlyifnoactivealarms) | If there is any active system, do not trigger a random alarm                       |         `true`         |
+|                  [`ic_far_oxTargetSupport`](./#ic_far_oxtargetsupport)                  | Replace "Press E" interactions with [OxTarget](https://overextended.dev/ox_target) |        `false`         |
+|                        `ic_far_defaultControlPanelDistanceCheck`                        | Distance to control panel before interaction option appear                         |          `2`           |
+|                        `ic_far_defaultPullStationDistanceCheck`                         | Distance to pull station before interaction option appear                          |          `1`           |
+|                           `ic_far_defaultControlPanelModels`                            | The default models to use for the Control Panel at each Alarm Status               |          tbd           |
+|                            `ic_far_defaultPullStationModels`                            | The default models to use for the Pull Station                                     | `prop_ic_pull_station` |
+|                             `ic_far_defaultDetectorModels`                              | The default models to use for the Detector                                         |   `prop_ic_detector`   |
+|                             `ic_far_defaultSprinklerModels`                             | The default model to use for the Sprinkler                                         |  `prop_ic_sprinkler`   |
+|                              `ic_far_defaultSounderModel`                               | The default model to use for the Sounder                                           |   `prop_ic_sounder`    |
+|                               `ic_far_defaultStrobeModel`                               | The default model to use for the Strobe                                            |    `prop_ic_strobe`    |
+|                            [`ic_far_debug`](./#ic_far_debug)                            | If the resource should run in debug mode                                           |        `false`         |
 
 ## Further Details
 
@@ -65,12 +61,6 @@ Systems in WalkTest do not count as 'in alarm', but systems with active Isolatio
 If this value is `true`, the default "Press E to ..." options are completely disabled, and are replaced with [OxTarget](https://overextended.dev/ox_target)'s third-eye system.
 :::info
 This feature requires [OxTarget](https://overextended.dev/ox_target) to be installed.
-:::
-
-### `ic_far_sonoranCADSupport`
-If this value is `true`, on alarm system activation a 911 Call will be created in [Sonoran CAD](https://sonorancad.com/).
-:::info
-This feature requires a [Sonoran CAD](https://sonorancad.com/) [standard subscription](https://info.sonorancad.com/pricing/faq) or higher, and the [Sonoran CAD Framework](https://info.sonorancad.com/integration-plugins/integration-plugins/framework-installation) resource.
 :::
 
 ### `ic_far_debug`
