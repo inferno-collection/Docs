@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 20
 ---
 
 # Configuration
 
-FAR uses convars for config values. For information on how to correctly install the `far.cfg` file, [see here](install.md).
+FAR uses convars for config values. For information on how to correctly install the `far.cfg` file, [see here](install/#installing-the-resource).
 
 ## Overview
 
