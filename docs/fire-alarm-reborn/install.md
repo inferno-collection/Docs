@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
 ---
 
 # Installation
 
-Follow the steps below to install FAR onto your FiveM Server.
+Follow the steps below to install FAR on your FiveM Server.
 
 ## Purchase the Resource
 If you have not done so already, you will need to purchase the resource from [our store](https://store.inferno-collection.com/).

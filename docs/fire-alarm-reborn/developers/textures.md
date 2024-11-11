@@ -1,3 +1,7 @@
+---
+sidebar_position: 20
+---
+
 # Prop Textures
 
 This page covers the editable textures in FAR.
