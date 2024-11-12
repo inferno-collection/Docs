@@ -6,64 +6,71 @@ sidebar_position: 20
 
 FAR uses convars for config values. For information on how to correctly install the `far.cfg` file, [see here](install/#installing-the-resource).
 
-## Overview
+## Value List
 
-|                                            Name                                             | Description                                                                        |   Default Value   |
-|:-------------------------------------------------------------------------------------------:|------------------------------------------------------------------------------------|:-----------------:|
-|                 [`ic_far_disablePasscodes`](config#ic_far_disablepasscodes)                 | Completely disable the need for passcodes on all control panels                    |      `false`      |
-|                     [`ic_far_kickCheaters`](config#ic_far_kickcheaters)                     | Kick suspected cheaters                                                            |      `false`      |
-|                     [`ic_far_randomAlarms`](config#ic_far_randomalarms)                     | Randomly select an alarm system every configured interval and activate it          |      `true`       |
-|       [`ic_far_minutesBetweenRandomAlarms`](config#ic_far_minutesbetweenrandomalarms)       | How many minutes between each random alarm                                         |       `30`        |
-| [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](config#ic_far_randomalarmsonlyifnoactivealarms) | If there is any active system, do not trigger a random alarm                       |      `true`       |
-|                  [`ic_far_oxTargetSupport`](config#ic_far_oxtargetsupport)                  | Replace "Press E" interactions with [OxTarget](https://overextended.dev/ox_target) |      `false`      |
-|                          `ic_far_defaultControlPanelDistanceCheck`                          | Distance to control panel before interaction option appear                         |        `2`        |
-|                          `ic_far_defaultPullStationDistanceCheck`                           | Distance to pull station before interaction option appear                          |        `1`        |
-|        [`ic_far_defaultControlPanelModels`](config#ic_far_defaultcontrolpanelmodels)        | The default models to use for the Control Panel                                    |    *See Below*    |
-|         [`ic_far_defaultPullStationModels`](config#ic_far_defaultpullstationmodels)         | The default models to use for the Pull Station                                     |    *See Below*    |
-|            [`ic_far_defaultDetectorModels`](config#ic_far_defaultdetectormodels)            | The default models to use for the Detector                                         |    *See Below*    |
-|           [`ic_far_defaultSprinklerModels`](config#ic_far_defaultsprinklermodels)           | The default model to use for the Sprinkler                                         |    *See Below*    |
-|                                `ic_far_defaultSounderModel`                                 | The default model to use for the Sounder                                           | `prop_ic_sounder` |
-|                                 `ic_far_defaultStrobeModel`                                 | The default model to use for the Strobe                                            | `prop_ic_strobe`  |
-|                            [`ic_far_debug`](config#ic_far_debug)                            | If the resource should run in debug mode                                           |      `false`      |
+|                                            Name                                            |   Default Value   |
+|:------------------------------------------------------------------------------------------:|:-----------------:|
+|                      [`ic_far_disablePasscodes`](#disable-passcodes)                       |      `false`      |
+|                       [`ic_far_kickCheaters`](kick-cheaters)                        |      `false`      |
+|                       [`ic_far_randomAlarms`](random-alarms)                        |      `true`       |
+|        [`ic_far_minutesBetweenRandomAlarms`](minutes-between-random-alarms)         |       `30`        |
+| [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](random-alarms-only-if-no-active-alarms) |      `true`       |
+|                    [`ic_far_oxTargetSupport`](oxtarget-support)                     |      `false`      |
+|                         `ic_far_defaultControlPanelDistanceCheck`                          |        `2`        |
+|                          `ic_far_defaultPullStationDistanceCheck`                          |        `1`        |
+|         [`ic_far_defaultControlPanelModels`](default-control-panel-models)          |    *See Below*    |
+|          [`ic_far_defaultPullStationModels`](default-pull-station-models)           |    *See Below*    |
+|              [`ic_far_defaultDetectorModels`](default-detector-models)              |    *See Below*    |
+|             [`ic_far_defaultSprinklerModels`](default-sprinkler-models)             |    *See Below*    |
+|                                `ic_far_defaultSounderModel`                                | `prop_ic_sounder` |
+|                                `ic_far_defaultStrobeModel`                                 | `prop_ic_strobe`  |
+|                               [`ic_far_debug`](debug)                               |      `false`      |
 
-## Further Details
+## Values Explained
 
-### `ic_far_disablePasscodes`
-If this value is `true`, no control panels will require passcodes to access them. This means any player can access the control panel, including testing the panel, and making announcements.
+### Disable Passcodes
+#### `ic_far_disablePasscodes`
+If this value is `true`, no Control Panels will require passcodes to access them. This means any player can access the Control Panel, including testing the panel, and making announcements.
 
 :::note
-This value does not change override Ace Permission.
+This value does not override any Ace Permissions that have been set.
 :::
 
-### `ic_far_kickCheaters`
+### Kick Cheaters
+#### `ic_far_kickCheaters`
 If this value is `true`, the resource will kick any players it detects as "cheaters". Cheaters are determined by events sent to the server, and actions performed. False-positive as possible, but unlikely.
 
 Regardless of this value, the resource will log events in the server console whenever it believes it has found a cheater.
 
-### `ic_far_randomAlarms`
-If this value and [`ic_far_randomAlarms`](config#ic_far_randomalarms) are `true`, every [`ic_far_minutesBetweenRandomAlarms`](config#ic_far_minutesbetweenrandomalarms) minutes the resource will make 6 attempts to find a random fire alarm system that is currently in Standby. If none are found, the resource will wait another [`ic_far_minutesBetweenRandomAlarms`](config#ic_far_minutesbetweenrandomalarms) minutes and repeat the process.
+### Random Alarms
+#### `ic_far_randomAlarms`
+If this value and [`ic_far_randomAlarms`](#random-alarms) are `true`, every [`ic_far_minutesBetweenRandomAlarms`](#minutes-between-random-alarms) the resource will make 6 attempts to find a random fire Alarm System that is currently in Standby. If none are found, the resource will wait another [`ic_far_minutesBetweenRandomAlarms`](#minutes-between-random-alarms) and repeat the process.
 
-If a suitable system is found, the resource will make 3 attempts to find and activate a random component of the alarm system, out of the detectors, sprinklers, and pull stations. If no suitable is found, the resource will wait another [`ic_far_minutesBetweenRandomAlarms`](config#ic_far_minutesbetweenrandomalarms) minutes and repeat the process from the beginning.
+If a suitable system is found, the resource will make 3 attempts to find and activate a random component of the Alarm System, out of the Detectors, Sprinklers, and Pull Stations. If no suitable component is found, the resource will wait another [`ic_far_minutesBetweenRandomAlarms`](#minutes-between-random-alarms) and repeat the process from the beginning.
 
-If a suitable component is found, the system will enter into alarm and all normal events will occur as if a player had activated the system.
+If a suitable component is found, the system will enter into alarm.
 
-### `ic_far_minutesBetweenRandomAlarms`
-This must be a whole number, more than `1`. Suggested value range: `20` - `40`. Regardless of this value, the resource will only attempt to activate a random system at a minimum of every 60 seconds.
+### Minutes Between [Random Alarms](#random-alarms)
+#### `ic_far_minutesBetweenRandomAlarms`
+This must be a whole number, more than `1`. Suggested value range: `20` - `40`.
 
-### `ic_far_randomAlarmsOnlyIfNoActiveAlarms`
+### [Random Alarms](#random-alarms) Only If No Active Alarms
+#### `ic_far_randomAlarmsOnlyIfNoActiveAlarms`
 If this value and [`ic_far_randomAlarms`](config#ic_far_randomalarms) are `true`, every [`ic_far_minutesBetweenRandomAlarms`](config#ic_far_minutesbetweenrandomalarms) minutes the resource will first check if any alarms systems are current in alarm before selecting a random system to activate. If any system is active, the resource will wait another [`ic_far_minutesBetweenRandomAlarms`](config#ic_far_minutesbetweenrandomalarms) minutes and repeat the process from the beginning.
 
 :::note
 Systems in WalkTest do not count as 'in alarm', but systems with active Isolations, Alarms, are Silenced, or are being tested, do count as 'in alarm'.
 :::
 
-### `ic_far_oxTargetSupport`
+### OxTarget Support
+#### `ic_far_oxTargetSupport`
 If this value is `true`, the default "Press E to ..." options are completely disabled, and are replaced with [OxTarget](https://overextended.dev/ox_target)'s third-eye system.
 :::info
 This feature requires [OxTarget](https://overextended.dev/ox_target) to be installed.
 :::
 
-### `ic_far_defaultControlPanelModels`
+### Default Control Panel Models
+#### `ic_far_defaultControlPanelModels`
 These values determine which prop/model should be used for each alarm status. For example, when using the default props provided with FAR, there is a version of the prop with flashing LEDs for when the alarm is active.
 
 The default value for this option is:
@@ -79,8 +86,8 @@ set ic_far_defaultControlPanelModels {
 	"Test":			"prop_ic_fire_panel"
 }
 ```
-
-### `ic_far_defaultPullStationModels`
+### Default Pull Station Models
+#### `ic_far_defaultPullStationModels`
 These values determine which prop/model should be used for when the Pull Station is un/pulled.
 
 The default value for this option is:
@@ -91,7 +98,8 @@ set ic_far_defaultDetectorModels {
 }
 ```
 
-### `ic_far_defaultDetectorModels`
+### Default Detector Models
+#### `ic_far_defaultDetectorModels`
 These values determine which prop/model should be used for when the Detector is un/triggered.
 
 The default value for this option is:
@@ -102,7 +110,8 @@ set ic_far_defaultSprinklerModels {
 }
 ```
 
-### `ic_far_defaultSprinklerModels`
+### Default Sprinkler Models
+#### `ic_far_defaultSprinklerModels`
 These values determine which prop/model should be used for when the Sprinkler is un/triggered.
 
 The default value for this option is:
@@ -113,25 +122,29 @@ set ic_far_defaultSprinklerModels {
 }
 ```
 
-### `ic_far_debug`
-If this value is `true`, a ton of extra logs will be outputted to both the client and server consoles. Not suggested at all for production use, nor for when using the tool.
+### Debug
+#### `ic_far_debug`
+If this value is `true`, a ton of extra logs will be outputted to both the client and server consoles. Not suggested at all for production use, nor for when using the [FAR Tool](developers/tool.md).
 
 ***
 ## Permissions
 There are several permissions for FAR, they are as follows:
 
-### `InfernoFireAlarmReborn.PullStations`
+### Use Pull Stations
+#### `InfernoFireAlarmReborn.PullStations`
 This permission allows players to activate Pull Stations.
 By default, this permission is granted to all players.
 
-### `InfernoFireAlarmReborn.ControlPanels`
+### Use Control Panels
+#### `InfernoFireAlarmReborn.ControlPanels`
 This permission allows players to interact with Control Panels.
 By default, this permission is granted to all players.
 :::note
 This permission only allows players to open the Control Panel NUI, if a panel requires a passcode, this permission does not bypass that requirement.
 :::
 
-### `InfernoFireAlarmReborn.ResetPullStations`
+### Reset Pull Stations
+#### `InfernoFireAlarmReborn.ResetPullStations`
 This permission allows players to reset activated Pull Stations.
 By default, this permission is granted to all players.
 :::note
@@ -141,12 +154,14 @@ Resetting a Pull Station does not "turn off" an alarm if it has been activated.
 We suggest changing this permission so only firefighters can do this.
 :::
 
-### `InfernoFireAlarmReborn.RandomAlarms`
+### Trigger Random Alarms via Command
+#### `InfernoFireAlarmReborn.RandomAlarms`
 This permission allows players to use the `/firealarm randomalarm` command to generate a random alarm.
 By default, this permission is only granted to admins (`group.admin`).
 
-### `InfernoFireAlarmReborn.Tool`
-This permission allows players to use the `/firealarm tool` command to access the Tool.
+### Use FAR Tool
+#### `InfernoFireAlarmReborn.Tool`
+This permission allows players to use the [FAR Tool](developers/tool.md).
 By default, this permission is only granted to admins (`group.admin`).
 
 ***
@@ -170,13 +185,13 @@ By default, this permission is only granted to admins (`group.admin`).
 ### General ###
 ###############
 
-# Completely disable the need for passcodes on all control panels
+# Completely disable the need for passcodes on all Control Panels
 set ic_far_disablePasscodes "false"
 
 # Kick suspected cheaters
 set ic_far_kickCheaters "false"
 
-# Randomly select an alarm system every configured interval and activate it
+# Randomly select an Alarm System every configured interval and activate it
 set ic_far_randomAlarms "true"
 
 # How many minutes between each random alarm
@@ -191,7 +206,7 @@ setr ic_far_oxTargetSupport "false"
 ### Advanced ###
 ################
 
-# Distance to control panel before interaction option appear
+# Distance to Control Panel before interaction option appear
 setr ic_far_defaultControlPanelDistanceCheck "2"
 
 # Distance to pull station before interaction option appear
