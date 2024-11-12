@@ -1,0 +1,489 @@
+---
+sidebar_position: 10
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Data Structures
+
+This page documents the data structures in FAR.
+
+***
+
+## Alarm System
+
+```lua
+alarmSystem.id
+alarmSystem.name
+alarmSystem.status
+alarmSystem.passcode
+alarmSystem.location
+alarmSystem.postalCode
+alarmSystem.position.x
+alarmSystem.position.y
+alarmSystem.position.z
+alarmSystem.controlPanels
+alarmSystem.pullStations
+alarmSystem.detectors
+alarmSystem.sprinklers
+```
+
+<Tabs>
+	<TabItem value="alarmSystem.id" label="id" default>
+		<p>`int`</p>
+		<p>ID of the Alarm System.</p>
+		<p>Example: `1`</p>
+	</TabItem>
+
+	<TabItem value="alarmSystem.name" label="name">
+		<p>`string`</p>
+		<p>Name of the Alarm System.</p>
+		<p>Example: `Mission Row Police Station`</p>
+	</TabItem>
+
+	<TabItem value="alarmSystem.status" label="status">
+		<p>`enum`</p>
+		<p>Status of the Alarm System as an enum.</p>
+		<p>Values:</p>
+		- `0` - Invalid status
+		- `1` - Entire system disabled
+		- `2` - System ready / standby
+		- `3` - Announcement in progress
+		- `4` - WalkTest in progress
+		- `5` - System has isolations
+		- `6` - System in Alarm
+		- `7` - System silenced
+		- `8` - System test in progress
+
+		<p>Example: `2`</p>
+	</TabItem>
+
+	<TabItem value="alarmSystem.passcode" label="passcode">
+		<p>`string`</p>
+		<p>Default passcode for Control Panels in this Alarm System.</p>
+		<p>Example: `123`</p>
+		:::warning
+		Individual Control Panels can override this value, it may not correct for all Control Panels in the system.
+		:::
+	</TabItem>
+
+	<TabItem value="alarmSystem.location" label="location">
+		<p>`string`</p>
+		<p>Human readable location of this Alarm System.</p>
+		<p>Example: `Altee St, Mission Row`</p>
+	</TabItem>
+
+	<TabItem value="alarmSystem.postalCode" label="postalCode">
+		<p>`string` | `null`</p>
+		<p>Postal Code this Alarm System is located within.</p>
+		<p>Example: `123`</p>
+	</TabItem>
+
+	<TabItem value="alarmSystem.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of the center of this Alarm System.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(alarmSystem.position.x, alarmSystem.position.y, alarmSystem.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="alarmSystem.controlPanels" label="controlPanels">
+		<p>`table` | `null`</p>
+		<p>Table containing data for all the Control Panels in this Alarm System.</p>
+		:::warning
+		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
+		:::
+	</TabItem>
+
+	<TabItem value="alarmSystem.pullStations" label="pullStations">
+		<p>`table` | `null`</p>
+		<p>Table containing data for all the Pull Stations in this Alarm System.</p>
+		:::warning
+		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
+		:::
+	</TabItem>
+
+	<TabItem value="alarmSystem.detectors" label="detectors">
+		<p>`table` | `null`</p>
+		<p>Table containing data for all the Detectors in this Alarm System.</p>
+		:::warning
+		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
+		:::
+	</TabItem>
+
+	<TabItem value="alarmSystem.sounders" label="sounders">
+		<p>`table` | `null`</p>
+		<p>Table containing data for all the Sounders in this Alarm System.</p>
+		:::warning
+		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
+		:::
+	</TabItem>
+
+	<TabItem value="alarmSystem.sprinklers" label="sprinklers">
+		<p>`table` | `null`</p>
+		<p>Table containing data for all the Sprinklers in this Alarm System.</p>
+		:::warning
+		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
+		:::
+	</TabItem>
+
+</Tabs>
+
+***
+
+## Pull Station
+
+```lua
+pullStation.id
+pullStation.name
+pullStation.alarmSystemId
+pullStation.position.x
+pullStation.position.y
+pullStation.position.z
+pullStation.rotation.x
+pullStation.rotation.y
+pullStation.rotation.z
+pullStation.isVirtual
+pullStation.modelName
+```
+
+<Tabs>
+	<TabItem value="pullStation.id" label="id" default>
+		<p>`int`</p>
+		<p>ID of the Pull Station.</p>
+		<p>Example: `1`</p>
+	</TabItem>
+
+	<TabItem value="pullStation.name" label="name">
+		<p>`int`</p>
+		<p>Name of the Pull Station.</p>
+		<p>Example: `Near Front Doors`</p>
+	</TabItem>
+
+	<TabItem value="pullStation.alarmSystemId" label="alarmSystemId">
+		<p>`int` | `null`</p>
+		<p>ID of the Alarm System this Pull Station belongs to.</p>
+		<p>Example: `1`</p>
+
+		:::warning
+		When accessing this table as part of an Alarm System, this parameter will not be provided.
+		You should instead access the top-level Alarm System ID.
+
+		```lua
+		local alarmSystemId = alarmSystem.pullStations[0].alarmSystemId -- WRONG
+
+		local alarmSystemId = alarmSystem.id -- CORRECT
+		```
+		:::
+	</TabItem>
+
+	<TabItem value="pullStation.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of the Pull Station in a table.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(pullStation.position.x, pullStation.position.y, pullStation.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="pullStation.rotation" label="rotation">
+		<p>`table`</p>
+		<p>Rotation of the Pull Station in a table.</p>
+		<p>Example:</p>
+		```lua
+		local rotation = vector3(pullStation.rotation.x, pullStation.rotation.y, pullStation.rotation.z)
+		```
+	</TabItem>
+
+	<TabItem value="pullStation.isVirtual" label="isVirtual">
+		<p>`bool`</p>
+		<p>If the Pull Station [is virtual](tool#virtual-props).</p>
+		<p>Example: `false`</p>
+	</TabItem>
+
+	<TabItem value="pullStation.modelName" label="modelName">
+		<p>`string`</p>
+		<p>Name of the model this Pull Station uses.</p>
+		<p>Example: `ic_prop_pull_station`</p>
+	</TabItem>
+</Tabs>
+
+***
+
+## Control Panel
+
+```lua
+controlPanel.id
+controlPanel.name
+controlPanel.alarmSystemId
+controlPanel.position.x
+controlPanel.position.y
+controlPanel.position.z
+controlPanel.rotation.x
+controlPanel.rotation.y
+controlPanel.rotation.z
+controlPanel.isVirtual
+controlPanel.modelName
+```
+
+<Tabs>
+	<TabItem value="controlPanelid" label="id" default>
+		<p>`int`</p>
+		<p>ID of the Control Panel.</p>
+		<p>Example: `1`</p>
+	</TabItem>
+
+	<TabItem value="controlPanel.name" label="name">
+		<p>`string`</p>
+		<p>Name of the Control Panel.</p>
+		<p>Example: `Entry Hallway`</p>
+	</TabItem>
+
+	<TabItem value="controlPanel.passcode" label="passcode">
+		<p>`string`</p>
+		<p>Passcode for the Control Panel.</p>
+		<p>Example: `1234`</p>
+	</TabItem>
+
+	<TabItem value="controlPanel.alarmSystemId" label="alarmSystemId">
+		<p>`int` | `null`</p>
+		<p>ID of the Alarm System this Control Panel belongs to.</p>
+		<p>Example: `1`</p>
+
+		:::warning
+		When accessing this table as part of an Alarm System, this parameter will not be provided.
+		You should instead access the top-level Alarm System ID.
+
+		```lua
+		local alarmSystemId = alarmSystem.controlPanels[0].alarmSystemId -- WRONG
+
+		local alarmSystemId = alarmSystem.id -- CORRECT
+		```
+		:::
+	</TabItem>
+
+	<TabItem value="controlPanel.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of the Control Panel in a table.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(controlPanel.position.x, controlPanel.position.y, controlPanel.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="controlPanel.rotation" label="rotation">
+		<p>`table`</p>
+		<p>Rotation of the Control Panel in a table.</p>
+		<p>Example:</p>
+		```lua
+		local rotation = vector3(controlPanel.rotation.x, controlPanel.rotation.y, controlPanel.rotation.z)
+		```
+	</TabItem>
+
+	<TabItem value="controlPanel.isVirtual" label="isVirtual">
+		<p>`bool`</p>
+		<p>If the Control Panel [is virtual](tool#virtual-props).</p>
+		<p>Example: `false`</p>
+	</TabItem>
+
+	<TabItem value="controlPanel.modelName" label="modelName">
+		<p>`string`</p>
+		<p>Name of the model this Control Panel uses.</p>
+		<p>Example: `ic_prop_fire_panel`</p>
+	</TabItem>
+</Tabs>
+
+***
+
+## Sounder
+
+```lua
+sounder.id
+sounder.alarmSystemId
+sounder.position.x
+sounder.position.y
+sounder.position.z
+sounder.rotation.x
+sounder.rotation.y
+sounder.rotation.z
+sounder.isVirtual
+```
+
+<Tabs>
+	<TabItem value="sounder.id" label="id" default>
+		<p>`int`</p>
+		<p>ID of the Sounder.</p>
+		<p>Example: `1`</p>
+	</TabItem>
+
+	<TabItem value="sounder.alarmSystemId" label="alarmSystemId">
+		<p>`int` | `null`</p>
+		<p>ID of the Alarm System this Sounder belongs to.</p>
+		<p>Example: `1`</p>
+
+		:::warning
+		When accessing this table as part of an Alarm System, this parameter will not be provided.
+		You should instead access the top-level Alarm System ID.
+
+		```lua
+		local alarmSystemId = alarmSystem.sounders[0].alarmSystemId -- WRONG
+
+		local alarmSystemId = alarmSystem.id -- CORRECT
+		```
+		:::
+	</TabItem>
+
+	<TabItem value="sounder.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of the Sounder in a table.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(sounder.position.x, sounder.position.y, sounder.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="sounder.rotation" label="rotation">
+		<p>`table`</p>
+		<p>Rotation of the Sounder in a table.</p>
+		<p>Example:</p>
+		```lua
+		local rotation = vector3(sounder.rotation.x, sounder.rotation.y, sounder.rotation.z)
+		```
+	</TabItem>
+
+	<TabItem value="sounder.isVirtual" label="isVirtual">
+		<p>`bool`</p>
+		<p>If the Sounder [is virtual](tool#virtual-props).</p>
+		<p>Example: `false`</p>
+	</TabItem>
+</Tabs>
+
+***
+
+## Sprinkler
+
+```lua
+sprinkler.id
+sprinkler.alarmSystemId
+sprinkler.position.x
+sprinkler.position.y
+sprinkler.position.z
+sprinkler.rotation.x
+sprinkler.rotation.y
+sprinkler.rotation.z
+sprinkler.isVirtual
+```
+
+<Tabs>
+	<TabItem value="sprinkler.id" label="id" default>
+		<p>`int`</p>
+		<p>ID of the Sprinkler.</p>
+		<p>Example: `1`</p>
+	</TabItem>
+
+	<TabItem value="sprinkler.alarmSystemId" label="alarmSystemId">
+		<p>`int` | `null`</p>
+		<p>ID of the Alarm System this Sprinkler belongs to.</p>
+		<p>Example: `1`</p>
+
+		:::warning
+		When accessing this table as part of an Alarm System, this parameter will not be provided.
+		You should instead access the top-level Alarm System ID.
+
+		```lua
+		local alarmSystemId = alarmSystem.sprinklers[0].alarmSystemId -- WRONG
+
+		local alarmSystemId = alarmSystem.id -- CORRECT
+		```
+		:::
+	</TabItem>
+
+	<TabItem value="sprinkler.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of the Sprinkler in a table.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(sprinkler.position.x, sprinkler.position.y, sprinkler.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="sprinkler.rotation" label="rotation">
+		<p>`table`</p>
+		<p>Rotation of the Sprinkler in a table.</p>
+		<p>Example:</p>
+		```lua
+		local rotation = vector3(sprinkler.rotation.x, sprinkler.rotation.y, sprinkler.rotation.z)
+		```
+	</TabItem>
+
+	<TabItem value="sprinkler.isVirtual" label="isVirtual">
+		<p>`bool`</p>
+		<p>If the Sprinkler [is virtual](tool#virtual-props).</p>
+		<p>Example: `false`</p>
+	</TabItem>
+</Tabs>
+
+## Detector
+
+```lua
+detector.id
+detector.alarmSystemId
+detector.position.x
+detector.position.y
+detector.position.z
+detector.rotation.x
+detector.rotation.y
+detector.rotation.z
+detector.isVirtual
+```
+
+<Tabs>
+	<TabItem value="detector.id" label="id" default>
+		<p>`int`</p>
+		<p>ID of the Detector.</p>
+		<p>Example: `1`</p>
+	</TabItem>
+
+	<TabItem value="detector.alarmSystemId" label="alarmSystemId">
+		<p>`int` | `null`</p>
+		<p>ID of the Alarm System this Detector belongs to.</p>
+		<p>Example: `1`</p>
+
+		:::warning
+		When accessing this table as part of an Alarm System, this parameter will not be provided.
+		You should instead access the top-level Alarm System ID.
+
+		```lua
+		local alarmSystemId = alarmSystem.detectors[0].alarmSystemId -- WRONG
+
+		local alarmSystemId = alarmSystem.id -- CORRECT
+		```
+		:::
+	</TabItem>
+
+	<TabItem value="detector.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of the Detector in a table.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(detector.position.x, detector.position.y, detector.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="detector.rotation" label="rotation">
+		<p>`table`</p>
+		<p>Rotation of the Detector in a table.</p>
+		<p>Example:</p>
+		```lua
+		local rotation = vector3(detector.rotation.x, detector.rotation.y, detector.rotation.z)
+		```
+	</TabItem>
+
+	<TabItem value="detector.isVirtual" label="isVirtual">
+		<p>`bool`</p>
+		<p>If the Detector [is virtual](tool#virtual-props).</p>
+		<p>Example: `false`</p>
+	</TabItem>
+</Tabs>

@@ -12,14 +12,14 @@ We suggest only using this if you're confident you've set up your alarm systems 
 :::
 - Error message to the server console that appears when the `config.cfg` file has not been executed.
 - `triggerPullStationAtPosition` Export which allows for the activation of a random Pull Station of a system within 50 units of the provided position.
-- `getAlarmSystemPasscode` Export which returns just an alarm system's passcode.
+- `getAlarmSystemPasscode` Export which returns just an Alarm System's passcode.
 
 **Fixed**:
 - Space Bar missing from the Tool controls helper.
 - Typos 😔
 - Outdated docs link.
-- Bug that prevent all but the first alarm system's control panel from opening.
-- Postal codes not being loaded from alarm system files.
+- Bug that prevent all but the first Alarm System's Control Panel from opening.
+- Postal codes not being loaded from Alarm System files.
 - Missing sounders in some of the stock resources.
 
 ***

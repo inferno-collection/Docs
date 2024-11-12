@@ -4,15 +4,15 @@ sidebar_position: 0
 
 # Tool
 
-This page explains how to create/edit alarm systems with the Tool.
+This page explains how to create/edit alarm systems with the FAR Tool.
 
 The FAR Tool is a powerful in-game feature that allows server owners to create new and edit existing fire alarm systems directly from their server.
 
-When using the tool, drafts are saved directly to the server's files, so server owners can delegate creation of alarm systems to trusted players without having the worry about the hassle of needing to send each other files.
+When using the FAR Tool, drafts are saved directly to the server's files, so server owners can delegate creation of alarm systems to trusted players without having the worry about the hassle of needing to send each other files.
 
 ## First-Time Use
 
-The very first time the tool is used on your server, it will create a new directory in the root of your server files, this is *generally* the same location as your `resources` folder and `server.cfg` file, see the example below:
+The very first time the FAR Tool is used on your server, it will create a new directory in the root of your server files, this is *generally* the same location as your `resources` folder and `server.cfg` file, see the example below:
 
 ![Root Directory](assets/root.png)
 
@@ -55,7 +55,7 @@ Below you will find the controls for the FAR Tool. They will also display in the
 ![Controls](assets/controls.png)
 
 :::tip
-You must be in first-person to use the tool.
+You must be in first-person to use the FAR Tool.
 :::
 
 #### Left Mouse Button
@@ -80,7 +80,7 @@ This changes between all the prop types, as well as the `Hide a Prop` option.
 
 #### Tilda ( ` )
 
-This creates a new fire alarm system. When creating a system, you need to be roughly at the center or middle of the building you are using, as your current location is saved.
+This creates a new fire Alarm System. When creating a system, you need to be roughly at the center or middle of the building you are using, as your current location is saved.
 
 :::tip
 You can have multiple fire alarm systems in a single draft. For example, in the pre-created locations, all clothing stores are inside the same draft file.
@@ -91,7 +91,7 @@ You can have multiple fire alarm systems in a single draft. For example, in the 
 This cycles through created alarm systems inside this draft file.
 
 :::warning
-If you see the warning below at the bottom of your screen, you are too far from the centre location of your alarm system.
+If you see the warning below at the bottom of your screen, you are too far from the centre location of your Alarm System.
 
 ![Too far away!](assets/distance.png)
 :::
@@ -102,9 +102,9 @@ This will toggle prop being Virtual or not. [See here](#virtual-props).
 
 ### Hidden Props
 
-When a prop is hidden with the tool, it will not appear in-game. The intention is to allow server owners to remove props that conflict with FAR and replace them with FAR props.
+When a prop is hidden with the FAR Tool, it will not appear in-game. The intention is to allow server owners to remove props that conflict with FAR and replace them with FAR props.
 
-For example, if you have a MLO you purchased on Tebex, and it contains props for an alarm system already, you could hide all these props, and put FAR props instead. The other option would be to use [Virtual Props](#virtual-props). 
+For example, if you have a MLO you purchased on Tebex, and it contains props for an Alarm System already, you could hide all these props, and put FAR props instead. The other option would be to use [Virtual Props](#virtual-props). 
 
 ### Virtual Props
 
