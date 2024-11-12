@@ -8,23 +8,23 @@ FAR uses convars for config values. For information on how to correctly install 
 
 ## Value List
 
-|                                            Name                                            |   Default Value   |
-|:------------------------------------------------------------------------------------------:|:-----------------:|
-|                      [`ic_far_disablePasscodes`](#disable-passcodes)                       |      `false`      |
-|                       [`ic_far_kickCheaters`](kick-cheaters)                        |      `false`      |
-|                       [`ic_far_randomAlarms`](random-alarms)                        |      `true`       |
-|        [`ic_far_minutesBetweenRandomAlarms`](minutes-between-random-alarms)         |       `30`        |
-| [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](random-alarms-only-if-no-active-alarms) |      `true`       |
-|                    [`ic_far_oxTargetSupport`](oxtarget-support)                     |      `false`      |
-|                         `ic_far_defaultControlPanelDistanceCheck`                          |        `2`        |
-|                          `ic_far_defaultPullStationDistanceCheck`                          |        `1`        |
-|         [`ic_far_defaultControlPanelModels`](default-control-panel-models)          |    *See Below*    |
-|          [`ic_far_defaultPullStationModels`](default-pull-station-models)           |    *See Below*    |
-|              [`ic_far_defaultDetectorModels`](default-detector-models)              |    *See Below*    |
-|             [`ic_far_defaultSprinklerModels`](default-sprinkler-models)             |    *See Below*    |
-|                                `ic_far_defaultSounderModel`                                | `prop_ic_sounder` |
-|                                `ic_far_defaultStrobeModel`                                 | `prop_ic_strobe`  |
-|                               [`ic_far_debug`](debug)                               |      `false`      |
+|                                         Name                                         |   Default Value   |
+|:------------------------------------------------------------------------------------:|:-----------------:|
+|                   [`ic_far_disablePasscodes`](#disable-passcodes)                    |      `false`      |
+|                       [`ic_far_kickCheaters`](#kick-cheaters)                        |      `false`      |
+|                       [`ic_far_randomAlarms`](#random-alarms)                        |      `true`       |
+|        [`ic_far_minutesBetweenRandomAlarms`](#minutes-between-random-alarms)         |       `30`        |
+| [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](#random-alarms-only-if-no-active-alarms) |      `true`       |
+|                    [`ic_far_oxTargetSupport`](#oxtarget-support)                     |      `false`      |
+|                      `ic_far_defaultControlPanelDistanceCheck`                       |        `2`        |
+|                       `ic_far_defaultPullStationDistanceCheck`                       |        `1`        |
+|         [`ic_far_defaultControlPanelModels`](#default-control-panel-models)          |    *See Below*    |
+|          [`ic_far_defaultPullStationModels`](#default-pull-station-models)           |    *See Below*    |
+|              [`ic_far_defaultDetectorModels`](#default-detector-models)              |    *See Below*    |
+|             [`ic_far_defaultSprinklerModels`](#default-sprinkler-models)             |    *See Below*    |
+|                             `ic_far_defaultSounderModel`                             | `prop_ic_sounder` |
+|                             `ic_far_defaultStrobeModel`                              | `prop_ic_strobe`  |
+|                               [`ic_far_debug`](#debug)                               |      `false`      |
 
 ## Values Explained
 
