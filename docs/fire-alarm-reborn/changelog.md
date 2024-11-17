@@ -4,6 +4,15 @@ sidebar_position: 999
 
 # Changelog
 
+## v1.2.1 - 11/17/2024
+**Added**:
+- Example in `editable/pager.lua` for changing tones paged based on which Alarm System is activated.
+
+**Fixed**:
+- Issue where not passing enough arguments to [Exports](developers/exports.md) would throw a confusing error.
+- [`PullStationTriggered`](developers/events.md#pulled) event example code referencing a non-existed variable.
+- `alarmSystemId` parameter on data returned by [Exports](developers/exports.md) incorrectly being passed as `alarmSystem`.
+
 ## v1.2 - 11/16/2024
 **Added**:
 - Check to prevent multiple of the same Alarm System being loaded.

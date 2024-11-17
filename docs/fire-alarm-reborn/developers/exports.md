@@ -8,6 +8,31 @@ This pages documents the exports that can be used with FAR.
 
 Be sure to consult the [Data Structures](data.mdx) page to understand the structure of the parameters.
 
+All parameters listed are required, none are optional.
+
+## How to Use
+
+When using exports with FAR, it is important to call them exact as shown below:
+
+```lua
+exports["inferno-fire-alarm-reborn"]:exportNameHere(param1, param2)
+```
+
+You must put the resource name in square brackets and quotations, followed by a colon and the export name.
+You **cannot** write `exports.inferno-fire-alarm-reborn`, and you **cannot** use a period (`.`) after the square brackets.
+See the examples below:
+
+```lua
+exports["inferno-fire-alarm-reborn"]:getAlarmSystem(pullStation.alarmSystemId, false) -- CORRECT
+
+exports["inferno-fire-alarm-reborn"].getAlarmSystem(pullStation.alarmSystemId, false) -- WRONG
+                                    ^
+exports.inferno-fire-alarm-reborn:getAlarmSystem(pullStation.alarmSystemId, false) -- WRONG
+       ^
+exports.inferno-fire-alarm-reborn.getAlarmSystem(pullStation.alarmSystemId, false) -- WRONG
+       ^                         ^
+```
+
 ## Pull Stations
 
 ### Trigger Pull Station
