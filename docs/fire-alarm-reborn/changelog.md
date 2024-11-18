@@ -4,6 +4,33 @@ sidebar_position: 999
 
 # Changelog
 
+## v1.2.2 - 11/18/2024
+
+:::danger
+Major breaking changes to the [Events](developers/events.md) were made in this version, do not blindly update.
+:::
+**Added**:
+- [`AlarmActivation`](developers/events.md#alarm-activation) event, which is the new recommended way to listen for Alarm System activation.
+- [`getAlarmSystemCompontents`](developers/exports.md#get-system-components) export, which returns an [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) table, containing all an Alarm System's Pull Station, Detectors, etc.
+  - [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) is a new [Data type](developers/data.mdx).
+
+**Changed**:
+- All the events listed below now have an [`AlarmSystem`](developers/data.mdx#alarm-system) parameter passed along with the event. See [Events](developers/events.md) for full details.
+  - [`PullStationTriggered`](developers/events.md#pulled)
+  - [`PullStationReset`](developers/events.md#reset)
+  - [`OpenControlPanel`](developers/events.md#opened)
+  - [`DetectorActivation`](developers/events.md#triggered)
+  - [`SprinklerActivation`](developers/events.md#triggered-1)
+
+**Removed**:
+- `getAlarmSystem` export.
+  - If you know the ID of the Alarm System, you likely already have access to an [`AlarmSystem`](developers/data.mdx#alarm-system) object.
+  - If you want to get all of an Alarm System's Control Panels, Pull Stations, etc., use the new [`getAlarmSystemCompontents`](developers/exports.md#get-system-components) export.
+- Components from the [`AlarmSystem`](developers/data.mdx#alarm-system) data type.
+  - Components are now stored in [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) and can be accessed via the [`getAlarmSystemCompontents`](developers/exports.md#get-system-components) export.
+- `alarmSystemId` from all components (Pull Stations, Sounders, etc.).
+  - If you know the ID of the Alarm System, you likely already have access to an [`AlarmSystem`](developers/data.mdx#alarm-system) object.
+
 ## v1.2.1 - 11/17/2024
 **Added**:
 - Example in `editable/pager.lua` for changing tones paged based on which Alarm System is activated.

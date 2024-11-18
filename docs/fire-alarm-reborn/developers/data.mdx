@@ -23,10 +23,6 @@ alarmSystem.postalCode
 alarmSystem.position.x
 alarmSystem.position.y
 alarmSystem.position.z
-alarmSystem.controlPanels
-alarmSystem.pullStations
-alarmSystem.detectors
-alarmSystem.sprinklers
 ```
 
 <Tabs>
@@ -89,44 +85,50 @@ alarmSystem.sprinklers
 		```
 	</TabItem>
 
+</Tabs>
+
+***
+
+## Alarm System Components
+
+```lua
+alarmSystemComponents.id
+alarmSystemComponents.controlPanels
+alarmSystemComponents.pullStations
+alarmSystemComponents.detectors
+alarmSystemComponents.sprinklers
+```
+
+<Tabs>
+	<TabItem value="alarmSystem.id" label="id" default>
+		<p>`int`</p>
+		<p>ID of the Alarm System.</p>
+		<p>Example: `1`</p>
+	</TabItem>
+
 	<TabItem value="alarmSystem.controlPanels" label="controlPanels">
-		<p>`table` | `null`</p>
+		<p><a href={"#control-panel"}>`ControlPanel[]`</a></p>
 		<p>Table containing data for all the Control Panels in this Alarm System.</p>
-		:::warning
-		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
-		:::
 	</TabItem>
 
 	<TabItem value="alarmSystem.pullStations" label="pullStations">
-		<p>`table` | `null`</p>
+		<p><a href={"#pull-station"}>`PullStation[]`</a></p>
 		<p>Table containing data for all the Pull Stations in this Alarm System.</p>
-		:::warning
-		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
-		:::
 	</TabItem>
 
 	<TabItem value="alarmSystem.detectors" label="detectors">
-		<p>`table` | `null`</p>
+		<p><a href={"#detector"}>`Detector[]`</a></p>
 		<p>Table containing data for all the Detectors in this Alarm System.</p>
-		:::warning
-		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
-		:::
 	</TabItem>
 
 	<TabItem value="alarmSystem.sounders" label="sounders">
-		<p>`table` | `null`</p>
+		<p><a href={"#sounder"}>`Sounders[]`</a></p>
 		<p>Table containing data for all the Sounders in this Alarm System.</p>
-		:::warning
-		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
-		:::
 	</TabItem>
 
 	<TabItem value="alarmSystem.sprinklers" label="sprinklers">
-		<p>`table` | `null`</p>
+		<p><a href={"#sprinkler"}>`Sprinkler[]`</a></p>
 		<p>Table containing data for all the Sprinklers in this Alarm System.</p>
-		:::warning
-		This data is only provided when the `getAlarmSystem` export is called with `includeComponents` as `true`.
-		:::
 	</TabItem>
 
 </Tabs>
@@ -138,7 +140,6 @@ alarmSystem.sprinklers
 ```lua
 pullStation.id
 pullStation.name
-pullStation.alarmSystemId
 pullStation.position.x
 pullStation.position.y
 pullStation.position.z
@@ -160,23 +161,6 @@ pullStation.modelName
 		<p>`int`</p>
 		<p>Name of the Pull Station.</p>
 		<p>Example: `Near Front Doors`</p>
-	</TabItem>
-
-	<TabItem value="pullStation.alarmSystemId" label="alarmSystemId">
-		<p>`int` | `null`</p>
-		<p>ID of the Alarm System this Pull Station belongs to.</p>
-		<p>Example: `1`</p>
-
-		:::warning
-		When accessing this table as part of an Alarm System, this parameter will not be provided.
-		You should instead access the top-level Alarm System ID.
-
-		```lua
-		local alarmSystemId = alarmSystem.pullStations[0].alarmSystemId -- WRONG
-
-		local alarmSystemId = alarmSystem.id -- CORRECT
-		```
-		:::
 	</TabItem>
 
 	<TabItem value="pullStation.postion" label="position">
@@ -217,7 +201,6 @@ pullStation.modelName
 ```lua
 controlPanel.id
 controlPanel.name
-controlPanel.alarmSystemId
 controlPanel.position.x
 controlPanel.position.y
 controlPanel.position.z
@@ -245,23 +228,6 @@ controlPanel.modelName
 		<p>`string`</p>
 		<p>Passcode for the Control Panel.</p>
 		<p>Example: `1234`</p>
-	</TabItem>
-
-	<TabItem value="controlPanel.alarmSystemId" label="alarmSystemId">
-		<p>`int` | `null`</p>
-		<p>ID of the Alarm System this Control Panel belongs to.</p>
-		<p>Example: `1`</p>
-
-		:::warning
-		When accessing this table as part of an Alarm System, this parameter will not be provided.
-		You should instead access the top-level Alarm System ID.
-
-		```lua
-		local alarmSystemId = alarmSystem.controlPanels[0].alarmSystemId -- WRONG
-
-		local alarmSystemId = alarmSystem.id -- CORRECT
-		```
-		:::
 	</TabItem>
 
 	<TabItem value="controlPanel.postion" label="position">
@@ -301,7 +267,6 @@ controlPanel.modelName
 
 ```lua
 sounder.id
-sounder.alarmSystemId
 sounder.position.x
 sounder.position.y
 sounder.position.z
@@ -316,23 +281,6 @@ sounder.isVirtual
 		<p>`int`</p>
 		<p>ID of the Sounder.</p>
 		<p>Example: `1`</p>
-	</TabItem>
-
-	<TabItem value="sounder.alarmSystemId" label="alarmSystemId">
-		<p>`int` | `null`</p>
-		<p>ID of the Alarm System this Sounder belongs to.</p>
-		<p>Example: `1`</p>
-
-		:::warning
-		When accessing this table as part of an Alarm System, this parameter will not be provided.
-		You should instead access the top-level Alarm System ID.
-
-		```lua
-		local alarmSystemId = alarmSystem.sounders[0].alarmSystemId -- WRONG
-
-		local alarmSystemId = alarmSystem.id -- CORRECT
-		```
-		:::
 	</TabItem>
 
 	<TabItem value="sounder.postion" label="position">
@@ -366,7 +314,6 @@ sounder.isVirtual
 
 ```lua
 sprinkler.id
-sprinkler.alarmSystemId
 sprinkler.position.x
 sprinkler.position.y
 sprinkler.position.z
@@ -381,23 +328,6 @@ sprinkler.isVirtual
 		<p>`int`</p>
 		<p>ID of the Sprinkler.</p>
 		<p>Example: `1`</p>
-	</TabItem>
-
-	<TabItem value="sprinkler.alarmSystemId" label="alarmSystemId">
-		<p>`int` | `null`</p>
-		<p>ID of the Alarm System this Sprinkler belongs to.</p>
-		<p>Example: `1`</p>
-
-		:::warning
-		When accessing this table as part of an Alarm System, this parameter will not be provided.
-		You should instead access the top-level Alarm System ID.
-
-		```lua
-		local alarmSystemId = alarmSystem.sprinklers[0].alarmSystemId -- WRONG
-
-		local alarmSystemId = alarmSystem.id -- CORRECT
-		```
-		:::
 	</TabItem>
 
 	<TabItem value="sprinkler.postion" label="position">
@@ -429,7 +359,6 @@ sprinkler.isVirtual
 
 ```lua
 detector.id
-detector.alarmSystemId
 detector.position.x
 detector.position.y
 detector.position.z
@@ -444,23 +373,6 @@ detector.isVirtual
 		<p>`int`</p>
 		<p>ID of the Detector.</p>
 		<p>Example: `1`</p>
-	</TabItem>
-
-	<TabItem value="detector.alarmSystemId" label="alarmSystemId">
-		<p>`int` | `null`</p>
-		<p>ID of the Alarm System this Detector belongs to.</p>
-		<p>Example: `1`</p>
-
-		:::warning
-		When accessing this table as part of an Alarm System, this parameter will not be provided.
-		You should instead access the top-level Alarm System ID.
-
-		```lua
-		local alarmSystemId = alarmSystem.detectors[0].alarmSystemId -- WRONG
-
-		local alarmSystemId = alarmSystem.id -- CORRECT
-		```
-		:::
 	</TabItem>
 
 	<TabItem value="detector.postion" label="position">
