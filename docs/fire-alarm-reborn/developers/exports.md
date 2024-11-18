@@ -23,15 +23,70 @@ You **cannot** write `exports.inferno-fire-alarm-reborn`, and you **cannot** use
 See the examples below:
 
 ```lua
-exports["inferno-fire-alarm-reborn"]:getAlarmSystem(pullStation.alarmSystemId, false) -- CORRECT
+exports["inferno-fire-alarm-reborn"]:getAlarmSystemNearPosition(position) -- CORRECT
 
-exports["inferno-fire-alarm-reborn"].getAlarmSystem(pullStation.alarmSystemId, false) -- WRONG
+exports["inferno-fire-alarm-reborn"].getAlarmSystemNearPosition(position) -- WRONG
                                     ^
-exports.inferno-fire-alarm-reborn:getAlarmSystem(pullStation.alarmSystemId, false) -- WRONG
+exports.inferno-fire-alarm-reborn:getAlarmSystemNearPosition(position) -- WRONG
        ^
-exports.inferno-fire-alarm-reborn.getAlarmSystem(pullStation.alarmSystemId, false) -- WRONG
+exports.inferno-fire-alarm-reborn.getAlarmSystemNearPosition(position) -- WRONG
        ^                         ^
 ```
+
+## Alarm Systems
+
+### Get System by Position
+Use this export to get an Alarm System near to a provided position and radius.
+
+#### Export Name
+```
+getAlarmSystemNearPosition
+```
+#### Parameters
+
+- `position` - `vector3`
+	- Position to use to search for closest Alarm System.
+- `radius` - `float`
+	- Radius from position to check.
+
+#### Return Value
+[`AlarmSystem`](data.mdx#alarm-system) | `null`
+
+### Get System Components
+Use this export to get all the Pull Stations, Detectors, etc. that belong to an Alarm System.
+
+#### Export Name
+```
+getAlarmSystemCompontents
+```
+#### Parameters
+
+- `alarmSystemId` - `int`
+	- The ID of an Alarm System.
+
+#### Return Value
+[`AlarmSystemCompontents`](data.mdx#alarm-system-components) | `null`
+
+### Get System Passcode
+Use this export to get an Alarm System's passcode.
+
+:::warning
+Individual Control Panels can override this value, it may not correct for all Control Panels in the system.
+:::
+
+#### Export Name
+```
+getAlarmSystemPasscode
+```
+#### Parameters
+
+- `alarmSystemId` - `int`
+	- The ID of an Alarm System.
+
+#### Return Value
+`string` | `null`
+
+***
 
 ## Pull Stations
 
@@ -87,60 +142,3 @@ triggerSprinklerAtPosition
 
 #### Return Value
 `void`
-
-***
-
-## Alarm Systems
-
-### Get System by ID
-Use this export to get an Alarm System if you have the ID of the system.
-
-#### Export Name
-```
-getAlarmSystem
-```
-#### Parameters
-
-- `alarmSystemId` - `int`
-	- The ID of an Alarm System.
-- `includeCompontents` - `bool`
-  - If components (Pull Stations, Detectors, etc.) should be included in the return.
-
-#### Return Value
-[`AlarmSystem`](data.mdx#alarm-system) | `null`
-
-### Get System by Position
-Use this export to get an Alarm System near to a provided position and radius.
-
-#### Export Name
-```
-getAlarmSystemNearPosition
-```
-#### Parameters
-
-- `position` - `vector3`
-	- Position to use to search for closest Alarm System.
-- `radius` - `float`
-	- Radius from position to check.
-
-#### Return Value
-[`AlarmSystem`](data.mdx#alarm-system) | `null`
-
-### Get System Passcode
-Use this export to get an Alarm System's passcode.
-
-:::warning
-Individual Control Panels can override this value, it may not correct for all Control Panels in the system.
-:::
-
-#### Export Name
-```
-getAlarmSystemPasscode
-```
-#### Parameters
-
-- `alarmSystemId` - `int`
-	- The ID of an Alarm System.
-
-#### Return Value
-`string` | `null`
