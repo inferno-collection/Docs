@@ -8,23 +8,25 @@ FAR uses convars for config values. For information on how to correctly install 
 
 ## Value List
 
-|                                         Name                                         |   Default Value   |
-|:------------------------------------------------------------------------------------:|:-----------------:|
-|                   [`ic_far_disablePasscodes`](#disable-passcodes)                    |      `false`      |
-|                       [`ic_far_kickCheaters`](#kick-cheaters)                        |      `false`      |
-|                       [`ic_far_randomAlarms`](#random-alarms)                        |      `true`       |
-|        [`ic_far_minutesBetweenRandomAlarms`](#minutes-between-random-alarms)         |       `30`        |
-| [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](#random-alarms-only-if-no-active-alarms) |      `true`       |
-|                    [`ic_far_oxTargetSupport`](#oxtarget-support)                     |      `false`      |
-|                      `ic_far_defaultControlPanelDistanceCheck`                       |        `2`        |
-|                       `ic_far_defaultPullStationDistanceCheck`                       |        `1`        |
-|         [`ic_far_defaultControlPanelModels`](#default-control-panel-models)          |    *See Below*    |
-|          [`ic_far_defaultPullStationModels`](#default-pull-station-models)           |    *See Below*    |
-|              [`ic_far_defaultDetectorModels`](#default-detector-models)              |    *See Below*    |
-|             [`ic_far_defaultSprinklerModels`](#default-sprinkler-models)             |    *See Below*    |
-|                             `ic_far_defaultSounderModel`                             | `prop_ic_sounder` |
-|                             `ic_far_defaultStrobeModel`                              | `prop_ic_strobe`  |
-|                               [`ic_far_debug`](#debug)                               |      `false`      |
+|                                         Name                                         |       Default Value       |
+|:------------------------------------------------------------------------------------:|:-------------------------:|
+|                   [`ic_far_disablePasscodes`](#disable-passcodes)                    |          `false`          |
+|                       [`ic_far_kickCheaters`](#kick-cheaters)                        |          `false`          |
+|                       [`ic_far_randomAlarms`](#random-alarms)                        |          `true`           |
+|        [`ic_far_minutesBetweenRandomAlarms`](#minutes-between-random-alarms)         |           `30`            |
+| [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](#random-alarms-only-if-no-active-alarms) |          `true`           |
+|                    [`ic_far_oxTargetSupport`](#oxtarget-support)                     |          `false`          |
+|                      `ic_far_defaultControlPanelDistanceCheck`                       |            `2`            |
+|                       `ic_far_defaultPullStationDistanceCheck`                       |            `1`            |
+|                     `ic_far_defaultSprinklerValveDistanceCheck`                      |            `1`            |
+|         [`ic_far_defaultControlPanelModels`](#default-control-panel-models)          |        *See Below*        |
+|          [`ic_far_defaultPullStationModels`](#default-pull-station-models)           |        *See Below*        |
+|              [`ic_far_defaultDetectorModels`](#default-detector-models)              |        *See Below*        |
+|             [`ic_far_defaultSprinklerModels`](#default-sprinkler-models)             |        *See Below*        |
+|                             `ic_far_defaultSounderModel`                             |     `prop_ic_sounder`     |
+|                             `ic_far_defaultStrobeModel`                              |     `prop_ic_strobe`      |
+|                         `ic_far_defaultSprinklerValveModel`                          | `prop_ic_sprinkler_valve` |
+|                               [`ic_far_debug`](#debug)                               |          `false`          |
 
 ## Values Explained
 
@@ -154,6 +156,11 @@ Resetting a Pull Station does not "turn off" an alarm if it has been activated.
 We suggest changing this permission so only firefighters can do this.
 :::
 
+### Use Sprinkler Valves
+#### `InfernoFireAlarmReborn.SprinklerValves`
+This permission allows players to open and close sprinkler valves.
+By default, this permission is granted to all players.
+
 ### Trigger Random Alarms via Command
 #### `InfernoFireAlarmReborn.RandomAlarms`
 This permission allows players to use the `/firealarm randomalarm` command to generate a random alarm.
@@ -185,13 +192,13 @@ By default, this permission is only granted to admins (`group.admin`).
 ### General ###
 ###############
 
-# Completely disable the need for passcodes on all Control Panels
+# Completely disable the need for passcodes on all control panels
 set ic_far_disablePasscodes "false"
 
 # Kick suspected cheaters
 set ic_far_kickCheaters "false"
 
-# Randomly select an Alarm System every configured interval and activate it
+# Randomly select an alarm system every configured interval and activate it
 set ic_far_randomAlarms "true"
 
 # How many minutes between each random alarm
@@ -206,11 +213,14 @@ setr ic_far_oxTargetSupport "false"
 ### Advanced ###
 ################
 
-# Distance to Control Panel before interaction option appear
+# Distance to control panel before interaction option appears
 setr ic_far_defaultControlPanelDistanceCheck "2"
 
-# Distance to pull station before interaction option appear
+# Distance to pull station before interaction option appears
 setr ic_far_defaultPullStationDistanceCheck "1"
+
+# Distance to sprinkler valve before interaction option appears
+setr defaultSprinklerValveDistanceCheck "1"
 
 # The default model to use for the Control Panel at each Alarm Status
 set ic_far_defaultControlPanelModels {
@@ -248,6 +258,9 @@ set ic_far_defaultSounderModel "prop_ic_sounder"
 # The default model to use for the Strobe
 set ic_far_defaultStrobeModel "prop_ic_strobe"
 
+# The default model to use for the Sprinkler Valve
+set ic_far_defaultSprinklerValveModel "prop_ic_sprinkler_valve"
+
 # If the resource should run in debug mode
 setr ic_far_debug "false"
 
@@ -259,6 +272,7 @@ setr ic_far_debug "false"
 add_ace builtin.everyone "InfernoFireAlarmReborn.PullStations" allow
 add_ace builtin.everyone "InfernoFireAlarmReborn.ControlPanels" allow
 add_ace builtin.everyone "InfernoFireAlarmReborn.ResetPullStations" allow
+add_ace builtin.everyone "InfernoFireAlarmReborn.SprinklerValve" allow
 
 add_ace group.admin "InfernoFireAlarmReborn.RandomAlarms" allow
 add_ace group.admin "InfernoFireAlarmReborn.Tool" allow

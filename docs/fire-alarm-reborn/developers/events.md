@@ -250,3 +250,19 @@ Inferno-Collection:Server:FireAlarmReborn:Editable:SprinklerActivation
 		- ```lua
           local position = vector3(position.x, position.y, position.z)
           ```
+
+### Sprinkler Valve Change
+Fired when a Sprinkler Valve is Opened or Closed.
+
+#### Event Name
+```
+Inferno-Collection:Server:FireAlarmReborn:Editable:SprinklerValveChanged
+```
+#### Parameters
+
+- `source` - `string`
+	- Server handle of the player who opened changed the Sprinkler Valve.
+- `alarmSystem` - [`AlarmSystem`](data.mdx#alarm-system)
+	- Alarm System that has been triggered.
+- `sprinklerValve` - [`SprinklerValve`](data.mdx#sprinkler-valve)
+	- Sprinkler Valve that was changed.
