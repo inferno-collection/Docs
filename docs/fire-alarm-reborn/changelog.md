@@ -4,6 +4,40 @@ sidebar_position: 999
 
 # Changelog
 
+## v1.3 - 11/19/2024
+**Added**:
+- Sprinkler Valves
+  - Sprinkler Valves are optional, any systems without a Sprinkler Valve will behave as it did prior to v1.3.
+  - Only one Sprinkler Valve can be placed per Alarm System.
+  - Sprinkler Valves have two positions:
+    - Open
+      - Water can flow.
+      - Sprinklers will activate.
+      - Sprinkler Bell will sound.
+    - Closed
+      - Water cannot flow.
+      - Sprinklers will not activate, and pre-activated Sprinklers will stop showing water.
+        - If the Sprinkler Valve is Opened again after being Closed, but before a system reset, pre-activated Sprinklers will show water again.
+      - Sprinkler Bell will not sound.
+  - If an Alarm System is in Alarm, and there is a triggered Sprinkler, the Sprinkler Valve must be placed in the Closed position before the system can reset.
+    - :::tip
+    	Be sure to place it back in the Open position afterward though, or else Sprinklers will not activate when there's a fire!
+  		:::
+  - Sprinkler Valves have their own [Ace Permission](config.md#use-sprinkler-valves).
+  - [`SprinklerValveChanged` event](developers/events.md#sprinkler-valve-change).
+
+**Changed**:
+- If an Alarm System contains a Sprinkler Valve, the Sprinkler Bell sound effect will come from the position of the Sprinkler Valve instead of the center of the Alarm System.
+  - :::tip
+  	Not sure where the Sprinkler Valve is located in an Alarm System? Follow the sound of the bell!
+  	:::
+
+**Removed**:
+- Server console warning about permissions not being correctly set-up.
+  - Replaced by the [`config.cfg` error message](#v11---11112024) added in v1.1.
+
+***
+
 ## v1.2.2 - 11/18/2024
 
 :::danger
@@ -31,6 +65,8 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 - `alarmSystemId` from all components (Pull Stations, Sounders, etc.).
   - If you know the ID of the Alarm System, you likely already have access to an [`AlarmSystem`](developers/data.mdx#alarm-system) object.
 
+***
+
 ## v1.2.1 - 11/17/2024
 **Added**:
 - Example in `editable/pager.lua` for changing tones paged based on which Alarm System is activated.
@@ -39,6 +75,7 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 - Issue where not passing enough arguments to [Exports](developers/exports.md) would throw a confusing error.
 - [`PullStationTriggered`](developers/events.md#pulled) event example code referencing a non-existed variable.
 - `alarmSystemId` parameter on data returned by [Exports](developers/exports.md) incorrectly being passed as `alarmSystem`.
+***
 
 ## v1.2 - 11/16/2024
 **Added**:
@@ -55,6 +92,8 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 - Multiple people being able to interact with an Alarm System Control Panel at once.
   - Even if there are multiple Control Panels for one Alarm System, only one can be used at once.
 - [`SystemDisabled` event](developers/events.md#disabled) not being fired.
+
+***
 
 ## v1.1 - 11/11/2024
 **Added**:
@@ -75,5 +114,6 @@ We suggest only using this if you're confident you've set up your alarm systems 
 - Missing sounders in some of the stock resources.
 
 ***
+
 ## v1 - 11/11/2024
 Initial resource release.

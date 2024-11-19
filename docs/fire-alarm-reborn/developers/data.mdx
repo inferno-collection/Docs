@@ -399,3 +399,53 @@ detector.isVirtual
 		<p>Example: `false`</p>
 	</TabItem>
 </Tabs>
+
+## Sprinkler Valve
+
+```lua
+sprinklerValve.status
+sprinklerValve.position.x
+sprinklerValve.position.y
+sprinklerValve.position.z
+sprinklerValve.rotation.x
+sprinklerValve.rotation.y
+sprinklerValve.rotation.z
+sprinklerValve.isVirtual
+```
+
+<Tabs>
+	<TabItem value="sprinklerValve.status" label="status" default>
+		<p>`enum`</p>
+		<p>Status of the Sprinkler Valve as an enum.</p>
+		<p>Values:</p>
+		- `0` - Invalid status
+		- `1` - Open
+		- `2` - Closed
+
+		<p>Example: `1`</p>
+	</TabItem>
+
+	<TabItem value="sprinklerValve.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of the Sprinkler Valve in a table.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(sprinklerValve.position.x, sprinklerValve.position.y, sprinklerValve.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="sprinklerValve.rotation" label="rotation">
+		<p>`table`</p>
+		<p>Rotation of the Sprinkler Valve in a table.</p>
+		<p>Example:</p>
+		```lua
+		local rotation = vector3(sprinklerValve.rotation.x, sprinklerValve.rotation.y, sprinklerValve.rotation.z)
+		```
+	</TabItem>
+
+	<TabItem value="sprinklerValve.isVirtual" label="isVirtual">
+		<p>`bool`</p>
+		<p>If the Sprinkler Valve [is virtual](tool#virtual-props).</p>
+		<p>Example: `false`</p>
+	</TabItem>
+</Tabs>
