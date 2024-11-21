@@ -4,6 +4,8 @@ sidebar_position: 999
 
 # Changelog
 
+This page documents the changes made to FAR.
+
 ## v1.3 - 11/19/2024
 **Added**:
 - Sprinkler Valves
