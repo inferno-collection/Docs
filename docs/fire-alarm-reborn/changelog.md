@@ -6,6 +6,19 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
+## v1.3.1 - 11/25/2024
+**Fixed**:
+- Resets being soft locked if first reset attempt failed.
+- FIRE LED state not updating until FIRES button was pressed.
+- Sprinklers reactivating for a few seconds if the Sprinkler Valve is Closed, and a new component is activated.
+- Edge case where the distance check for the nearest interactable component would fail.
+- [`ic_far_disablePasscodes`](config.md#disable-passcodes) config option being ignored.
+- TEST button saying a passcode is required, when [`ic_far_disablePasscodes`](config.md#disable-passcodes) is `true`.
+- ALARM and BUZZER LEDs being stuck in the ON condition after being tested.
+- SILENCE ALARM button not working if an Alarm System was silence, but a second component was then activated.
+
+***
+
 ## v1.3 - 11/19/2024
 **Added**:
 - Sprinkler Valves
