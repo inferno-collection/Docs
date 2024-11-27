@@ -6,6 +6,13 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
+## v1.3.2 - 11/27/2024
+**Fixed**:
+- All fires created by z_Fires were put out after a few seconds, regardless of Sprinklers.
+- [AlarmActivation](developers/events.md#alarm-activation) event being fired multiple times.
+- Typo in `ic_far_defaultSprinklerValveDistanceCheck` config option.
+- ALARM and BUZZER Control Panel LEDs still blinking after being muted.
+
 ## v1.3.1 - 11/25/2024
 **Fixed**:
 - Resets being soft locked if first reset attempt failed.
