@@ -90,8 +90,8 @@ getAlarmSystemPasscode
 
 ## Pull Stations
 
-### Trigger Pull Station
-Use this export to trigger a random Pull Station inside the Alarm System closest to the provided position.
+### Trigger Pull Station At Position
+Use this export to trigger the Pull Station closest to the provided position, inside the Alarm System closest to the provided position.
 
 #### Export Name
 ```
@@ -100,7 +100,22 @@ triggerPullStationAtPosition
 #### Parameters
 
 - `position` - `vector3`
-  - Position to use to search for closest Alarm System.
+  - Position to use to search for closest Pull Station & Alarm System.
+
+#### Return Value
+`void`
+
+### Trigger Pull Station Near Position
+Use this export to trigger a random Pull Station near the provided position, inside the Alarm System closest to the provided position.
+
+#### Export Name
+```
+triggerPullStationNearPosition
+```
+#### Parameters
+
+- `position` - `vector3`
+	- Position to use to search for closest Alarm System.
 
 #### Return Value
 `void`
