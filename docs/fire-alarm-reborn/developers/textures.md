@@ -162,6 +162,41 @@ Used on:
 ### `strobe_d`
 This texture is a diffuse texture applied to the Strobe.
 
+Used on:
+- `prop_ic_strobe`
+
+## Sprinkler Valve
+
+### `valve_d`
+This texture is a diffuse texture applied to the Sprinkler Valve.
+
+Used on:
+- `prop_ic_sprinkler_valve`
+
+:::tip
+This texture has a matching entry in the `hi` YTD file.
+:::
+
+### `valve_n`
+This texture is a normal/bump map for the Sprinkler Valve.
+
+Used on:
+- `prop_ic_sprinkler_valve`
+
+:::tip
+This texture has a matching entry in the `hi` YTD file.
+:::
+
+### `valve_s`
+This texture is a specular map for the Sprinkler Valve.
+
+Used on:
+- `prop_ic_sprinkler_valve`
+
+:::tip
+This texture has a matching entry in the `hi` YTD file.
+:::
+
 ## Miscellaneous
 
 ### `bump_n`

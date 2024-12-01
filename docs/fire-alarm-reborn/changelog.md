@@ -6,6 +6,33 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
+## v1.3.3 - 12/01/2024
+
+:::danger
+Breaking changes to the [Exports](developers/exports.md) were made in this version, do not blindly update.
+:::
+
+**Added**:
+- [`ic_far_sprinklerChance`](config.md#sprinkler-chance-to-extinguish-fire) config value, [see here](config.md#sprinkler-chance-to-extinguish-fire) for details.
+- [`ic_far_allowBadResets`](config.md#allow-badinvalid-alarm-system-resets) config value, [see here](config.md#allow-badinvalid-alarm-system-resets) for details.
+- [`ic_far_realisticAudio`](config.md#use-realistic-audio-for-sounders) config value, [see here](config.md#use-realistic-audio-for-sounders) for details.
+- [`triggerPullStationNearPosition`](developers/exports.md#trigger-pull-station-near-position) export, [see here](developers/exports.md#trigger-pull-station-near-position) for details.
+
+**Changed**:
+- Multiple Sprinklers can now activate for the same fire.
+  - Previously, only the closest Sprinkler within X distance of a fire would activate, now all Sprinklers with X distance will activate.
+  - The distance ('X') from the fire to the Sprinkler has been reduced slightly to avoid "too many" Sprinklers activating.
+- Pre-activated Sprinklers now extinguish new fires.
+  - :::note
+  	This only applies to [z_Fires](https://forum.cfx.re/t/paid-standalone-esx-qbcore-z-fire/5244464?u=christopherm) and [SmartFires](https://forum.cfx.re/t/smart-fires-automatic-fires-fire-smoke-types-many-integrations-standalone-paid-resource/4792695?u=christopherm).
+  	:::
+  - Previously, once a Sprinkler was activated, any new fires in the same location while the Sprinkler was still active would not be extinguished; this is no longer the case.
+- [`triggerPullStationAtPosition`](developers/exports.md#trigger-pull-station-at-position) export now activates the closet Pull Station to the provided position, not a random Pull Station.
+  - For random Pull Stations, use [`triggerPullStationNearPosition`](developers/exports.md#trigger-pull-station-near-position).
+
+**Fixed**:
+- Issue where randomly generated z_Fires smoke was causing server errors and Sprinklers not to activate.
+
 ## v1.3.2 - 11/27/2024
 **Fixed**:
 - All fires created by z_Fires were put out after a few seconds, regardless of Sprinklers.

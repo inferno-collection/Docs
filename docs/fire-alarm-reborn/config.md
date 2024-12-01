@@ -16,6 +16,9 @@ FAR uses convars for config values. For information on how to correctly install 
 |        [`ic_far_minutesBetweenRandomAlarms`](#minutes-between-random-alarms)         |           `30`            |
 | [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](#random-alarms-only-if-no-active-alarms) |          `true`           |
 |                    [`ic_far_oxTargetSupport`](#oxtarget-support)                     |          `false`          |
+|           [`ic_far_sprinklerChance`](#sprinkler-chance-to-extinguish-fire)           |           `100`           |
+|           [`ic_far_allowBadResets`](#allow-badinvalid-alarm-system-resets)           |          `false`          |
+|             [`ic_far_realisticAudio`](#use-realistic-audio-for-sounders)             |          `false`          |
 |                      `ic_far_defaultControlPanelDistanceCheck`                       |            `2`            |
 |                       `ic_far_defaultPullStationDistanceCheck`                       |            `1`            |
 |                     `ic_far_defaultSprinklerValveDistanceCheck`                      |            `1`            |
@@ -70,6 +73,27 @@ If this value is `true`, the default "Press E to ..." options are completely dis
 :::info
 This feature requires [OxTarget](https://overextended.dev/ox_target) to be installed.
 :::
+
+### Sprinkler Chance to Extinguish Fire
+#### `ic_far_sprinklerChance`
+
+This value determines what percentage chance an activated sprinkler should extinguish a fire. Value should be between `0` and `100`, where `0` is a 0% chance of the fire being extinguished, and `100` is a 100% chance of the fire being extinguished.
+
+### Allow Bad/Invalid Alarm System Resets
+#### `ic_far_allowBadResets`
+
+If this value is `true`, Alarm Systems will temporarily go back to non-alarm after being reset with active components.  
+For example, resetting an Alarm System without resetting a Pull Station.  
+Alarm Systems will re-enter into Alarm after several seconds.
+
+When this value is `false`, Control Panels will display an error message when there are still active components, and not allow a reset to go through.
+
+### Use Realistic Audio for Sounders
+#### `ic_far_realisticAudio`
+
+If this value is `true`, Sounders will add a short delay between the playing of the same audio file for Sounders, which adds a slight echo effect.
+
+If this value is `false`, Sounder will play all audio files at the exact same time across all Sounders.
 
 ### Default Control Panel Models
 #### `ic_far_defaultControlPanelModels`
@@ -212,6 +236,15 @@ setr ic_far_oxTargetSupport "false"
 
 ### Advanced ###
 ################
+
+# Percentage chance that sprinklers will put out detected fires
+set ic_far_sprinklerChance "100"
+
+# Allow bad alarm system resets
+set ic_far_allowBadResets "false"
+
+# Enable Realistic Audio for Sounders
+setr ic_far_realisticAudio "true"
 
 # Distance to control panel before interaction option appears
 setr ic_far_defaultControlPanelDistanceCheck "2"
