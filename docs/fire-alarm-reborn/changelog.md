@@ -6,6 +6,11 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
+## v1.3.4 - 12/04/2024
+
+**Fixed**:
+- Hidden Props reappearing momentarily ('flickering') when an Alarm System changed status, such as from standby into alarm.
+
 ## v1.3.3 - 12/01/2024
 
 :::danger
