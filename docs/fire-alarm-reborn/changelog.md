@@ -6,6 +6,49 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
+## v1.3.5 - 12/09/2024
+
+**Added**:
+- Alarm System Monitoring
+  - Adds a `monitoring` parameter to the [`AlarmSystem`](developers/data.mdx#alarm-system) object.
+  - Designed to represent if an Alarm System is being monitored by an Alarm Monitoring Company, such as Gruppe Sechs.
+  - Can be used when handling activation events to determine if the alarm activation should result in an automatic page/call/etc. to Emergency Services, for example:
+    - ```lua
+      RegisterServerEvent("Inferno-Collection:Server:FireAlarmReborn:Editable:AlarmActivation")
+          AddEventHandler("Inferno-Collection:Server:FireAlarmReborn:Editable:AlarmActivation", function(alarmSystem)
+			
+          -- Monitoring is not enabled, so we will not page the Fire Dept.
+          if not alarmSystem.monitoring then
+              return
+          end
+			
+          Pager:NewPage("Fire Alarm - " .. alarmSystem.name .. " - " .. alarmSystem.location)
+      end)
+      ```
+  - Value is `true` by default, and can be changed in one of two ways:
+    1. In-game, by using the Control Panel and locating the Disable Monitoring option in the Main Menu.
+    2. Out-of-game, by adding `monitoringDisabled = "true"` to Alarm System entries.
+  - [`MonitoringDisabled`](developers/events.md#monitoring) event.
+
+**Changed**:
+- Logic that checked if interiors were full loaded before spawning FAR props.
+  - Previously, if an interior was reporting as "not ready", FAR would not spawn props at all.
+  - Now, FAR will load props after 15 seconds regardless.
+    - This resolves an issue with FAR props not loading at locations where addon MLOs intersected with base-game MLOs.
+- Multiple players can now use the [FAR Tool](developers/tool.md) at the same time.
+
+**Fixed**:
+- "Press E to ..." prompts appearing even when [`ic_far_oxTargetSupport`](config#oxtarget-support) was set to `true`.
+- OxTarget Sprinkler Valve interactions duplicating.
+- [Random Alarms](config.md#random-alarms) being triggered even when there were no players in server.
+- Bug that prevented the loading of draft Alarm Systems that shared locations with a live Alarm Systems already loaded. 
+
+**Removed**:
+- Per-Control Panel passcodes.
+  - Passcodes are now per-Alarm System.
+  - Existing Alarm Systems can be updated by moving `passcode = "..."` from the Control Panel entry into the Alarm System entry.
+    - Reach out in [Discord](https://inferno.gay/discord) if you need help converting old systems.
+
 ## v1.3.4 - 12/04/2024
 
 **Fixed**:

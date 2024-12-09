@@ -8,7 +8,8 @@ This pages documents the exports that can be used with FAR.
 
 Be sure to consult the [Data Structures](data.mdx) page to understand the structure of the parameters.
 
-All parameters listed are required, none are optional.
+All parameters listed are required, none are optional.  
+All the exports listed below are **server** exports, not client exports.
 
 ## How to Use
 
@@ -70,10 +71,6 @@ getAlarmSystemCompontents
 ### Get System Passcode
 Use this export to get an Alarm System's passcode.
 
-:::warning
-Individual Control Panels can override this value, it may not correct for all Control Panels in the system.
-:::
-
 #### Export Name
 ```
 getAlarmSystemPasscode
@@ -125,7 +122,7 @@ triggerPullStationNearPosition
 ## Detectors
 
 ### Trigger Detector
-Use this export to trigger a random Detector inside the Alarm System closest to the provided position.
+Use this export to trigger the Detector closest to the provided position, inside the Alarm System closest to the provided position.
 
 #### Export Name
 ```
@@ -134,7 +131,7 @@ triggerDetectorAtPosition
 #### Parameters
 
 - `position` - `vector3`
-	- Position to use to search for closest Alarm System.
+	- Position to use to search for closest Detector & Alarm System.
 
 #### Return Value
 `void`
@@ -144,7 +141,7 @@ triggerDetectorAtPosition
 ## Sprinklers
 
 ### Trigger Sprinkler
-Use this export to trigger a random Sprinkler inside the Alarm System closest to the provided position.
+Use this export to trigger the Sprinkler closest to the provided position, inside the Alarm System closest to the provided position.
 
 #### Export Name
 ```
@@ -153,7 +150,7 @@ triggerSprinklerAtPosition
 #### Parameters
 
 - `position` - `vector3`
-	- Position to use to search for closest Alarm System.
+	- Position to use to search for closest Sprinkler & Alarm System.
 
 #### Return Value
 `void`

@@ -119,6 +119,22 @@ Inferno-Collection:Server:FireAlarmReborn:Editable:SystemDisabled
 - `enabled` - `bool`
 	- `true` if system enabled, `false` if system disabled.
 
+### Monitoring
+Fired when an Alarm System's Monitoring is disabled or enabled.
+
+#### Event Name
+```
+Inferno-Collection:Server:FireAlarmReborn:Editable:MonitoringDisabled
+```
+#### Parameters
+
+- `source` - `string`
+	- Server handle of the player who made the change.
+- `alarmSystem` - [`AlarmSystem`](data.mdx#alarm-system)
+	- Alarm System change applied to.
+- `enabled` - `bool`
+	- `true` if monitoring enabled, `false` if monitoring disabled.
+
 ### Random Activation
 Fired when a random Alarm System is activated, either via Command or [scheduled Random Alarms](../config.md#random-alarms).
 

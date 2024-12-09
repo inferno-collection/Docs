@@ -128,3 +128,5 @@ When a component is triggered, the Alarm System will nearly always go into alarm
 - When the Alarm System is in WalkTest mode.
 - When the component has been isolated at the Control Panel.
 - When the entire Alarm System is disabled.
+
+It is also important to note that if an Alarm System has its Monitoring Disabled, depending on the configuration by the server owner, Emergency Services may not be paged.

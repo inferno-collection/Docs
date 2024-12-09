@@ -19,6 +19,7 @@ alarmSystem.name
 alarmSystem.status
 alarmSystem.passcode
 alarmSystem.location
+alarmSystem.monitoring
 alarmSystem.postalCode
 alarmSystem.position.x
 alarmSystem.position.y
@@ -57,17 +58,20 @@ alarmSystem.position.z
 
 	<TabItem value="alarmSystem.passcode" label="passcode">
 		<p>`string`</p>
-		<p>Default passcode for Control Panels in this Alarm System.</p>
-		<p>Example: `123`</p>
-		:::warning
-		Individual Control Panels can override this value, it may not correct for all Control Panels in the system.
-		:::
+		<p>Passcode for Control Panels in this Alarm System.</p>
+		<p>Example: `1234`</p>
 	</TabItem>
 
 	<TabItem value="alarmSystem.location" label="location">
 		<p>`string`</p>
 		<p>Human readable location of this Alarm System.</p>
 		<p>Example: `Altee St, Mission Row`</p>
+	</TabItem>
+
+	<TabItem value="alarmSystem.monitoring" label="monitoring">
+		<p>`bool`</p>
+		<p>A boolean indicating if Monitoring for this Alarm System is active or inactive.</p>
+		<p>Example: `true`</p>
 	</TabItem>
 
 	<TabItem value="alarmSystem.postalCode" label="postalCode">
@@ -222,12 +226,6 @@ controlPanel.modelName
 		<p>`string`</p>
 		<p>Name of the Control Panel.</p>
 		<p>Example: `Entry Hallway`</p>
-	</TabItem>
-
-	<TabItem value="controlPanel.passcode" label="passcode">
-		<p>`string`</p>
-		<p>Passcode for the Control Panel.</p>
-		<p>Example: `1234`</p>
 	</TabItem>
 
 	<TabItem value="controlPanel.postion" label="position">
