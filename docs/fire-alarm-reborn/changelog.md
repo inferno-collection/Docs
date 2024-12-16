@@ -6,6 +6,31 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
+## v1.3.6 - 16/09/2024
+
+**Added**:
+- [API](developers/api.mdx) with two endpoints:
+  - [`alarm-systems`](developers/api.mdx#get-alarm-system-by-status) endpoint.
+  - [`alarm-system`](developers/api.mdx#get-alarm-system-by-id) endpoint.
+- Two new client exports:
+	- [`pullStationInteraction`](developers/exports/client.md#interact-with-pull-station-at-player-position) export.
+    - [`controlPanelInteraction`](developers/exports/client.md#interact-with-control-panel-at-player-position) export.
+
+**Changed**:
+- Increased maximum prop spawning distance from 75 meters to 100 meters, and maximum [FAR Tool](developers/tool.md) prop placement from 35 meters to 75 meters.
+  - The aim of this change is to allow for physically larger Alarm Systems to be created.
+- Editable [events](developers/events.md) such that they cannot be triggered from the client.
+
+**Removed**:
+- Logic that checked if an interior had loaded before spawning FAR Props.
+  - Caused issues with add-on MLOs located in the same position as base-game MLOs.
+
+**Fixed**:
+- Announcements not working correctly from the Control Panel.
+- Passcode error pop-up when creating a new Alarm Location with the [FAR Tool](developers/tool.md).
+- Erroneous file name being shown when saving an existing draft with the [FAR Tool](developers/tool.md).
+- Being able to load empty `.lua` files as valid drafts for [FAR Tool](developers/tool.md).
+
 ## v1.3.5 - 12/09/2024
 
 **Added**:
@@ -57,14 +82,14 @@ This page documents the changes made to FAR.
 ## v1.3.3 - 12/01/2024
 
 :::danger
-Breaking changes to the [Exports](developers/exports.md) were made in this version, do not blindly update.
+Breaking changes to the [Exports](developers/exports/server.md) were made in this version, do not blindly update.
 :::
 
 **Added**:
 - [`ic_far_sprinklerChance`](config.md#sprinkler-chance-to-extinguish-fire) config value, [see here](config.md#sprinkler-chance-to-extinguish-fire) for details.
 - [`ic_far_allowBadResets`](config.md#allow-badinvalid-alarm-system-resets) config value, [see here](config.md#allow-badinvalid-alarm-system-resets) for details.
 - [`ic_far_realisticAudio`](config.md#use-realistic-audio-for-sounders) config value, [see here](config.md#use-realistic-audio-for-sounders) for details.
-- [`triggerPullStationNearPosition`](developers/exports.md#trigger-pull-station-near-position) export, [see here](developers/exports.md#trigger-pull-station-near-position) for details.
+- [`triggerPullStationNearPosition`](developers/exports/server.md#trigger-pull-station-near-position) export, [see here](developers/exports/server.md#trigger-pull-station-near-position) for details.
 
 **Changed**:
 - Multiple Sprinklers can now activate for the same fire.
@@ -75,8 +100,8 @@ Breaking changes to the [Exports](developers/exports.md) were made in this versi
   	This only applies to [z_Fires](https://forum.cfx.re/t/paid-standalone-esx-qbcore-z-fire/5244464?u=christopherm) and [SmartFires](https://forum.cfx.re/t/smart-fires-automatic-fires-fire-smoke-types-many-integrations-standalone-paid-resource/4792695?u=christopherm).
   	:::
   - Previously, once a Sprinkler was activated, any new fires in the same location while the Sprinkler was still active would not be extinguished; this is no longer the case.
-- [`triggerPullStationAtPosition`](developers/exports.md#trigger-pull-station-at-position) export now activates the closet Pull Station to the provided position, not a random Pull Station.
-  - For random Pull Stations, use [`triggerPullStationNearPosition`](developers/exports.md#trigger-pull-station-near-position).
+- [`triggerPullStationAtPosition`](developers/exports/server.md#trigger-pull-station-at-position) export now activates the closet Pull Station to the provided position, not a random Pull Station.
+  - For random Pull Stations, use [`triggerPullStationNearPosition`](developers/exports/server.md#trigger-pull-station-near-position).
 
 **Fixed**:
 - Issue where randomly generated z_Fires smoke was causing server errors and Sprinklers not to activate.
@@ -142,7 +167,7 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 :::
 **Added**:
 - [`AlarmActivation`](developers/events.md#alarm-activation) event, which is the new recommended way to listen for Alarm System activation.
-- [`getAlarmSystemCompontents`](developers/exports.md#get-system-components) export, which returns an [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) table, containing all an Alarm System's Pull Station, Detectors, etc.
+- [`getAlarmSystemCompontents`](developers/exports/server.md#get-system-components) export, which returns an [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) table, containing all an Alarm System's Pull Station, Detectors, etc.
   - [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) is a new [Data type](developers/data.mdx).
 
 **Changed**:
@@ -156,9 +181,9 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 **Removed**:
 - `getAlarmSystem` export.
   - If you know the ID of the Alarm System, you likely already have access to an [`AlarmSystem`](developers/data.mdx#alarm-system) object.
-  - If you want to get all of an Alarm System's Control Panels, Pull Stations, etc., use the new [`getAlarmSystemCompontents`](developers/exports.md#get-system-components) export.
+  - If you want to get all of an Alarm System's Control Panels, Pull Stations, etc., use the new [`getAlarmSystemCompontents`](developers/exports/server.md#get-system-components) export.
 - Components from the [`AlarmSystem`](developers/data.mdx#alarm-system) data type.
-  - Components are now stored in [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) and can be accessed via the [`getAlarmSystemCompontents`](developers/exports.md#get-system-components) export.
+  - Components are now stored in [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) and can be accessed via the [`getAlarmSystemCompontents`](developers/exports/server.md#get-system-components) export.
 - `alarmSystemId` from all components (Pull Stations, Sounders, etc.).
   - If you know the ID of the Alarm System, you likely already have access to an [`AlarmSystem`](developers/data.mdx#alarm-system) object.
 
@@ -169,9 +194,9 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 - Example in `editable/pager.lua` for changing tones paged based on which Alarm System is activated.
 
 **Fixed**:
-- Issue where not passing enough arguments to [Exports](developers/exports.md) would throw a confusing error.
+- Issue where not passing enough arguments to [Exports](developers/exports/server.md) would throw a confusing error.
 - [`PullStationTriggered`](developers/events.md#pulled) event example code referencing a non-existed variable.
-- `alarmSystemId` parameter on data returned by [Exports](developers/exports.md) incorrectly being passed as `alarmSystem`.
+- `alarmSystemId` parameter on data returned by [Exports](developers/exports/server.md) incorrectly being passed as `alarmSystem`.
 ***
 
 ## v1.2 - 11/16/2024

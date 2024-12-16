@@ -19,6 +19,8 @@ FAR uses convars for config values. For information on how to correctly install 
 |           [`ic_far_sprinklerChance`](#sprinkler-chance-to-extinguish-fire)           |           `100`           |
 |           [`ic_far_allowBadResets`](#allow-badinvalid-alarm-system-resets)           |          `false`          |
 |             [`ic_far_realisticAudio`](#use-realistic-audio-for-sounders)             |          `false`          |
+|                     [`ic_far_access_token`](#http-access-token)                      |          *None*           |
+|                      [`ic_far_whitelisted_ips`](#api-whitelist)                      |        *See Below*        |
 |                      `ic_far_defaultControlPanelDistanceCheck`                       |            `2`            |
 |                       `ic_far_defaultPullStationDistanceCheck`                       |            `1`            |
 |                     `ic_far_defaultSprinklerValveDistanceCheck`                      |            `1`            |
@@ -94,6 +96,25 @@ When this value is `false`, Control Panels will display an error message when th
 If this value is `true`, Sounders will add a short delay between the playing of the same audio file for Sounders, which adds a slight echo effect.
 
 If this value is `false`, Sounder will play all audio files at the exact same time across all Sounders.
+
+### HTTP Access Token
+#### `ic_far_access_token`
+
+This is an optional config value that is required if server owners wish to use the included [API](developers/api.mdx).  
+This value is blank by default, and while blank, the [API](developers/api.mdx) will reject all HTTP requests.  
+To enable the [API](developers/api.mdx) you must provide a value to be used as a token.
+
+### API Whitelist
+#### `ic_far_whitelisted_ips`
+
+This is an optional config value that allows server owners to only allow HTTP requests from specific IP addresses.
+
+To allow to requests from any IP address, set this value to `[]`.  
+The default value, `127.0.0.1`, should allow access from the local machine only on most systems.
+
+:::warning
+Regardless of this config option, [`ic_far_access_token`](#http-access-token) is required.
+:::
 
 ### Default Control Panel Models
 #### `ic_far_defaultControlPanelModels`
@@ -293,6 +314,14 @@ set ic_far_defaultStrobeModel "prop_ic_strobe"
 
 # The default model to use for the Sprinkler Valve
 set ic_far_defaultSprinklerValveModel "prop_ic_sprinkler_valve"
+
+# HTTP Access Token
+set ic_far_access_token ""
+
+# List of whitelisted IPs to allow HTTP requests from
+set ic_far_whitelisted_ips [
+	"127.0.0.1"
+]
 
 # If the resource should run in debug mode
 setr ic_far_debug "false"

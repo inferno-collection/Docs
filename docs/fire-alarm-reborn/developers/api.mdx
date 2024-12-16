@@ -1,0 +1,93 @@
+---
+sidebar_position: 40
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# API
+
+This page documents the HTTP endpoints for FAR.
+
+## How to Use
+The endpoints documented below are made available directly from the resource.
+To access the API, you first need to know the IP address or domain, and port of the server.
+With this information, you can append `/fire-alarm-reborn/` and then the endpoint name.
+
+For example, if your domain is `my-server.com`, the port is `30120`, and you wanted the `alarm-systems` endpoint, you would access `http://my-server.com:30120/fire-alarm-reborn/alarm-systems/all`.
+
+Every request requires an `Authorization` header containing the [`ic_far_access_token`](../config.md#http-access-token). If [`ic_far_access_token`](../config.md#http-access-token) is not set, then a 404 - Not Found will be returned, and an error will be logged to the console. If [`ic_far_access_token`](../config.md#http-access-token) does not match the token provided in the `Authorization` header, then a 401 - Unauthorized will be returned.
+
+If [`ic_far_whitelisted_ips`](../config.md#api-whitelist) contains any valid IP addresses, then any requests sent from IP address not contained within [`ic_far_whitelisted_ips`](../config.md#api-whitelist) will be rejected with 401 - Unauthorized, and an error will be logged to the console.
+
+All valid HTTP requests will be logged to the console.
+
+## Alarm Systems
+
+### Get Alarm System by Status
+Use this endpoint to get an array of [AlarmSystem](data.mdx#alarm-system)s by [`AlarmSystemStatus`](data.mdx#alarm-system).
+
+#### Endpoint
+```
+GET alarm-systems/{status}
+```
+#### Parameters
+
+- `status` - `int|'all'|'active'`
+	- The status to return.
+      - Accepts either an `int` that match with an [`AlarmSystemStatus`](data.mdx#alarm-system), or `all` or `active`.
+        - `all` - Returns all [AlarmSystem](data.mdx#alarm-system)s in the server.
+        - `active` - Returns [AlarmSystem](data.mdx#alarm-system)s that are in Alarm or Silenced.
+
+#### Return Value
+<Tabs>
+	<TabItem value="alarm-system.200" label="200 - OK" default>
+		<p>[`AlarmSystem[]`](data.mdx#alarm-system)</p>
+	</TabItem>
+
+	<TabItem value="alarm-system.400" label="400 - Bad Request" default>
+		- `No AlarmSystemStatus Provided`
+			- No `status` parameter provided in the request path
+			- Correct Example: `alarm-systems/1`
+			- Bad Example: `alarm-systems/`
+		- `{status} is not a valid AlarmSystemStatus`
+			- Provided `status` was not a valid [`AlarmSystemStatus`](data.mdx#alarm-system).
+			- Correct Example: `alarm-systems/1`
+			- Bad Example: `alarm-systems/999`
+	</TabItem>
+</Tabs>
+
+### Get Alarm System by ID
+Use this endpoint to get a specific [AlarmSystem](data.mdx#alarm-system) by ID.
+
+#### Endpoint
+```
+GET alarm-system/{id}
+```
+#### Parameters
+
+- `id` - `int`
+	- The ID of the Alarm System
+
+#### Return Value
+<Tabs>
+	<TabItem value="alarm-system.200" label="200 - OK" default>
+		<p>[`AlarmSystem[]`](data.mdx#alarm-system)</p>
+	</TabItem>
+
+	<TabItem value="alarm-system.400" label="400 - Bad Request" default>
+		- `No Alarm System ID Provided`
+			- No `id` parameter provided in the request path
+			- Correct Example: `alarm-system/123`
+			- Bad Example: `alarm-system/`
+		- `Provided Alarm System ID is not a number`
+			- `id` parameter was not a number
+			- Correct Example: `alarm-system/123`
+			- Bad Example: `alarm-system/one-two-three`
+	</TabItem>
+
+	<TabItem value="alarm-system.404" label="404 - Not Found" default>
+		- `No Alarm System with ID {id} found`
+			- Provided `id` is not an id currently in use.
+	</TabItem>
+</Tabs>
