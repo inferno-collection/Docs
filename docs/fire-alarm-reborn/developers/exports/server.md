@@ -1,38 +1,16 @@
 ---
-sidebar_position: 30
+sidebar_position: 10
 ---
 
-# Exports
+# Server Exports
 
-This pages documents the exports that can be used with FAR.
+This page documents the server exports that can be used with FAR.
 
-Be sure to consult the [Data Structures](data.mdx) page to understand the structure of the parameters.
+Be sure to consult the [Data Structures](../data.mdx) page to understand the structure of the parameters.
 
 All parameters listed are required, none are optional.  
-All the exports listed below are **server** exports, not client exports.
-
-## How to Use
-
-When using exports with FAR, it is important to call them exact as shown below:
-
-```lua
-exports["inferno-fire-alarm-reborn"]:exportNameHere(param1, param2)
-```
-
-You must put the resource name in square brackets and quotations, followed by a colon and the export name.
-You **cannot** write `exports.inferno-fire-alarm-reborn`, and you **cannot** use a period (`.`) after the square brackets.
-See the examples below:
-
-```lua
-exports["inferno-fire-alarm-reborn"]:getAlarmSystemNearPosition(position) -- CORRECT
-
-exports["inferno-fire-alarm-reborn"].getAlarmSystemNearPosition(position) -- WRONG
-                                    ^
-exports.inferno-fire-alarm-reborn:getAlarmSystemNearPosition(position) -- WRONG
-       ^
-exports.inferno-fire-alarm-reborn.getAlarmSystemNearPosition(position) -- WRONG
-       ^                         ^
-```
+All the exports listed below are **server** exports, not client exports.  
+For client exports, see [here](server.md).
 
 ## Alarm Systems
 
@@ -51,7 +29,7 @@ getAlarmSystemNearPosition
 	- Radius from position to check.
 
 #### Return Value
-[`AlarmSystem`](data.mdx#alarm-system) | `null`
+[`AlarmSystem`](../data.mdx#alarm-system) | `null`
 
 ### Get System Components
 Use this export to get all the Pull Stations, Detectors, etc. that belong to an Alarm System.
@@ -66,7 +44,7 @@ getAlarmSystemCompontents
 	- The ID of an Alarm System.
 
 #### Return Value
-[`AlarmSystemCompontents`](data.mdx#alarm-system-components) | `null`
+[`AlarmSystemCompontents`](../data.mdx#alarm-system-components) | `null`
 
 ### Get System Passcode
 Use this export to get an Alarm System's passcode.
