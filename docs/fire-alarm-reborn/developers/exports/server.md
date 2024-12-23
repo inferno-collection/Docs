@@ -132,3 +132,29 @@ triggerSprinklerAtPosition
 
 #### Return Value
 `void`
+
+***
+
+## Miscellaneous
+
+### Enabled or Disable Random Alarms
+Use this export to enable or disable [Random Alarms](../../config.md#random-alarms).
+
+#### Export Name
+```
+enableRandomAlarms
+```
+#### Parameters
+
+- `value` - `bool`
+	- `true` to enable Random Alarms, `false` to disable Random Alarms.
+
+#### Return Value
+`void`
+
+:::warning
+Each time this export is called, the internal timer that tracks when the last Random Alarm was activated is reset.  
+This means you should only call this export as required.
+
+For example, if you have a script that tracks Firefighter numbers in server and you want to enable Random Alarms when more than X players are in server, you should only call this export once to enable Random Alarms, and not ever time the player count goes above X.
+:::

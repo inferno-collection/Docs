@@ -17,6 +17,7 @@ FAR uses convars for config values. For information on how to correctly install 
 | [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](#random-alarms-only-if-no-active-alarms) |          `true`           |
 |                    [`ic_far_oxTargetSupport`](#oxtarget-support)                     |          `false`          |
 |           [`ic_far_sprinklerChance`](#sprinkler-chance-to-extinguish-fire)           |           `100`           |
+|                 [`ic_far_alarmSystemTimeout`](#alarm-system-timeout)                 |           `-1`            |
 |           [`ic_far_allowBadResets`](#allow-badinvalid-alarm-system-resets)           |          `false`          |
 |             [`ic_far_realisticAudio`](#use-realistic-audio-for-sounders)             |          `false`          |
 |                     [`ic_far_access_token`](#http-access-token)                      |          *None*           |
@@ -57,6 +58,11 @@ If a suitable system is found, the resource will make 3 attempts to find and act
 
 If a suitable component is found, the system will enter into alarm.
 
+:::tip
+You can use the `enableRandomAlarms` export to change this value while the server is running.  
+For example, if you have a script that keeps track of online Firefighters, you might set [`ic_far_randomAlarms`](#random-alarms) to `false`, and then use `enableRandomAlarms` to only enable Random Alarms when more than X Firefighters are online.
+:::
+
 ### Minutes Between [Random Alarms](#random-alarms)
 #### `ic_far_minutesBetweenRandomAlarms`
 This must be a whole number, more than `1`. Suggested value range: `20` - `40`.
@@ -80,6 +86,14 @@ This feature requires [OxTarget](https://overextended.dev/ox_target) to be insta
 #### `ic_far_sprinklerChance`
 
 This value determines what percentage chance an activated sprinkler should extinguish a fire. Value should be between `0` and `100`, where `0` is a 0% chance of the fire being extinguished, and `100` is a 100% chance of the fire being extinguished.
+
+### Alarm System Timeout
+#### `ic_far_alarmSystemTimeout`
+
+This value determines how many minutes need to pass before an Alarm System can be in a non-standby status, before it is automatically reset to standby.  
+By default the value is `-1`, which means Alarm Systems will never automatically reset.
+
+For example, if you wanted all Alarm Systems that have been in Alarm for more than one hour to automatically reset, you would set this to `60`. 
 
 ### Allow Bad/Invalid Alarm System Resets
 #### `ic_far_allowBadResets`
