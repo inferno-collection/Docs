@@ -17,6 +17,7 @@ This page documents the data structures in FAR.
 alarmSystem.id
 alarmSystem.name
 alarmSystem.status
+alarmSystem.lastStatusChange
 alarmSystem.passcode
 alarmSystem.location
 alarmSystem.monitoring
@@ -54,6 +55,12 @@ alarmSystem.position.z
 		- `8` - System test in progress
 
 		<p>Example: `2`</p>
+	</TabItem>
+
+	<TabItem value="alarmSystem.lastStatusChange" label="lastStatusChange">
+		<p>`date`</p>
+		<p>The last time the Alarm System's status was changed.</p>
+		<p>Example: `2024-12-23T04:14:33.7711836Z`</p>
 	</TabItem>
 
 	<TabItem value="alarmSystem.passcode" label="passcode">

@@ -6,15 +6,26 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
-## v1.3.6 - 16/09/2024
+## v1.3.\*
+
+### v1.3.7 - 12/23/2024
+**Added**:
+- [`ic_far_alarmSystemTimeout`](config.md#alarm-system-timeout) config value, [see here](config.md#alarm-system-timeout) for details.
+- [`enableRandomAlarms`](developers/exports/server.md#enabled-or-disable-random-alarms) export, [see here](developers/exports/server.md#enabled-or-disable-random-alarms) for details.
+
+**Fixed**:
+- Being unable to open/close Sprinkler Valves properly with OxTarget.
+- Detectors not fully resetting when an Alarm System is reset.
+
+### v1.3.6 - 12/16/2024
 
 **Added**:
 - [API](developers/api.mdx) with two endpoints:
-  - [`alarm-systems`](developers/api.mdx#get-alarm-system-by-status) endpoint.
-  - [`alarm-system`](developers/api.mdx#get-alarm-system-by-id) endpoint.
+  - [`alarm-systems`](developers/api.mdx#get-alarm-system-by-status) endpoint, [see here](developers/api.mdx#get-alarm-system-by-status) for details.
+  - [`alarm-system`](developers/api.mdx#get-alarm-system-by-id) endpoint, [see here](developers/api.mdx#get-alarm-system-by-id) for details.
 - Two new client exports:
-	- [`pullStationInteraction`](developers/exports/client.md#interact-with-pull-station-at-player-position) export.
-    - [`controlPanelInteraction`](developers/exports/client.md#interact-with-control-panel-at-player-position) export.
+	- [`pullStationInteraction`](developers/exports/client.md#interact-with-pull-station-at-player-position) export, [see here](developers/exports/client.md#interact-with-pull-station-at-player-position) for details.
+    - [`controlPanelInteraction`](developers/exports/client.md#interact-with-control-panel-at-player-position) export, [see here](developers/exports/client.md#interact-with-control-panel-at-player-position) for details.
 
 **Changed**:
 - Increased maximum prop spawning distance from 75 meters to 100 meters, and maximum [FAR Tool](developers/tool.md) prop placement from 35 meters to 75 meters.
@@ -31,7 +42,7 @@ This page documents the changes made to FAR.
 - Erroneous file name being shown when saving an existing draft with the [FAR Tool](developers/tool.md).
 - Being able to load empty `.lua` files as valid drafts for [FAR Tool](developers/tool.md).
 
-## v1.3.5 - 12/09/2024
+### v1.3.5 - 12/09/2024
 
 **Added**:
 - Alarm System Monitoring
@@ -74,12 +85,12 @@ This page documents the changes made to FAR.
   - Existing Alarm Systems can be updated by moving `passcode = "..."` from the Control Panel entry into the Alarm System entry.
     - Reach out in [Discord](https://inferno.gay/discord) if you need help converting old systems.
 
-## v1.3.4 - 12/04/2024
+### v1.3.4 - 12/04/2024
 
 **Fixed**:
 - Hidden Props reappearing momentarily ('flickering') when an Alarm System changed status, such as from standby into alarm.
 
-## v1.3.3 - 12/01/2024
+### v1.3.3 - 12/01/2024
 
 :::danger
 Breaking changes to the [Exports](developers/exports/server.md) were made in this version, do not blindly update.
@@ -106,14 +117,14 @@ Breaking changes to the [Exports](developers/exports/server.md) were made in thi
 **Fixed**:
 - Issue where randomly generated z_Fires smoke was causing server errors and Sprinklers not to activate.
 
-## v1.3.2 - 11/27/2024
+### v1.3.2 - 11/27/2024
 **Fixed**:
 - All fires created by z_Fires were put out after a few seconds, regardless of Sprinklers.
 - [AlarmActivation](developers/events.md#alarm-activation) event being fired multiple times.
 - Typo in `ic_far_defaultSprinklerValveDistanceCheck` config option.
 - ALARM and BUZZER Control Panel LEDs still blinking after being muted.
 
-## v1.3.1 - 11/25/2024
+### v1.3.1 - 11/25/2024
 **Fixed**:
 - Resets being soft locked if first reset attempt failed.
 - FIRE LED state not updating until FIRES button was pressed.
@@ -126,7 +137,7 @@ Breaking changes to the [Exports](developers/exports/server.md) were made in thi
 
 ***
 
-## v1.3 - 11/19/2024
+### v1.3 - 11/19/2024
 **Added**:
 - Sprinkler Valves
   - Sprinkler Valves are optional, any systems without a Sprinkler Valve will behave as it did prior to v1.3.
@@ -160,7 +171,9 @@ Breaking changes to the [Exports](developers/exports/server.md) were made in thi
 
 ***
 
-## v1.2.2 - 11/18/2024
+## v1.2.\*
+
+### v1.2.2 - 11/18/2024
 
 :::danger
 Major breaking changes to the [Events](developers/events.md) were made in this version, do not blindly update.
@@ -189,7 +202,7 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 
 ***
 
-## v1.2.1 - 11/17/2024
+### v1.2.1 - 11/17/2024
 **Added**:
 - Example in `editable/pager.lua` for changing tones paged based on which Alarm System is activated.
 
@@ -199,7 +212,7 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 - `alarmSystemId` parameter on data returned by [Exports](developers/exports/server.md) incorrectly being passed as `alarmSystem`.
 ***
 
-## v1.2 - 11/16/2024
+### v1.2 - 11/16/2024
 **Added**:
 - Check to prevent multiple of the same Alarm System being loaded.
 - Error message when a file listed as an `fire_alarms` file could not be found.
@@ -217,7 +230,9 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 
 ***
 
-## v1.1 - 11/11/2024
+## v1.1.\*
+
+### v1.1 - 11/11/2024
 **Added**:
 - `IgnoreProximity` flag for Alarm Systems which removes the warning in the server console when one or more systems are within 30 units of each other.
 :::warning
@@ -237,5 +252,5 @@ We suggest only using this if you're confident you've set up your alarm systems 
 
 ***
 
-## v1 - 11/11/2024
+### v1 - 11/11/2024
 Initial resource release.

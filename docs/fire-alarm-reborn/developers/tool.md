@@ -46,6 +46,19 @@ If you wish to *not* save changes to a draft, you can use the `/firealarm tool c
 This will immediately and irreversibly discard the changes you have made, and you cannot get them back.
 :::
 
+### Using a Draft
+
+To use a draft as an Alarm System, you will need to copy the file from the Drafts folder and place it inside another FiveM resource.  
+Most people find it easiest to place it inside the [`inferno-alarms` resource](../install.md#optional---install-pre-created-locations), but you can place it inside any resource, so long as the manifest file is updated.
+
+In your resource of choice, add this line at the bottom of the `fxmanifest.lua`:
+
+```lua
+fire_alarms "your_draft_name_here.lua"
+```
+
+Making sure to replace `your_draft_name_here` with the name of the draft `.lua` file.
+
 ## In-Game Tool
 
 ### Controls 
