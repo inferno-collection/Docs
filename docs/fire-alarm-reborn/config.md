@@ -15,11 +15,11 @@ FAR uses convars for config values. For information on how to correctly install 
 |                       [`ic_far_randomAlarms`](#random-alarms)                        |          `true`           |
 |        [`ic_far_minutesBetweenRandomAlarms`](#minutes-between-random-alarms)         |           `30`            |
 | [`ic_far_randomAlarmsOnlyIfNoActiveAlarms`](#random-alarms-only-if-no-active-alarms) |          `true`           |
-|                    [`ic_far_oxTargetSupport`](#oxtarget-support)                     |          `false`          |
 |           [`ic_far_sprinklerChance`](#sprinkler-chance-to-extinguish-fire)           |           `100`           |
 |                 [`ic_far_alarmSystemTimeout`](#alarm-system-timeout)                 |           `-1`            |
 |           [`ic_far_allowBadResets`](#allow-badinvalid-alarm-system-resets)           |          `false`          |
 |             [`ic_far_realisticAudio`](#use-realistic-audio-for-sounders)             |          `false`          |
+|                             `ic_far_manualInteractions`                              |          `false`          |
 |                     [`ic_far_access_token`](#http-access-token)                      |          *None*           |
 |                      [`ic_far_whitelisted_ips`](#api-whitelist)                      |        *See Below*        |
 |                      `ic_far_defaultControlPanelDistanceCheck`                       |            `2`            |
@@ -75,13 +75,6 @@ If this value and [`ic_far_randomAlarms`](config#ic_far_randomalarms) are `true`
 Systems in WalkTest do not count as 'in alarm', but systems with active Isolations, Alarms, are Silenced, or are being tested, do count as 'in alarm'.
 :::
 
-### OxTarget Support
-#### `ic_far_oxTargetSupport`
-If this value is `true`, the default "Press E to ..." options are completely disabled, and are replaced with [OxTarget](https://overextended.dev/ox_target)'s third-eye system.
-:::info
-This feature requires [OxTarget](https://overextended.dev/ox_target) to be installed.
-:::
-
 ### Sprinkler Chance to Extinguish Fire
 #### `ic_far_sprinklerChance`
 
@@ -110,6 +103,18 @@ When this value is `false`, Control Panels will display an error message when th
 If this value is `true`, Sounders will add a short delay between the playing of the same audio file for Sounders, which adds a slight echo effect.
 
 If this value is `false`, Sounder will play all audio files at the exact same time across all Sounders.
+
+### Manual Interactions (Target/Third-Eye Resource Support)
+#### `ic_far_manualInteractions` (replaces `ic_far_oxTargetSupport`)
+
+If this value is `true`, "Press E ..." interaction pop-ups and keybindings will be disabled, and instead events will be fired that can be used in `editable/client/targeting.lua`; to enable support for [OxTarget](https://overextended.dev/ox_target), [QBTarget](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-target), or any other target/third-eye resource, changes will need to be made in this file.
+
+For [OxTarget](https://overextended.dev/ox_target) or [QBTarget](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-target), simply uncomment the lines under the sections named either [OxTarget](https://overextended.dev/ox_target) or [QBTarget](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-target).  
+For any other target/third-eye resource, use the provided event handlers and variables to add your own exports/events. Reach out in [Discord](https://inferno.gay/discord) if you need help adding other resources.
+
+:::note
+The events in `editable/client/targeting.lua` will not fire unless `ic_far_manualInteractions` is `true`.
+:::
 
 ### HTTP Access Token
 #### `ic_far_access_token`

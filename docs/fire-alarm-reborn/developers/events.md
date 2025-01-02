@@ -6,9 +6,13 @@ sidebar_position: 20
 
 This pages documents the events that can be listened for in FAR.
 
-Inside the FAR resource there is a directory called `editable`, and within that there is a file called `events.lua`.
+Inside the FAR resource there is a directory called `editable`, then `editable/server`, and within that there is a file called `events.lua` (`editable/server/events.lua`).
 That file documents all the available events for FAR, as well as their parameters.
 This page serves to compliment that file.
+
+:::note
+This page does not cover events inside of `editable/client/targeting.lua`, [see here](../config.md#manual-interactions-targetthird-eye-resource-support) for information on those events.
+:::
 
 Be sure to consult the [Data Structures](data.mdx) page to understand the structure of the parameters.
 ## Alarm Systems
