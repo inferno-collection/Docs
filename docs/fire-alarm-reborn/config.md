@@ -271,14 +271,14 @@ set ic_far_minutesBetweenRandomAlarms "30"
 # If there is any active system, do not trigger a random alarm
 set ic_far_randomAlarmsOnlyIfNoActiveAlarms	"true"
 
-# Replace "Press E" interactions with OxTarget
-setr ic_far_oxTargetSupport "false"
-
 ### Advanced ###
 ################
 
 # Percentage chance that sprinklers will put out detected fires
 set ic_far_sprinklerChance "100"
+
+# Time in minutes before an alarm system automatically resets
+set ic_far_alarmSystemTimeout "-1"
 
 # Allow bad alarm system resets
 set ic_far_allowBadResets "false"
@@ -293,10 +293,13 @@ setr ic_far_defaultControlPanelDistanceCheck "2"
 setr ic_far_defaultPullStationDistanceCheck "1"
 
 # Distance to sprinkler valve before interaction option appears
-setr defaultSprinklerValveDistanceCheck "1"
+setr ic_far_defaultSprinklerValveDistanceCheck "1"
+
+# Don't display "Press E to..." interactions
+setr ic_far_manualInteractions "false"
 
 # The default model to use for the Control Panel at each Alarm Status
-set ic_far_defaultControlPanelModels {
+setr ic_far_defaultControlPanelModels {
 	"Disabled":		"prop_ic_fire_panel",
 	"Standby":		"prop_ic_fire_panel",
 	"Announcement":		"prop_ic_fire_panel",
@@ -308,31 +311,31 @@ set ic_far_defaultControlPanelModels {
 }
 
 # The default model to use for the Pull Stations
-set ic_far_defaultPullStationModels {
+setr ic_far_defaultPullStationModels {
 	"pulled":	"prop_ic_pull_station_pulled",
 	"normal":	"prop_ic_pull_station"
 }
 
 # The default model to use for the Detector
-set ic_far_defaultDetectorModels {
+setr ic_far_defaultDetectorModels {
 	"triggered":		"prop_ic_detector_triggered",
 	"normal":		"prop_ic_detector"
 }
 
 # The default model to use for the Sprinkler
-set ic_far_defaultSprinklerModels {
+setr ic_far_defaultSprinklerModels {
 	"triggered":		"prop_ic_sprinkler_triggered",
 	"normal":		"prop_ic_sprinkler"
 }
 
 # The default model to use for the Sounder
-set ic_far_defaultSounderModel "prop_ic_sounder"
+setr ic_far_defaultSounderModel "prop_ic_sounder"
 
 # The default model to use for the Strobe
-set ic_far_defaultStrobeModel "prop_ic_strobe"
+setr ic_far_defaultStrobeModel "prop_ic_strobe"
 
 # The default model to use for the Sprinkler Valve
-set ic_far_defaultSprinklerValveModel "prop_ic_sprinkler_valve"
+sert ic_far_defaultSprinklerValveModel "prop_ic_sprinkler_valve"
 
 # HTTP Access Token
 set ic_far_access_token ""
