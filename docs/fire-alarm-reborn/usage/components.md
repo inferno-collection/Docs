@@ -104,7 +104,7 @@ Sprinkler Valves are optional and will not always be part of an Alarm System, ev
 :::
 
 :::warning
-Sprinkler Valves will "reset" or change back to the Open position after an Alarm System has been reset. You must return the Sprinkler Valve to the Open position manually, or Sprinklers will not activate for any further fires.
+Sprinkler Valves will **not** "reset" or change back to the Open position after an Alarm System has been reset. You must return the Sprinkler Valve to the Open position manually, or Sprinklers will not activate for any further fires.
 :::
 
 ***

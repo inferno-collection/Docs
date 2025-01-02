@@ -8,6 +8,48 @@ This page documents the changes made to FAR.
 
 ## v1.3.\*
 
+### v1.3.8 - 01/02/2025
+
+:::danger
+Major breaking changes to `editable`s and OxTarget were made in this version, do not blindly update.  
+Reach out in [Discord](https://inferno.gay/discord) if you need help updating.  
+Always make a back-up before updating!
+:::
+
+**Added**:
+- Support for multiple target/third-eye resources, see below.
+
+**Changed**:
+- Moved all targeting logic into a new client `editable`s folder
+  - Allows support for OxTarget & QBTarget out-of-the-box.
+  - Owners/developers who previously used `ic_far_oxTargetSupport` will need to enable [`ic_far_manualInteractions`](config.md#manual-interactions-targetthird-eye-resource-support) and edit their `editable/client/targeting.lua` to re-enable support.
+    - Reach out in [Discord](https://inferno.gay/discord) if you need help with this.
+- Moved server editable files from `editables/` to `editables/server/`.
+  - **Existing users will need to manually move their existing `editables` files to the new directory.**
+    - Reach out in [Discord](https://inferno.gay/discord) if you need help with this.
+- Multiple [Detector](usage/components.md#detectors--sprinklers)s can now activate for a single fire/smoke event, instead of just the closest.
+
+**Fixed**:
+- OxTarget zones being removed twice, resulting in a harmless error.
+- Custom props not being used in the [FAR Tool](developers/tool.md).
+	- :::note
+	  This fix makes several small changes to the `config.cfg` file, existing users may need to update this themselves.  
+      To apply the change, replace `set` with `setr` for the following entries:
+      - `ic_far_defaultControlPanelModels` 
+      - `ic_far_defaultPullStationModels`
+      - `ic_far_defaultDetectorModels`
+      - `ic_far_defaultSprinklerModels`
+      - `ic_far_defaultSounderModel`
+      - `ic_far_defaultStrobeModel`
+      - `ic_far_defaultSprinklerValveModel`
+      
+	  :::danger
+  	  **Do not** replace all instances of `set` inside `config.cfg`, only change the entries listed above, otherwise secret values such as the HTTP Access Token can be exposed.
+  	  :::
+	  :::
+- [SmartFires](https://forum.cfx.re/t/smart-fires-automatic-fires-fire-smoke-types-many-integrations-standalone-paid-resource/4792695?u=christopherm)' smoke would not activate detectors.
+- Unhandled error and getting stuck in an animation when trying to access a Control Panel another player is using, instead of displaying the friendly pop-up.
+
 ### v1.3.7 - 12/23/2024
 **Added**:
 - [`ic_far_alarmSystemTimeout`](config.md#alarm-system-timeout) config value, [see here](config.md#alarm-system-timeout) for details.
@@ -74,7 +116,7 @@ This page documents the changes made to FAR.
 - Multiple players can now use the [FAR Tool](developers/tool.md) at the same time.
 
 **Fixed**:
-- "Press E to ..." prompts appearing even when [`ic_far_oxTargetSupport`](config#oxtarget-support) was set to `true`.
+- "Press E to ..." prompts appearing even when [`ic_far_oxTargetSupport`](config.md#manual-interactions-targetthird-eye-resource-support) was set to `true`.
 - OxTarget Sprinkler Valve interactions duplicating.
 - [Random Alarms](config.md#random-alarms) being triggered even when there were no players in server.
 - Bug that prevented the loading of draft Alarm Systems that shared locations with a live Alarm Systems already loaded. 
