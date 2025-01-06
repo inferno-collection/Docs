@@ -8,6 +8,17 @@ This page documents the changes made to FAR.
 
 ## v1.3.\*
 
+### v1.3.9 - 01/06/2025
+
+**Added**:
+- Keybinds to the [FAR Tool](developers/tool.md) to allow for minor position and rotation adjustments. [See here](developers/tool.md#arrow-keys) for more information.
+- [`enableAlarms`](developers/exports/server.md#enabled-or-disable-all-alarms-globally) export, see [here](developers/exports/server.md#enabled-or-disable-all-alarms-globally) for details.
+
+**Fixed**:
+- Error relating to base-game explosions.
+- Typo in `config.cfg` for `ic_far_defaultSprinklerValveModel`
+  - Existing server owners/developers should search for `sert` and replace with `setr`.
+
 ### v1.3.8 - 01/02/2025
 
 :::danger
