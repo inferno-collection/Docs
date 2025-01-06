@@ -158,3 +158,18 @@ This means you should only call this export as required.
 
 For example, if you have a script that tracks Firefighter numbers in server and you want to enable Random Alarms when more than X players are in server, you should only call this export once to enable Random Alarms, and not ever time the player count goes above X.
 :::
+
+### Enabled or Disable All Alarms Globally
+Use this export to enable or disable all Alarms.
+
+#### Export Name
+```
+enableAlarms
+```
+#### Parameters
+
+- `value` - `bool`
+	- `true` to enable Alarms, `false` to disable Alarms.
+
+#### Return Value
+`void`

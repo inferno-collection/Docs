@@ -335,7 +335,7 @@ setr ic_far_defaultSounderModel "prop_ic_sounder"
 setr ic_far_defaultStrobeModel "prop_ic_strobe"
 
 # The default model to use for the Sprinkler Valve
-sert ic_far_defaultSprinklerValveModel "prop_ic_sprinkler_valve"
+setr ic_far_defaultSprinklerValveModel "prop_ic_sprinkler_valve"
 
 # HTTP Access Token
 set ic_far_access_token ""

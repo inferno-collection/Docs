@@ -10,6 +10,10 @@ The FAR Tool is a powerful in-game feature that allows server owners to create n
 
 When using the FAR Tool, drafts are saved directly to the server's files, so server owners can delegate creation of alarm systems to trusted players without having the worry about the hassle of needing to send each other files.
 
+:::tip
+You must be in first-person to use the FAR Tool.
+:::
+
 ## First-Time Use
 
 The very first time the FAR Tool is used on your server, it will create a new directory in the root of your server files, this is *generally* the same location as your `resources` folder and `server.cfg` file, see the example below:
@@ -67,8 +71,14 @@ Below you will find the controls for the FAR Tool. They will also display in the
 
 ![Controls](assets/controls.png)
 
+In addition to the above, there are the following:
+
+#### Arrow Keys
+The Left and Right arrow keys will rotate the current prop left or right.  
+The Up and Down arrow keys will move the current prop closer or further away from you.
+
 :::tip
-You must be in first-person to use the FAR Tool.
+Holding Left Shift will increase the increment of the above changes.
 :::
 
 #### Left Mouse Button
