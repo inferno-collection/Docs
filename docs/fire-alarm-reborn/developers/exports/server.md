@@ -36,7 +36,7 @@ Use this export to get all the Pull Stations, Detectors, etc. that belong to an 
 
 #### Export Name
 ```
-getAlarmSystemCompontents
+getAlarmSystemComponents
 ```
 #### Parameters
 
@@ -60,6 +60,42 @@ getAlarmSystemPasscode
 
 #### Return Value
 `string` | `null`
+
+### Reset all Alarm Systems
+Use this export to forcefully reset all Alarm Systems.
+
+:::warning
+This is not a graceful reset: any isolations, closed Sprinkler Valves, etc. will all be reset to their default values/positions.
+:::
+
+#### Export Name
+```
+resetAllSystems
+```
+#### Parameters
+
+None
+
+#### Return Value
+`void`
+
+### Reset last Alarm System
+Use this export to forcefully reset the most recently triggered Alarm System
+
+:::warning
+This is not a graceful reset: any isolations, closed Sprinkler Valves, etc. will all be reset to their default values/positions.
+:::
+
+#### Export Name
+```
+resetLastAlarmSystem
+```
+#### Parameters
+
+None
+
+#### Return Value
+`void`
 
 ***
 

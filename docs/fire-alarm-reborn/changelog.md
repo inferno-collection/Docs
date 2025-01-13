@@ -6,6 +6,27 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
+## v1.4.\*
+
+### v1.4.0 - 01/13/2025
+
+**Added**:
+- New commands:
+  - [`/firealarm activations`](usage/commands.md#fire-alarm-activations-log) command, [see here](usage/commands.md#fire-alarm-activations-log) for details.
+  - [`/firealarm resetall`](usage/commands.md#reset-all-alarm-systems) command, [see here](usage/commands.md#reset-all-alarm-systems) for details.
+  - [`/firealarm resetlast`](usage/commands.md#reset-last-alarm-systems) command, [see here](usage/commands.md#reset-last-alarm-systems) for details.
+- New client and server exports:
+  - [`sprinklerValveInteraction`](developers/exports/client.md#interact-with-sprinkler-valve-at-player-position) client export, [see here](developers/exports/client.md#interact-with-sprinkler-valve-at-player-position) for details.
+  - [`resetAllSystems`](developers/exports/server.md#reset-all-alarm-systems) server export, [see here](developers/exports/server.md#reset-all-alarm-systems) for details.
+  - [`resetLastAlarmSystem`](developers/exports/server.md#reset-last-alarm-system) server export, [see here](developers/exports/server.md#reset-last-alarm-system) for details.
+
+**Changed**:
+- Optimized syncing of Alarm Systems between Server and Clients.
+
+**Fixed**:
+- Some console log messages being malformed.
+- Sonoran CAD export in Server Editables missing Alarm System name.
+
 ## v1.3.\*
 
 ### v1.3.9 - 01/06/2025
@@ -232,7 +253,7 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 :::
 **Added**:
 - [`AlarmActivation`](developers/events.md#alarm-activation) event, which is the new recommended way to listen for Alarm System activation.
-- [`getAlarmSystemCompontents`](developers/exports/server.md#get-system-components) export, which returns an [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) table, containing all an Alarm System's Pull Station, Detectors, etc.
+- [`getAlarmSystemComponents`](developers/exports/server.md#get-system-components) export, which returns an [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) table, containing all an Alarm System's Pull Station, Detectors, etc.
   - [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) is a new [Data type](developers/data.mdx).
 
 **Changed**:
@@ -246,9 +267,9 @@ Major breaking changes to the [Events](developers/events.md) were made in this v
 **Removed**:
 - `getAlarmSystem` export.
   - If you know the ID of the Alarm System, you likely already have access to an [`AlarmSystem`](developers/data.mdx#alarm-system) object.
-  - If you want to get all of an Alarm System's Control Panels, Pull Stations, etc., use the new [`getAlarmSystemCompontents`](developers/exports/server.md#get-system-components) export.
+  - If you want to get all of an Alarm System's Control Panels, Pull Stations, etc., use the new [`getAlarmSystemComponents`](developers/exports/server.md#get-system-components) export.
 - Components from the [`AlarmSystem`](developers/data.mdx#alarm-system) data type.
-  - Components are now stored in [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) and can be accessed via the [`getAlarmSystemCompontents`](developers/exports/server.md#get-system-components) export.
+  - Components are now stored in [`AlarmSystemComponents`](developers/data.mdx#alarm-system-components) and can be accessed via the [`getAlarmSystemComponents`](developers/exports/server.md#get-system-components) export.
 - `alarmSystemId` from all components (Pull Stations, Sounders, etc.).
   - If you know the ID of the Alarm System, you likely already have access to an [`AlarmSystem`](developers/data.mdx#alarm-system) object.
 

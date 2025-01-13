@@ -38,3 +38,18 @@ controlPanelInteraction
 
 #### Return Value
 `void`
+
+***
+
+## Sprinkler Valve
+
+### Interact With Sprinkler Valve At Player Position
+Use this export to open or close the Sprinkler Valve closest to the player.
+
+#### Export Name
+```
+sprinklerValveInteraction
+```
+
+#### Return Value
+`void`
