@@ -211,7 +211,7 @@ This permission only allows players to open the Control Panel NUI, if a panel re
 
 ### Reset Pull Stations
 #### `InfernoFireAlarmReborn.ResetPullStations`
-This permission allows players to reset activated Pull Stations.
+This permission allows players to reset activated Pull Stations.  
 By default, this permission is granted to all players.
 :::note
 Resetting a Pull Station does not "turn off" an alarm if it has been activated.
@@ -222,17 +222,22 @@ We suggest changing this permission so only firefighters can do this.
 
 ### Use Sprinkler Valves
 #### `InfernoFireAlarmReborn.SprinklerValves`
-This permission allows players to open and close sprinkler valves.
+This permission allows players to open and close sprinkler valves.  
 By default, this permission is granted to all players.
 
 ### Trigger Random Alarms via Command
 #### `InfernoFireAlarmReborn.RandomAlarms`
-This permission allows players to use the `/firealarm randomalarm` command to generate a random alarm.
+This permission allows players to use the [`/firealarm randomalarm`](usage/commands.md#firealarm-randomalarm) command to generate a random alarm.  
+By default, this permission is only granted to admins (`group.admin`).
+
+### Reset Alarm Systems via Command
+#### `InfernoFireAlarmReborn.ResetAlarm`
+This permission allows players to use the [`/firealarm resetall`](usage/commands.md#reset-all-alarm-systems) and [`/firealarm resetlast`](usage/commands.md#reset-last-alarm-systems) commands to restart Alarm Systems.  
 By default, this permission is only granted to admins (`group.admin`).
 
 ### Use FAR Tool
 #### `InfernoFireAlarmReborn.Tool`
-This permission allows players to use the [FAR Tool](developers/tool.md).
+This permission allows players to use the [FAR Tool](developers/tool.md).  
 By default, this permission is only granted to admins (`group.admin`).
 
 ***
@@ -360,4 +365,5 @@ add_ace builtin.everyone "InfernoFireAlarmReborn.SprinklerValve" allow
 
 add_ace group.admin "InfernoFireAlarmReborn.RandomAlarms" allow
 add_ace group.admin "InfernoFireAlarmReborn.Tool" allow
+add_ace group.admin "InfernoFireAlarmReborn.ResetAlarm" allow
 ```
