@@ -14,7 +14,7 @@ import DocCardList from '@theme/DocCardList';
 ***
 ## How to Use
 
-When using exports with FAR, it is important to call them exact as shown below:
+When using exports with FAR, it is important to call them exactly as shown below:
 
 ```lua
 exports["inferno-fire-alarm-reborn"]:exportNameHere(param1, param2)
