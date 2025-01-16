@@ -8,6 +8,11 @@ This page documents the changes made to FAR.
 
 ## v1.4.\*
 
+### v1.4.1 - 01/16/2025
+
+**Fixed**:
+- Issue where if two or more Alarm Systems were within 100 units of each other, and one or more Alarm Systems had its props spawned (entering spawn radius), despawned (leaving spawn radius), and then spawned again (reentering spawn radius), the Alarm System's props would not respawn and instead "No Interactable Prop" errors would appear.
+
 ### v1.4.0 - 01/13/2025
 
 **Added**:
