@@ -26,7 +26,7 @@ Where a Pull Station has been pulled, for an Alarm System to be fully reset, the
 ## Detectors & Sprinklers
 
 Detectors and Sprinklers will activate an Alarm System when they detect smoke or fire around their position.  
-Neither have direct interaction options.
+Neither have direct interaction options, however, Sprinklers will activate if shot.
 
 FAR detects smoke/fire from two sources:
 - [Base Game](#base-game)
