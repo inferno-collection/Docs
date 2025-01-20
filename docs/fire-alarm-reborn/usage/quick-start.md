@@ -23,3 +23,8 @@ Pull Stations can be activated by walking up to them and pressing the key prompt
 There is also a number of ways to deactivate an Alarm System. To fully reset an Alarm System, the "alarm" (a.k.a. the thing that triggered the Alarm System) must be cleared. For example, if a Pull Station was pulled, the Pull Station will need to be reset. After that, the Control Panel can be used to reset the Alarm System.
 
 Pull Stations can be reset, and Control Panels interacted with, by walking up to them and pressing the key prompted on the screen.
+
+
+## More Information
+
+[See here](components.md) for more information.

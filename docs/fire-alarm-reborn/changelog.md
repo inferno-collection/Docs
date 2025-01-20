@@ -8,6 +8,16 @@ This page documents the changes made to FAR.
 
 ## v1.4.\*
 
+### v1.4.2 - 01/20/2025
+
+**Added**:
+- Ability to shoot Sprinklers
+  - When shot, a Sprinkler will show water.
+  - If the Alarm System is not yet in Alarm, it will go into Alarm.
+
+**Changed**:
+- HTTP API request logs such that they only log when [Debug Mode](config.md#debug) is enabled.
+
 ### v1.4.1 - 01/16/2025
 
 **Fixed**:
@@ -31,6 +41,8 @@ This page documents the changes made to FAR.
 **Fixed**:
 - Some console log messages being malformed.
 - Sonoran CAD export in Server Editables missing Alarm System name.
+
+***
 
 ## v1.3.\*
 

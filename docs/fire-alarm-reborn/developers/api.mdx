@@ -20,7 +20,7 @@ Every request requires an `Authorization` header containing the [`ic_far_access_
 
 If [`ic_far_whitelisted_ips`](../config.md#api-whitelist) contains any valid IP addresses, then any requests sent from IP address not contained within [`ic_far_whitelisted_ips`](../config.md#api-whitelist) will be rejected with 401 - Unauthorized, and an error will be logged to the console.
 
-All valid HTTP requests will be logged to the console.
+Valid HTTP requests are logged to the console when [Debug Mode](../config.md#debug) is enabled.
 
 ## Alarm Systems
 

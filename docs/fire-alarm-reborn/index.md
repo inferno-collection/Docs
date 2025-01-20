@@ -6,6 +6,8 @@ sidebar_position: 10
 
 A standalone, in-depth Fire Alarm script for FiveM, with easy customization and support for several fire scripts.
 
+[Click here](https://store.inferno-collection.com/category/far) to view Tebex Store.
+
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
 
