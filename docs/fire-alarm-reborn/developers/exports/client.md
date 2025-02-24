@@ -53,3 +53,22 @@ sprinklerValveInteraction
 
 #### Return Value
 `void`
+
+## Miscellaneous
+
+### Disable All Interactions
+Use this export to disable or enable all Interactions.  
+For example, you might disable all interactions if the player is handcuffed or dead.
+
+#### Export Name
+```
+disableInteractions
+```
+
+#### Parameters
+
+- `value` - `bool`
+	- `true` to disable all interactions, `false` to enable all interactions.
+
+#### Return Value
+`void`

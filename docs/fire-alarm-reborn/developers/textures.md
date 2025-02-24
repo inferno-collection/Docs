@@ -197,6 +197,28 @@ Used on:
 This texture has a matching entry in the `hi` YTD file.
 :::
 
+## Detector Tester Spray Can
+
+### `tester_can_d`
+This texture is a diffuse texture applied to the Spray Can.
+
+Used on:
+- `prop_ic_tester_can`
+
+:::tip
+This texture has a matching entry in the `hi` YTD file.
+:::
+
+### `texter_can_body_d`
+This texture is used for the metal parts of the Spray Can.
+
+Used on:
+- `prop_ic_tester_can`
+
+:::note
+Unlike other `*_d` files, this is not a true diffuse map, and can only be used for small metallic parts of the Spray Can.
+:::
+
 ## Miscellaneous
 
 ### `bump_n`
