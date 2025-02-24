@@ -15,3 +15,15 @@ To enable WalkTest, access a Control Panel, enter the passcode if required, then
 ## Using WalkTest
 
 So long as WalkTest is enabled, simpling activating [Components](components.md) as normal will return the audio response expected.
+
+## Detector Tester Spray Can
+
+As Detectors do not have a direct interaction option, a separate Detector Spray Can is available.  
+To collect the Spray Can, use the command [`/firealarm tester`](commands.md#collect-or-store-detector-tester-spray-can).  
+To store the Spray Can, use the same command again, swap weapons, or enter a vehicle.
+
+Once equipped, walking below a Detector will make a prompt appear, and players can spray the can to activate the smoke detector.
+
+:::warning
+If the Alarm System has not been put into WalkTest, the system will activate as if the Detector had detected actual smoke.
+:::

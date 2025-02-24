@@ -225,6 +225,11 @@ We suggest changing this permission so only firefighters can do this.
 This permission allows players to open and close sprinkler valves.  
 By default, this permission is granted to all players.
 
+### Use Detector Tester Spray Can
+#### `InfernoFireAlarmReborn.Tester`
+This permission allows players to use the Smoke Detector Tester Can, used with WalkTesting to activate Detectors.  
+By default, this permission is granted to all players.
+
 ### Trigger Random Alarms via Command
 #### `InfernoFireAlarmReborn.RandomAlarms`
 This permission allows players to use the [`/firealarm randomalarm`](usage/commands.md#firealarm-randomalarm) command to generate a random alarm.  
@@ -362,6 +367,7 @@ add_ace builtin.everyone "InfernoFireAlarmReborn.PullStations" allow
 add_ace builtin.everyone "InfernoFireAlarmReborn.ControlPanels" allow
 add_ace builtin.everyone "InfernoFireAlarmReborn.ResetPullStations" allow
 add_ace builtin.everyone "InfernoFireAlarmReborn.SprinklerValve" allow
+add_ace builtin.everyone "InfernoFireAlarmReborn.Tester" allow
 
 add_ace group.admin "InfernoFireAlarmReborn.RandomAlarms" allow
 add_ace group.admin "InfernoFireAlarmReborn.Tool" allow

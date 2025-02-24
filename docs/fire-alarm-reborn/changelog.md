@@ -8,6 +8,18 @@ This page documents the changes made to FAR.
 
 ## v1.4.\*
 
+### v1.4.3 - 02/24/2025
+
+**Added**:
+- [Detector Tester Spray Can](usage/walktest.md#detector-tester-spray-can), [see here](usage/walktest.md#detector-tester-spray-can) for details.
+- [`disableInteractions`](developers/exports/client.md#disable-all-interactions) client export, [see here](developers/exports/client.md#disable-all-interactions) for details.
+  - The `editable/client/targeting.lua` file has been updated to include `canInteract` entries for both OxTarget and QBTarget, if you use these resources you might want to update this file.
+  - If you use your own targeting/third-eye resource, consider making use of the `canInteract()` export, see the examples inside the `editable/client/targeting.lua` file.
+
+**Changed**:
+- Some interactions now take priority over others.
+  - Interacting with a Control Panel or Pull Station will take priority over Spraying the Detector Spray Can, for example.
+
 ### v1.4.2 - 01/20/2025
 
 **Added**:

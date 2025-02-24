@@ -74,3 +74,11 @@ This command will forcefully reset the most recently triggered Alarm System.
 :::warning
 This is not a graceful reset: any isolations, closed Sprinkler Valves, etc. will all be reset to their default values/positions.
 :::
+
+***
+
+## Collect or Store Detector Tester Spray Can
+### `/firealarm tester`
+#### Required Ace Permission: [`Tester`](../config#use-detector-tester-spray-can)
+
+This command will either collect or store the player's Detector Tester Spray Can.
