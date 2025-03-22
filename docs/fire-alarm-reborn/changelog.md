@@ -8,6 +8,22 @@ This page documents the changes made to FAR.
 
 ## v1.4.\*
 
+### v1.4.4 - 03/22/2025
+
+**Changed**:
+- Minor refactor to FAR Tool's demo prop creation logic.
+
+**Fixed**:
+- Typo in internal event handling Alarm System updating between client and server.
+  - The typo existed both in the event handler and the trigger, so it still functions in prior versions.
+- Hidden Metadata not being removed from memory after FAR Tool was closed.
+- Preview prop in FAR Tool appearing above the player's head momentarily when first spawned.
+- Draft Alarm System data being stored in server memory when it didn't need to be.
+- Issue with the Detector Testing where a server error would be thrown.
+- Typo in an uncommon error relating to draft alarm systems not being loaded properly.
+- An empty error message appearing in the server console when a Draft Alarm system with a syntax error was loaded.
+  - Now the error indicates the syntax error is from a "draft alarm system", instead of an empty error message.
+
 ### v1.4.3 - 02/24/2025
 
 **Added**:
