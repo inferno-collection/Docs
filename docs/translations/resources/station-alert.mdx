@@ -6,15 +6,15 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="english" label="English" default>
-	  Translation by: [Inferno Collection](https://inferno-collection.com)
+	<TabItem value="english" label="English" default>
+		Translation by: [Inferno Collection](https://inferno-collection.com)
 
-	  ```jsx title="config.cfg" showLineNumbers
-	  ###################
-	  ###  Language   ###
-	  ###################
+		```jsx title="config.cfg" showLineNumbers
+		###################
+		###  Language   ###
+		###################
 
-	  setr ic_sa_language {
+		setr ic_sa_language {
 		  "DoorControls":                         "Door Controls",
 		  "AccessDoorControls":                   "Access Door Controls",
 		  "NoDoorsToControl":                     "This location has no doors to control!",
@@ -108,10 +108,115 @@ import TabItem from '@theme/TabItem';
 
 		  "TrafficLightSelection":                "Traffic Light Selection",
 		  "ConnectThisTrafficLight":              "Connect this traffic light to"
-	  }
-	  ```
-  </TabItem>
-  <TabItem value="notlisted" label="Your Language Missing?">
-    [See here](../../translations)!
-  </TabItem>
+		}
+		```
+	</TabItem>
+	<TabItem value="german" label="German (Deutsch)">
+		Translation by: timanier
+
+		```jsx title="config.cfg" showLineNumbers
+		###################
+		###  Language   ###
+		###################
+
+		setr ic_sa_language {
+		  "DoorControls":                         "Türsteuerung",
+		  "AccessDoorControls":                   "Öffne Türsteuerung",
+		  "NoDoorsToControl":                     "Dieser Standort hat keine Türen zum Steuern!",
+		  "OpenAll":                              "Öffne alle",
+		  "OpenAllDoors":                         "Öffne alle Türen",
+		  "OpenDoor":                             "Tür öffnen",
+
+		  "StationComputer":                      "Wachen Computer",
+		  "AccessComputer":                       "Öffne Computer",
+		  "CreateANewAlert":                      "Erstelle einen neuen Alarm für eine beliebige Wache.",
+		  "StationAlert":                         "Wachalarm",
+		  "ActivateStationAlert":                 "Aktiviere einen lokalen Wachen Alarm.",
+
+		  "NewAlert":                             "Neuer Alarm",
+		  "CurrentMessage":                       "Aktuelle Nachricht",
+		  "SelectLocations":                      "Wachstandorte auswählen",
+		  "SelectWhichLocation":                  "Wähle aus, welche Wache alarmiert werden soll.",
+		  "SelectDoors":                          "Türen auswählen",
+		  "SelectWhichDoors":                     "Wähle aus, welche Tür an welcher Wache geöffnet werden soll. Wenn keine Tür ausgewählt wird, werden alle Türen an allen ausgewählten Wachen geöffnet.",
+		  "EnterMessage":                         "Nachricht eingeben",
+		  "ProvideAMessage":                      "Optional kann man eine Nachricht zum Alarm angeben.",
+		  "SelectTone":                           "Ton auswählen",
+		  "SelectATone":                          "Wähle einen Ton für den Alarm aus. Wenn kein Ton ausgewählt wurde, wird der Standardton verendet.",
+		  "SelectColors":                         "Farben der Einheiten Auswählen",
+		  "SelectUnitColors":                     "Wähle optional eine Farbe der Einheiten, für einen bestimmten Ton",
+		  "SendAlert":                            "Alarm senden",
+		  "SendTheAlert":                         "Alarm zu ausgewählten Wachen senden",
+
+		  "LocationSelection":                    "Wachstandort Auswahl",
+		  "SendAlertTo":                          "Alarm senden an",
+
+		  "DoorSelection":                        "Türen auswählen",
+		  "Open":                                 "Öffnen",
+		  "At":                                   "Bei",
+
+		  "Close":                                "Schließen",
+		  "CloseMenu":                            "Menü schließen",
+		  "Selected":                             "Ausgewählt",
+		  "Provided":                             "Zur Verfügung",
+		  "Confirm":                              "Bestätigen",
+		  "ConfirmYourSelection":                 "Auswahl bestätigen",
+
+		  "ToneSelection":                        "Ton Auswahl",
+		  "UseTone":                              "Ton nutzen",
+
+		  "UnitColorSelection":                   "Einheitsfarben Auswahl",
+		  "UseColor":                             "Farbe nutzen",
+
+		  "YouDoNotHavePermission":               "Du hast keine Berechtigung, diesen Befehl zu nutzen!",
+		  "CommandIsClientOnly":                  "Dieser Befehl muss vom Client ausgeführt werden!",
+		  "CommandIsServerOnly":                  "Dieser Befehl muss in der Konsole eingegeben werden!",
+		  "MustBeInVehicle":                      "Du musst in einem Fahrzeug sein, um diesen Befehl zu nutzen!",
+
+		  "StationLocation":                      "Wachstandort",
+		  "Place":                                "Platzieren",
+		  "PlaceA":                               "Platziere ein",
+		  "SelectA":                              "Wähle ein",
+		  "HideAProp":                            "Prop verstecken",
+		  "TooFar":                               "Zu weit entfernt von",
+		  "Name":                                 "Name",
+		  "New":                                  "Neu",
+		  "Remove":                               "Entfernen",
+		  "Change":                               "Ändern",
+		  "LinkedTo":                             "Verbunden mit",
+		  "MustBeUpright":                        "Muss aufrecht sein",
+		  "FirstPersonRequired":                  "Nutze die Ego-Perspektive zur Nutzung",
+		  "CannotPlaceThere":                     "Kann hier nicht platziert werden",
+		  "TooFarFromSurface":                    "Zu weit entfernt von der Oberfläche",
+
+		  "InvalidAimLocation":                   "Das ist kein gültiger Ort",
+		  "InvalidDoorName":                      "Ungültiger Tür Name",
+		  "DoorNameAlreadyInUse":                 "Tür Name ist bereits vergeben",
+		  "NoDoorsAddedYet":                      "Noch keine Türen hinzugefügt",
+		  "NoDoorSelected":                       "Keine Tür ausgewählt",
+		  "NoDoorCloseEnough":                    "Keine Tür nah genug",
+		  "NoDoorFound":                          "Keine Tür gefunden",
+
+		  "NoPropSelected":                       "Kein Prop ausgewählt",
+		  "NoHiddenPropSelected":                 "Kein Prop ausgewählt, ziele auf den blauen Kreis",
+		  "CannotCreateWhileEditing":             "Es kann kein Wachen Standort erstellt werden, während ein Prop bearbeitet wird",
+		  "CannotChangeLocationWhileEditing":     "Der Wachen Standort kann nicht geändert werden, während ein Prop bearbeitet wird",
+		  "CannotChangePropWhileEditing":         "Das Prop kann nicht gewechselt werden, während ein anderes Prop bearbeitet wird",
+		  "InvalidLocationName":                  "Ungültiger Wachen Standortname",
+		  "NoLocationCreatedYet":                 "Es wurde noch kein Wachen Standort erstellt!",
+		  "PropAlreadyHidden":                    "Bereits versteckt. Rechtsklick zum Sichtbar machen",
+		  "NothingToHide":                        "Nichts gefunden zum verstecken",
+
+		  "PropAlreadyAComputer":                 "Ausgewählter Prop ist bereits ein Computer",
+		  "NoComputerSelected":                   "Kein Computer ausgewählt",
+		  "NoPropFound":                          "Kein Prop gefunden",
+
+		  "TrafficLightSelection":                "Ampel Auswahl",
+		  "ConnectThisTrafficLight":              "Diese Ampel verbinden mit"
+		}
+		```
+	</TabItem>
+	<TabItem value="notlisted" label="Your Language Missing?">
+		[See here](../../translations)!
+	</TabItem>
 </Tabs>

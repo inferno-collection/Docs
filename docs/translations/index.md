@@ -1,6 +1,6 @@
 ---
 title: Translations
-description: Help improve Inferno Collection by translating our index.md.
+description: Help improve Inferno Collection by translating our resources.
 sidebar_position: 10000
 ---
 # Translations
