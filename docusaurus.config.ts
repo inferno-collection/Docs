@@ -115,6 +115,10 @@ const config: Config = {
 							label: 'Bug Bounty Program 🐛',
 							href: '/bug-bounty',
 						},
+						{
+							label: 'Translations 🌐',
+							href: '/translations',
+						},
 					],
 				},
 			],
