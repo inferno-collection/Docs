@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
 	title: 'Inferno Collection',
-	tagline: 'Where all the Fire/EMS magic happens',
+	tagline: 'The home of Fire/EMS FiveM Development.',
 	favicon: 'img/favicon.ico',
 
 	// Set the production url of your site here
@@ -38,7 +38,7 @@ const config: Config = {
 					sidebarPath: './sidebars.ts',
 					routeBasePath: '/',
 					editUrl: ({versionDocsDirPath, docPath}) =>
-						`https://github.com/inferno-collection/Docs/edit/master/${versionDocsDirPath}/${docPath}`,
+						`https://github.com/inferno-collection/Docs/edit/develop/${versionDocsDirPath}/${docPath}`,
 					showLastUpdateAuthor: true,
 					showLastUpdateTime: true,
 				},
