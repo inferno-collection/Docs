@@ -46,12 +46,12 @@ Not all systems are in scope. Below is a list of what currently qualifies.
 
 We categorize submissions based on real-world impact. Well-written reports with clear reproduction steps or proof of concept may receive increased rewards.
 
-| Severity        | Description                                                                                                      | Reward                                                                                            |
-|-----------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| 🟥 **Critical** | Total compromise (e.g., RCE, bypassing server security, unauthorized `TriggerEvent`, `GlobalState` manipulation) | $50–$100 [Tebex Store](https://store.inferno-collection.com/) credit Credit **or** $25–$50 PayPal |
-| 🟧 **High**     | Major issues (e.g., exploiting other players, bypassing restrictions)                                            | $25–$50 [Tebex Store](https://store.inferno-collection.com/) credit Credit                        |
-| 🟨 **Medium**   | Gameplay-impacting bugs (e.g., unintended UI access, interaction misuse)                                         | $5–$25 [Tebex Store](https://store.inferno-collection.com/) credit Credit                         |
-| 🟩 **Low**      | Minor or cosmetic issues (e.g., typos, UI glitches)                                                              | A Thank You!                                                                                      |
+| Severity        | Description                                                                                                      | Reward                                                                                     |
+|-----------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| 🟥 **Critical** | Total compromise (e.g., RCE, bypassing server security, unauthorized `TriggerEvent`, `GlobalState` manipulation) | $50–$100 [Tebex Store](https://store.inferno-collection.com/) credit **or** $25–$50 PayPal |
+| 🟧 **High**     | Major issues (e.g., exploiting other players, bypassing restrictions)                                            | $25–$50 [Tebex Store](https://store.inferno-collection.com/) credit                        |
+| 🟨 **Medium**   | Gameplay-impacting bugs (e.g., unintended UI access, interaction misuse)                                         | $5–$25 [Tebex Store](https://store.inferno-collection.com/) credit                         |
+| 🟩 **Low**      | Minor or cosmetic issues (e.g., typos, UI glitches)                                                              | A Thank You!                                                                               |
 
 > All valid reports will earn the bug reporter a special Discord role.
 
