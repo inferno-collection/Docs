@@ -387,7 +387,7 @@ By default, this permission is granted to all players.
 This permission allows players to use the [`/stationalert new`](usage/commands.md#stationalert-new) command to create Alerts anywhere via Command.  
 By default, this permission is only granted to admins (`group.admin`).
 
-### Use FAR Tool
+### Use SA Tool
 #### `InfernoStationAlert.Tool`
 This permission allows players to use the [SA Tool](developers/tool.md).  
 By default, this permission is only granted to admins (`group.admin`).
