@@ -4,7 +4,7 @@ sidebar_position: 20
 
 # Configuration
 
-FAR uses convars for config values. For information on how to correctly install the `far.cfg` file, [see here](install/#installing-the-resource).
+FAR uses convars for config values. For information on how to correctly install the `config.cfg` file, [see here](install.md).
 
 ## Value List
 
@@ -251,7 +251,7 @@ By default, this permission is only granted to admins (`group.admin`).
 ``` showLineNumbers
 # Inferno Collection Fire Alarm Reborn
 # 
-# Copyright (c) 2019-2024, Christopher M, Inferno Collection. All rights reserved.
+# Copyright (c) 2019-2025, Christopher M, Inferno Collection. All rights reserved.
 
 ############################################################################
 ###                                NOTICE                                ###
