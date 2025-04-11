@@ -1,0 +1,100 @@
+---
+sidebar_position: 10
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Data Structures
+
+This page documents the data structures in SA.
+
+***
+
+## Station Location
+
+```lua
+location.name
+location.position.x
+location.position.y
+location.position.z
+location.doors
+```
+
+<Tabs>
+	<TabItem value="location.name" label="name">
+		<p>`string`</p>
+		<p>Name of the Location.</p>
+		<p>Example: `Station One`</p>
+	</TabItem>
+
+	<TabItem value="location.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of this Station Location.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(location.position.x, location.position.y, location.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="location.doors" label="doors">
+		<p>`table`</p>
+		<p>A table containing all the door names of this Station Location.</p>
+	</TabItem>
+</Tabs>
+
+***
+
+## Door Controls
+
+```lua
+doorcontrols.position.x
+doorcontrols.position.y
+doorcontrols.position.z
+doorcontrols.rotation.x
+doorcontrols.rotation.y
+doorcontrols.rotation.z
+```
+
+<Tabs>
+	<TabItem value="doorcontrols.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of this Door Control prop.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(doorcontrols.position.x, doorcontrols.position.y, doorcontrols.position.z)
+		```
+	</TabItem>
+
+	<TabItem value="doorcontrols.rotation" label="rotation">
+		<p>`table`</p>
+		<p>Rotation of this Door Control prop.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(doorcontrols.rotation.x, doorcontrols.rotation.y, doorcontrols.rotation.z)
+		```
+	</TabItem>
+</Tabs>
+
+***
+
+## Station Computer
+
+```lua
+computer.position.x
+computer.position.y
+computer.position.z
+```
+
+<Tabs>
+	<TabItem value="computer.postion" label="position">
+		<p>`table`</p>
+		<p>World coordinates of this computer.</p>
+		<p>Example:</p>
+		```lua
+		local position = vector3(computer.position.x, computer.position.y, computer.position.z)
+		```
+	</TabItem>
+</Tabs>
+
+***

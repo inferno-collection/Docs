@@ -12,9 +12,9 @@ This page documents the HTTP endpoints for FAR.
 ## How to Use
 The endpoints documented below are made available directly from the resource.
 To access the API, you first need to know the IP address or domain, and port of the server.
-With this information, you can append `/fire-alarm-reborn/` and then the endpoint name.
+With this information, you can append `/inferno-fire-alarm-reborn/` and then the endpoint name.
 
-For example, if your domain is `my-server.com`, the port is `30120`, and you wanted the `alarm-systems` endpoint, you would access `http://my-server.com:30120/fire-alarm-reborn/alarm-systems/all`.
+For example, if your domain is `my-server.com`, the port is `30120`, and you wanted the `alarm-systems` endpoint, you would access `http://my-server.com:30120/inferno-fire-alarm-reborn/alarm-systems/all`.
 
 Every request requires an `Authorization` header containing the [`ic_far_access_token`](../config.md#http-access-token). If [`ic_far_access_token`](../config.md#http-access-token) is not set, then a 404 - Not Found will be returned, and an error will be logged to the console. If [`ic_far_access_token`](../config.md#http-access-token) does not match the token provided in the `Authorization` header, then a 401 - Unauthorized will be returned.
 

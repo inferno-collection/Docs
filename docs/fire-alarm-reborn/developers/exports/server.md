@@ -10,7 +10,7 @@ Be sure to consult the [Data Structures](../data.mdx) page to understand the str
 
 All parameters listed are required, none are optional.  
 All the exports listed below are **server** exports, not client exports.  
-For client exports, see [here](server.md).
+For client exports, see [here](client.md).
 
 ## Alarm Systems
 

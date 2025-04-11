@@ -1,0 +1,132 @@
+---
+sidebar_position: 40
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# API
+
+This page documents the HTTP endpoints for SA.
+
+## How to Use
+The endpoints documented below are made available directly from the resource.
+To access the API, you first need to know the IP address or domain, and port of the server.
+With this information, you can append `/inferno-station-alert/` and then the endpoint name.
+
+For example, if your domain is `my-server.com`, the port is `30120`, and you wanted the `alert` endpoint, you would access `http://my-server.com:30120/inferno-station-alert/alert`.
+
+Every request requires an `Authorization` header containing the [`ic_sa_access_token`](../config.md#http-access-token). If [`ic_sa_access_token`](../config.md#http-access-token) is not set, then a 404 - Not Found will be returned, and an error will be logged to the console. If [`ic_sa_access_token`](../config.md#http-access-token) does not match the token provided in the `Authorization` header, then a 401 - Unauthorized will be returned.
+
+If [`ic_sa_whitelisted_ips`](../config.md#api-whitelist) contains any valid IP addresses, then any requests sent from IP address not contained within [`ic_sa_whitelisted_ips`](../config.md#api-whitelist) will be rejected with 401 - Unauthorized, and an error will be logged to the console.
+
+Valid HTTP requests are logged to the console when [Debug Mode](../config.md#debug) is enabled.
+
+## Alerts
+
+### Create A New Alert
+Use this endpoint to create a new Alert.
+
+#### Endpoint
+```
+POST alert
+```
+#### Body
+
+- `locations` - `object`
+	- Must be an object that contains the names of locations, and optionally a list of door names to open.
+		- To open all doors, pass an empty array.
+	- Example:
+		```json
+		{
+			"locations": {
+				"Station One": ["Bay Two", "Bay Three"],
+				"Station Two": [],
+				"Station Three": ["Bay One", "Bay Two"]
+			},
+		}
+		```
+- `message` - `string|undefined`
+	- Optional message to be read out via Text-to-Speech.
+		- Requires Voice Turnout Addon, [see here](../config.md#voice-turnout-addon-values-explained) for details.
+- `tone` - `string|undefined`
+	- Optional tone to play.
+	- If not provided, default tone will be used.
+- `unitcolors` - `string[]|undefined`
+	- Optional list of Unit Indicator colors to show in-game.
+		- Options are: `red`, `green`, and/or `blue`.
+	- If not provided, no colors will show.
+
+#### Example Request
+<Tabs>
+	<TabItem value="alert.example.1" label="Alert with Message" default>
+		```json
+		{
+			"message": "Ladder 7, Rescue 7. Carson Avenue intersection of Davis Avenue, Strawberry, Los Santos. Vehicle Accident, possible persons trapped. Postal 0 9 0.",
+			"locations": {
+				"Davis": ["Bay Two", "Bay Three"]
+			}
+		}
+		```
+	</TabItem>
+
+	<TabItem value="alert.example.2" label="Alert with Unit Indicator Colors" default>
+		```json
+		{
+			"locations": {
+				"Davis": ["Bay Two", "Bay Three"]
+			},
+			"unitcolors": ["red", "green"]
+		}
+		```
+	</TabItem>
+
+	<TabItem value="alert.example.3" label="Alert with specific Tone" default>
+		```json showLineNumbers
+		{
+			"locations": {
+				"Davis": ["Bay Two", "Bay Three"]
+			},
+			"tone": "Tone 2"
+		}
+		```
+	</TabItem>
+
+	<TabItem value="alert.example.4" label="Full Alert" default>
+		```json showLineNumbers
+		{
+			"message": "Ladder 7, Rescue 7. Carson Avenue intersection of Davis Avenue, Strawberry, Los Santos. Vehicle Accident, possible persons trapped. Postal 0 9 0.",
+			"locations": {
+				"Davis": ["Bay Two", "Bay Three"]
+			},
+			"tone": "Tone 2",
+			"unitcolors": ["red", "green"]
+		}
+		```
+	</TabItem>
+</Tabs>
+
+#### Return Value
+<Tabs>
+	<TabItem value="alarm-system.200" label="200 - OK" default>
+		<p>*No return body, headers only*</p>
+	</TabItem>
+
+	<TabItem value="alarm-system.400" label="400 - Bad Request" default>
+		- `No body provided`
+			- No request body provided.
+		- `Malformed body`
+			- Request body didn't contain required fields, or contains irrelevant fields.
+		- `No locations provided`
+			- `locations` was empty or invalid.
+		- `X is not a valid location`
+			- Invalid location name provided.
+		- `X is not a valid door for Y`
+			- Invalid door name provided for specific location.
+		- `X is not a valid unit indicator color`
+			- Invalid color provided for unit indicator colors.
+		- `X is not a valid tone name. Valid tones: Y, Z`
+			- Invalid tone provided.
+			- Make sure to provide the tone name and not the tone file name.
+	</TabItem>
+</Tabs>
