@@ -42,7 +42,6 @@ const config: Config = {
 					showLastUpdateAuthor: true,
 					showLastUpdateTime: true,
 				},
-				blog: false,
 				theme: {
 					customCss: './src/css/custom.css',
 				},
@@ -67,7 +66,7 @@ const config: Config = {
 					type: 'docSidebar',
 					sidebarId: 'docsSidebar',
 					position: 'left',
-					label: 'Docs',
+					label: 'Documentation',
 				},
 			],
 		},
@@ -75,11 +74,15 @@ const config: Config = {
 			style: 'dark',
 			links: [
 				{
-					title: 'Docs',
+					title: 'Documentation',
 					items: [
 						{
 							label: 'Fire Alarm Reborn',
 							to: '/fire-alarm-reborn',
+						},
+						{
+							label: 'Station Alert',
+							to: '/station-alert',
 						},
 					],
 				},
