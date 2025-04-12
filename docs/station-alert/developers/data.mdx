@@ -98,3 +98,44 @@ computer.position.z
 </Tabs>
 
 ***
+
+## Alert
+
+```lua
+alert.tone
+alert.message
+alert.locations
+alert.unitcolors
+```
+
+<Tabs>
+	<TabItem value="alert.tone" label="tone">
+		<p>`string`</p>
+		<p>The tone that played for this Alert.</p>
+		<p>Example:</p>
+		```lua
+		Tone Two
+		```
+	</TabItem>
+
+	<TabItem value="alert.message" label="message">
+		<p>`string|null`</p>
+		<p>The TTS message for this Alert.</p>
+		<p>Example:</p>
+		```lua
+		Station 2, Engine 2, Fire Call!
+		```
+	</TabItem>
+
+	<TabItem value="alert.locations" label="locations">
+		<p>`table`</p>
+		<p>A table containing the Location Names for this Alert.</p>
+	</TabItem>
+
+	<TabItem value="alert.unitcolors" label="unitcolors">
+		<p>`table`</p>
+		<p>A table containing the unit colors this Alert.</p>
+	</TabItem>
+</Tabs>
+
+***
