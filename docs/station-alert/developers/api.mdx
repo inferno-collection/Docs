@@ -130,3 +130,46 @@ POST alert
 			- Make sure to provide the tone name and not the tone file name.
 	</TabItem>
 </Tabs>
+
+***
+
+## Locations
+
+### Get All Locations
+Use this endpoint to get all locations
+
+#### Endpoint
+```
+GET locations
+```
+
+#### Return Value
+<Tabs>
+	<TabItem value="all-locations.200" label="200 - OK" default>
+		<p>[`Location[]`](data.mdx#station-location)</p>
+	</TabItem>
+</Tabs>
+
+### Get Location By Name
+Use this endpoint to get a specific location by name
+
+#### Endpoint
+```
+GET location/{name}
+```
+
+#### Return Value
+<Tabs>
+	<TabItem value="specific-location.200" label="200 - OK" default>
+		<p>[`Location`](data.mdx#station-location)</p>
+	</TabItem>
+
+	<TabItem value="specific-location.400" label="400 - Bad Request" default>
+		- `No Location Name Provided`
+			- You must include the name of the location in the request URL.
+			- Example: `GET locations/Davis Station`
+				- You can include spaces or use `%20` as a seperator
+		- `X is not a valid location name, valid locations names are: Y & Z`
+			- Location name provided does not exist.
+	</TabItem>
+</Tabs>
