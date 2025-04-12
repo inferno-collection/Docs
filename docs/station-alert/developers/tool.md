@@ -89,6 +89,11 @@ If it says `Hide a Prop`, then this will hide the prop highlighted in orange. [S
 When looking at a previously placed prop (will have a white circle around it), you can Left-Click to move it to a new location.
 :::
 
+:::warning
+Placing too many Ceiling Speakers can result in very loud, overlapping audio.  
+We suggest placing one speaker every 5-10 meters.
+:::
+
 #### Right Mouse Button
 
 If the bottom of your screen starts with `Place a`, then this will delete the selected prop.
