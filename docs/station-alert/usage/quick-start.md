@@ -15,7 +15,7 @@ Server Owners and Developers will need to use the [SA Tool](../developers/tool.m
 
 This will again depend on your server. Some servers will have Alerts configured to automatically activate when a fire starts, others may be linked to CAD systems, and others again require players to manually generate Alerts in-game.
 
-Server Owners and Developers should review [these pages](../developers) to set up their servers.
+Server Owners and Developers should read the ["Start Here"](../developers/start-here.md) developer page for information on how to set up SA in their servers.
 
 ## How do I stop an Alert?
 

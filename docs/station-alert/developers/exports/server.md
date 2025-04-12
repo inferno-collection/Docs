@@ -93,7 +93,7 @@ Use this export to create a new Alert at the Station Location nearest to the pro
 
 #### Export Name
 ```
-newAlert
+newAlertNearestStation
 ```
 #### Parameters
 
