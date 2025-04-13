@@ -63,6 +63,15 @@ fire_alarms "your_draft_name_here.lua"
 
 Making sure to replace `your_draft_name_here` with the name of the draft `.lua` file.
 
+Below is an example of a full `fxmanifest.lua`:
+```lua showLineNumbers
+game "gta5"
+
+fire_alarms "mission_row.lua"
+
+dependency "inferno-fire-alarm-reborn"
+```
+
 ## In-Game Tool
 
 ### Controls 
