@@ -22,6 +22,11 @@ getAllLocations
 #### Parameters
 *None*
 
+#### Example
+```lua
+local value = exports["inferno-station-alert"]:getAllLocations()
+```
+
 #### Return Value
 [`Location`](../data.mdx#station-location)[]
 
@@ -32,11 +37,17 @@ Use this export to get the nearest Station Location to a given position within a
 ```
 getNearestLocationToPosition
 ```
+
 #### Parameters
 - `position` - `vector3`
   - Position to use to search for nearest Station Location.
 - `radius`
-  - Search radius in meters.
+  - Search radius in meters. -1 for no radius.
+
+#### Example
+```lua
+local value = exports["inferno-station-alert"]:getNearestLocationToPosition(vec3(1, 1, 1))
+```
 
 #### Return Value
 [`Location`](../data.mdx#station-location) | `null`
@@ -48,9 +59,15 @@ Use this export to get the nearest Station Location to a given position only if 
 ```
 getNearestLocationWithPlayersToPosition
 ```
+
 #### Parameters
 - `position` - `vector3`
 	- Position to use to search for nearest Station Location.
+
+#### Example
+```lua
+local value = exports["inferno-station-alert"]:getNearestLocationWithPlayersToPosition(vec3(1, 1, 1))
+```
 
 #### Return Value
 [`Location`](../data.mdx#station-location) | `null`
@@ -85,14 +102,14 @@ newAlert
 
 #### Example
 ```lua
-{
+local success = exports["inferno-station-alert"]:newAlert({
     ["message"] = "Some message.",
     ["locations"] = {
         ["Davis"] = {"Bay One", "Bay Three"},
     },
     ["unitColors"] = {"blue", "red"},
     ["tone"] = "Tone 1"
-}
+})
 ```
 
 #### Return Value
@@ -110,7 +127,7 @@ newAlertNearestStation
 - `position` - `vector3`
   - Position to use to search for nearest Station Location.
 - `radius`
-	- Search radius in meters.
+	- Search radius in meters. -1 for no radius.
 - `alert` - `table`
 	- `message` - `string`
 		- Optional Text-to-Speech message.
@@ -123,16 +140,15 @@ newAlertNearestStation
 
 #### Example
 ```lua
-{
+local success = exports["inferno-station-alert"]:newAlertNearestStation(vec3(1, 1, 1), 300, {
     ["message"] = "Some message.",
     ["unitColors"] = {"blue", "red"},
     ["tone"] = "Tone 1"
-}
+})
 ```
 
 #### Return Value
 `bool`
-
 
 ### Create New Alert At Nearest Station With Players
 Use this export to create a new Alert at the Station Location nearest to the provided position only if it has players nearby.
@@ -157,11 +173,11 @@ newAlertNearestStationWithPlayers
 
 #### Example
 ```lua
-{
+local success = exports["inferno-station-alert"]:newAlertNearestStationWithPlayers(vec3(1, 1, 1), {
     ["message"] = "Some message.",
     ["unitColors"] = {"blue", "red"},
     ["tone"] = "Tone 1"
-}
+})
 ```
 
 #### Return Value
