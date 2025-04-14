@@ -11,7 +11,6 @@ Be sure to consult the [Data Structures](../data.mdx) page to understand the str
 All the exports listed below are **server** exports, not client exports.
 
 ## Locations
-
 ### Get All Locations
 Use this export to get all Station Locations.
 
@@ -19,12 +18,12 @@ Use this export to get all Station Locations.
 ```
 getAllLocations
 ```
-#### Parameters
 
+#### Parameters
 *None*
 
 #### Return Value
-[`Location`](../data.mdx#station-location)[] | `null`
+[`Location`](../data.mdx#station-location)[]
 
 ### Get Nearest Location To Position
 Use this export to get the nearest Station Location to a given position within a radius.
@@ -34,7 +33,6 @@ Use this export to get the nearest Station Location to a given position within a
 getNearestLocationToPosition
 ```
 #### Parameters
-
 - `position` - `vector3`
   - Position to use to search for nearest Station Location.
 - `radius`
@@ -43,10 +41,23 @@ getNearestLocationToPosition
 #### Return Value
 [`Location`](../data.mdx#station-location) | `null`
 
+### Get Nearest Location With Players To Position
+Use this export to get the nearest Station Location to a given position only if it has players nearby.
+
+#### Export Name
+```
+getNearestLocationWithPlayersToPosition
+```
+#### Parameters
+- `position` - `vector3`
+	- Position to use to search for nearest Station Location.
+
+#### Return Value
+[`Location`](../data.mdx#station-location) | `null`
+
 ***
 
 ## Alerts
-
 ### Create New Alert
 Use this export to create a new Alert.
 
@@ -54,8 +65,8 @@ Use this export to create a new Alert.
 ```
 newAlert
 ```
-#### Parameters
 
+#### Parameters
 - `alert` - `table`
   - `locations` - `table`
     - Location - `object`
@@ -73,7 +84,6 @@ newAlert
     - Optionally provide a specific tone to use, or default tone is used.
 
 #### Example
-
 ```lua
 {
     ["message"] = "Some message.",
@@ -89,19 +99,70 @@ newAlert
 `bool`
 
 ### Create New Alert At Nearest Station
-Use this export to create a new Alert at the Station Location nearest to the provided position.
+Use this export to create a new Alert at the Station Location nearest to the provided position within a radius.
 
 #### Export Name
 ```
 newAlertNearestStation
 ```
-#### Parameters
 
+#### Parameters
 - `position` - `vector3`
   - Position to use to search for nearest Station Location.
-- `message` - `string`
-    - Optional Text-to-Speech message.
-    - Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
+- `radius`
+	- Search radius in meters.
+- `alert` - `table`
+	- `message` - `string`
+		- Optional Text-to-Speech message.
+		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
+	- `unitColors` - `table`
+		- Color Name - `string`
+		- Optionally provide unit indicator colors, or no colors show.
+	- `tone` - string
+		- Optionally provide a specific tone to use, or default tone is used.
+
+#### Example
+```lua
+{
+    ["message"] = "Some message.",
+    ["unitColors"] = {"blue", "red"},
+    ["tone"] = "Tone 1"
+}
+```
+
+#### Return Value
+`bool`
+
+
+### Create New Alert At Nearest Station With Players
+Use this export to create a new Alert at the Station Location nearest to the provided position only if it has players nearby.
+
+#### Export Name
+```
+newAlertNearestStationWithPlayers
+```
+
+#### Parameters
+- `position` - `vector3`
+	- Position to use to search for nearest Station Location.
+- `alert` - `table`
+	- `message` - `string`
+		- Optional Text-to-Speech message.
+		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
+	- `unitColors` - `table`
+		- Color Name - `string`
+		- Optionally provide unit indicator colors, or no colors show.
+	- `tone` - string
+		- Optionally provide a specific tone to use, or default tone is used.
+
+#### Example
+```lua
+{
+    ["message"] = "Some message.",
+    ["unitColors"] = {"blue", "red"},
+    ["tone"] = "Tone 1"
+}
+```
 
 #### Return Value
 `bool`
