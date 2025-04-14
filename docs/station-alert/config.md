@@ -18,6 +18,7 @@ SA uses convars for config values. For information on how to correctly install t
 |       [`ic_sa_addonPaymentReference`](#tebex-subscription-payment-reference)        |             `""`              |
 |                   [`ic_sa_ttsLanguage`](#text-to-speech-language)                   |            `en-us`            |
 |                      [`ic_sa_ttsVoice`](#text-to-speech-voice)                      |            `Mary`             |
+|                    [`is_sa_ttsSpeechRate`](#text-to-speech-rate)                    |             `-1`              |
 |                [`ic_sa_followUpAlertMessages`](#follow-up-messages)                 |            `true`             |
 |                 [`ic_sa_repeatMessage`](#repeat-tts-message-twice)                  |            `true`             |
 |                  [`ic_sa_endingTone`](#repeat-tone-at-end-of-tts)                   |            `true`             |
@@ -355,6 +356,12 @@ The following voices are available:
 | Thai                    | `Ukrit`  | Male         |
 | Turkish                 | `Omer`   | Male         |
 | Vietnamese              | `Chi`    | Male         |
+
+### Text-to-Speech Rate
+#### `is_sa_ttsSpeechRate`
+This value determines how fast the TTS will be read.  
+The default value is `-1`, valid values are between `-10` and `10`.  
+Suggested values are between `-2` and `0`.
 
 ### Follow-Up Messages
 #### `ic_sa_followUpAlertMessages`
