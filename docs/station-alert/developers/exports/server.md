@@ -10,6 +10,11 @@ Be sure to consult the [Data Structures](../data.mdx) page to understand the str
 
 All the exports listed below are **server** exports, not client exports.
 
+:::info
+All the exports on this page required Station Alert, and do not work for Sonoran Edition.  
+For more info, [see here](../../index.md#available-versions).
+:::
+
 ## Locations
 ### Get All Locations
 Use this export to get all Station Locations.
