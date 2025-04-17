@@ -6,6 +6,30 @@ sidebar_position: 999
 
 This page documents the changes made to SA.
 
+## v1.0.\*
+
+### v1.0.3 - 04/17/2025
+
+**Added**:
+- "Close All" button to Door Controls.
+- Hook for CD_Dispatch.
+- Filter to TTS.
+  - A reminder that TTS usage is logged and reviewed... please be kind to people on the internet.
+
+**Changed**:
+- Improved TTS error logging.
+  - Helpful errors will now appear in the server console when there is a TTS error.
+
+**Fixed**:
+- Server crash when duplicate messages were submitted at the same time.
+- An issue with SA that resulted in a single zFire fire, creating multiple alerts.
+- Super embarrassing typo *somewhere*.
+  - No I'm not going to tell you what it was. Yes I'll deny this ever happened. No you'll never find it.
+
+**Removed**:
+- Requirement for Station Locations to have at least one light and one door.
+  - This now allows for ["Dispatch Centers"](usage/components.md#dispatch-centers) to be placed, which can create alerts but not receive them.
+
 ### v1.0.2 - 04/14/2025
 
 :::danger
@@ -37,12 +61,10 @@ Breaking changes to the [Exports](developers/exports/server.md) were made in thi
 ### v1.0.1 - 04/13/2025
 
 **Added**:
-- Temporary hook for zFires
+- Temporary hook for zFires.
 
 **Fixed**:
 - `editable` files being escrowed.
-
-## v1.0.\*
 
 ### v1 - 04/11/2025
 Easy Access release.

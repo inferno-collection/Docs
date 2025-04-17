@@ -52,3 +52,9 @@ Wall Lights are designed to be placed outside of Stations, and will flash when a
 ## Unit Indicators 
 Unit Indicators change color depending on what metadata was provided in an Alert.  
 For example, medical calls could be blue, fire calls could be red, and everything else could be green.
+
+***
+
+## Dispatch Centers
+Dispatch Centers are not a physical thing, but rather a concept. When you create a Station Location without any Lights or Doors, it is removed from the list of Station Locations that can receive an alert, however, they can still create alerts.  
+As such, they become "Dispatch Centers": locations that can create, but not receive, alerts.
