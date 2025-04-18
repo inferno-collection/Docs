@@ -440,6 +440,9 @@ set ic_sa_kickCheaters "false"
 # How many seconds after an alert should doors close
 set ic_sa_secondsTillDoorsClose "150"
 
+# How many seconds after an alert should lights reset
+set ic_sa_secondsTillLightsReset "150"
+
 # Labels and files names for tones
 setr ic_sa_tones {
     "Tone 1":   "alert1.mp3",
@@ -462,6 +465,9 @@ set ic_sa_ttsLanguage "en-us"
 
 # Text-to-Speech Voice
 set ic_sa_ttsVoice "Mary"
+
+# Text-to-Speech Speech Rate
+set is_sa_ttsSpeechRate "-1"
 
 # Send "90 seconds" & "120 seconds" follow up messages
 set ic_sa_followUpAlertMessages "true"
@@ -537,16 +543,21 @@ setr ic_sa_language {
     "AccessDoorControls":                   "Access Door Controls",
     "NoDoorsToControl":                     "This location has no doors to control!",
     "OpenAll":                              "Open All",
+    "CloseAll":                             "Close All",
     "OpenAllDoors":                         "Open all doors",
+    "CloseAllDoors":                        "Close all doors",
     "OpenDoor":                             "Open door",
-
+    "CloseDoor":                            "Close door",
+    
     "StationComputer":                      "Station Computer",
     "AccessComputer":                       "Access Computer",
     "CreateANewAlert":                      "Create a new Alert for any Station Location.",
+    "CreateANewMessage":                    "Create a new Message to be read at only this Station Location.",
     "StationAlert":                         "Station Alert",
     "ActivateStationAlert":                 "Activate a local Station Alert.",
-
+    
     "NewAlert":                             "New Alert",
+    "NewMessage":                           "New Message",
     "CurrentMessage":                       "Current Message",
     "SelectLocations":                      "Select Station Locations",
     "SelectWhichLocation":                  "Select which Station Locations the Alert will be sent to.",
@@ -563,7 +574,7 @@ setr ic_sa_language {
     
     "LocationSelection":                    "Station Location Selection",
     "SendAlertTo":                          "Send Alert to",
-
+    
     "DoorSelection":                        "Door Selection",
     "Open":                                 "Open",
     "At":                                   "At",
@@ -574,10 +585,10 @@ setr ic_sa_language {
     "Provided":                             "Provided",
     "Confirm":                              "Confirm",
     "ConfirmYourSelection":                 "Confirm Your Selection",
-
+    
     "ToneSelection":                        "Tone Selection",
     "UseTone":                              "Use Tone",
-
+    
     "UnitColorSelection":                   "Unit Color Selection",
     "UseColor":                             "Use Color",
     
@@ -585,7 +596,8 @@ setr ic_sa_language {
     "CommandIsClientOnly":                  "This command needs to be run from the client!",
     "CommandIsServerOnly":                  "This command needs to be run from the console!",
     "MustBeInVehicle":                      "You must be in a vehicle to use this command!",
-
+    "UnknownCommand":                       "Unknown command!",
+    
     "StationLocation":                      "Station Location",
     "Place":                                "Place",
     "PlaceA":                               "Place a",
@@ -601,7 +613,7 @@ setr ic_sa_language {
     "FirstPersonRequired":                  "Enter First-Person to use the Tool",
     "CannotPlaceThere":                     "Cannot place there",
     "TooFarFromSurface":                    "Too far from any surfaces",
-
+    
     "InvalidAimLocation":                   "This is not a valid aiming location",
     "InvalidDoorName":                      "Invalid door name",
     "DoorNameAlreadyInUse":                 "Door name already in use",
@@ -609,7 +621,7 @@ setr ic_sa_language {
     "NoDoorSelected":                       "No door selected",
     "NoDoorCloseEnough":                    "No door close enough",
     "NoDoorFound":                          "No door found",
-
+    
     "NoPropSelected":                       "No prop selected",
     "NoHiddenPropSelected":                 "No prop selected, aim for blue circle",
     "CannotCreateWhileEditing":             "Cannot create Station Location while editing prop",
@@ -619,11 +631,11 @@ setr ic_sa_language {
     "NoLocationCreatedYet":                 "No Station Location created yet!",
     "PropAlreadyHidden":                    "Prop already hidden. Right Click to unhide",
     "NothingToHide":                        "Nothing found to hide",
-
+    
     "PropAlreadyAComputer":                 "Selected Prop is already a Computer",
     "NoComputerSelected":                   "No Computer selected",
     "NoPropFound":                          "No prop found",
-
+    
     "TrafficLightSelection":                "Traffic Light Selection",
     "ConnectThisTrafficLight":              "Connect this traffic light to"
 }
