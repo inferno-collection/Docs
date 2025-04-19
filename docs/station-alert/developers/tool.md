@@ -63,6 +63,7 @@ Making sure to replace `your_draft_name_here` with the name of the draft `.lua` 
 
 Below is an example of a full `fxmanifest.lua`:
 ```lua showLineNumbers
+fx_version "cerulean"
 game "gta5"
 
 locations "davis.lua"
