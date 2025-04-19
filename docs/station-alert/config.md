@@ -23,6 +23,7 @@ SA uses convars for config values. For information on how to correctly install t
 |                 [`ic_sa_repeatMessage`](#repeat-tts-message-twice)                  |            `true`             |
 |                  [`ic_sa_endingTone`](#repeat-tone-at-end-of-tts)                   |            `true`             |
 | [`ic_sa_manualInteractions`](#manual-interactions-targetthird-eye-resource-support) |            `false`            |
+|                        [`ic_sa_slowerDoors`](#slower-doors)                         |             `true             |
 |                [`ic_sa_wallLightModels`](#default-wall-light-models)                |          *See Below*          |
 |             [`ic_sa_trafficLightModels`](#default-traffic-light-models)             |          *See Below*          |
 |            [`ic_sa_unitIndicatorModels`](#default-unit-indicator-models)            |          *See Below*          |
@@ -79,6 +80,13 @@ For any other target/third-eye resource, use the provided event handlers and var
 :::note
 The events in `editable/client/targeting.lua` will not fire unless `ic_sa_manualInteractions` is `true`.
 :::
+
+### Slower Doors
+#### `ic_sa_slowerDoors`
+When this value is `true`, doors will open and closer slower than normal to be more realistic.  
+If you do not want the resource to change the speed of the doors, set this value to `false`.
+
+If this value is `true` and your doors do not open like they should, or need to be bumped/hit to be open, change this value to `value` and it should resolve the issue.
 
 ### HTTP Access Token
 #### `ic_sa_httpAccessToken`

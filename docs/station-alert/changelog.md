@@ -8,8 +8,24 @@ This page documents the changes made to SA.
 
 ## v1.0.\*
 
-### v1.0.3 - 04/17/2025
+### v1.0.4 - 04/19/2025
+**Added**:
+- Hook for EmergencyDispatch.
+- [`ic_sa_slowerDoors`](config.md#slower-doors) config option.
+- Coloured radii in the [SA Tool](developers/tool.md#coloured-radii) that indicate the approximate range of Speakers.
+  - To help prevent excess overlap and aid in proper coverage of stations.
 
+**Changed**:
+- Improved error logging when prop models are not loading correctly.
+- Sonoran Edition version validation logic.
+  - Will not try twice before exiting.
+  - Waits longer to account for slow server boot time.
+- Improved logic that sends location data to the client.
+
+**Fixed**:
+- Bug in the third-eye code that preventing interaction with most Computers and Door Controls.
+
+### v1.0.3 - 04/17/2025
 **Added**:
 - "Close All" button to Door Controls.
 - Hook for CD_Dispatch.
@@ -31,7 +47,6 @@ This page documents the changes made to SA.
   - This now allows for ["Dispatch Centers"](usage/components.md#dispatch-centers) to be placed, which can create alerts but not receive them.
 
 ### v1.0.2 - 04/14/2025
-
 :::danger
 Breaking changes to the [Exports](developers/exports/server.md) were made in this version, do not blindly update.
 :::
@@ -59,7 +74,6 @@ Breaking changes to the [Exports](developers/exports/server.md) were made in thi
 - Messages (like "90 seconds") only placing through one speaker, and not all speakers.
 
 ### v1.0.1 - 04/13/2025
-
 **Added**:
 - Temporary hook for zFires.
 
