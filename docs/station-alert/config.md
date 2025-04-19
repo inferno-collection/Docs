@@ -86,7 +86,7 @@ The events in `editable/client/targeting.lua` will not fire unless `ic_sa_manual
 When this value is `true`, doors will open and closer slower than normal to be more realistic.  
 If you do not want the resource to change the speed of the doors, set this value to `false`.
 
-If this value is `true` and your doors do not open like they should, or need to be bumped/hit to be open, change this value to `value` and it should resolve the issue.
+If this value is `true` and your doors do not open like they should, or need to be bumped/hit to be open, change this value to `false` and it should resolve the issue.
 
 ### HTTP Access Token
 #### `ic_sa_httpAccessToken`
