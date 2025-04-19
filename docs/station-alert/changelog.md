@@ -18,7 +18,7 @@ This page documents the changes made to SA.
 **Changed**:
 - Improved error logging when prop models are not loading correctly.
 - Sonoran Edition version validation logic.
-  - Will not try twice before exiting.
+  - Will now try twice before exiting.
   - Waits longer to account for slow server boot time.
 - Improved logic that sends location data to the client.
 
