@@ -8,6 +8,17 @@ This page documents the changes made to FAR.
 
 ## v1.4.\*
 
+### v1.4.5 - 04/21/2025
+**Added**:
+- Hook to activate [Inferno Station Alert](../station-alert) when Alarm activated.
+
+**Changed**:
+- Minor improvement to memory management in the [FAR Tool](developers/tool.md).
+
+**Fixed**:
+- Specific types of complex default config values not listing correctly in the console.
+- [`resetLastAlarmSystem`](developers/exports/server.md#reset-last-alarm-system) server export calling the same native twice unnecessarily.
+
 ### v1.4.4 - 03/22/2025
 
 **Changed**:
