@@ -457,6 +457,9 @@ set ic_sa_secondsTillDoorsClose "150"
 # How many seconds after an alert should lights reset
 set ic_sa_secondsTillLightsReset "150"
 
+# Close doors once driven through
+setr ic_sa_closeDoorsOnDriveThrough "true"
+
 # Labels and files names for tones
 setr ic_sa_tones {
     "Tone 1":   "alert1.mp3",
@@ -497,6 +500,9 @@ setr ic_sa_endingTone "true"
 
 # Don't display "Press E to..." interactions
 setr ic_sa_manualInteractions "false"
+
+# Slower Doors
+setr ic_sa_slowerDoors "true"
 
 # The model to use for the wall lights
 setr ic_sa_wallLightModels {
