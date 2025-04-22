@@ -35,6 +35,45 @@ local value = exports["inferno-station-alert"]:getAllLocations()
 #### Return Value
 [`Location`](../data.mdx#station-location)[]
 
+### Get All Locations With Players
+Use this export to get all Station Locations with players nearby.
+
+#### Export Name
+```
+getAllLocationsWithPlayers
+```
+
+#### Parameters
+*None*
+
+#### Example
+```lua
+local value = exports["inferno-station-alert"]:getAllLocationsWithPlayers()
+```
+
+#### Return Value
+[`Location`](../data.mdx#station-location)[]
+
+### Get All Locations With Players Nearest To Position
+Use this export to get all Station Locations with players ordered by their distance to the provided position.
+
+#### Export Name
+```
+getAllLocationsWithPlayersNearestToPosition
+```
+
+#### Parameters
+- `position` - `vector3`
+	- Position to use to search for nearest Station Location.
+
+#### Example
+```lua
+local value = exports["inferno-station-alert"]getAllLocationsWithPlayersNearestToPosition(vec3(1,1,1))
+```
+
+#### Return Value
+[`Location`](../data.mdx#station-location)[]
+
 ### Get Nearest Location To Position
 Use this export to get the nearest Station Location to a given position within a radius.
 
@@ -96,6 +135,7 @@ newAlert
       - Door Names - `table`
         - Door Name - `string`
       - If empty table provided, all doors will open.
+      - If table with single empty string provided, no doors will open.
   - `message` - `string`
     - Optional Text-to-Speech message.
     - Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
