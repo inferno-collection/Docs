@@ -13,6 +13,7 @@ SA uses convars for config values. For information on how to correctly install t
 |                       [`ic_sa_kickCheaters`](#kick-cheaters)                        |            `false`            |
 |             [`ic_sa_secondsTillDoorsClose`](#seconds-till-doors-close)              |             `150`             |
 |            [`ic_sa_secondsTillLightsReset`](#seconds-till-lights-reset)             |             `150`             |
+|               [`ic_sa_closeDoorsOnDriveThrough`](#self-closing-doors)               |            `true`             |
 |                         [`ic_sa_tones`](#alert-tone-sounds)                         |          *See Below*          |
 |                 [`ic_sa_enableAddon`](#enable-voice-turnout-addon)                  |            `false`            |
 |       [`ic_sa_addonPaymentReference`](#tebex-subscription-payment-reference)        |             `""`              |
@@ -51,6 +52,11 @@ If value is `-1`, doors will stay open until manually closed.
 #### `ic_sa_secondsTillLightsReset`
 This must be a whole number, more than 0. Suggested value range: `125` - `150`.  
 This is the number of seconds after an Alert is activated, that Wall Lights and Unit Indicators will reset.
+
+### Self-Closing Doors
+#### `ic_sa_closeDoorsOnDriveThrough`
+This value determines with doors should close once a vehicle has driven through them.
+
 
 ### Alert Tone Sounds
 #### `ic_sa_tones`

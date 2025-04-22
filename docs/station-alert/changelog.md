@@ -7,6 +7,23 @@ sidebar_position: 999
 This page documents the changes made to SA.
 
 ## v1.0.\*
+### v1.0.5 - 04/22/2025
+**Added**:
+- [`getAllLocationsWithPlayers`](developers/exports/server.md#get-all-locations-with-players) and [`getAllLocationsWithPlayersNearestToPosition`](developers/exports/server.md#get-all-locations-with-players-nearest-to-position) server exports.
+- [`MenuOpened`](developers/events.md#menu-opened---client) and [`MenuClosed`](developers/events.md#menu-closed---client) client events.
+- Support for no Doors being opened on Alert.
+  - Only works with Exports and HTTP API.
+  - Instead of passing door names in an array, pass an array with a single empty string.
+- Self-Closing Doors
+  - When a door is opened, once a vehicle is driven through the door, the door will close.
+  - Can be disabled via [`ic_sa_closeDoorsOnDriveThrough`](config.md#self-closing-doors).
+- [Health Check](usage/commands.md#health-check) command.
+
+**Fixed**:
+- Edge case where Unit Indicators at Stations with no doors would never activate.
+- Edge case where restarting the resource after the server had started, while doors where not fulled closed, would result in traffic lights showing multiple colors.
+- Bug where the Door Buzzer would incorrectly always show doors as "Closed".
+- Bug where props would spawn, despawn, an error would show, and then prop respawn.
 
 ### v1.0.4 - 04/19/2025
 **Added**:

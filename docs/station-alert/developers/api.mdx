@@ -41,6 +41,7 @@ POST alert
 - `locations` - `object`
 	- Must be an object that contains the names of locations, and optionally a list of door names to open.
 		- To open all doors, pass an empty array.
+		- To not open any doors, pass an array with a single empty string.
 	- Example:
 		```json
 		{
@@ -48,7 +49,7 @@ POST alert
 				"Station One": ["Bay Two", "Bay Three"],
 				"Station Two": [],
 				"Station Three": ["Bay One", "Bay Two"]
-			},
+			}
 		}
 		```
 - `message` - `string|undefined`

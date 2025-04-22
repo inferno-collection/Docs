@@ -58,3 +58,10 @@ This command opens a menu to create a new Station Alert from anywhere.
 #### Required Ace Permission: [`Buzzer`](../config#use-buzzer)
 
 This command opens the Buzzer menu, which allows the player to open/close Doors from outside a Station.
+
+
+## Health Check
+### `/stationalert health`
+#### Required Ace Permission: Console Only
+
+This command prints information to the console indicating the state of the resource.

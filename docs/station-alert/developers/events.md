@@ -18,7 +18,7 @@ Be sure to consult the [Data Structures](data.mdx) page to understand the struct
 
 ## Alerts
 
-### Alert Activation
+### Alert Activation - **Server**
 Fired when an Alert is activated.
 
 #### Event Name
@@ -29,3 +29,23 @@ Inferno-Collection:Server:StationAlert:Editable:NewAlert
 
 - `alert` - [`Alert`](data.mdx#alert)
 	- The Alert that was activated.
+
+***
+
+## Miscellaneous
+
+### Menu Opened - **Client**
+Fired when any SA Menu is opened.
+
+#### Event Name
+```
+Inferno-Collection:Client:StationAlert:MenuOpened
+```
+
+### Menu Closed - **Client**
+Fired when any SA Menu is closed.
+
+#### Event Name
+```
+Inferno-Collection:Client:StationAlert:MenuClosed
+```
