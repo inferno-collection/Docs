@@ -339,6 +339,117 @@ import TabItem from '@theme/TabItem';
 		}
 		```
 	</TabItem>
+	<TabItem value="canadian-french" label="Canadian French (Français Canadien)">
+		Translation by: [Racooon](https://github.com/CaptRacoon)
+
+		```jsx title="config.cfg" showLineNumbers
+		###################
+		###  Language   ###
+		###################
+
+		setr ic_sa_language {
+		  "DoorControls":                         "Contrôles de Portes",
+		  "AccessDoorControls":                   "Accéder aux contrôles de portes",
+		  "NoDoorsToControl":                     "Cet emplacement à aucune porte à contrôler!",
+		  "OpenAll":                              "Ouvrir tout",
+		  "CloseAll":                             "Fermer tout",
+		  "OpenAllDoors":                         "Ouvrir toutes les portes",
+		  "CloseAllDoors":                        "Fermer toutes les portes",
+		  "OpenDoor":                             "Ouvrir la porte",
+		  "CloseDoor":                            "Fermer la porte",
+
+		  "StationComputer":                      "Ordinateur de caserne",
+		  "AccessComputer":                       "Accéder a l'ordinateur",
+		  "CreateANewAlert":                      "Créer une nouvelle Alerte pour une caserne.",
+		  "CreateANewMessage":                    "Créer un nouveau message pour cette caserne.",
+		  "StationAlert":                         "Alerte de caserne",
+		  "ActivateStationAlert":                 "Activer une alerte de caserne locale.",
+
+		  "NewAlert":                             "Nouvelle Alerte",
+		  "NewMessage":                           "Nouveau message",
+		  "CurrentMessage":                       "Message actuel",
+		  "SelectLocations":                      "Sélectionner les casernes",
+		  "SelectWhichLocation":                  "Sélectionner a quelle(s) caserne(s) cette Alerte sera envoyée.",
+		  "SelectDoors":                          "Sélectionner les portes",
+		  "SelectWhichDoors":                     "Choisir quelles portes de chaque caserne devra ouvrir, si aucune sélectionnée, elles s'ouvriront toutes!",
+		  "EnterMessage":                         "Entrez le message",
+		  "ProvideAMessage":                      "(Optionnel) Ajoutez un message avec l'alerte.",
+		  "SelectTone":                           "Sélectionnez un ton",
+		  "SelectATone":                          "(Optionnel) Sélectionnez un ton qui sera avec l'alerte, si aucun ton n'est choisi, le ton par défaut jouera.",
+		  "SelectColors":                         "Sélectionner la couleur de les unitées",
+		  "SelectUnitColors":                     "(Optionnel) Sélectionner la couleur des unitées accompagné de ce ton.",
+		  "SendAlert":                            "Envoyer l'alerte",
+		  "SendTheAlert":                         "Envoyer l'alerte aux casernes sélectionnées",
+
+		  "LocationSelection":                    "sélection de Caserne",
+		  "SendAlertTo":                          "Envoyer l'alerte à",
+
+		  "DoorSelection":                        "Sélection de porte",
+		  "Open":                                 "Ouvrir",
+		  "At":                                   "à",
+
+		  "Close":                                "Fermer",
+		  "CloseMenu":                            "Fermer le menu",
+		  "Selected":                             "Sélectionné",
+		  "Provided":                             "Fourni",
+		  "Confirm":                              "Confirmer",
+		  "ConfirmYourSelection":                 "Confirmez votre sélection",
+
+		  "ToneSelection":                        "Sélection de Ton",
+		  "UseTone":                              "Utiliser ce Ton",
+
+		  "UnitColorSelection":                   "Sélection de la couleur de l'unité",
+		  "UseColor":                             "Utiliser la couleur",
+
+		  "YouDoNotHavePermission":               "Vous n'avez pas la permission d'utiliser cette commande!",
+		  "CommandIsClientOnly":                  "Cette commande doit être utilisée dans le client!",
+		  "CommandIsServerOnly":                  "Cette commande doit être utilisée dans la console!",
+		  "MustBeInVehicle":                      "Vous devez être dans un véhicule pour utiliser cette commande!",
+		  "UnknownCommand":                       "Commande inconnue!",
+
+		  "StationLocation":                      "Caserne",
+		  "Place":                                "Placer",
+		  "PlaceA":                               "Placer un",
+		  "SelectA":                              "Sélectionner un",
+		  "HideAProp":                            "Cacher un accessoire",
+		  "TooFar":                               "Trop loin de",
+		  "Name":                                 "Nom",
+		  "New":                                  "Nouveau",
+		  "Remove":                               "Retirer",
+		  "Change":                               "Changer",
+		  "LinkedTo":                             "Connecté à",
+		  "MustBeUpright":                        "Doit être droit",
+		  "FirstPersonRequired":                  "Allez en première personne pour utiliser cet Outil",
+		  "CannotPlaceThere":                     "Ne peut pas être placé ici",
+		  "TooFarFromSurface":                    "Trop loin d'une surface",
+
+		  "InvalidAimLocation":                   "Cela n'est pas une position visée valide",
+		  "InvalidDoorName":                      "Nom de porte invalide",
+		  "DoorNameAlreadyInUse":                 "Nom de porte déjà utilisé",
+		  "NoDoorsAddedYet":                      "Aucune porte ajoutée",
+		  "NoDoorSelected":                       "Aucune porte sélectionnée",
+		  "NoDoorCloseEnough":                    "Aucune porte à portée",
+		  "NoDoorFound":                          "Aucune porte trouvée",
+
+		  "NoPropSelected":                       "Aucun accessoire sélectionné",
+		  "NoHiddenPropSelected":                 "Aucun accessoire sélectionné, visez le cercle bleu",
+		  "CannotCreateWhileEditing":             "Vous ne pouvez pas créer de Caserne lorsque vous modifiez un accessoire!",
+		  "CannotChangeLocationWhileEditing":     "Vous ne pouvez pas changer d'emplacement lorsque vous modifiez un accessoire!",
+		  "CannotChangePropWhileEditing":         "Vous ne pouvez pas changer d'Accessoire lorsque vous modifiez un accessoire!",
+		  "InvalidLocationName":                  "Nom de caserne invalide.",
+		  "NoLocationCreatedYet":                 "Aucune caserne créée!",
+		  "PropAlreadyHidden":                    "Accessoire déjà caché. Clique-Droit pour l'afficher",
+		  "NothingToHide":                        "Rien à cacher",
+
+		  "PropAlreadyAComputer":                 "L'accesoire sélectionné est déjà dans l'ordinateur",
+		  "NoComputerSelected":                   "Aucun accessoire sélectionné",
+		  "NoPropFound":                          "Aucun accessoire trouvé",
+
+		  "TrafficLightSelection":                "Sélection de feu de circulation",
+		  "ConnectThisTrafficLight":              "Connecter ce feu de circulation à"
+		}
+		```
+	</TabItem>
 	<TabItem value="notlisted" label="Your Language Missing?">
 		[See here](../../translations)!
 	</TabItem>
