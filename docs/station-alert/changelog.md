@@ -7,6 +7,20 @@ sidebar_position: 999
 This page documents the changes made to SA.
 
 ## v1.0.\*
+### v1.0.6 - 04/24/2025
+**Added**:
+- Call Screen
+  - When not Alerted, displays a screensaver with the station name, current time, and customizable logo.
+  - When Alerted, displays call details, door states, and time since alert.
+  - Can display custom pages/websites if [configured to do so](config.md#custom-call-screen).
+  - See [here](config.md#call-screen-settings-explained) and [here](usage/components.md#call-screens) for more information.
+
+**Fixed**:
+- Models not being unloaded from memory when no longer required.
+- Issue with doors not auto-closing after the time set in the config.
+- Error message triggered when models failing to load, not listing the correct model names.
+- Edge case where [SA Tool](developers/tool.md) would completely fail to load when provided bad data, instead of showing a helpful error message.
+
 ### v1.0.5 - 04/22/2025
 **Added**:
 - [`getAllLocationsWithPlayers`](developers/exports/server.md#get-all-locations-with-players) and [`getAllLocationsWithPlayersNearestToPosition`](developers/exports/server.md#get-all-locations-with-players-nearest-to-position) server exports.
