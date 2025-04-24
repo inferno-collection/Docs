@@ -55,6 +55,12 @@ For example, medical calls could be blue, fire calls could be red, and everythin
 
 ***
 
+## Call Screens
+Call Screens will display information about the Station they are located in, and if configured, the current time.  
+When Alerted, they will change screens to display information about the current Alert, which doors are open and closed, and how long since the Alert was received.
+
+***
+
 ## Dispatch Centers
 Dispatch Centers are not a physical thing, but rather a concept. When you create a Station Location without any Lights or Doors, it is removed from the list of Station Locations that can receive an alert, however, they can still create alerts.  
 As such, they become "Dispatch Centers": locations that can create, but not receive, alerts.

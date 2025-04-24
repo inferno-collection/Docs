@@ -15,6 +15,7 @@ SA uses convars for config values. For information on how to correctly install t
 |            [`ic_sa_secondsTillLightsReset`](#seconds-till-lights-reset)             |             `150`             |
 |               [`ic_sa_closeDoorsOnDriveThrough`](#self-closing-doors)               |            `true`             |
 |                         [`ic_sa_tones`](#alert-tone-sounds)                         |          *See Below*          |
+|            [`ic_sa_callScreenSettings`](#call-screen-settings-explained)            |          *See Below*          |
 |                 [`ic_sa_enableAddon`](#enable-voice-turnout-addon)                  |            `false`            |
 |       [`ic_sa_addonPaymentReference`](#tebex-subscription-payment-reference)        |             `""`              |
 |                   [`ic_sa_ttsLanguage`](#text-to-speech-language)                   |            `en-us`            |
@@ -171,6 +172,71 @@ setr ic_sa_ceilingSpeakerModel "v_serv_metro_ceilingspeaker"
 ### Debug
 #### `ic_sa_debug`
 If this value is `true`, a ton of extra logs will be outputted to both the client and server consoles. Not suggested at all for production use, nor for when using the [SA Tool](developers/tool.md).
+
+***
+
+## Call Screen Settings Explained
+
+The Call Screen is a TV that can be placed with the [SA Tool](developers/tool.md) that will display information about the Station and Alerts.
+
+### Logo URL
+#### `logo_url`
+This can be either a local path to an image within the resource, or a website.  
+To upload a logo, go to `ui/assets` within `inferno-station-alert` and upload your image file.
+
+### Show Time on Screensaver
+#### `show_time`
+If this value is `true`, the current time will be displayed on the screensaver.
+
+### Timezone
+#### `timezone`
+If `show_time` is `true`, this value will be used to set the timezone.   
+A full list of timezones can be found [here](https://gist.github.com/diogocapela/12c6617fc87607d11fd62d2a4f42b02a).
+
+### Timezone Tag
+#### `timezone_tag`
+If `show_time` is `true`, this value will be used to set the format of the time.   
+A full list of timezone tags can be found [here](https://github.com/TiagoDanin/Locale-Codes?tab=readme-ov-file#locale-list) (see the `tag` column).
+
+### TV Screen Model
+#### `tv_screen_model`
+The model to use for the Call Screen.   
+We don't suggest changing this unless you are familiar with DUIs and Render Targets.
+
+### Render Screen Model
+#### `render_screen_model`
+The model to use with the DUI Render Target.   
+We don't suggest changing this unless you are familiar with DUIs and Render Targets.
+
+### Render Target Name
+#### `render_target`
+The name of the DUI Render Target to use.   
+We don't suggest changing this unless you are familiar with DUIs and Render Targets.
+
+### Custom Call Screen
+#### `custom_urls`
+Set this value to `true` if you wish to replace both the screensaver and alert screen.
+
+### Custom Screensaver URL
+#### `custom_screensaver_url`
+When `custom_urls` is `true`, the DUI will be directed to this URL for the screensaver.
+
+The following query parameters are passed with the URL:
+- `l` - Value of [`logo_url`](#logo-url)
+- `s` - Station name
+- `tz` - Value of [`timezone`](#timezone)
+- `tt` - Value of [`timezone_tag`](#timezone-tag)
+
+### Custom Alert URL
+#### `custom_alert_url`
+When `custom_urls` is `true`, the DUI will be directed to this URL for the alert screen.
+
+The following query parameters are passed with the URL:
+- `l` - Value of [`logo_url`](#logo-url)
+- `m` - Message provided with Alert
+- `d` - JSON array of door names and their state (open or closed)
+
+***
 
 ## Voice Turnout Addon Values Explained
 
@@ -391,6 +457,7 @@ If this value is `true`, the TTS message will be repeated twice when it is read.
 If this value is `true`, the selected Tone for an Alert will be played again at the end of the TTS.
 
 ***
+
 ## Permissions
 There are several permissions for SA, they are as follows:
 
@@ -420,6 +487,7 @@ This permission allows players to use the [SA Tool](developers/tool.md).
 By default, this permission is only granted to admins (`group.admin`).
 
 ***
+
 ## Language
 The config contains a Language section which allows for customization of most written language in the resource.  
 You can check if the resource has already been translated in your language by viewing [this page](../translations/resources/station-alert.mdx).  
@@ -427,6 +495,7 @@ If there is an existing translation, copy it and replace the entire language sec
 
 If your language has not been translated yet, feel free to check out our [Translation program](../translations/index.md#want-to-help-us-translate-a-resources), where you get rewarded for translating resources!  
 You can find the default translation in the section below.
+
 ***
 
 ## Default Config File
@@ -465,6 +534,23 @@ setr ic_sa_tones {
     "Tone 1":   "alert1.mp3",
     "Tone 2":   "alert2.mp3",
     "Tone 3":   "alert3.mp3"
+}
+
+### Call Screen ###
+###################
+
+setr ic_sa_callScreenSettings {
+    "logo_url":                 "/ui/assets/inferno_collection.png",
+    "show_time":                "true",
+    "timezone":                 "Australia/Melbourne",
+    "timezone_tag":             "en-AU",
+
+    "tv_screen_model":          "xm_prop_x17_tv_ceiling_01",
+    "render_screen_model":      "xm_prop_x17_tv_ceiling_scn_02",
+    "render_target":            "prop_x17_tv_ceil_scn_02",
+    "custom_urls":              "false",
+    "custom_screensaver_url":   "",
+    "custom_alert_url":         ""
 }
 
 ### SA Addon ###
