@@ -449,6 +449,116 @@ import TabItem from '@theme/TabItem';
 		  "ConnectThisTrafficLight":              "Connecter ce feu de circulation à"
 		}
 		```
+	<TabItem value="polish" label="Polski" default>
+		Translation by: Shnitzel
+
+		```jsx title="config.cfg" showLineNumbers
+		###################
+		###  Language   ###
+		###################
+
+		setr ic_sa_language {
+		  "DoorControls":                         "Sterowanie drzwiami",
+		  "AccessDoorControls":                   "Użyj kontroli drzwi",
+		  "NoDoorsToControl":                     "W tej lokacji nie ma drzwi z kontrolerem!",
+		  "OpenAll":                              "Otwórz wszystkie",
+		  "CloseAll":                             "Zamknij wszystkie",
+		  "OpenAllDoors":                         "Otwórz wszystkie drzwi",
+		  "CloseAllDoors":                        "Zamknij wszystkie drzwi",
+		  "OpenDoor":                             "Otwórz drzwi",
+		  "CloseDoor":                            "Zamknij drzwi",
+
+		  "StationComputer":                      "Komputer stacji",
+		  "AccessComputer":                       "Użyj komputera",
+		  "CreateANewAlert":                      "Stwóz nowy alert dla dowolnej lokacji.",
+		  "CreateANewMessage":                    "Stwórz nową wiadomość tylko dla tej stacji.",
+		  "StationAlert":                         "Alarm stacji",
+		  "ActivateStationAlert":                 "Uruchom lokalny alarm stacji!",
+
+		  "NewAlert":                             "Nowy alarm",
+		  "NewMessage":                           "Nowa wiadomość",
+		  "CurrentMessage":                       "Aktualna wiadomość",
+		  "SelectLocations":                      "Wybierz lokalizację stacji",
+		  "SelectWhichLocation":                  "Wybierz do których lokalizacji zostanie wysłany alarm",
+		  "SelectDoors":                          "Wybierz drzwi",
+		  "SelectWhichDoors":                     "Wybierz które drzwi, w których stacjach powinny zostać otwarte. Jeśli nie wybierzesz nic, wszystkie drzwi na wszystkich lokacjach się otworzą!",
+		  "EnterMessage":                         "Wpisz wiadomość",
+		  "ProvideAMessage":                      "Opcjonalnie dodaj wiadomość do alarmu",
+		  "SelectTone":                           "Wybierz dźwięk",
+		  "SelectATone":                          "Wybierz dźwięk alarmu jaki zostanie uruchomiony. Jeśli nie wybierzesz niczego, uruchomimy domyślny.",
+		  "SelectColors":                         "Wybierz kolor jednostek.",
+		  "SelectUnitColors":                     "Opcjonalnie oznacz alarm kolorem dla jednostek.",
+		  "SendAlert":                            "Wyślij alarm",
+		  "SendTheAlert":                         "Zatwierdź uruchomienie alarmu w wybranych lokalizacjach.",
+
+		  "LocationSelection":                    "Wybór lokalizacji stacji",
+		  "SendAlertTo":                          "Uruchom alarm w",
+
+		  "DoorSelection":                        "Wybór drzwi",
+		  "Open":                                 "Otwóz",
+		  "At":                                   "w",
+
+		  "Close":                                "Zamknij",
+		  "CloseMenu":                            "Zamknij menu",
+		  "Selected":                             "Wybrane",
+		  "Provided":                             "Dostarczono",
+		  "Confirm":                              "Potwierdź",
+		  "ConfirmYourSelection":                 "Potwierdź swój wybór",
+
+		  "ToneSelection":                        "Wybór dźwięku",
+		  "UseTone":                              "Użyj dźwięku",
+
+		  "UnitColorSelection":                   "Wybór koloru",
+		  "UseColor":                             "Użyj koloru",
+
+		  "YouDoNotHavePermission":               "Nie masz uprawnień do tej komendy",
+		  "CommandIsClientOnly":                  "Ta komenda powinna być uruchomiona po stronie klienta!",
+		  "CommandIsServerOnly":                  "Ta komenda powinna być uruchomiona po stronie serwera!",
+		  "MustBeInVehicle":                      "Tej komendy można użyć tylko w pojeździe!",
+		  "UnknownCommand":                       "Nieznana komenda!",
+
+		  "StationLocation":                      "Lokalizacja stacji",
+		  "Place":                                "Umieść",
+		  "PlaceA":                               "Umieść",
+		  "SelectA":                              "Wybierz",
+		  "HideAProp":                            "Ukryj prop",
+		  "TooFar":                               "Za daleko od",
+		  "Name":                                 "Nazwa",
+		  "New":                                  "Nowy",
+		  "Remove":                               "Usuń",
+		  "Change":                               "Zmień",
+		  "LinkedTo":                             "Połączony z",
+		  "MustBeUpright":                        "Musi być pionowo",
+		  "FirstPersonRequired":                  "To narzędzie jest dotestępne w widoku pierwszoosobowym",
+		  "CannotPlaceThere":                     "Nie można tego tutaj umieścić",
+		  "TooFarFromSurface":                    "Zbyt daleko od powierzchni",
+
+		  "InvalidAimLocation":                   "Niepoprawna lokalizacja",
+		  "InvalidDoorName":                      "Niepoprawna nazwa drzwi",
+		  "DoorNameAlreadyInUse":                 "Drzwi o takiej nazwie już istnieją",
+		  "NoDoorsAddedYet":                      "Nie dodano jeszcze żadnych drzwi",
+		  "NoDoorSelected":                       "Nie wybrano drzwi",
+		  "NoDoorCloseEnough":                    "Nie ma drzwi w pobliżu",
+		  "NoDoorFound":                          "Nie znaleziono drzwi",
+
+		  "NoPropSelected":                       "Nie wybrano propa",
+		  "NoHiddenPropSelected":                 "Nie zaznaczono propa, celuj w niebieski okrąd",
+		  "CannotCreateWhileEditing":             "Nie można utworzyć lokalizacji podczas edycji propa",
+		  "CannotChangeLocationWhileEditing":     "Nie można zmienić lokalizacji podczas edycji propa",
+		  "CannotChangePropWhileEditing":         "Nie można zmienić typu propa podczas jego edycji",
+		  "InvalidLocationName":                  "Niepoprawna nazwa Lokalizacji Stacji",
+		  "NoLocationCreatedYet":                 "Nie utworzono jeszcze żadnej Lokalizacji Stacji",
+		  "PropAlreadyHidden":                    "Prop już jest ukryty. Kliknij prawym aby go pokazać",
+		  "NothingToHide":                        "Nie znaleziono niczego do ukrycia",
+
+		  "PropAlreadyAComputer":                 "Wybrany prop jest już komputerem",
+		  "NoComputerSelected":                   "Nie zaznaczono komputera",
+		  "NoPropFound":                          "Nie znaleziono propa",
+
+		  "TrafficLightSelection":                "Wybór świateł drogowych",
+		  "ConnectThisTrafficLight":              "Podłącz te światła do"
+		}
+		```
 	</TabItem>
 	<TabItem value="notlisted" label="Your Language Missing?">
 		[See here](../../translations)!
