@@ -18,7 +18,7 @@ You must be in first-person to use the SA Tool.
 
 The very first time the SA Tool is used on your server, it will create a new directory in the root of your server files, this is *generally* the same location as your `resources` folder and `server.cfg` file, see the example below:
 
-![Root Directory](assets/root.png)
+![Root Directory](assets/tool/root.png)
 
 If you are ever unsure, you can use the `/stationalert path` command from your server console, it will tell you exactly where the directory is located.
 
@@ -77,7 +77,7 @@ dependency "inferno-station-alert"
 
 Below you will find the controls for the SA Tool. They will also display in the top left of your screen.
 
-![Controls](assets/controls.png)
+![Controls](assets/tool/controls.png)
 
 In addition to the above, there are the following:
 
@@ -130,7 +130,7 @@ This cycles through created station locations inside this draft file.
 :::warning
 If you see the warning below at the bottom of your screen, you are too far from your station location.
 
-![Too far away!](assets/distance.png)
+![Too far away!](assets/tool/distance.png)
 :::
 
 ### Hidden Props
