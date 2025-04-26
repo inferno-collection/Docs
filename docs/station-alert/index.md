@@ -43,15 +43,15 @@ Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-c
 
 ### Feature Comparison
 
-| Feature                                                      | Station Alert<br/>Sonoran Edition | Station Alert<br/>(Standalone) |
-|--------------------------------------------------------------|:---------------------------------:|:------------------------------:|
-| Create Alerts in-game via Menu or Command                    |                 ❌                 |               ✅                |
-| Create Alerts and get data via [Exports](developers/exports) |                 ❌                 |               ✅                |
-| Create Alerts and get data via [API](developers/api.mdx)     |                 ❌                 |               ✅                |
-| Working Traffic Lights, Door Controls, Lights and Speakers   |                 ✅                 |               ✅                |
-| [SA Tool](developers/tool.md) for Location creation          |                 ✅                 |               ✅                |
-| Sonoran CAD Support                                          |                 ✅                 |              ✅\^               |
-| Support Text-to-Speech                                       |                ✅\#                |              ✅\*               |
+| Feature                                                                | Station Alert<br/>Sonoran Edition | Station Alert<br/>(Standalone) |
+|------------------------------------------------------------------------|:---------------------------------:|:------------------------------:|
+| Create Alerts in-game via Menu or Command                              |                 ❌                 |               ✅                |
+| Create Alerts and get data via [Exports](developers/exports)           |                 ❌                 |               ✅                |
+| Create Alerts and get data via [API](developers/api.mdx)               |                 ❌                 |               ✅                |
+| Working Traffic Lights, Door Controls, Lights, Speakers, & Call Screen |                 ✅                 |               ✅                |
+| [SA Tool](developers/tool.md) for Location creation                    |                 ✅                 |               ✅                |
+| Sonoran CAD Support                                                    |                 ✅                 |              ✅\^               |
+| Support Text-to-Speech                                                 |                ✅\#                |              ✅\*               |
 
 \^ - Requires the Plus or Pro version of Sonoran CAD.  
 \# - Free for the duration of the Sonoran Subscription.  

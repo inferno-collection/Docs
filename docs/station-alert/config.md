@@ -242,6 +242,8 @@ The following query parameters are passed with the URL:
 
 The Voice Turnout Addon is an optional, subscription based, addon for SA.  
 You can purchase it from our Tebex Store [here](https://store.inferno-collection.com/package/station-alert-addon).  
+It is not a resource you download, but rather the Subscription Payment Reference is used like a password to access the TTS service.
+
 The options below require a valid subscription, or they will not work.
 
 ### Enable Voice Turnout Addon
@@ -262,7 +264,7 @@ You can find the Subscription Payment Reference in three places:
 :::danger
 Treat your Subscription Payment Reference like a password.  
 **Do not** post it publicly.  
-**Do not** share it other people/server owners/developers.
+**Do not** share it with other people/server owners/developers.
 
 Text-to-Speech usage is monitored, and abuse will result in consequences.
 :::
