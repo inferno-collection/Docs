@@ -7,6 +7,23 @@ sidebar_position: 999
 This page documents the changes made to SA.
 
 ## v1.0.\*
+### v1.0.7 - 04/27/2025
+**Added**:
+- Higher resolution DUI for Call Screen
+	:::warning
+	Restarting the resource while using the new Call Screen will cause the Call Screens to all go black.   
+	This is because of how FiveM un/loads the replacement asset, and we cannot fix this.   
+	If you need to restart the resource a lot (i.e. because you are developing/testing a custom call screen), we suggest moving the `xm_prop_x17_tv_ceiling_scn_02.ydr` file out of the `stream` folder temporarily. 
+	:::
+
+**Changed**:
+- Further increased the Sonoran Edition timeout validation logic.
+- Server info logs to be blue, making them easier to locate in the log.
+
+**Fixed**:
+- Typo in `config` value: `i`**s**`_sa_ttsSpeechRate` should be `i`**c**`_sa_ttsSpeechRate`.
+- A blank timer appearing for one second when the Call Screen first changes to the Alert page.
+
 ### v1.0.6 - 04/24/2025
 **Added**:
 - Call Screen
