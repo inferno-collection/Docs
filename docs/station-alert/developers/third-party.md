@@ -59,36 +59,12 @@ You can customize the `exports` to liking, see [here](exports/server.md) for mor
 Follow the steps below to create alerts when a player started fire is created, and when automatic fires are created.
 
 1. Inside `SmartFires`, open `config.lua`.
-2. Locate `fireAlerts = {...}`, then add the following under `infernoPager = { ...`:
-   ```lua
-   -- This allows integration with the Inferno Station Alert resource
-   infernoStationAlert = {
-       enabled = true,
-       unitIndicatorColors = {"red"},
-       tone = ""
-   },
-   ```
+2. Locate `infernoStationAlert = {...}`, and set `enabled` to `true`, then edit `unitIndicatorColors` and `tone` as you wish.
    ![SmartFires 1](assets/third-party/smart_fires/1.png)
    - Leaving `tone` empty will use the default tone.
    - Set `unitIndicatorColors` to `{}` to not have any colors.
-3. Inside `SmartFires`, open `sv_utils.lua`.
-4. Locate `function triggerFireNotification(id, message)`, then add the following under `if main.fireAlerts.infernoPager.enabled then ...`:
-   ```lua
-   if main.fireAlerts.infernoStationAlert.enabled then
-       exports["inferno-station-alert"]:newAlertNearestStationWithPlayers(fires[id].coords, {
-           ["message"] = "-station-, " .. fires[id].streetName .. ", " .. "reported fire",
-           ["unitColors"] = main.fireAlerts.infernoStationAlert.unitIndicatorColors,
-           ["tone"] = main.fireAlerts.infernoStationAlert.tone
-       })
-   end
-   ```
-   ![Smart Fires 2](assets/third-party/smart_fires/2.png)
 
 You can customize the `exports` to liking, see [here](exports/server.md) for more information.
-
-:::note
-In a future update of SmartFires, this code will be added as part of the SmartFires download - beware of duplication when updating.
-:::
 
 ## Fire Alarm Reborn
 Follow the steps below to create alerts when a fire alarm is activated.
