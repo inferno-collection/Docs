@@ -10,6 +10,8 @@ The FAR Tool is a powerful in-game feature that allows server owners to create n
 
 When using the FAR Tool, drafts are saved directly to the server's files, so server owners can delegate creation of alarm systems to trusted players without having the worry about the hassle of needing to send each other files.
 
+Watch the [YouTube Video](https://www.youtube.com/watch?v=m89Kc5o5HpE&t=993s) for FAR Tool.
+
 :::tip
 You must be in first-person to use the FAR Tool.
 :::

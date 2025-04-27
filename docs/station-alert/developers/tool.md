@@ -10,6 +10,8 @@ The SA Tool is a powerful in-game feature that allows server owners to create ne
 
 When using the SA Tool, drafts are saved directly to the server's files, so server owners can delegate creation of station locations to trusted players without having the worry about the hassle of needing to send each other files.
 
+Watch the [YouTube Video](https://www.youtube.com/watch?v=V0MBgqLFetA&t=641s) for SA Tool.
+
 :::tip
 You must be in first-person to use the SA Tool.
 :::
