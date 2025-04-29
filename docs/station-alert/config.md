@@ -10,6 +10,7 @@ SA uses convars for config values. For information on how to correctly install t
 
 |                                        Name                                         |         Default Value         |
 |:-----------------------------------------------------------------------------------:|:-----------------------------:|
+|                            [`ic_sa_language`](#language)                            |            `en-us`            |
 |                       [`ic_sa_kickCheaters`](#kick-cheaters)                        |            `false`            |
 |             [`ic_sa_secondsTillDoorsClose`](#seconds-till-doors-close)              |             `150`             |
 |            [`ic_sa_secondsTillLightsReset`](#seconds-till-lights-reset)             |             `150`             |
@@ -36,6 +37,14 @@ SA uses convars for config values. For information on how to correctly install t
 |                               [`ic_sa_debug`](#debug)                               |            `false`            |
 
 ## Values Explained
+
+### Language
+#### `ic_sa_language`
+This value is the short code for the language you'd like to use.  
+You can check the list of available language by viewing [this page](../translations/resources).
+If your language has not been translated yet, feel free to check out our [Translation program](../translations/index.md#want-to-help-us-translate-a-resources), where you get rewarded for translating resources!
+
+The default value is `en-us` for English.
 
 ### Kick Cheaters
 #### `ic_sa_kickCheaters`
@@ -490,16 +499,6 @@ By default, this permission is only granted to admins (`group.admin`).
 
 ***
 
-## Language
-The config contains a Language section which allows for customization of most written language in the resource.  
-You can check if the resource has already been translated in your language by viewing [this page](../translations/resources/station-alert.mdx).  
-If there is an existing translation, copy it and replace the entire language section in your `config.cfg`.
-
-If your language has not been translated yet, feel free to check out our [Translation program](../translations/index.md#want-to-help-us-translate-a-resources), where you get rewarded for translating resources!  
-You can find the default translation in the section below.
-
-***
-
 ## Default Config File
 ``` showLineNumbers
 # Inferno Collection Station Alert
@@ -518,6 +517,10 @@ You can find the default translation in the section below.
 
 ### General ###
 ###############
+
+# Select language
+# More Info: https://docs.inferno-collection.com/translations/resources/
+set ic_sa_language "en-us"
 
 # Kick suspected cheaters
 set ic_sa_kickCheaters "false"
@@ -641,110 +644,4 @@ add_ace builtin.everyone "InfernoStationAlert.Buzzer" allow
 
 add_ace group.admin "InfernoStationAlert.Tool" allow
 add_ace group.admin "InfernoStationAlert.Command" allow
-
-###################
-###  Language   ###
-###################
-
-setr ic_sa_language {
-    "DoorControls":                         "Door Controls",
-    "AccessDoorControls":                   "Access Door Controls",
-    "NoDoorsToControl":                     "This location has no doors to control!",
-    "OpenAll":                              "Open All",
-    "CloseAll":                             "Close All",
-    "OpenAllDoors":                         "Open all doors",
-    "CloseAllDoors":                        "Close all doors",
-    "OpenDoor":                             "Open door",
-    "CloseDoor":                            "Close door",
-    
-    "StationComputer":                      "Station Computer",
-    "AccessComputer":                       "Access Computer",
-    "CreateANewAlert":                      "Create a new Alert for any Station Location.",
-    "CreateANewMessage":                    "Create a new Message to be read at only this Station Location.",
-    "StationAlert":                         "Station Alert",
-    "ActivateStationAlert":                 "Activate a local Station Alert.",
-    
-    "NewAlert":                             "New Alert",
-    "NewMessage":                           "New Message",
-    "CurrentMessage":                       "Current Message",
-    "SelectLocations":                      "Select Station Locations",
-    "SelectWhichLocation":                  "Select which Station Locations the Alert will be sent to.",
-    "SelectDoors":                          "Select Doors",
-    "SelectWhichDoors":                     "Select which doors at which Station Locations should open. If none selected, all doors at all selected Station Locations will open.",
-    "EnterMessage":                         "Enter Message",
-    "ProvideAMessage":                      "Optionally provide a message with the Alert.",
-    "SelectTone":                           "Select Tone",
-    "SelectATone":                          "Optionally select a tone to use with the Alert. If not selected, default tone will be used.",
-    "SelectColors":                         "Select Unit Colors",
-    "SelectUnitColors":                     "Optionally select unit colors to use with this tone",
-    "SendAlert":                            "Send Alert",
-    "SendTheAlert":                         "Send the Alert to the selected Station Locations",
-    
-    "LocationSelection":                    "Station Location Selection",
-    "SendAlertTo":                          "Send Alert to",
-    
-    "DoorSelection":                        "Door Selection",
-    "Open":                                 "Open",
-    "At":                                   "At",
-    
-    "Close":                                "Close",
-    "CloseMenu":                            "Close menu",
-    "Selected":                             "Selected",
-    "Provided":                             "Provided",
-    "Confirm":                              "Confirm",
-    "ConfirmYourSelection":                 "Confirm Your Selection",
-    
-    "ToneSelection":                        "Tone Selection",
-    "UseTone":                              "Use Tone",
-    
-    "UnitColorSelection":                   "Unit Color Selection",
-    "UseColor":                             "Use Color",
-    
-    "YouDoNotHavePermission":               "You do not have permission to use this command!",
-    "CommandIsClientOnly":                  "This command needs to be run from the client!",
-    "CommandIsServerOnly":                  "This command needs to be run from the console!",
-    "MustBeInVehicle":                      "You must be in a vehicle to use this command!",
-    "UnknownCommand":                       "Unknown command!",
-    
-    "StationLocation":                      "Station Location",
-    "Place":                                "Place",
-    "PlaceA":                               "Place a",
-    "SelectA":                              "Select a",
-    "HideAProp":                            "Hide a Prop",
-    "TooFar":                               "Too far away from",
-    "Name":                                 "Name",
-    "New":                                  "New",
-    "Remove":                               "Remove",
-    "Change":                               "Change",
-    "LinkedTo":                             "Linked To",
-    "MustBeUpright":                        "Must be upright",
-    "FirstPersonRequired":                  "Enter First-Person to use the Tool",
-    "CannotPlaceThere":                     "Cannot place there",
-    "TooFarFromSurface":                    "Too far from any surfaces",
-    
-    "InvalidAimLocation":                   "This is not a valid aiming location",
-    "InvalidDoorName":                      "Invalid door name",
-    "DoorNameAlreadyInUse":                 "Door name already in use",
-    "NoDoorsAddedYet":                      "No doors added yet",
-    "NoDoorSelected":                       "No door selected",
-    "NoDoorCloseEnough":                    "No door close enough",
-    "NoDoorFound":                          "No door found",
-    
-    "NoPropSelected":                       "No prop selected",
-    "NoHiddenPropSelected":                 "No prop selected, aim for blue circle",
-    "CannotCreateWhileEditing":             "Cannot create Station Location while editing prop",
-    "CannotChangeLocationWhileEditing":     "Cannot change Locations while editing prop",
-    "CannotChangePropWhileEditing":         "Cannot change Prop Type while editing prop",
-    "InvalidLocationName":                  "Invalid Station Location name",
-    "NoLocationCreatedYet":                 "No Station Location created yet!",
-    "PropAlreadyHidden":                    "Prop already hidden. Right Click to unhide",
-    "NothingToHide":                        "Nothing found to hide",
-    
-    "PropAlreadyAComputer":                 "Selected Prop is already a Computer",
-    "NoComputerSelected":                   "No Computer selected",
-    "NoPropFound":                          "No prop found",
-    
-    "TrafficLightSelection":                "Traffic Light Selection",
-    "ConnectThisTrafficLight":              "Connect this traffic light to"
-}
 ```
