@@ -7,6 +7,14 @@ sidebar_position: 999
 This page documents the changes made to FAR.
 
 ## v1.4.\*
+### v1.4.6 - 04/29/2025
+**Added**:
+- Error message when audio is not loaded successfully.
+- Coordinates to Sonoran 911 call.
+- [`ic_far_twoStageAlarm`](config.md#two-stage-alarm) which allows for the disabling of the voice part of the alarm.
+
+**Changed**:
+- Internal structure of two items to prevent rare cases of Mono server crashes.
 
 ### v1.4.5 - 04/21/2025
 **Added**:

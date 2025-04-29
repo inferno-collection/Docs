@@ -19,7 +19,8 @@ FAR uses convars for config values. For information on how to correctly install 
 |                 [`ic_far_alarmSystemTimeout`](#alarm-system-timeout)                 |           `-1`            |
 |           [`ic_far_allowBadResets`](#allow-badinvalid-alarm-system-resets)           |          `false`          |
 |             [`ic_far_realisticAudio`](#use-realistic-audio-for-sounders)             |          `false`          |
-|                             `ic_far_manualInteractions`                              |          `false`          |
+| [`ic_far_manualInteractions`](#manual-interactions-targetthird-eye-resource-support) |          `false`          |
+|                      [`ic_far_twoStageAlarm`](#two-stage-alarm)                      |          `true`           |
 |                     [`ic_far_access_token`](#http-access-token)                      |          *None*           |
 |                      [`ic_far_whitelisted_ips`](#api-whitelist)                      |        *See Below*        |
 |                      `ic_far_defaultControlPanelDistanceCheck`                       |            `2`            |
@@ -116,6 +117,12 @@ For any other target/third-eye resource, use the provided event handlers and var
 The events in `editable/client/targeting.lua` will not fire unless `ic_far_manualInteractions` is `true`.
 :::
 
+### Two Stage Alarm
+#### `ic_far_twoStageAlarm`
+When this value is `true`, the alarm sound will alternate between Stage One ("alarm") and Stage Two ("voice").   
+If this value is `false`, Stage One will loop.  
+Default value is `true`.
+
 ### HTTP Access Token
 #### `ic_far_access_token`
 
@@ -152,6 +159,7 @@ set ic_far_defaultControlPanelModels {
 	"Test":			"prop_ic_fire_panel"
 }
 ```
+
 ### Default Pull Station Models
 #### `ic_far_defaultPullStationModels`
 These values determine which prop/model should be used for when the Pull Station is un/pulled.

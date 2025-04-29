@@ -41,7 +41,7 @@ SA uses convars for config values. For information on how to correctly install t
 ### Language
 #### `ic_sa_language`
 This value is the short code for the language you'd like to use.  
-You can check the list of available language by viewing [this page](../translations/resources).
+You can check the list of available language by viewing [this page](../translations/resources).  
 If your language has not been translated yet, feel free to check out our [Translation program](../translations/index.md#want-to-help-us-translate-a-resources), where you get rewarded for translating resources!
 
 The default value is `en-us` for English.
