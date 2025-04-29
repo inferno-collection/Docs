@@ -4,9 +4,9 @@ description: Current list of translated resources.
 sidebar_position: 10
 ---
 
-| Resource                                                    | Languages                                             |
-|-------------------------------------------------------------|-------------------------------------------------------|
-| [Station Alert](../../translations/resources/station-alert) | - English<br/>- German (Deutsch)<br/>- Danish (Dansk) |
+| Resource                                                        | Short Code                                          | Native Name                                                 | English Name                                              |
+|-----------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------|
+| [Station Alert](../../translations/resources/station-alert.mdx) | - `en-us`<br/>- `de-de`<br/>- `da-dk`<br/>- `fr-ca` | - English<br/>- Deutsch<br/>- Dansk<br/>- Français Canadien | - English<br/>- German<br/>- Danish<br/>- Canadian French |
 
 ### Resource not listed?
 If a resource is not listed, this means it does not support multiple languages at this time.  

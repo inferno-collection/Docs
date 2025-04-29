@@ -7,6 +7,30 @@ sidebar_position: 999
 This page documents the changes made to SA.
 
 ## v1.0.\*
+### v1.0.8 - 04/29/2025
+:::warning
+Significant changes to [`ic_sa_language`](config.md#language) were made in this version, do not blindly update.
+:::
+
+**Changed**:
+- Warning about locations not having any lights **and** doors, to warning about not having any lights **or** any doors.
+- Wording of [SA Tool](developers/tool.md) when saving a draft.
+- Completely redone language system.
+  - Was required as `.cfg`s don't support accents.
+  - [`ic_sa_language`](config.md#language) is now a language short code (e.g., `en-us`). [See here](config.md#language) for more information.
+  - Translations have moved from `config.cfg` to individual files per-language inside a new folder called `languages`.
+
+**Fixed**:
+- Text-to-Speech requests containing accents failing.
+- "Update Doors" button in Sonoran CAD not properly opening/closing doors in-game.
+- No doors closing after timeout when all doors were opened for an Alert.
+- Sonoran CAD not being sent required config when validation failed on the first attempt.
+- `-station-` appearing on call screens instead of the name of the station, when using server exports.
+- Multiple alerts resulting in:
+  - Duplicated follow-up messages
+  - Doors closing too soon
+  - Lights turning off too soon
+
 ### v1.0.7 - 04/27/2025
 **Added**:
 - Higher resolution DUI for Call Screen
