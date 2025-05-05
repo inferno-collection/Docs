@@ -59,9 +59,20 @@ This command opens a menu to create a new Station Alert from anywhere.
 
 This command opens the Buzzer menu, which allows the player to open/close Doors from outside a Station.
 
-
 ## Health Check
 ### `/stationalert health`
 #### Required Ace Permission: Console Only
 
 This command prints information to the console indicating the state of the resource.
+
+
+## DUI Fix
+### `/stationalert duifix`
+#### Required Ace Permission: None
+
+The command will flip the DUI on the call screens.  
+This is a "band-aid fix" for the [Flipped DUI Bug](https://forum.cfx.re/t/dui-rotation-bug/644418?u=christopherm) that some people have.  
+If you don't have this bug, you do not need to use this command.
+
+You only need to do the command once, then the script will remember your preference.  
+If you ever need to un-flip the DUI, simply run the command again.

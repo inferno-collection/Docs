@@ -235,6 +235,7 @@ The following query parameters are passed with the URL:
 - `s` - Station name
 - `tz` - Value of [`timezone`](#timezone)
 - `tt` - Value of [`timezone_tag`](#timezone-tag)
+- `d` - JSON array of door names and their state (open or closed)
 
 ### Custom Alert URL
 #### `custom_alert_url`
@@ -242,6 +243,7 @@ When `custom_urls` is `true`, the DUI will be directed to this URL for the alert
 
 The following query parameters are passed with the URL:
 - `l` - Value of [`logo_url`](#logo-url)
+- `s` - Station name
 - `m` - Message provided with Alert
 - `d` - JSON array of door names and their state (open or closed)
 
@@ -520,7 +522,7 @@ By default, this permission is only granted to admins (`group.admin`).
 
 # Select language
 # More Info: https://docs.inferno-collection.com/translations/resources/
-set ic_sa_language "en-us"
+setr ic_sa_language "en-us"
 
 # Kick suspected cheaters
 set ic_sa_kickCheaters "false"

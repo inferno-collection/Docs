@@ -7,6 +7,20 @@ sidebar_position: 999
 This page documents the changes made to SA.
 
 ## v1.0.\*
+### v1.0.9 - 05/05/2025
+**Added**:
+- [`/stationalert duifix`](usage/commands.md#dui-fix) command for players with the Flipped DUI Bug. [See here](usage/commands.md#dui-fix) for more info.
+- Friendly error for when invalid user-provided JSON config values fail to load, indicating as such.
+- `tones.json` which allows tone names with accents and non-ASCII characters. [See here](../translations/resources/station-alert.mdx#tone-name-overrides) for more info.
+
+**Changed**:
+- Improved the server log message when ingesting [Dispatch Centers](usage/components.md#dispatch-centers).
+- [`/stationalert health`](usage/commands.md#health-check) command to list [Dispatch Centers](usage/components.md#dispatch-centers) count, and all location names.
+- Call Screens requests such that Doors JSON is provided for Screensaver, and Station Name for Alerts. [See here](config.md#custom-call-screen) for more info.
+
+**Fixed**:
+- [Dispatch Centers](usage/components.md#dispatch-centers) being selectable in Sonoran CAD.
+
 ### v1.0.8 - 04/29/2025
 :::warning
 Significant changes to [`ic_sa_language`](config.md#language) were made in this version, do not blindly update.
