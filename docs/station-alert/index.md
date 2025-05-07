@@ -37,7 +37,7 @@ Some important notes for Sonoran Edition:
 - Text-to-Speech is included for free for the duration of the Sonoran Pro subscription.
   - Voice Turnout Addon *is not* required.
 - Only Sonoran CAD integration works.
-  - All other activation types (menu, command, exports, etc.) will not work.
+  - All other activation types (menu, command, exports, third-party resources, etc.) will not work.
 
 Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-collection.com/package/station-alert-sonoran-edition).
 
@@ -48,6 +48,7 @@ Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-c
 | Create Alerts in-game via Menu or Command                              |                 ❌                 |               ✅                |
 | Create Alerts and get data via [Exports](developers/exports)           |                 ❌                 |               ✅                |
 | Create Alerts and get data via [API](developers/api.mdx)               |                 ❌                 |               ✅                |
+| Create Alerts via [Third-Party Resources](developers/third-party)      |                 ❌                 |               ✅                |
 | Working Traffic Lights, Door Controls, Lights, Speakers, & Call Screen |                 ✅                 |               ✅                |
 | [SA Tool](developers/tool.md) for Location creation                    |                 ✅                 |               ✅                |
 | Sonoran CAD Support                                                    |                 ✅                 |              ✅\^               |
@@ -59,9 +60,13 @@ Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-c
 
 ***
 
-## Resource Compatability List
+## Third-Party Resource Integrations
 
 Below is a list of resources that we have added optional compatibility with, should you wish to connect them with SA.
+
+:::tip
+Third-Party Resource Integrations only work with the [Standalone Version](#station-alert-1) of SA.
+:::
 
 | Resource                                                                                                                                                             | Features                                                         | How to enable                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|----------------------------------------------------------|

@@ -5,6 +5,10 @@ sidebar_position: 50
 # Third-Party Resources
 This page explains how to integrate SA with third-party resources.
 
+:::tip
+Third-Party Resource Integrations only work with the [Standalone Version](../index.md#station-alert-1) of SA.
+:::
+
 ## zFires
 Follow the steps below to create alerts when a player started fire is created, and when automatic incidents are created.
 
