@@ -59,6 +59,10 @@ For example, medical calls could be blue, fire calls could be red, and everythin
 Call Screens will display information about the Station they are located in, and if configured, the current time.  
 When Alerted, they will change screens to display information about the current Alert, which doors are open and closed, and how long since the Alert was received.
 
+:::warning
+Restarting SA will cause the Call Screens to all go black. This is because of how FiveM un/loads the replacement asset, and we cannot fix this. If you need to restart the resource a lot (i.e. because you are developing/testing a custom call screen), we suggest moving the `xm_prop_x17_tv_ceiling_scn_02.ydr` file out of the `stream` folder temporarily. 
+:::
+
 ***
 
 ## Dispatch Centers

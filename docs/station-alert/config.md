@@ -226,6 +226,10 @@ We don't suggest changing this unless you are familiar with DUIs and Render Targ
 #### `custom_urls`
 Set this value to `true` if you wish to replace both the screensaver and alert screen.
 
+:::warning
+Restarting SA will cause the Call Screens to all go black. This is because of how FiveM un/loads the replacement asset, and we cannot fix this. If you need to restart the resource a lot (i.e. because you are developing/testing a custom call screen), we suggest moving the `xm_prop_x17_tv_ceiling_scn_02.ydr` file out of the `stream` folder temporarily.
+:::
+
 ### Custom Screensaver URL
 #### `custom_screensaver_url`
 When `custom_urls` is `true`, the DUI will be directed to this URL for the screensaver.
