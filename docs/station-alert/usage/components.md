@@ -18,6 +18,12 @@ Door Controls allow players to open and close doors from a panel within the stat
 Door Controls can be placed anywhere, but we suggest placing them inside the room where the bays are.  
 Door Controls can also be access from a Station Computer.
 
+The Door Controls Menu allows players to:
+- Open and close individual doors
+- Open and close all doors
+- Isolate doors
+  - When a door is isolated, it will not open or close with other doors, and will remain "locked" in whatever position (open or closed) it was isolated in.
+
 ***
 
 ## Traffic Lights
@@ -28,8 +34,18 @@ When a door is closed, it will be red. When a door is opening or closing, it wil
 
 ## Station Computer
 Station Computers are not standalone props, but instead a prop selected to act as a Computer.  
-When nearby these props, a prompt will appear and players can access a menu to create a new Alert.  
-From the Station Computer, the Door Controls can also be accessed.
+When nearby these props, a prompt will appear and players can access a menu.  
+From the Station Computer menu, players can:
+- Create new alerts
+  - Create a new Alert at any Station Location.
+- Create new messages
+  - Plays a message over the station speakers and shows message on [Call Screens](#call-screens).
+- Control doors
+  - See [Door Controls](#door-controls).
+- Activate a local station alert
+  - Play a generic tone over the station speakers - designed for walk-in emergencies.
+- Rename doors
+  - Allows players to temporarily rename doors - such as if a truck is moved around - reverts after server restart.
 
 ***
 
@@ -44,20 +60,34 @@ We suggest placing one speaker every 5-10 meters.
 
 ***
 
+## Exterior Speakers
+Functionally identical to [Ceiling Speakers](#ceiling-speakers), but designed to be placed outside.  
+[See here](#ceiling-speakers) for more info.
+
+***
+
 ## Wall Lights
 Wall Lights are designed to be placed outside of Stations, and will flash when an Alert is received.
 
 ***
 
-## Unit Indicators 
+## Unit Indicators
 Unit Indicators change color depending on what metadata was provided in an Alert.  
 For example, medical calls could be blue, fire calls could be red, and everything else could be green.
+
+Available colors:
+- Red
+- Green
+- Blue
+- Yellow
+- Magenta
 
 ***
 
 ## Call Screens
 Call Screens will display information about the Station they are located in, and if configured, the current time.  
-When Alerted, they will change screens to display information about the current Alert, which doors are open and closed, and how long since the Alert was received.
+When Alerted, they will change screens to display information about the current Alert, which doors are open and closed, and how long since the Alert was received.  
+When a message (but not a full alert) is received, the screens will show just the message sent without the extra details (such as door states), then reset after 20 seconds.
 
 :::warning
 Restarting SA will cause the Call Screens to all go black. This is because of how FiveM un/loads the replacement asset, and we cannot fix this. If you need to restart the resource a lot (i.e. because you are developing/testing a custom call screen), we suggest moving the `xm_prop_x17_tv_ceiling_scn_02.ydr` file out of the `stream` folder temporarily. 

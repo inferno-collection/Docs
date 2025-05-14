@@ -32,6 +32,20 @@ Inferno-Collection:Server:StationAlert:Editable:NewAlert
 
 ***
 
+### Message Received - **Server**
+Fired when a message is sent to a station.
+
+#### Event Name
+```
+Inferno-Collection:Server:StationAlert:Editable:NewMessage
+```
+#### Parameters
+
+- `message` - `string`
+	- The message that was sent.
+
+***
+
 ## Miscellaneous
 
 ### Menu Opened - **Client**

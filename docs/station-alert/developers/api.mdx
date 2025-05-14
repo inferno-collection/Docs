@@ -11,7 +11,7 @@ This page documents the HTTP endpoints for SA.
 
 :::info
 The API requires Station Alert, and does not work for Sonoran Edition.
-For more info, [see here](../../index.md#available-versions).
+For more info, [see here](../index.md#available-versions).
 :::
 
 ## How to Use
@@ -76,7 +76,7 @@ POST alert
 		```
 	</TabItem>
 
-	<TabItem value="alert.example.2" label="Alert with Unit Indicator Colors" default>
+	<TabItem value="alert.example.2" label="Alert with Unit Indicator Colors">
 		```json
 		{
 			"locations": {
@@ -87,7 +87,7 @@ POST alert
 		```
 	</TabItem>
 
-	<TabItem value="alert.example.3" label="Alert with specific Tone" default>
+	<TabItem value="alert.example.3" label="Alert with specific Tone">
 		```json showLineNumbers
 		{
 			"locations": {
@@ -98,7 +98,7 @@ POST alert
 		```
 	</TabItem>
 
-	<TabItem value="alert.example.4" label="Full Alert" default>
+	<TabItem value="alert.example.4" label="Full Alert">
 		```json showLineNumbers
 		{
 			"message": "Ladder 7, Rescue 7. Carson Avenue intersection of Davis Avenue, Strawberry, Los Santos. Vehicle Accident, possible persons trapped. Postal 0 9 0.",
@@ -118,7 +118,7 @@ POST alert
 		<p>*No return body, headers only*</p>
 	</TabItem>
 
-	<TabItem value="alarm-system.400" label="400 - Bad Request" default>
+	<TabItem value="alarm-system.400" label="400 - Bad Request">
 		- `No body provided`
 			- No request body provided.
 		- `Malformed body`
@@ -134,6 +134,56 @@ POST alert
 		- `X is not a valid tone name. Valid tones: Y, Z`
 			- Invalid tone provided.
 			- Make sure to provide the tone name and not the tone file name.
+	</TabItem>
+</Tabs>
+
+***
+
+### Create A New Message
+Use this endpoint to send a message to one or more stations
+
+#### Endpoint
+```
+POST message
+```
+#### Body
+
+- `rawmessage` - `string`
+	- The message to send.
+- `locations` - `array`
+	- An array of location names.
+	- Example:
+		```json
+		{
+			"locations": ["Station One", "Station Two"]
+		}
+		```
+
+#### Example Request
+```json
+{
+    "rawmessage": "Could the LT please come to the office for a phone call. LT to the office for a phone call.",
+    "locations": ["Station One"]
+}
+```
+
+#### Return Value
+<Tabs>
+	<TabItem value="message.200" label="200 - OK" default>
+		<p>*No return body, headers only*</p>
+	</TabItem>
+
+	<TabItem value="message.400" label="400 - Bad Request">
+		- `No body provided`
+			- No request body provided.
+		- `Malformed body`
+			- Request body didn't contain required fields, or contains irrelevant fields.
+		- `No locations provided`
+			- `locations` was empty or invalid.
+		- `X is not a valid location`
+			- Invalid location name provided.
+		- `RawMessage cannot be empty`
+			- Ensure you are not passing an empty string (`""`) for `rawmessage`.
 	</TabItem>
 </Tabs>
 
@@ -156,6 +206,8 @@ GET locations
 	</TabItem>
 </Tabs>
 
+***
+
 ### Get Location By Name
 Use this endpoint to get a specific location by name
 
@@ -177,5 +229,97 @@ GET location/{name}
 				- You can include spaces or use `%20` as a seperator
 		- `X is not a valid location name, valid locations names are: Y & Z`
 			- Location name provided does not exist.
+	</TabItem>
+</Tabs>
+
+***
+
+## Doors
+
+### Get Doors By Location
+Use this endpoint to get the states of all doors at a location
+
+#### Endpoint
+```
+GET doors/{name}
+```
+
+#### Return Value
+<Tabs>
+	<TabItem value="doors.200" label="200 - OK" default>
+		<p>Each line is an array of door names as strings</p>
+		```json
+		{
+			"open": [],
+			"closed": [],
+			"isolatedOpen": [],
+			"isolatedClosed": []
+		}
+		```
+	</TabItem>
+
+	<TabItem value="doors.400" label="400 - Bad Request" default>
+		- `No Location Name Provided`
+			- You must include the name of the location in the request URL.
+			- Example: `GET doors/Davis Station`
+			- You can include spaces or use `%20` as a seperator
+		- `X is not a valid location name, valid locations names are: Y & Z`
+			- Location name provided does not exist.
+	</TabItem>
+</Tabs>
+
+***
+
+### Update Doors
+Use this endpoint to get update the doors of one or more station locations
+
+#### Endpoint
+```
+POST doors
+```
+
+#### Body
+- `open` - `object`
+	- Must be an object that contains the names of locations, and optionally a list of door names to open.
+		- To open all doors, pass an empty array.
+	- Example:
+		```json
+		{
+			"open": {
+				"Station One": ["Bay Two", "Bay Three"],
+				"Station Two": [],
+				"Station Three": ["Bay One", "Bay Two"]
+			}
+		}
+		```
+- `close` - `object`
+	- Must be an object that contains the names of locations, and optionally a list of door names to close.
+		- To close all doors, pass an empty array.
+	- Example:
+		```json
+		{
+			"close": {
+				"Station One": ["Bay Two", "Bay Three"],
+				"Station Two": [],
+				"Station Three": ["Bay One", "Bay Two"]
+			}
+		}
+		```
+
+#### Return Value
+<Tabs>
+	<TabItem value="doors-update.200" label="200 - OK" default>
+		<p>*No return body, headers only*</p>
+	</TabItem>
+
+	<TabItem value="doors-update.400" label="400 - Bad Request">
+		- `Empty body`
+			- No request body provided.
+		- `Malformed body`
+			- Request body didn't contain required fields, or contains irrelevant fields.
+		- `X is not a valid location`
+			- Invalid location name provided.
+		- `X is not a valid door for Y`
+			- Invalid door name provided for location.
 	</TabItem>
 </Tabs>
