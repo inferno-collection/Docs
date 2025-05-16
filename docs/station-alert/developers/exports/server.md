@@ -227,3 +227,90 @@ local success = exports["inferno-station-alert"]:newAlertNearestStationWithPlaye
 
 #### Return Value
 `bool`
+
+## Doors
+### Update Doors
+Use this export to update the door states of doors at one or more stations.
+
+#### Export Name
+```
+updateDoors
+```
+
+#### Parameters
+- `doors` - `table`
+	- `open` - `table`
+		- Location - `object`
+			- Location Name - `string`
+			- Door Names - `table`
+				- Door Name - `string`
+			- If empty table provided, all doors will open.
+	- `close` - `table`
+		- Location - `object`
+			- Location Name - `string`
+			- Door Names - `table`
+				- Door Name - `string`
+			- If empty table provided, all doors will close.
+
+#### Example
+```lua
+local value = exports["inferno-station-alert"]:updateDoors({
+    ["open"] = {
+        ["Station One"] = {"Door One", "Door Three"},
+    },
+    ["close"] = {
+        ["Station Two"] = {"Door Two", "Door Four"},
+    }
+})
+```
+
+#### Return Value
+`bool`
+
+
+### Update Door Isolations
+Use this export to update the door isolation states of doors at one or more stations.
+
+#### Export Name
+```
+updateDoorIsolations
+```
+
+#### Parameters
+- `doors` - `table`
+	- `open` - `table`
+		- Location - `object`
+			- Location Name - `string`
+			- Door Names - `table`
+				- Door Name - `string`
+			- If empty table provided, all doors will lock open.
+	- `close` - `table`
+		- Location - `object`
+			- Location Name - `string`
+			- Door Names - `table`
+				- Door Name - `string`
+			- If empty table provided, all doors will lock closed.
+	- `deisolate` - `table`
+		- Location - `object`
+			- Location Name - `string`
+			- Door Names - `table`
+				- Door Name - `string`
+			- If empty table provided, all doors will deisolate.
+
+#### Example
+```lua
+local value = exports["inferno-station-alert"]:updateDoorIsolations({
+    ["open"] = {
+        ["Station One"] = {"Bay Two"},
+    },
+    ["close"] = {
+        ["Station One"] = {"Bay Four"},
+    },
+    ["deisolate"] = {
+        ["Station One"] = {"Bay Three"},
+    }
+})
+```
+
+#### Return Value
+`bool`

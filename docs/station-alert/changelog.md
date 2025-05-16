@@ -6,6 +6,47 @@ sidebar_position: 999
 
 This page documents the changes made to SA.
 
+## v1.1.\*
+### v1.1.0 - 05/16/2025
+**Added**:
+- Added [Exterior Speakers](usage/components.md#exterior-speakers).
+  - Behave exactly the same as Ceiling Speakers, but are designed to be placed outside.
+- Message Screen for [Call Screens](usage/components.md#call-screens)
+  - When a message is sent to the station, it will display on the Call Screens for 20 seconds before returning to the screensaver.
+  - [`custom_message_url`](config.md#custom-message-url) has also been added for [Custom Call Screen](config.md#custom-call-screen) users. [See here](config.md#custom-message-url) for more info.
+- Support for per-station logos. [See here](config.md#logo-url) for more info.
+- Yellow and Magenta as color options for [Unit Indicators](usage/components.md#unit-indicators).
+- In-game menu to temporarily rename doors. [See here](usage/components.md#station-computer) for more info.
+- Support for overriding Custom Call Screen URLs via convars. [See here](config.md#custom-call-screen) for more info.
+  - This allows for accents and non-ASCII characters in URLs. [See here](../translations/resources/station-alert.mdx#custom-call-screen-url-overrides) for more info.
+- In-game menu to temporarily isolate (lock open or closed) doors. [See here](usage/components.md#door-controls) for more info.
+- [`tts-replace.json`](usage/tts.md#word-replacement) which will replace matching entries in all text-to-speech messages. [See here](usage/tts.md#word-replacement) for more info.
+  - For example, replacing `A`, `B`, & `C` with `Alpha`, `Bravo`, and `Charlie`. 
+- **Events**:
+  - [`NewMessage`](developers/events.md#message-received---server) server event that is fired when a message is sent to a station. [See here](developers/events.md#message-received---server) for more info.
+- **API**:
+  - [`message`](developers/api.mdx#create-a-new-message) POST API endpoint to send messages to stations via [HTTP API](developers/api.mdx). [See here](developers/api.mdx#create-a-new-message) for more info.
+  - [`doors`](developers/api.mdx#get-doors-by-location) GET API endpoint to get doors at a location via [HTTP API](developers/api.mdx). [See here](developers/api.mdx#get-doors-by-location) for more info.
+  - [`doors`](developers/api.mdx#update-doors) POST API endpoint to update doors at one or more locations via [HTTP API](developers/api.mdx). [See here](developers/api.mdx#update-doors) for more info.
+- **Exports**:
+  - [`updateDoors`](developers/exports/server.md#update-doors) server export for opening and closing doors via exports. [See here](developers/exports/server.md#update-doors) for more info.
+  - [`updateDoorIsolations`](developers/exports/server.md#update-door-isolations) server export for isolating doors via exports. [See here](developers/exports/server.md#update-door-isolations) for more info.
+
+**Changed**:
+- Refactored logic that loads required models for stations to remove unnecessary variable assignment.
+- Refactored logic that creates alerts to removed duplicated message variable accidentally introduced in Sonoran Edition.
+- Custom Call Screen URL logic such that when [`custom_urls`](config.md#custom-call-screen) is `true`, if any of the custom URLs are empty (`""`), they will default back to the built-in URLs.
+
+**Fixed**:
+- Issue where if all doors were deselected in the in-game Call Creation menus, all the doors at a station would open, instead of none.
+
+**Removed**:
+- Temporary zFires hook.
+  - zFires has been updated to include the required code as part of the download. [See here](developers/third-party.md#zfires) for more info.
+  - Make sure to update your copy of zFires!
+
+***
+
 ## v1.0.\*
 ### v1.0.9 - 05/05/2025
 **Added**:

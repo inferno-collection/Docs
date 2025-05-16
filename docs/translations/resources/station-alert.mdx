@@ -8,7 +8,6 @@ import TabItem from '@theme/TabItem';
 Below you can find several translations for SA. These are provided with the resource, inside the `languages`, but are provided here for reference.
 
 ## Tone Name Overrides
-
 Also inside the `languages` folder is a file called `tones.json`.
 You can use this file to replace the names of [Tones defined in the `config.cfg`](../../station-alert/config#alert-tone-sounds) with tones names containing accents or other non-ASCII characters. See the example below:
 
@@ -19,6 +18,10 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 	"Tone 3": "Contrôles de Portes"
 }
 ```
+
+## Custom Call Screen URL Overrides
+If you need to have accents or non-ASCII characters in your custom call screen URLs, you will need to override the values with convars.
+[See here](../../station-alert/config#custom-call-screen) for more info.
 
 ## Translations
 
@@ -67,6 +70,7 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"DoorSelection": "Door Selection",
 			"Open": "Open",
+			"Closed": "Closed",
 			"At": "At",
 
 			"Close": "Close",
@@ -81,6 +85,17 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"UnitColorSelection": "Unit Color Selection",
 			"UseColor": "Use Color",
+
+			"RenameDoors": "Rename Doors",
+			"RenameDoorsDesc": "Rename one or more Doors temporarily",
+			"Rename": "Rename",
+
+			"DoorIsolations": "Door Isolations",
+			"DoorIsolationsDesc": "Isolate one or more doors preventing them from opening or closing",
+			"Isolate": "Isolate",
+			"Isolated": "Isolated",
+			"Deisolate": "Deisolate",
+			"Deisolated": "Deisolated",
 
 			"YouDoNotHavePermission": "You do not have permission to use this command!",
 			"CommandIsClientOnly": "This command needs to be run from the client!",
@@ -175,6 +190,7 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"DoorSelection": "Türen auswählen",
 			"Open": "Öffnen",
+			"Closed": "Geschlossen",
 			"At": "Bei",
 
 			"Close": "Schließen",
@@ -189,6 +205,17 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"UnitColorSelection": "Einheitsfarben Auswahl",
 			"UseColor": "Farbe nutzen",
+
+			"RenameDoors": "Tore umbennen",
+			"RenameDoorsDesc": "Eine oder mehrere Tore vorübergehend umbenennen",
+			"Rename": "Umbennen",
+
+			"DoorIsolations": "Isolierte Türen",
+			"DoorIsolationsDesc": "Isoliere eine oder mehrere Türen, damit sich diese nicht öffnen oder schließen",
+			"Isolate": "Isolieren",
+			"Isolated": "Isoliert",
+			"Deisolate": "Deisolieren",
+			"Deisolated": "Deisoliert",
 
 			"YouDoNotHavePermission": "Du hast keine Berechtigung, diesen Befehl zu nutzen!",
 			"CommandIsClientOnly": "Dieser Befehl muss vom Client ausgeführt werden!",
@@ -283,6 +310,7 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"DoorSelection": "Dørvalg",
 			"Open": "Åbn",
+			"Closed": "Lukket",
 			"At": "Ved",
 
 			"Close": "Luk",
@@ -297,6 +325,17 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"UnitColorSelection": "Valg af enhedsfarve",
 			"UseColor": "Brug farve",
+
+			"RenameDoors": "Omdøb døre",
+			"RenameDoorsDesc": "Omdøb en eller flere døre midlertidigt",
+			"Rename": "Omdøb",
+
+			"DoorIsolations": "Dørisoleringer",
+			"DoorIsolationsDesc": "Isolér en eller flere døre, så de forhindres i at åbne eller lukke",
+			"Isolate": "Isolér",
+			"Isolated": "Isoleret",
+			"Deisolate": "Fjern isolering",
+			"Deisolated": "Isolering fjernet",
 
 			"YouDoNotHavePermission": "Du har ikke tilladelse til at bruge denne kommando!",
 			"CommandIsClientOnly": "Denne kommando skal køres fra klienten!",
@@ -391,6 +430,7 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"DoorSelection": "Sélection de porte",
 			"Open": "Ouvrir",
+			"Closed": "Fermée",
 			"At": "à",
 
 			"Close": "Fermer",
@@ -405,6 +445,17 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"UnitColorSelection": "Sélection de la couleur de l'unité",
 			"UseColor": "Utiliser la couleur",
+
+			"RenameDoors": "Renommer les portes",
+			"RenameDoorsDesc": "Renommer une ou plusieurs portes temporairement ",
+			"Rename": "Renommer",
+
+			"DoorIsolations": "Isolation des portes",
+			"DoorIsolationsDesc": "Isoler une ou plusieurs portes, prévenant qu’elles ouvrent.",
+			"Isolate": "Isoler",
+			"Isolated": "Isolée",
+			"Deisolate": "Dé-isoler",
+			"Deisolated": "Dé-Isolée",
 
 			"YouDoNotHavePermission": "Vous n'avez pas la permission d'utiliser cette commande!",
 			"CommandIsClientOnly": "Cette commande doit être utilisée dans le client!",
@@ -452,6 +503,126 @@ You can use this file to replace the names of [Tones defined in the `config.cfg`
 
 			"TrafficLightSelection": "Sélection de feu de circulation",
 			"ConnectThisTrafficLight": "Connecter ce feu de circulation à"
+		}
+		```
+	</TabItem>
+	<TabItem value="polish" label="pl-pl (Polski)">
+		#### Polish - Polski
+		Translation by: Shnitzel
+
+		```json title="pl-pl.json" showLineNumbers
+		{
+			"DoorControls": "Kontrola drzwi",
+			"AccessDoorControls": "Dostęp do kontroli drzwi",
+			"NoDoorsToControl": "W tej lokalizacji nie ma podłączonych drzwi!",
+			"OpenAll": "Otwórz wszystkie!",
+			"CloseAll": "Zamknij wszystkie!",
+			"OpenAllDoors": "Otwiera wszystkie drzwi",
+			"CloseAllDoors": "Zamyka wszystkie drzwi",
+			"OpenDoor": "Otwórz drzwi",
+			"CloseDoor": "Zamknij drzwi",
+
+			"StationComputer": "Komputer stacji",
+			"AccessComputer": "Dostęp do komputera",
+			"CreateANewAlert": "Stwórz nowe zgłoszenie dla dowolnej stacji",
+			"CreateANewMessage": "Stwórz nową wiadomość tylko dla tej stacji",
+			"StationAlert": "Alarm Stacji",
+			"ActivateStationAlert": "Aktywuj lokalny alarm dla stacji",
+
+			"NewAlert": "Nowy alert",
+			"NewMessage": "Nowa wiadomość",
+			"CurrentMessage": "Aktualna wiadomość",
+			"SelectLocations": "Wybierz lokację",
+			"SelectWhichLocation": "Wybierz dla której lokalizacji chcesz wysłać alert",
+			"SelectDoors": "Wybierz drzwi",
+			"SelectWhichDoors": "Wybierz które drzwi, na której stacji chcesz otworzyć. Brak wyboru oznacza otwarcie wszystkich drzwi.",
+			"EnterMessage": "Wpisz wiadomość",
+			"ProvideAMessage": "Opcjonalna wiadomość dla alertu",
+			"SelectTone": "Wybierz dźwięk",
+			"SelectATone": "Opcjonalnie wybierz rodzaj alarmu. Brak wyboru oddtworzy domyślny dźwięk.",
+			"SelectColors": "Wybierz kolor alertu",
+			"SelectUnitColors": "Opcjonalnie oznacz alert kolorem jednostek",
+			"SendAlert": "Wyślij alert",
+			"SendTheAlert": "Wyślij alert do wybranych lokalizacji",
+
+			"LocationSelection": "Wybór lokalizacji stacji",
+			"SendAlertTo": "Wyślij alert do:",
+
+			"DoorSelection": "Wybór drzwi",
+			"Open": "Otwórz",
+			"Closed": "Zamknięte",
+			"At": "w",
+
+			"Close": "Zamknij",
+			"CloseMenu": "Zamknij menu",
+			"Selected": "Wybierz",
+			"Provided": "Dostarczone",
+			"Confirm": "Potwierdź",
+			"ConfirmYourSelection": "Potwierdź wybór",
+
+			"ToneSelection": "Wybór dźwięku",
+			"UseTone": "Użyj dźwięku",
+
+			"UnitColorSelection": "Wybór koloru jednostek",
+			"UseColor": "Użyj koloru",
+
+			"RenameDoors": "Zmień nazwę drzwi",
+			"RenameDoorsDesc": "Zmień tymczasowo nazwę wybranych drzwi",
+			"Rename": "Zmień nazwę",
+
+			"DoorIsolations": "Zablokowane drzwi",
+			"DoorIsolationsDesc": "Zablokuj wybrane drzwi, zapobiegając ich otwieraniu lub zamykaniu",
+			"Isolate": "Zablokuj",
+			"Isolated": "Zablokowane",
+			"Deisolate": "Odblokuj",
+			"Deisolated": "Odblokowane",
+
+			"YouDoNotHavePermission": "Nie masz uprawnień by to zrobić",
+			"CommandIsClientOnly": "Ta komenda jest dostępna tylko po stronie klienta!",
+			"CommandIsServerOnly": "Ta komenda działa tylko z konsoli serwera!",
+			"MustBeInVehicle": "Musisz być w pojeździe, aby użyć tej komendy!",
+			"UnknownCommand": "Nieznana komenda!",
+
+			"StationLocation": "Lokalizacja stacji",
+			"Place": "Umieść",
+			"PlaceA": "Umieść",
+			"SelectA": "Wybierz",
+			"HideAProp": "Ukryj prop",
+			"TooFar": "Za daleko od",
+			"Name": "Nazwa",
+			"New": "Nowy",
+			"Remove": "Usuń",
+			"Change": "Zmień",
+			"LinkedTo": "Połączone z",
+			"MustBeUpright": "Musi być ustawione pionowo",
+			"FirstPersonRequired": "Narzędzie dostępne w widoku z pierwszej osoby",
+			"CannotPlaceThere": "Nie można tutaj umieścić",
+			"TooFarFromSurface": "Za daleko od poprawnej powierzchni",
+
+			"InvalidAimLocation": "Niepoprawna lokalizacja",
+			"InvalidDoorName": "Niepoprawna nazwa drzwi",
+			"DoorNameAlreadyInUse": "Nazwa drzwi już w użyciu",
+			"NoDoorsAddedYet": "Nie dodano jeszcze drzwi",
+			"NoDoorSelected": "Nie zaznaczono drzwi",
+			"NoDoorCloseEnough": "Brak drzwi w pobliżu",
+			"NoDoorFound": "Nie znaleziono drzwi",
+
+			"NoPropSelected": "Nie wybrano propa",
+			"NoHiddenPropSelected": "Nie zaznaczono propa. Celuj w niebieski okrąg",
+			"CannotCreateWhileEditing": "Nie można utworzyć lokalizacji w czasie edycji propa",
+			"CannotChangeLocationWhileEditing": "Nie można zmienić lokalizacji w czasie edycji propa",
+			"CannotChangePropWhileEditing": "Nie można zmienić typu propa podczas jego edycji",
+			"InvalidLocationName": "Niepoprawna nazwa stacji",
+			"NoLocationCreatedYet": "Nie utworzono jeszcze żadnej stacji!",
+			"PropAlreadyHidden": "Prop już ukryty. Kliknij prawym aby go pokazać",
+			"NothingToHide": "Nie znaleziono niczego do ukrycia",
+
+			"PropAlreadyAComputer": "Wybrany prop jest już komputerem",
+			"NoComputerSelected": "Nie wybrano komputera",
+			"NoPropFound": "Nie znaleziono propa",
+
+			"TrafficLightSelection": "Wybór świateł drogowych",
+			"ConnectThisTrafficLight": "Połącz światła z"
 		}
 		```
 	</TabItem>

@@ -193,6 +193,13 @@ The Call Screen is a TV that can be placed with the [SA Tool](developers/tool.md
 This can be either a local path to an image within the resource, or a website.  
 To upload a logo, go to `ui/assets` within `inferno-station-alert` and upload your image file.
 
+The logo provided in `logo_url` will be used for all call screens, expect locations where a specific logo has been provided in the locations file.  
+To provide a logo for a specific station location, edit the `.lua` location file of your choosing, then next to `name` add `logourl`. See the example below:
+
+```lua
+location { name = "Davis Fire Station", logourl = "/ui/assets/inferno_collection.png" }
+```
+
 ### Show Time on Screensaver
 #### `show_time`
 If this value is `true`, the current time will be displayed on the screensaver.
@@ -226,6 +233,24 @@ We don't suggest changing this unless you are familiar with DUIs and Render Targ
 #### `custom_urls`
 Set this value to `true` if you wish to replace both the screensaver and alert screen.
 
+:::warning
+Restarting SA will cause the Call Screens to all go black. This is because of how FiveM un/loads the replacement asset, and we cannot fix this. If you need to restart the resource a lot (i.e. because you are developing/testing a custom call screen), we suggest moving the `xm_prop_x17_tv_ceiling_scn_02.ydr` file out of the `stream` folder temporarily.
+:::
+
+The below custom URLs can be:
+- Set to a URL in `config.cfg`.
+- Left blank in the `config.cfg`.
+  - Will default back to built-in URL.
+- Be overridden via convar.
+  - To override via convar, make sure `custom_urls` is true in the `config.cfg`, then set replicated convars for the following:
+    - `custom_screensaver_url`
+    - `custom_alert_url`
+    - `custom_message_url`
+  - Example:
+    ```
+    setr custom_alert_url "https://google.com"
+    ```
+
 ### Custom Screensaver URL
 #### `custom_screensaver_url`
 When `custom_urls` is `true`, the DUI will be directed to this URL for the screensaver.
@@ -245,6 +270,18 @@ The following query parameters are passed with the URL:
 - `l` - Value of [`logo_url`](#logo-url)
 - `s` - Station name
 - `m` - Message provided with Alert
+- `d` - JSON array of door names and their state (open or closed)
+
+***
+
+### Custom Message URL
+#### `custom_message_url`
+When `custom_urls` is `true`, the DUI will be directed to this URL for the message screen.
+
+The following query parameters are passed with the URL:
+- `l` - Value of [`logo_url`](#logo-url)
+- `s` - Station name
+- `m` - Message
 - `d` - JSON array of door names and their state (open or closed)
 
 ***

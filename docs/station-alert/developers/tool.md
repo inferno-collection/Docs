@@ -52,14 +52,18 @@ If you wish to *not* save changes to a draft, you can use the `/stationalert too
 This will immediately and irreversibly discard the changes you have made, and you cannot get them back.
 :::
 
-### Using a Draft
+### Deploying a Draft
 
-To use a draft as Station Location, you will need to copy the file from the Drafts folder and place it inside another FiveM resource.  
+To deploy a draft as Station Location, you will need to copy the file from the Drafts folder and place it inside another FiveM resource.  
 The draft can be placed in either an existing resource, or a new one, so long as this line is added at the bottom of the `fxmanifest.lua`:
 
 ```lua
 locations "your_draft_name_here.lua"
 ```
+
+:::note
+Drafts cannot be placed in the Station Alert resource.
+:::
 
 Making sure to replace `your_draft_name_here` with the name of the draft `.lua` file.
 
@@ -72,6 +76,11 @@ locations "davis.lua"
 
 dependency "inferno-station-alert"
 ```
+
+:::tip
+Resources with Draft Locations inside them must be started *after* Station Alert, or they will not be loaded.  
+Either add `dependency "inferno-station-alert"` to the manifest, or update your resource start order.
+:::
 
 ## In-Game Tool
 

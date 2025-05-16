@@ -76,3 +76,24 @@ Where possible, use full-words, or logical shortenings, not abbreviation.
 ### 4. Use phonetics
 If you ask the TTS to read "D", it'll give you "D" ("dee").  
 You probably wanted "Delta" or "David" - you need to write this instead!
+
+
+***
+
+## Word Replacement
+The `tts-replace.json` file allows for replacing of words with other words.   
+An example might be replacing `A`, `B`, & `C` with `Alpha`, `Bravo`, and `Charlie`.
+
+:::tip
+Only whole words will be matched and replaced.   
+For example, if `Alpha` repalces `A`, `This is a Bannanna` would become `This is Alpha Bananna`, *not* `This is Alpha BAlphanAlphannAlpha`.
+:::
+
+### Example File
+```json title="tts-replace.json" showLineNumbers
+{
+	"P10": "Pumper 10",
+	"St": "Street",
+	"LS": "Los Santos"
+}
+```

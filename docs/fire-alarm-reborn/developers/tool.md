@@ -52,9 +52,9 @@ If you wish to *not* save changes to a draft, you can use the `/firealarm tool c
 This will immediately and irreversibly discard the changes you have made, and you cannot get them back.
 :::
 
-### Using a Draft
+### Deploying a Draft
 
-To use a draft as an Alarm System, you will need to copy the file from the Drafts folder and place it inside another FiveM resource.  
+To deploy a draft as an Alarm System, you will need to copy the file from the Drafts folder and place it inside another FiveM resource.  
 Most people find it easiest to place it inside the [`inferno-alarms` resource](../install.md#optional---install-pre-created-locations), but you can place it inside any resource, so long as the manifest file is updated.
 
 In your resource of choice, add this line at the bottom of the `fxmanifest.lua`:
@@ -62,6 +62,10 @@ In your resource of choice, add this line at the bottom of the `fxmanifest.lua`:
 ```lua
 fire_alarms "your_draft_name_here.lua"
 ```
+
+:::note
+Drafts cannot be placed in the Fire Alarm Reborn resource.
+:::
 
 Making sure to replace `your_draft_name_here` with the name of the draft `.lua` file.
 
@@ -74,6 +78,11 @@ fire_alarms "mission_row.lua"
 
 dependency "inferno-fire-alarm-reborn"
 ```
+
+:::tip
+Resources with Draft Alarm Systems inside them must be started *after* Fire Alarm Reborn, or they will not be loaded.  
+Either add `dependency "inferno-fire-alarm-reborn"` to the manifest, or update your resource start order.
+:::
 
 ## In-Game Tool
 

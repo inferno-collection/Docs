@@ -12,32 +12,11 @@ Third-Party Resource Integrations only work with the [Standalone Version](../ind
 ## zFires
 Follow the steps below to create alerts when a player started fire is created, and when automatic incidents are created.
 
-1. Inside `inferno-station-alert`, open `editable/server/events.lua`.
-2. Locate the `Temporary zFires Hook`, then uncomment (remove the `--`) the section below.
-![zFires 1](assets/third-party/zfires/1.png)
-3. Inside `z_fire`, open `core/config.lua`.
-4. Locate `integrations = {...}`, then add the following under `['infernoPager'] = ...`:
-	```lua
-	['infernoStationAlert'] = true, -- @comment: https://store.inferno-collection.com/category/sa
-	```
-	![zFires 2](assets/third-party/zfires/2.png)
-5. Inside `z_fire`, open `core/server/classes/utils.lua`.
-6. Locate `if integrations['infernoPager'] then`, then add the following underneath:
-	```lua
- 	if integrations['infernoStationAlert'] then
-        exports["inferno-station-alert"]:newAlertNearestStationWithPlayers(incident.data.pos, {
-            ["message"] = "-station-, " .. incident.location .. ", " .. incident.description,
-            ["unitColors"] = {"red"}
-        })
-    end
-	```
- 	![zFires 3](assets/third-party/zfires/3.png)
+1. Inside `z_fire`, open `core/config.lua`.
+2. Locate `integrations = {...}`, then find `['infernoStationAlert'] = false` and change to `true`.
+    ![zFires ](assets/third-party/zfires/1.png)
 
 You can customize the `exports` to liking, see [here](exports/server.md) for more information.
-
-:::note
-In a future update of zFires, this code will be added as part of the zFires download - beware of duplication when updating.
-:::
 
 ## CD_Dispatch
 Follow the steps below to create alerts when a new notification is created for one or more specific jobs.
