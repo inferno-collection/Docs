@@ -558,7 +558,6 @@ By default, this permission is only granted to admins (`group.admin`).
 ###############
 
 # Select language
-# More Info: https://docs.inferno-collection.com/translations/resources/
 setr ic_sa_language "en-us"
 
 # Kick suspected cheaters
@@ -594,7 +593,8 @@ setr ic_sa_callScreenSettings {
     "render_target":            "prop_x17_tv_ceil_scn_02",
     "custom_urls":              "false",
     "custom_screensaver_url":   "",
-    "custom_alert_url":         ""
+    "custom_alert_url":         "",
+    "custom_message_url":       ""
 }
 
 ### SA Addon ###
@@ -614,7 +614,7 @@ set ic_sa_ttsLanguage "en-us"
 set ic_sa_ttsVoice "Mary"
 
 # Text-to-Speech Speech Rate
-set is_sa_ttsSpeechRate "-1"
+set ic_sa_ttsSpeechRate "-1"
 
 # Send "90 seconds" & "120 seconds" follow up messages
 set ic_sa_followUpAlertMessages "true"
@@ -652,7 +652,9 @@ setr ic_sa_unitIndicatorModels {
 	"None":		"prop_ic_unit_indicator",
 	"Red":		"prop_ic_unit_indicator_r",
 	"Green":	"prop_ic_unit_indicator_g",
-	"Blue":         "prop_ic_unit_indicator_b"
+	"Blue":		"prop_ic_unit_indicator_b"
+	"Magenta":	"prop_ic_unit_indicator_m",
+	"Yellow":	"prop_ic_unit_indicator_y"
 }
 
 # The model to use for the door controls
@@ -660,6 +662,9 @@ setr ic_sa_doorControlsModel "prop_ic_door_controls"
 
 # The model to use for the ceiling speaker
 setr ic_sa_ceilingSpeakerModel "v_serv_metro_ceilingspeaker"
+
+# The model to use for the external speaker
+setr ic_sa_exteriorSpeakerModel "h4_prop_h4_tannoy_01a"
 
 # HTTP Access Token
 set ic_sa_httpAccessToken ""
