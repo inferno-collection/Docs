@@ -57,3 +57,12 @@ Follow the steps below to create alerts when a fire alarm is activated.
    ![FAR 1](assets/third-party/far/1.png)
 
 You can customize the `exports` to liking by editing `editables/server/station-alert.lua`. For more information on `exports`, see [here](exports/server.md).
+
+
+## Sonoran CAD
+To connect Sonoran CAD and Inferno Collection, ensure that Sonoran CAD starts before SA does.  
+When SA connects with Sonoran CAD, you will see a log entry in the console:
+
+```
+Sonoran CAD detected
+```

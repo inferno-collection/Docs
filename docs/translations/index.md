@@ -36,14 +36,14 @@ No need to own or even download the resources!
 
 ### Submissions
 
-All submissions must be made via a private thread in our [Discord channel](https://discord.gg/5GZ3Jzt).  
+All submissions must be made via a private thread in [`#general`](https://discord.com/channels/346941064344764416/388981595928788992) in our [Discord](https://discord.gg/5GZ3Jzt).  
 All work must be original – no Google Translate, ChatGPT, etc.
 
 1. Review [this page](../translations/resources) for the list of resources that can be translated.
 2. Pick a resource that hasn't been translated in your language yet and click the link for the resource.
 3. Use the provided information to create a translation in your own language.
-4. Create a thread [in Discord](https://discord.gg/5GZ3Jzt) informing us you've finished a translation for your language.
-5. Create a Pull Request (or we can on your behalf) to update  the documentation.
+4. Create a thread in [`#general`](https://discord.com/channels/346941064344764416/388981595928788992) in our [Discord](https://discord.gg/5GZ3Jzt) informing us you've finished a translation for your language.
+5. Create a Pull Request (or we can on your behalf) to update the documentation.
 6. Receive your reward!
 
 Questions, comments, concerns? [Create a thread in Discord!](https://discord.gg/5GZ3Jzt)
