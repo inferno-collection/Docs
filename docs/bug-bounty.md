@@ -88,12 +88,13 @@ We are committed to working with ethical researchers. If you comply with this po
 
 To submit a report:
 
-1. Join our [Discord server](https://discord.gg/5GZ3Jzt).
-2. Navigate to the `#bug-bounty` channel.
+1. Join our [Discord](https://discord.gg/5GZ3Jzt).
+2. Navigate to [`#general`](https://discord.com/channels/346941064344764416/388981595928788992).
 3. Create a **private thread** and include:
 	- A detailed description of the issue
 	- Steps to reproduce
 	- Proof of concept or working example, if possible
+    - Ping @Christopher.
 
 > ✅ The more complete your report, the more likely you'll receive a reward!
 
