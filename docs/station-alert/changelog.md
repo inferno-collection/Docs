@@ -8,6 +8,10 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 ### v1.1.0 - 05/16/2025
+
+**YouTube Video**:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2BUjmwnyRhc?si=ECIjutYto5G94qHK" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 **Added**:
 - Added [Exterior Speakers](usage/components.md#exterior-speakers).
   - Behave exactly the same as Ceiling Speakers, but are designed to be placed outside.
