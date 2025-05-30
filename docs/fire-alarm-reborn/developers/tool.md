@@ -60,7 +60,9 @@ Most people find it easiest to place it inside the [`inferno-alarms` resource](.
 In your resource of choice, add this line at the bottom of the `fxmanifest.lua`:
 
 ```lua
-fire_alarms "your_draft_name_here.lua"
+fire_alarms "your_first_draft_name_here.lua"
+fire_alarms "your_second_draft_name_here.lua"
+fire_alarms "your_third_draft_name_here.lua"
 ```
 
 :::note
