@@ -103,6 +103,7 @@ computer.position.z
 
 ```lua
 alert.tone
+alert.tones
 alert.message
 alert.locations
 alert.unitcolors
@@ -110,12 +111,19 @@ alert.unitcolors
 
 <Tabs>
 	<TabItem value="alert.tone" label="tone">
-		<p>`string`</p>
+		<p>`string|null`</p>
 		<p>The tone that played for this Alert.</p>
+		<p>If `null`, use `tones`.</p>
 		<p>Example:</p>
 		```lua
 		Tone Two
 		```
+	</TabItem>
+
+	<TabItem value="alert.tones" label="tones">
+		<p>`table`</p>
+		<p>The tones that played for each station in this Alert.</p>
+		<p>If empty, use `tone`.</p>
 	</TabItem>
 
 	<TabItem value="alert.message" label="message">

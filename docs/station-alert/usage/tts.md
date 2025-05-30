@@ -81,19 +81,36 @@ You probably wanted "Delta" or "David" - you need to write this instead!
 ***
 
 ## Word Replacement
+### Variables
+On some exports and events, TTS supports variables, which are words inserted into an Alert that are then replaced by the script.
+
+For example, `-station-` when used with the [`newAlertNearestStation`](../developers/exports/server.md#create-new-alert-at-nearest-station) server export will be replaced with the name of the station that gets picked.
+
+Below is a table of variables, what they work with, and what they do.
+
+| Variable              | Works with                                                                                                                                                                                                                                                                                                                                                      | Description                                               |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| `-station-`           | - [`newAlertNearestStation`](../developers/exports/server.md#create-new-alert-at-nearest-station)<br/>- [`newAlertNearestStationWithPlayers`](../developers/exports/server.md#create-new-alert-at-nearest-station-with-players)                                                                                                                                 | Replaced with the name of the Station that gets selected. |
+| `-stations-`          | - [`/alert`](../developers/api.mdx#create-a-new-alert)<br/>- [`newAlert`](../developers/exports/server.md#create-new-alert)                                                                                                                                                                                                                                     | Replaced with the names of the Stations selected.         |
+| `-doors-` & `-units-` | - [`/alert`](../developers/api.mdx#create-a-new-alert)<br/>- [`newAlert`](../developers/exports/server.md#create-new-alert)<br/>- [`newAlertNearestStation`](../developers/exports/server.md#create-new-alert-at-nearest-station)<br/>- [`newAlertNearestStationWithPlayers`](../developers/exports/server.md#create-new-alert-at-nearest-station-with-players) | Replaced with the names of the doors selected to open.    |
+
+### Word Replacement File
 The `tts-replace.json` file allows for replacing of words with other words.   
 An example might be replacing `A`, `B`, & `C` with `Alpha`, `Bravo`, and `Charlie`.
 
 :::tip
 Only whole words will be matched and replaced.   
-For example, if `Alpha` repalces `A`, `This is a Bannanna` would become `This is Alpha Bananna`, *not* `This is Alpha BAlphanAlphannAlpha`.
+For example, if `Alpha` replaces `A`, `This is a Bannanna` would become `This is Alpha Bananna`, *not* `This is Alpha BAlphanAlphannAlpha`.
 :::
 
-### Example File
+The file also supports Regex, if you want to get more advanced with your replacements.  
+Simply add `re:` to the start of your entry and SA will treat it as Regex.
+
 ```json title="tts-replace.json" showLineNumbers
 {
 	"P10": "Pumper 10",
 	"St": "Street",
-	"LS": "Los Santos"
+	"LS": "Los Santos",
+	"re:\\bunit\\s+(\\d+)\\b": "Fire Unit $1"
 }
 ```

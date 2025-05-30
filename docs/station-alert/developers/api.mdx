@@ -58,6 +58,16 @@ POST alert
 - `tone` - `string|undefined`
 	- Optional tone to play.
 	- If not provided, default tone will be used.
+- `tones` - `object`
+	- Optionally provide a specific tone for each location.
+	- If provided, `tone` is ignored.
+	- Example:
+		```json
+		"tones": {
+		      "Station One": "Tone 1",
+		      "Station Two": "Tone 2"
+		}
+		```
 - `unitcolors` - `string[]|undefined`
 	- Optional list of Unit Indicator colors to show in-game.
 		- Options are: `red`, `green`, and/or `blue`.
@@ -320,6 +330,50 @@ POST doors
 		- `X is not a valid location`
 			- Invalid location name provided.
 		- `X is not a valid door for Y`
+			- Invalid door name provided for location.
+	</TabItem>
+</Tabs>
+
+
+***
+
+### Rename Doors
+Use this endpoint to rename doors at one or more locations
+
+#### Endpoint
+```
+POST doors/rename
+```
+
+#### Body
+- `locations` - `object`
+	- A list of location names with the keys being the current door name, and the value being the new name.
+	- Example:
+		```json
+		{
+			"locations": {
+				"Station One": {
+					"Old Door name": "New Door Name"
+				}
+			}
+		}
+		```
+#### Return Value
+<Tabs>
+	<TabItem value="doors-update.200" label="200 - OK" default>
+		<p>*No return body, headers only*</p>
+	</TabItem>
+
+	<TabItem value="doors-update.400" label="400 - Bad Request">
+		- `Empty body`
+			- No request body provided.
+		- `Malformed body`
+			- Request body didn't contain required fields, or contains irrelevant fields.
+		- `No locations provided.`
+			- `locations` was empty.
+		- `X is not a valid location`
+			- Invalid location name provided.
+		- `X does not have a door names Y`
 			- Invalid door name provided for location.
 	</TabItem>
 </Tabs>

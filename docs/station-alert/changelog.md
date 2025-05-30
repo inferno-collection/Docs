@@ -7,6 +7,43 @@ sidebar_position: 999
 This page documents the changes made to SA.
 
 ## v1.1.\*
+
+### v1.1.1 - 05/30/2025
+**Added**:
+- New config options:
+  - [`ic_sa_nuiVolume`](config.md#nui-volume) controlling the in-game NUI volume. [See here](config.md#nui-volume) for more info.
+  - [`ic_sa_command`](config.md#alias-command) allowing for an alias command to be specified instead of `stationalert`. [See here](config.md#alias-command) for more info.
+- All Station Broadcast via Station Computer.
+  - Similar to a message, but plays at all Stations.
+  - Has its own Ace Permission: [`Broadcast`](config.md#use-all-station-broadcast)
+- [`doors/rename`](developers/api.mdx#rename-doors) POST API endpoint. [See here](developers/api.mdx#rename-doors) for more info.
+- Regex support for TTS replacements. [See here](usage/tts.md#word-replacement-file) for more info.
+- Support for extra TTS replacement variables. [See here](usage/tts.md#variables) for more info.
+  - `-stations-`, `-doors-`, & `-units-`.
+- `tones` parameters to [`newAlert`](developers/exports/server.md#create-new-alert) server export & [`alert`](developers/api.mdx#create-a-new-alert) POST API endpoints.
+  - Allows for specifying a specific tone per station alerted.
+  - For example, Station One might hear Tone One, while Station Two might hear Tone Two.
+- [`newMessage`](developers/exports/server.md#create-new-message) server export for sending messages to stations via export. [See here](developers/exports/server.md#create-new-message) for more info.
+- `displayMessage` parameters to [`newAlert`](developers/exports/server.md#create-new-alert), [`newAlertNearestStation`](developers/exports/server.md#create-new-alert-at-nearest-station) and [`newAlertNearestStationWithPlayers`](developers/exports/server.md#create-new-alert-at-nearest-station-with-players) server exports & [`alert`](developers/api.mdx#create-a-new-alert) and [`message`](developers/api.mdx#create-a-new-alert) POST API endpoints.
+  - Allows for a separate message to be shown on call screens, versus what is read by TTS.
+  - Example:
+      - TTS: `Station One: Engine One, Truck One, Fire at Postal 0 9 0`
+      - Call Screens: `Station 1: E1 & T1. Fire @ Postal 090`
+
+**Changed**:
+- [`stationalert health`](usage/commands.md#health-check) command visual output, and the following extra info:
+  - TTS replacements.
+  - Addon validation status.
+
+**Fixed**:
+- Isolated doors not updating when renamed.
+- Issue where incomplete JSON config values would throw an error.
+	- A friendly error is now shown, and the default config value is used instead.
+- Issue where locations were marked as [Dispatch Centers](usage/components.md#dispatch-centers) erroneously.
+- Issue where door names would not be displayed on the alert screen of call screens.
+- In-game menus showing out-of-date door names immediately following a door renaming.
+- Issue where location updates (such as door renames) while doors were opening/closing would cause traffic lights to incorrectly flash multiple colors.
+
 ### v1.1.0 - 05/16/2025
 
 **YouTube Video**:

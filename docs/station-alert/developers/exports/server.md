@@ -139,11 +139,25 @@ newAlert
   - `message` - `string`
     - Optional Text-to-Speech message.
     - Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
+  - `displayMessage` - `string`
+    - Optional message to show on call screens.
+    - If not provided, `message` will be used.
+    - If neither provided, `New Alert` will show on call screens.
   - `unitColors` - `table`
     - Color Name - `string`
     - Optionally provide unit indicator colors, or no colors show.
-  - `tone` - string
+  - `tone` - `string`
     - Optionally provide a specific tone to use, or default tone is used.
+  - `tones` - `table`
+    - Optionally provide a specific tone for each location.
+    - If provided, `tone` is ignored.
+    - Example:
+      - ```lua
+        ["tones"] = {
+        	["Station One"] = "Tone One",
+        	["Station Two"] = "Tone Two",
+	    },
+        ```
 
 #### Example
 ```lua
@@ -177,11 +191,25 @@ newAlertNearestStation
 	- `message` - `string`
 		- Optional Text-to-Speech message.
 		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
+    - `displayMessage` - `string`
+      - Optional message to show on call screens.
+      - If not provided, `message` will be used.
+      - If neither provided, `New Alert` will show on call screens.
 	- `unitColors` - `table`
 		- Color Name - `string`
 		- Optionally provide unit indicator colors, or no colors show.
-	- `tone` - string
+	- `tone` - `string`
 		- Optionally provide a specific tone to use, or default tone is used.
+	- `tones` - `table`
+		- Optionally provide a specific tone for each location.
+		- If provided, `tone` is ignored.
+          - Example:
+            - ```lua
+              ["tones"] = {
+	          	["Station One"] = "Tone One",
+	           	["Station Two"] = "Tone Two",
+	          },
+	          ```
 
 #### Example
 ```lua
@@ -210,11 +238,25 @@ newAlertNearestStationWithPlayers
 	- `message` - `string`
 		- Optional Text-to-Speech message.
 		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
+	- `displayMessage` - `string`
+      - Optional message to show on call screens.
+      - If not provided, `message` will be used.
+      - If neither provided, `New Alert` will show on call screens.
 	- `unitColors` - `table`
 		- Color Name - `string`
 		- Optionally provide unit indicator colors, or no colors show.
-	- `tone` - string
+	- `tone` - `string`
 		- Optionally provide a specific tone to use, or default tone is used.
+	- `tones` - `table`
+		- Optionally provide a specific tone for each location.
+		- If provided, `tone` is ignored.
+			- Example:
+              - ```lua
+                ["tones"] = {
+                  	["Station One"] = "Tone One",
+                   	["Station Two"] = "Tone Two",
+                },
+                ```
 
 #### Example
 ```lua
@@ -222,6 +264,34 @@ local success = exports["inferno-station-alert"]:newAlertNearestStationWithPlaye
     ["message"] = "Some message.",
     ["unitColors"] = {"blue", "red"},
     ["tone"] = "Tone 1"
+})
+```
+
+#### Return Value
+`bool`
+
+### Create New Message
+Use this export to send a message to one or more stations.
+
+#### Export Name
+```
+newMessage
+```
+
+#### Parameters
+- `message` - `table`
+	- `locations` - `table`
+      - Location Name - `string`
+	- `message` - `string`
+		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
+	- `displayMessage` - `string`
+		- Optional message to show on call screens.
+
+#### Example
+```lua
+local success = exports["inferno-station-alert"]:newMessage({
+    ["message"] = "Some message.",
+    ["locations"] = {"Davis", "red"}
 })
 ```
 

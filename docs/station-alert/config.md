@@ -16,10 +16,12 @@ SA uses convars for config values. For information on how to correctly install t
 |            [`ic_sa_secondsTillLightsReset`](#seconds-till-lights-reset)             |             `150`             |
 |               [`ic_sa_closeDoorsOnDriveThrough`](#self-closing-doors)               |            `true`             |
 |                         [`ic_sa_tones`](#alert-tone-sounds)                         |          *See Below*          |
+|                          [`ic_sa_nuiVolume`](#nui-volume)                           |              `5`              |
 |            [`ic_sa_callScreenSettings`](#call-screen-settings-explained)            |          *See Below*          |
 |                 [`ic_sa_enableAddon`](#enable-voice-turnout-addon)                  |            `false`            |
 |       [`ic_sa_addonPaymentReference`](#tebex-subscription-payment-reference)        |             `""`              |
 |                   [`ic_sa_ttsLanguage`](#text-to-speech-language)                   |            `en-us`            |
+|                          [`ic_sa_command`](#alias-command)                          |        `stationalert`         |
 |                      [`ic_sa_ttsVoice`](#text-to-speech-voice)                      |            `Mary`             |
 |                    [`is_sa_ttsSpeechRate`](#text-to-speech-rate)                    |             `-1`              |
 |                [`ic_sa_followUpAlertMessages`](#follow-up-messages)                 |            `true`             |
@@ -67,7 +69,6 @@ This is the number of seconds after an Alert is activated, that Wall Lights and 
 #### `ic_sa_closeDoorsOnDriveThrough`
 This value determines with doors should close once a vehicle has driven through them.
 
-
 ### Alert Tone Sounds
 #### `ic_sa_tones`
 These values define what tones can be played. Each entry contains "human-readable name", and a "file name".  
@@ -86,6 +87,13 @@ setr ic_sa_tones {
 }
 ```
 
+### NUI Volume
+#### `ic_sa_nuiVolume`
+This value is used to determine how loud the in-game NUI should be.  
+Must be a whole number between `1` and `10`, where `10` is the loudest.
+
+Default value is `5`.
+
 ### Manual Interactions (Target/Third-Eye Resource Support)
 #### `ic_sa_manualInteractions`
 If this value is `true`, "Press E ..." interaction pop-ups and keybindings will be disabled, and instead events will be fired that can be used in `editable/client/targeting.lua`; to enable support for [OxTarget](https://overextended.dev/ox_target), [QBTarget](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-target), or any other target/third-eye resource, changes will need to be made in this file.
@@ -103,6 +111,14 @@ When this value is `true`, doors will open and closer slower than normal to be m
 If you do not want the resource to change the speed of the doors, set this value to `false`.
 
 If this value is `true` and your doors do not open like they should, or need to be bumped/hit to be open, change this value to `false` and it should resolve the issue.
+
+### Alias Command
+#### `ic_sa_command`
+When this value is anything other than `stationalert`, the value will be used to register an alias command.  
+This alias command can be used instead of the full `stationalert` command.  
+For example, setting the value to `sa` would allow the use of `/sa <...>` for commands.
+
+Default value is `stationalert`.
 
 ### HTTP Access Token
 #### `ic_sa_httpAccessToken`
@@ -521,6 +537,11 @@ By default, this permission is granted to all players.
 This permission allows players to interact with the Station Computer to create Alerts.  
 By default, this permission is granted to all players.
 
+### Use All Station Broadcast
+#### `InfernoStationAlert.Broadcast`
+This permission allows players to use the Station Computer to create all station Broadcasts.  
+By default, this permission is only granted to admins (`group.admin`).
+
 ### Use Buzzer
 #### `InfernoStationAlert.Buzzer`
 This permission allows players to use the [`/stationalert buzzer`](usage/commands.md#stationalert-buzzer) command to open/close Doors from outside the Station.  
@@ -634,10 +655,13 @@ setr ic_sa_manualInteractions "false"
 # Slower Doors
 setr ic_sa_slowerDoors "true"
 
+# NUI Volume
+setr ic_sa_nuiVolume "5"
+
 # The model to use for the wall lights
 setr ic_sa_wallLightModels {
-	"off":	"hei_prop_wall_alarm_off",
-	"on":	"prop_ic_wall_light"
+	"off":		"hei_prop_wall_alarm_off",
+	"on":		"prop_ic_wall_light"
 }
 
 # The model to use for the traffic lights
@@ -652,7 +676,7 @@ setr ic_sa_unitIndicatorModels {
 	"None":		"prop_ic_unit_indicator",
 	"Red":		"prop_ic_unit_indicator_r",
 	"Green":	"prop_ic_unit_indicator_g",
-	"Blue":		"prop_ic_unit_indicator_b"
+	"Blue":		"prop_ic_unit_indicator_b",
 	"Magenta":	"prop_ic_unit_indicator_m",
 	"Yellow":	"prop_ic_unit_indicator_y"
 }
@@ -674,6 +698,9 @@ set ic_sa_whitelistedIps [
 	"127.0.0.1"
 ]
 
+# Change command name
+set ic_sa_command "stationalert"
+
 # If the resource should run in debug mode
 setr ic_sa_debug "false"
 
@@ -688,4 +715,5 @@ add_ace builtin.everyone "InfernoStationAlert.Buzzer" allow
 
 add_ace group.admin "InfernoStationAlert.Tool" allow
 add_ace group.admin "InfernoStationAlert.Command" allow
+add_ace group.admin "InfernoStationAlert.Broadcast" allow
 ```
