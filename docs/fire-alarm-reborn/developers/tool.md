@@ -60,7 +60,9 @@ Most people find it easiest to place it inside the [`inferno-alarms` resource](.
 In your resource of choice, add this line at the bottom of the `fxmanifest.lua`:
 
 ```lua
-fire_alarms "your_draft_name_here.lua"
+fire_alarms "your_first_draft_name_here.lua"
+fire_alarms "your_second_draft_name_here.lua"
+fire_alarms "your_third_draft_name_here.lua"
 ```
 
 :::note
@@ -157,3 +159,15 @@ Virtual Props are props that will not actually appear in game, but can still be 
 For example, in the base-game GTA V LTD Gas Station MLOs, there are call points (similar to pull stations) and sprinklers that are not props and are instead baked into the map, and therefore cannot be removed by [hiding them](#hidden-props). In this case, you can use Virtual Props placed over the top of the exiting fire alarm components.
 
 ![Virtual Prop](assets/virtual.png)
+
+## Adding Postal Codes
+Postal codes can be added to alarm systems on a per-system basis, and requires manually adding an extra value to each desired system in a draft file.
+
+To add a postal code, open the draft file and locate the `system { ... }` line.  
+On the same line, within the `{ }`, add `postalcode = "123"`, where `123` is your postal code; see the example below:
+
+```lua
+system { name = "Ammu-Nation", location = "Popular Street", position = vec3(0, 0, 0), postalcode = "123" }
+```
+
+Postal codes are used in the Sonoran CAD hook, and can be access from any script via `.passcode`. [See here](data.mdx#alarm-system) for more info.

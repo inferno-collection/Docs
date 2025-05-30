@@ -58,7 +58,9 @@ To deploy a draft as Station Location, you will need to copy the file from the D
 The draft can be placed in either an existing resource, or a new one, so long as this line is added at the bottom of the `fxmanifest.lua`:
 
 ```lua
-locations "your_draft_name_here.lua"
+locations "your_first_draft_name_here.lua"
+locations "your_second_draft_name_here.lua"
+locations "your_third_draft_name_here.lua"
 ```
 
 :::note
