@@ -8,6 +8,24 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 
+### v1.1.2 - 06/05/2025
+
+**YouTube Video**:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wypQ19zgBWA?si=8s8A4B3096R8gCOh" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**Added**:
+- Base Game Traffic Lights
+  - Allows for the control of traffic at an intersection when an alert is received.
+  - For more info see the [video above](https://youtu.be/wypQ19zgBWA), [see here](usage/components.md#base-game-traffic-lights), and [see here](developers/tool.md#base-game-traffic-lights).
+
+**Fixed**:
+- Issue where sending multiple alerts simultaneously would cause doors to not automatically close.
+- Issue where resource would not default back to English when using a broken language file.
+- Issue where when SA Tool is active, part of the core logic would loop instead of wait.
+- Issue where you could save "empty" drafts in the SA Tool.
+- Issue where when SA Tool is active, and current location had no doors, Computers and Hidden props would not be highlighted.
+- Issue where saving a draft in the SA Tool would not clear Hidden props and Computers from memory until another location was loaded.
+
 ### v1.1.1 - 05/30/2025
 **Added**:
 - New config options:
