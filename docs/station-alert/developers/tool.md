@@ -12,6 +12,10 @@ When using the SA Tool, drafts are saved directly to the server's files, so serv
 
 Watch the [YouTube Video](https://www.youtube.com/watch?v=V0MBgqLFetA&t=641s) for SA Tool.
 
+**YouTube Videos**:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V0MBgqLFetA?si=3ai-Is13o3te9z66&amp;start=641" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wypQ19zgBWA?si=8s8A4B3096R8gCOh" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 :::tip
 You must be in first-person to use the SA Tool.
 :::
@@ -147,7 +151,6 @@ If you see the warning below at the bottom of your screen, you are too far from 
 :::
 
 ### Hidden Props
-
 When a prop is hidden with the SA Tool, it will not appear in-game. The intention is to allow server owners to remove props that conflict with SA and replace them with SA props.
 
 For example, if you have a MLO you purchased on Tebex, and it contains non-functional warning lights outside the building, you could hide these and replace them with SA Wall Lights.
@@ -157,3 +160,16 @@ When in the tool, you may notice coloured radii (or circles) - these represent t
 The aim is to help prevent excess overlap of speakers, and aid in proper coverage of stations.
 
 The colors will only appear when nearby to a Speaker.
+
+### Base Game Traffic Lights
+For info on what [Base Game Traffic Lights](../usage/components.md#base-game-traffic-lights) are, [see here](../usage/components.md#base-game-traffic-lights).
+
+For a video demonstration, see the second YouTube video at the top of the screen.
+
+To add Base Game Traffic Lights, select the option via the scroll wheel.  
+Aim at a traffic light until it is highlighted, then select Green or Red from the menu.  
+Selecting Red will turn this traffic light red when alerted, and will stop traffic.  
+Selecting Green will turn this traffic light green when alerts, and keep traffic flowing.  
+Aim at spot on the road where traffic should stop - generally, this is where traffic normally stops for a red light.
+
+If you want to add another spot on the road (such as when there's multiple lanes), aim at the existing traffic light and left click.

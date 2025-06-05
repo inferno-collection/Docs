@@ -1,4 +1,4 @@
-# Inferno Collection - Documention
+# Inferno Collection - Documentation
 
 We welcome and encourage contributions!
 

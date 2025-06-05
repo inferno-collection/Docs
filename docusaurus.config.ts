@@ -68,6 +68,21 @@ const config: Config = {
 					position: 'left',
 					label: 'Documentation',
 				},
+				{
+					to: 'https://inferno.gay/store',
+					label: 'Store',
+					position: 'left',
+				},
+				{
+					to: 'https://inferno.gay/github',
+					label: 'GitHub',
+					position: 'left',
+				},
+				{
+					to: 'https://inferno.gay/yt',
+					label: 'YouTube',
+					position: 'left',
+				},
 			],
 		},
 		footer: {
