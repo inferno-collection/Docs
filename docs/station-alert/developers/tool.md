@@ -173,3 +173,12 @@ Selecting Green will turn this traffic light green when alerts, and keep traffic
 Aim at spot on the road where traffic should stop - generally, this is where traffic normally stops for a red light.
 
 If you want to add another spot on the road (such as when there's multiple lanes), aim at the existing traffic light and left click.
+
+### Addon Traffic Lights
+For info on what [Addon Traffic Lights](../usage/components.md#addon-traffic-lights) are, [see here](../usage/components.md#addon-traffic-lights).
+
+To add Addon Traffic Lights, select the option via the scroll wheel.  
+Aim at the ground where you want the traffic light to go; the light will always face the player.
+Once placed, aim at spot on the road where traffic should stop.
+
+If you want to add another spot on the road (such as when there's multiple lanes), aim at the existing traffic light and left click.

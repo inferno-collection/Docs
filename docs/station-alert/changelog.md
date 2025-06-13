@@ -8,6 +8,34 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 
+### v1.1.3 - 06/13/2025
+:::warning
+Significant changes to [Server Exports](developers/exports/server.md) were made in this version, do not blindly update.
+:::
+
+**YouTube Video**:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ezGdlphpJg0?si=qqfgW74iNxR-JU7P" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**Added**:
+- Addon Traffic Lights
+	- Place anywhere using [SA Tool](developers/tool.md) and stop traffic when Alert received.
+	- For more info see the [video above](https://youtu.be/ezGdlphpJg0), [see here](usage/components.md#addon-traffic-lights), and [see here](developers/tool.md#addon-traffic-lights).
+- [`ic_sa_closeAllDoorsOnTimeout`](config.md#close-all-doors-on-timeout) config option.
+  - Controls if all doors should close on Alert timeout. [See here](config.md#close-all-doors-on-timeout) for more info.
+
+**Changed**:
+- ['Locations - Get All *' Server Export](developers/exports/server.md#locations) data structure returns
+  - Previously these exports returned a table with an entry called `locations` which contained the expected data.
+  - Now the returned table contains what was previously inside `locations`.
+  - To update existing implementations, remove `.locations` from any code, see example below:
+    - ```lua
+      -- Old implementation
+      local stations = exports["inferno-station-alert"]getAllLocations().locations
+      
+      -- New implementation
+      local stations = exports["inferno-station-alert"]getAllLocations()
+      ```
+
 ### v1.1.2 - 06/05/2025
 
 **YouTube Video**:
