@@ -33,7 +33,7 @@ When a door is closed, it will be red. When a door is opening or closing, it wil
 ***
 
 ## Base Game Traffic Lights
-Base Game Traffic Lights (not to be confused with [Interior Traffic Lights](#traffic-lights)), are existing props in the GTA World that can be added to SA.  
+Base Game Traffic Lights (not to be confused with [Interior Traffic Lights](#traffic-lights) or [Addon Traffic Lights](#addon-traffic-lights)), are existing props in the GTA World that can be added to SA.  
 When added via the [SA Tool](../developers/tool.md), they can be forced to stay green or red for the duration of an Alert.  
 This allows for Fire Appliances to exit a Station quickly, without getting stuck in traffic.
 
@@ -41,6 +41,18 @@ See the video below for more information.
 
 **YouTube Video**:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wypQ19zgBWA?si=8s8A4B3096R8gCOh" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+***
+
+## Addon Traffic Lights
+Addon Traffic Lights (not to be confused with [Interior Traffic Lights](#traffic-lights) or [Base Game Traffic Lights](#base-game-traffic-lights)), are props placed via the [SA Tool](../developers/tool.md).  
+Once placed they can stop traffic in one or more locations - think an extension of [Base Game Traffic Lights](#base-game-traffic-lights), but placeable anywhere.  
+This stops Fire Appliances getting stuck in their driveways because vehicles are stopped on the road in-front of them.
+
+See the video below for more information.
+
+**YouTube Video**:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ezGdlphpJg0?si=qqfgW74iNxR-JU7P" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ***
 

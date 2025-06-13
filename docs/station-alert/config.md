@@ -8,35 +8,38 @@ SA uses convars for config values. For information on how to correctly install t
 
 ## Value List
 
-|                                        Name                                         |         Default Value         |
-|:-----------------------------------------------------------------------------------:|:-----------------------------:|
-|                            [`ic_sa_language`](#language)                            |            `en-us`            |
-|                       [`ic_sa_kickCheaters`](#kick-cheaters)                        |            `false`            |
-|             [`ic_sa_secondsTillDoorsClose`](#seconds-till-doors-close)              |             `150`             |
-|            [`ic_sa_secondsTillLightsReset`](#seconds-till-lights-reset)             |             `150`             |
-|               [`ic_sa_closeDoorsOnDriveThrough`](#self-closing-doors)               |            `true`             |
-|                         [`ic_sa_tones`](#alert-tone-sounds)                         |          *See Below*          |
-|                          [`ic_sa_nuiVolume`](#nui-volume)                           |              `5`              |
-|            [`ic_sa_callScreenSettings`](#call-screen-settings-explained)            |          *See Below*          |
-|                 [`ic_sa_enableAddon`](#enable-voice-turnout-addon)                  |            `false`            |
-|       [`ic_sa_addonPaymentReference`](#tebex-subscription-payment-reference)        |             `""`              |
-|                   [`ic_sa_ttsLanguage`](#text-to-speech-language)                   |            `en-us`            |
-|                          [`ic_sa_command`](#alias-command)                          |        `stationalert`         |
-|                      [`ic_sa_ttsVoice`](#text-to-speech-voice)                      |            `Mary`             |
-|                    [`is_sa_ttsSpeechRate`](#text-to-speech-rate)                    |             `-1`              |
-|                [`ic_sa_followUpAlertMessages`](#follow-up-messages)                 |            `true`             |
-|                 [`ic_sa_repeatMessage`](#repeat-tts-message-twice)                  |            `true`             |
-|                  [`ic_sa_endingTone`](#repeat-tone-at-end-of-tts)                   |            `true`             |
-| [`ic_sa_manualInteractions`](#manual-interactions-targetthird-eye-resource-support) |            `false`            |
-|                        [`ic_sa_slowerDoors`](#slower-doors)                         |             `true             |
-|                [`ic_sa_wallLightModels`](#default-wall-light-models)                |          *See Below*          |
-|             [`ic_sa_trafficLightModels`](#default-traffic-light-models)             |          *See Below*          |
-|            [`ic_sa_unitIndicatorModels`](#default-unit-indicator-models)            |          *See Below*          |
-|              [`ic_sa_doorControlsModel`](#default-door-controls-model)              |    `prop_ic_door_controls`    |
-|            [`ic_sa_ceilingSpeakerModel`](#default-ceiling-speaker-model)            | `v_serv_metro_ceilingspeaker` |
-|                    [`ic_sa_httpAccessToken`](#http-access-token)                    |             `""`              |
-|                      [`ic_sa_whitelistedIps`](#api-whitelist)                       |          *See Below*          |
-|                               [`ic_sa_debug`](#debug)                               |            `false`            |
+|                                        Name                                         |          Default Value           |
+|:-----------------------------------------------------------------------------------:|:--------------------------------:|
+|                            [`ic_sa_language`](#language)                            |             `en-us`              |
+|                       [`ic_sa_kickCheaters`](#kick-cheaters)                        |             `false`              |
+|             [`ic_sa_secondsTillDoorsClose`](#seconds-till-doors-close)              |              `150`               |
+|            [`ic_sa_secondsTillLightsReset`](#seconds-till-lights-reset)             |              `150`               |
+|               [`ic_sa_closeDoorsOnDriveThrough`](#self-closing-doors)               |              `true`              |
+|            [`ic_sa_closeAllDoorsOnTimeout`](#close-all-doors-on-timeout)            |             `false`              |
+|                         [`ic_sa_tones`](#alert-tone-sounds)                         |           *See Below*            |
+|                          [`ic_sa_nuiVolume`](#nui-volume)                           |               `5`                |
+|            [`ic_sa_callScreenSettings`](#call-screen-settings-explained)            |           *See Below*            |
+|                 [`ic_sa_enableAddon`](#enable-voice-turnout-addon)                  |             `false`              |
+|       [`ic_sa_addonPaymentReference`](#tebex-subscription-payment-reference)        |               `""`               |
+|                   [`ic_sa_ttsLanguage`](#text-to-speech-language)                   |             `en-us`              |
+|                          [`ic_sa_command`](#alias-command)                          |          `stationalert`          |
+|                      [`ic_sa_ttsVoice`](#text-to-speech-voice)                      |              `Mary`              |
+|                    [`is_sa_ttsSpeechRate`](#text-to-speech-rate)                    |               `-1`               |
+|                [`ic_sa_followUpAlertMessages`](#follow-up-messages)                 |              `true`              |
+|                 [`ic_sa_repeatMessage`](#repeat-tts-message-twice)                  |              `true`              |
+|                  [`ic_sa_endingTone`](#repeat-tone-at-end-of-tts)                   |              `true`              |
+| [`ic_sa_manualInteractions`](#manual-interactions-targetthird-eye-resource-support) |             `false`              |
+|                        [`ic_sa_slowerDoors`](#slower-doors)                         |              `true               |
+|                [`ic_sa_wallLightModels`](#default-wall-light-models)                |           *See Below*            |
+|             [`ic_sa_trafficLightModels`](#default-traffic-light-models)             |           *See Below*            |
+|            [`ic_sa_unitIndicatorModels`](#default-unit-indicator-models)            |           *See Below*            |
+|              [`ic_sa_doorControlsModel`](#default-door-controls-model)              |     `prop_ic_door_controls`      |
+|            [`ic_sa_ceilingSpeakerModel`](#default-ceiling-speaker-model)            |  `v_serv_metro_ceilingspeaker`   |
+|           [`ic_sa_exteriorSpeakerModel`](#default-exterior-speaker-model)           |     `h4_prop_h4_tannoy_01a`      |
+|        [`ic_sa_addonTrafficLightModel`](#default-addon-traffic-light-model)         | `prop_ic_exterior_traffic_light` |
+|                    [`ic_sa_httpAccessToken`](#http-access-token)                    |               `""`               |
+|                      [`ic_sa_whitelistedIps`](#api-whitelist)                       |           *See Below*            |
+|                               [`ic_sa_debug`](#debug)                               |             `false`              |
 
 ## Values Explained
 
@@ -68,6 +71,14 @@ This is the number of seconds after an Alert is activated, that Wall Lights and 
 ### Self-Closing Doors
 #### `ic_sa_closeDoorsOnDriveThrough`
 This value determines with doors should close once a vehicle has driven through them.
+
+### Close All Doors on Timeout
+#### `ic_sa_closeAllDoorsOnTimeout`
+This value determines if all open doors should close on an alert timeout, or only the doors opened via the alert.
+
+For example, if Door One is opened manually, and Door Two opens as part of an alert.  
+When this value is `true`, on timeout both Door One and Door Two will close.  
+When this value is `false`, only Door Two is closed, Door One remains open.
 
 ### Alert Tone Sounds
 #### `ic_sa_tones`
@@ -192,6 +203,24 @@ These values determine which prop/model should be used for Ceiling Speakers.
 The default value for this option is:
 ```cfg
 setr ic_sa_ceilingSpeakerModel "v_serv_metro_ceilingspeaker"
+```
+
+### Default Exterior Speaker Model
+#### `ic_sa_exteriorSpeakerModel`
+These values determine which prop/model should be used for Exterior Speakers.
+
+The default value for this option is:
+```cfg
+setr ic_sa_exteriorSpeakerModel "h4_prop_h4_tannoy_01a"
+```
+
+### Default Addon Traffic Light Model
+#### `ic_sa_addonTrafficLightModel`
+These values determine which prop/model should be used for Exterior Traffic Lights.
+
+The default value for this option is:
+```cfg
+setr ic_sa_addonTrafficLightModel "prop_ic_exterior_traffic_light"
 ```
 
 ### Debug
@@ -593,6 +622,9 @@ set ic_sa_secondsTillLightsReset "150"
 # Close doors once driven through
 setr ic_sa_closeDoorsOnDriveThrough "true"
 
+# Close all doors when alert timesout
+set ic_sa_closeAllDoorsOnTimeout "false"
+
 # Labels and files names for tones
 setr ic_sa_tones {
     "Tone 1":   "alert1.mp3",
@@ -689,6 +721,9 @@ setr ic_sa_ceilingSpeakerModel "v_serv_metro_ceilingspeaker"
 
 # The model to use for the external speaker
 setr ic_sa_exteriorSpeakerModel "h4_prop_h4_tannoy_01a"
+
+# The model to use for the addon traffic light
+setr ic_sa_addonTrafficLightModel "prop_ic_exterior_traffic_light"
 
 # HTTP Access Token
 set ic_sa_httpAccessToken ""

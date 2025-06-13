@@ -41,6 +41,57 @@ Used on:
 
 ***
 
+## Addon Traffic Lights
+### `exterior_traffic_light_d`
+This texture is used for the entire Addon Traffic Light model, except the yellow sign.
+
+Used on:
+- `prop_ic_exterior_traffic_light`
+
+### `exterior_traffic_light_lod`
+This texture is used for the entire Addon Traffic Light model LOD.
+
+Used on:
+- `prop_ic_exterior_traffic_light`
+
+### `exterior_traffic_light_s`
+This texture is a specular map for the Addon Traffic Light.
+
+Used on:
+- `prop_ic_exterior_traffic_light`
+
+### `exterior_traffic_light_sign_back_d`
+This texture is used for the yellow sign attached to the Addon Traffic Light.
+
+Used on:
+- `prop_ic_exterior_traffic_light`
+
+### `exterior_traffic_light_sign_back_n`
+This texture is a normal/bump map for the yellow sign attached to the Addon Traffic Light.
+
+Used on:
+- `prop_ic_exterior_traffic_light`
+
+### `exterior_traffic_light_sign_chrome_s`
+This texture is a specular map for the Addon Traffic Light.
+
+Used on:
+- `prop_ic_exterior_traffic_light`
+
+### `exterior_traffic_light_sign_d`
+This texture is used for the yellow sign attached to the Addon Traffic Light.
+
+Used on:
+- `prop_ic_exterior_traffic_light`
+
+### `exterior_traffic_light_sign_metal_n`
+This texture is a normal/bump map for the yellow sign attached to the Addon Traffic Light.
+
+Used on:
+- `prop_ic_exterior_traffic_light`
+
+***
+
 ## Unit Indicator
 ### `unit_indicator_body_d`
 This texture is used for the body of the Unit Indicator model.
