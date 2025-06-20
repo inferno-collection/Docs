@@ -86,10 +86,6 @@ When this value is `false`, only Door Two is closed, Door One remains open.
 #### `ic_sa_addonTrafficLightAlwaysFlashYellow`
 When this value is `true`, instead of turning off entirely when not alerted, [Addon Traffic Lights](usage/components.md#addon-traffic-lights) will continuously flash yellow.
 
-For example, if Door One is opened manually, and Door Two opens as part of an alert.  
-When this value is `true`, on timeout both Door One and Door Two will close.  
-When this value is `false`, only Door Two is closed, Door One remains open.
-
 ### Alert Tone Sounds
 #### `ic_sa_tones`
 These values define what tones can be played. Each entry contains "human-readable name", and a "file name".  
