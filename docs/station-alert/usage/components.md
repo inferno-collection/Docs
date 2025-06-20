@@ -95,6 +95,11 @@ Wall Lights are designed to be placed outside of Stations, and will flash when a
 
 ***
 
+## Bollard Lights
+Similar to Wall Lights, Bollard Lights are designed to be placed outside of Stations near roadways, and will flash when an Alert is received.
+
+***
+
 ## Unit Indicators
 Unit Indicators change color depending on what metadata was provided in an Alert.  
 For example, medical calls could be blue, fire calls could be red, and everything else could be green.

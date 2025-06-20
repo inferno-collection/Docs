@@ -115,27 +115,61 @@ Used on:
 
 ## Wall Light
 ### `white`
-This texture is used for as part of the specular map for the Wall Light.
+This texture is used as part of the specular map for the Wall Light.
 
 Used on:
 - `prop_ic_wall_light`
 
 ### `grey`
-This texture is used for as part of the diffuse map for the Wall Light.
+This texture is used as part of the diffuse map for the Wall Light.
 
 Used on:
 - `prop_ic_wall_light`
 
 ### `wall_light_d`
-This texture is used for as part of the diffuse map for the Wall Light.
+This texture is used as part of the diffuse map for the Wall Light.
 
 Used on:
 - `prop_ic_wall_light`
 
 ### `wall_light_alpha_d`
-This texture is used for as part of the diffuse map for the Wall Light.
+This texture is used as part of the diffuse map for the Wall Light.
 
 Used on:
 - `prop_ic_wall_light`
 
 ***
+
+
+## Bollard Light
+### `white`
+This texture is used as part of the specular map for the Bollard Light.
+
+Used on:
+- `prop_ic_bollard_light_on`
+- `prop_ic_bollard_light_off`
+
+### `grey`
+This texture is used as part of the diffuse map for the Bollard Light.
+
+Used on:
+- `prop_ic_bollard_light_on`
+- `prop_ic_bollard_light_off`
+
+### `bollard_d`
+This texture is used as part of the diffuse map for the Wall Light.
+
+Used on:
+- `prop_ic_bollard_light_on`
+- `prop_ic_bollard_light_off`
+
+### `wall_light_alpha_d`
+This texture is used as part of the diffuse map for the Bollard Light.
+
+Used on:
+- `prop_ic_bollard_light_on`
+- `prop_ic_bollard_light_off`
+
+:::tip
+This texture has a matching entry in the `hi` YTD file.
+:::
