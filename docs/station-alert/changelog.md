@@ -8,6 +8,27 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 
+### v1.1.4 - 06/20/2025
+
+**Added**:
+- [Bollard Lights](usage/components.md#bollard-lights) that flash on Alert. [See here](usage/components.md#bollard-lights) for more info.
+- "ConVar Permissions" section to config, which prevents other resources from reading private values (like Addon Payment Reference).
+
+**Changed**:
+- Replaced Addon Traffic Light model.
+  - Fixes issue where placing too close to a road would make them act like normal traffic lights.
+  - Adds the [`ic_sa_addonTrafficLightAlwaysFlashYellow`](config.md#addon-traffic-lights-always-flash-yellow) config option, allowing addon traffic lights to always be flashing. [See here](config.md#addon-traffic-lights-always-flash-yellow) for more info.
+- SA Tool 3D text and color to only draw for the selected prop.
+  - For example, if "Door" is selected, only door 3D text will render, and not Traffic Light, Wall Light, etc.
+  - Speaker radius colors will also now only show when Ceiling Speaker or Exterior Speaker is selected.
+- Improved Addon & Base Traffic lights such that they more consistently stop traffic at red lights.
+
+**Fixed**:
+- Issue where Interior Traffic Lights placed very close together would result in the wrong light(s) changing color when a door opened/closed.
+- Edge case where sitting in a vehicle, in a station, after closing all doors via the Buzzer or Door Controls, would cause an error.
+- Bug that allow re-selecting the same prop multiple times in the SA Tool when selecting a Computer.
+- Issue where Peds could be selected in the SA Tool erroneously.
+
 ### v1.1.3 - 06/13/2025
 :::warning
 Significant changes to [Server Exports](developers/exports/server.md) were made in this version, do not blindly update.
