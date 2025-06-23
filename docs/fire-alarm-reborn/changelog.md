@@ -7,6 +7,17 @@ sidebar_position: 999
 This page documents the changes made to FAR.
 
 ## v1.4.\*
+
+### v1.4.7 - 06/23/2025
+**Added**:
+- Optional `aop` parameter for Alarm Systems.
+  - In an Alarm System's draft file entry, you can add `aop = "..."`, where `...` is an AOP of your choosing. [See here](developers/tool.md#adding-aop) for more info.
+  - Once set, you can use the new [`setAlarmAOP`](developers/exports/server.md#set-alarm-system-aop) export to define the AOP. [See here](developers/exports/server.md#set-alarm-system-aop) for more info.
+- Infinite radius support for [`getAlarmSystemNearPosition`](developers/exports/server.md#get-system-by-position) by passing `-1` in the `radius` parameter. [See here](developers/exports/server.md#get-system-by-position) for more info.
+
+**Updated**:
+- Existing Prop Hiding logic using newer functions developed for [Station Alert](../station-alert).
+
 ### v1.4.6 - 04/29/2025
 **Added**:
 - Error message when audio is not loaded successfully.

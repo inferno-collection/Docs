@@ -27,6 +27,7 @@ getAlarmSystemNearPosition
 	- Position to use to search for closest Alarm System.
 - `radius` - `float`
 	- Radius from position to check.
+    - Passing `-1` will not limit the search radius.
 
 #### Return Value
 [`AlarmSystem`](../data.mdx#alarm-system) | `null`
@@ -206,6 +207,23 @@ enableAlarms
 
 - `value` - `bool`
 	- `true` to enable Alarms, `false` to disable Alarms.
+
+#### Return Value
+`void`
+
+### Set Alarm System AOP
+This export determines which AOP should be used when activating Random Alarms.  
+For example, if the AOP is set to `LS`, only Alarm Systems with their AOP defined as `LS` will be selected.  
+For more info on how to set an Alarm System's AOP, [see here](../tool.md#adding-aop).
+
+#### Export Name
+```
+setAlarmAOP
+```
+#### Parameters
+
+- `aop` - `string`
+	- Either a string that is the AOP, or an empty string (`""`) to remove AOP.
 
 #### Return Value
 `void`

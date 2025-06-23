@@ -171,3 +171,16 @@ system { name = "Ammu-Nation", location = "Popular Street", position = vec3(0, 0
 ```
 
 Postal codes are used in the Sonoran CAD hook, and can be access from any script via `.passcode`. [See here](data.mdx#alarm-system) for more info.
+
+
+## Adding AOP
+An AOP (Area of Patrol) can be added to an Alarm System on a per-system basis, and requires manually adding an extra value to each desired system in a draft file.
+
+To add an AOP, open the draft file and locate the `system { ... }` line.  
+On the same line, within the `{ }`, add `aop = "..."`, where `...` is your AOP; see the example below:
+
+```lua
+system { name = "Ammu-Nation", location = "Popular Street", position = vec3(0, 0, 0), aop = "Los Santos" }
+```
+
+AOPs are used as part of Random Alarm activations, and can also be access from any script via `.aop`. [See here](data.mdx#alarm-system) and [here](exports/server.md#set-alarm-system-aop) for more info.
