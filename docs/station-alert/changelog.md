@@ -8,6 +8,19 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 
+### v1.1.5 - 06/24/2025
+
+**Added**:
+- Groups for Station Locations.
+  - Stations can be assigned a "Group" (i.e., "Sandy Shores") via their Draft File.
+  - Groups of Stations can then be alerted at the same time via the new [`newGroupAlert`](developers/exports/server.md#create-new-alert-for-group-of-stations) server export. [See here](developers/exports/server.md#create-new-alert-for-group-of-stations) for more info.
+  - All Stations with Groups can then be fetched via the new [`getAllLocationsByGroup`](developers/exports/server.md#get-all-locations-by-group) server export. [See here](developers/exports/server.md#get-all-locations-by-group) for more info.
+- Custom Data Attribute for Locations.
+  - Store whatever information you'd like on a per-system basis, to access from any script. [See here](developers/tool.md#adding-custom-data) for more info.
+- Support for Custom Icons in Sonoran CAD. [See here](developers/third-party.md#per-station-icons) for more info.
+	- Icons can be added on a per-system basis, which will display in Sonoran CAD's Station Alert window and Live Map.
+		- ![](https://i.imgur.com/3pYjnsr.png "Sonoran CAD w/ Station Alert")
+
 ### v1.1.4 - 06/20/2025
 
 **Added**:

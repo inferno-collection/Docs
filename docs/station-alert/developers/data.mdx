@@ -15,6 +15,8 @@ This page documents the data structures in SA.
 
 ```lua
 location.name
+location.group
+location.customdata
 location.position.x
 location.position.y
 location.position.z
@@ -26,6 +28,18 @@ location.doors
 		<p>`string`</p>
 		<p>Name of the Location.</p>
 		<p>Example: `Station One`</p>
+	</TabItem>
+
+	<TabItem value="location.group" label="group">
+		<p>`string` | `null`</p>
+		<p>Optional group this Station belongs to.</p>
+		<p>Example: `Los Santos`</p>
+	</TabItem>
+
+	<TabItem value="location.customdata" label="customdata">
+		<p>`string` | `null`</p>
+		<p>Optional Custom Data for this location. <a href="./tool#adding-custom-data">See here</a> for more info.</p>
+		<p>Example: `Your Custom Data Goes Here!`</p>
 	</TabItem>
 
 	<TabItem value="location.postion" label="position">
