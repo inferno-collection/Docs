@@ -58,11 +58,44 @@ Follow the steps below to create alerts when a fire alarm is activated.
 
 You can customize the `exports` to liking by editing `editables/server/station-alert.lua`. For more information on `exports`, see [here](exports/server.md).
 
-
 ## Sonoran CAD
 To connect Sonoran CAD and Inferno Collection, ensure that Sonoran CAD starts before SA does.  
 When SA connects with Sonoran CAD, you will see a log entry in the console:
 
 ```
 Sonoran CAD detected
+```
+
+### Per-Station Icons
+It's possible to change the icons that appear in Sonoran CAD on a per-station basis; this requires manually adding an extra value to each desired system in a draft file.  
+For example, you might use a "fire" icon for Fire Stations, and an "ambulance" icon for Ambulance Stations.
+
+![](https://i.imgur.com/3pYjnsr.png "Sonoran CAD w/ Station Alert")
+
+To add an icon, open the draft file and locate the `location { ... }` line.  
+On the same line, within the `{ }`, add `icon = "..."`, where `...` is your icon.
+
+Icons can be either:
+
+- A Font Awesome Icon (v6 Free)
+  - [See here](https://fontawesome.com/v6/icons?ic=free) for list of icons.
+  - Only the name is required, not the full HTML.
+    - Example: If the HTML is `<i class="fa-solid fa-house"></i>`, the icon would be `fa-solid fa-house`.
+- A valid URL for a remote image
+  - Valid in this context means an HTTPS url (not HTTP), and leading to an image file.
+  - URL must be remote (i.e., accessible over the internet), not local to the server (i.e., located in the resource).
+    - Example: `https://example.com/some/path/to/your/image.png`
+
+Examples:
+
+```lua
+location { name = "Davis Fire Station", icon = "fa-solid fa-house-fire" }
+
+...
+
+location { name = "Sandy Shores Fire Station", icon = "fa-solid fa-dumpster-fire" }
+
+...
+
+location { name = "Paleto Bay Fire Station", icon = "https://example.com/some/path/to/your/image.png" }
 ```

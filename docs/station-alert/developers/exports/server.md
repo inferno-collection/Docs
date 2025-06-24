@@ -35,6 +35,26 @@ local value = exports["inferno-station-alert"]:getAllLocations()
 #### Return Value
 [`Location`](../data.mdx#station-location)[]
 
+### Get All Locations by Group
+Use this export to get all Station Locations sorted by Group.
+
+#### Export Name
+```
+getAllLocationsByGroup
+```
+
+#### Parameters
+*None*
+
+#### Example
+```lua
+local value = exports["inferno-station-alert"]:getAllLocationsByGroup()
+```
+
+#### Return Value
+`Dictionary`\<`string`, [`Location`](../data.mdx#station-location)[]\>
+	- Where the `string` is the name of a group
+
 ### Get All Locations With Players
 Use this export to get all Station Locations with players nearby.
 
@@ -261,6 +281,54 @@ newAlertNearestStationWithPlayers
 #### Example
 ```lua
 local success = exports["inferno-station-alert"]:newAlertNearestStationWithPlayers(vec3(1, 1, 1), {
+    ["message"] = "Some message.",
+    ["unitColors"] = {"blue", "red"},
+    ["tone"] = "Tone 1"
+})
+```
+
+#### Return Value
+`bool`
+
+### Create New Alert For Group of Stations
+Use this export to create a new Alert for a Group of Stations.  
+[See here](../tool.md#adding-groups) for info on how to assign groups.
+
+#### Export Name
+```
+newGroupAlert
+```
+
+#### Parameters
+- `group` - `string`
+	- Name of group to send alert to.
+- `alert` - `table`
+	- `message` - `string`
+		- Optional Text-to-Speech message.
+		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
+	- `displayMessage` - `string`
+		- Optional message to show on call screens.
+		- If not provided, `message` will be used.
+		- If neither provided, `New Alert` will show on call screens.
+	- `unitColors` - `table`
+		- Color Name - `string`
+		- Optionally provide unit indicator colors, or no colors show.
+	- `tone` - `string`
+		- Optionally provide a specific tone to use, or default tone is used.
+	- `tones` - `table`
+		- Optionally provide a specific tone for each location.
+		- If provided, `tone` is ignored.
+			- Example:
+				- ```lua
+					["tones"] = {
+						["Station One"] = "Tone One",
+						["Station Two"] = "Tone Two",
+					},
+                ```
+
+#### Example
+```lua
+local success = exports["inferno-station-alert"]:newGroupAlert("Some Group Name", {
     ["message"] = "Some message.",
     ["unitColors"] = {"blue", "red"},
     ["tone"] = "Tone 1"

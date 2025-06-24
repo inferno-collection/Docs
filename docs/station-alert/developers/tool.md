@@ -182,3 +182,38 @@ Aim at the ground where you want the traffic light to go; the light will always 
 Once placed, aim at spot on the road where traffic should stop.
 
 If you want to add another spot on the road (such as when there's multiple lanes), aim at the existing traffic light and left click.
+
+## Adding Groups
+A Group can be added on a per-system basis, and requires manually adding an extra value to each desired system in a draft file.
+
+To add an icon, open the draft file and locate the `location { ... }` line.  
+On the same line, within the `{ }`, add `group = "..."`, where `...` is your group.
+
+```lua
+location { name = "Davis Fire Station", group = "Los Santos" }
+```
+
+Groups can be used via the [`newGroupAlert`](exports/server.md#create-new-alert-for-group-of-stations) server export, [see here](exports/server.md#create-new-alert-for-group-of-stations) for more info.
+
+## Adding Custom Data
+Custom data can be added on a per-system basis, and requires manually adding an extra value to each desired system in a draft file.
+
+To add custom data, open the draft file and locate the `location { ... }` line.  
+On the same line, within the `{ }`, add `customdata = "..."`, where `...` is your custom data.
+
+```lua
+location { name = "Davis Fire Station", customdata = "Your Custom Data Goes Here!" }
+```
+
+Some example use cases for custom data include:
+- Extra information to display on an MDT, Pager, CAD, etc., such as:
+  - Gate codes, Alarm Panel Location, Safety Notes, etc.
+- The type of station, e.g.:
+  - Fire Station
+  - Ambulance Station
+  - Bush Fire Station
+  - Etc.
+- If the station should be alerted from other scripts
+- Etc.
+
+Custom data can be access from any script via `.customdata`. [See here](data.mdx#station-location) and [here](exports/server.md#get-all-locations-by-group) for more info.
