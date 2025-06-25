@@ -319,6 +319,10 @@ The below custom URLs can be:
     setr custom_alert_url "https://google.com"
     ```
 
+#### Example Custom Call Screen by [Kristian Madsen](https://kristianmadsen.dk)
+
+![](https://i.imgur.com/HktTHRN.png "Example Custom Call Screen")
+
 ### Custom Screensaver URL
 #### `custom_screensaver_url`
 When `custom_urls` is `true`, the DUI will be directed to this URL for the screensaver.
