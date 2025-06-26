@@ -170,8 +170,7 @@ On the same line, within the `{ }`, add `postalcode = "123"`, where `123` is you
 system { name = "Ammu-Nation", location = "Popular Street", position = vec3(0, 0, 0), postalcode = "123" }
 ```
 
-Postal codes are used in the Sonoran CAD hook, and can be access from any script via `.passcode`. [See here](data.mdx#alarm-system) for more info.
-
+Postal codes are used in the Sonoran CAD hook, and can be access from any script via `.postalcode`. [See here](data.mdx#alarm-system) for more info.
 
 ## Adding AOP
 An AOP (Area of Patrol) can be added to an Alarm System on a per-system basis, and requires manually adding an extra value to each desired system in a draft file.
