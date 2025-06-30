@@ -1,7 +1,7 @@
 ---
 title: Bug Bounty Program
 description: Help improve Inferno Collection by responsibly disclosing vulnerabilities.
-sidebar_position: 10000
+sidebar_position: 20
 ---
 
 # 🐛 Bug Bounty Program

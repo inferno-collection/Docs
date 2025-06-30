@@ -70,7 +70,7 @@ This must be a whole number, more than `1`. Suggested value range: `20` - `40`.
 
 ### [Random Alarms](#random-alarms) Only If No Active Alarms
 #### `ic_far_randomAlarmsOnlyIfNoActiveAlarms`
-If this value and [`ic_far_randomAlarms`](config#ic_far_randomalarms) are `true`, every [`ic_far_minutesBetweenRandomAlarms`](config#ic_far_minutesbetweenrandomalarms) minutes the resource will first check if any alarms systems are current in alarm before selecting a random system to activate. If any system is active, the resource will wait another [`ic_far_minutesBetweenRandomAlarms`](config#ic_far_minutesbetweenrandomalarms) minutes and repeat the process from the beginning.
+If this value and [`ic_far_randomAlarms`](config.md#ic_far_randomalarms) are `true`, every [`ic_far_minutesBetweenRandomAlarms`](config.md#ic_far_minutesbetweenrandomalarms) minutes the resource will first check if any alarms systems are current in alarm before selecting a random system to activate. If any system is active, the resource will wait another [`ic_far_minutesBetweenRandomAlarms`](config.md#ic_far_minutesbetweenrandomalarms) minutes and repeat the process from the beginning.
 
 :::note
 Systems in WalkTest do not count as 'in alarm', but systems with active Isolations, Alarms, are Silenced, or are being tested, do count as 'in alarm'.

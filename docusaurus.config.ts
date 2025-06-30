@@ -93,11 +93,11 @@ const config: Config = {
 					items: [
 						{
 							label: 'Fire Alarm Reborn',
-							to: '/fire-alarm-reborn',
+							to: '/resources/fire-alarm-reborn/',
 						},
 						{
 							label: 'Station Alert',
-							to: '/station-alert',
+							to: '/resources/station-alert',
 						},
 					],
 				},
@@ -131,11 +131,11 @@ const config: Config = {
 						},
 						{
 							label: 'Bug Bounty Program 🐛',
-							href: '/bug-bounty',
+							href: '/programs/bug-bounty',
 						},
 						{
 							label: 'Translations 🌐',
-							href: '/translations',
+							href: '/programs/translators',
 						},
 					],
 				},

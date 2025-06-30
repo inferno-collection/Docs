@@ -139,7 +139,7 @@ Significant changes to [Server Exports](developers/exports/server.md) were made 
 - Yellow and Magenta as color options for [Unit Indicators](usage/components.md#unit-indicators).
 - In-game menu to temporarily rename doors. [See here](usage/components.md#station-computer) for more info.
 - Support for overriding Custom Call Screen URLs via convars. [See here](config.md#custom-call-screen) for more info.
-  - This allows for accents and non-ASCII characters in URLs. [See here](../translations/resources/station-alert.mdx#custom-call-screen-url-overrides) for more info.
+  - This allows for accents and non-ASCII characters in URLs. [See here](../../translations/station-alert.mdx#custom-call-screen-url-overrides) for more info.
 - In-game menu to temporarily isolate (lock open or closed) doors. [See here](usage/components.md#door-controls) for more info.
 - [`tts-replace.json`](usage/tts.md#word-replacement) which will replace matching entries in all text-to-speech messages. [See here](usage/tts.md#word-replacement) for more info.
   - For example, replacing `A`, `B`, & `C` with `Alpha`, `Bravo`, and `Charlie`. 
@@ -173,7 +173,7 @@ Significant changes to [Server Exports](developers/exports/server.md) were made 
 **Added**:
 - [`/stationalert duifix`](usage/commands.md#dui-fix) command for players with the Flipped DUI Bug. [See here](usage/commands.md#dui-fix) for more info.
 - Friendly error for when invalid user-provided JSON config values fail to load, indicating as such.
-- `tones.json` which allows tone names with accents and non-ASCII characters. [See here](../translations/resources/station-alert.mdx#tone-name-overrides) for more info.
+- `tones.json` which allows tone names with accents and non-ASCII characters. [See here](../../translations/station-alert.mdx#tone-name-overrides) for more info.
 
 **Changed**:
 - Improved the server log message when ingesting [Dispatch Centers](usage/components.md#dispatch-centers).

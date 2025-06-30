@@ -16,7 +16,7 @@ This page documents the changes made to FAR.
 - Infinite radius support for [`getAlarmSystemNearPosition`](developers/exports/server.md#get-system-by-position) by passing `-1` in the `radius` parameter. [See here](developers/exports/server.md#get-system-by-position) for more info.
 
 **Updated**:
-- Existing Prop Hiding logic using newer functions developed for [Station Alert](../station-alert).
+- Existing Prop Hiding logic using newer functions developed for [Station Alert](../../resources/station-alert).
 
 ### v1.4.6 - 04/29/2025
 **Added**:
@@ -29,7 +29,7 @@ This page documents the changes made to FAR.
 
 ### v1.4.5 - 04/21/2025
 **Added**:
-- Hook to activate [Inferno Station Alert](../station-alert) when Alarm activated.
+- Hook to activate [Inferno Station Alert](../../resources/station-alert) when Alarm activated.
 
 **Changed**:
 - Minor improvement to memory management in the [FAR Tool](developers/tool.md).
