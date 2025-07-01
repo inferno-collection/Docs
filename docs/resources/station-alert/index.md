@@ -48,7 +48,7 @@ Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-c
 | Create Alerts in-game via Menu or Command                              |                 ❌                 |               ✅                |
 | Create Alerts and get data via [Exports](developers/exports)           |                 ❌                 |               ✅                |
 | Create Alerts and get data via [API](developers/api.mdx)               |                 ❌                 |               ✅                |
-| Create Alerts via [Third-Party Resources](developers/third-party)      |                 ❌                 |               ✅                |
+| Create Alerts via [Third-Party Resources](developers/third-party.md)      |                 ❌                 |               ✅                |
 | Working Traffic Lights, Door Controls, Lights, Speakers, & Call Screen |                 ✅                 |               ✅                |
 | [SA Tool](developers/tool.md) for Location creation                    |                 ✅                 |               ✅                |
 | Sonoran CAD Support                                                    |                 ✅                 |              ✅\^               |

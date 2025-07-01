@@ -1,7 +1,7 @@
 ---
 title: Bug Bounty Program
 description: Help improve Inferno Collection by responsibly disclosing vulnerabilities.
-sidebar_position: 10000
+sidebar_position: 30
 ---
 
 # 🐛 Bug Bounty Program
@@ -101,3 +101,13 @@ To submit a report:
 ---
 
 Thank you for helping us make Inferno Collection more secure!
+
+---
+
+## 🧪 Part of the Creator & Contributor Program
+
+This Bug Bounty Program is part of our broader **Creator & Contributor Program**, which also includes:
+- 🎥 [Creator Program](creators.md)
+- 🌐 [Translators Program](translators.md)
+
+Help improve our products, grow our community, and earn rewards along the way!
