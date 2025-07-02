@@ -8,6 +8,19 @@ This page documents the changes made to FAR.
 
 ## v1.4.\*
 
+### v1.4.7 - 07/02/2025
+**Added**:
+- Custom Data Attribute for Systems.
+	- Store whatever information you'd like on a per-system basis, to access from any script. [See here](developers/tool.md#adding-custom-data) for more info.
+- [`getAllAlarmSystems`](developers/exports/server.md#get-all-systems) server export, [see here](developers/exports/server.md#get-all-systems) for more info.
+- [`triggerRandomAlarm`](developers/exports/server.md#trigger-random-alarm) server export, [see here](developers/exports/server.md#trigger-random-alarm) for more info.
+- [`ic_far_strobesHaveSpeakers`](config.md#strobes-have-speakers) which allows alarm sounds to play from strobes.
+- Support for Call Creation in [Night Shift's Mobile Data Terminal](https://store.nights-software.com/package/5667103) - enable in `editable/server/events.lua`
+- Support for Call Creation in [Codesign Dispatch ](https://codesign.pro/product/4206357) (CD_Dispatch) - enable in `editable/server/events.lua`
+
+**Fixed**:
+- Temporary patch that *should* fix the z_Fire x FAR crashes for the time being - make sure z_Fire is up-to-date.
+
 ### v1.4.7 - 06/23/2025
 **Added**:
 - Optional `aop` parameter for Alarm Systems.
