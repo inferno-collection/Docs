@@ -14,6 +14,20 @@ For client exports, see [here](client.md).
 
 ## Alarm Systems
 
+### Get all Systems
+Use this export to get all Alarm Systems.
+
+#### Export Name
+```
+getAllAlarmSystems
+```
+#### Parameters
+
+None
+
+#### Return Value
+[`AlarmSystem`](../data.mdx#alarm-system) | `null`
+
 ### Get System by Position
 Use this export to get an Alarm System near to a provided position and radius.
 
@@ -173,6 +187,20 @@ triggerSprinklerAtPosition
 ***
 
 ## Miscellaneous
+
+### Trigger Random Alarm
+Use this export to trigger a random [Random Alarms](../../config.md#random-alarms).
+
+#### Export Name
+```
+triggerRandomAlarm
+```
+#### Parameters
+
+None
+
+#### Return Value
+[`AlarmSystem`](../data.mdx#alarm-system) | `false`
 
 ### Enabled or Disable Random Alarms
 Use this export to enable or disable [Random Alarms](../../config.md#random-alarms).

@@ -183,3 +183,22 @@ system { name = "Ammu-Nation", location = "Popular Street", position = vec3(0, 0
 ```
 
 AOPs are used as part of Random Alarm activations, and can also be access from any script via `.aop`. [See here](data.mdx#alarm-system) and [here](exports/server.md#set-alarm-system-aop) for more info.
+
+
+## Adding Custom Data
+Custom data can be added on a per-system basis, and requires manually adding an extra value to each desired system in a draft file.
+
+To add custom data, open the draft file and locate the `system { ... }` line.  
+On the same line, within the `{ }`, add `customdata = "..."`, where `...` is your custom data.
+
+```lua
+system { name = "Ammu-Nation - Popular St", location = "Popular Street, Cypress Flats", position = vec3(811.607, -2154.82, 29.619), customdata = "Your Custom Data Goes Here!" }
+```
+
+Some example use cases for custom data include:
+- Extra information to display on an MDT, Pager, CAD, etc., such as:
+	- Gate codes, Alarm Panel Location, Safety Notes, etc.
+- The type of building
+- Etc.
+
+Custom data can be access from any script via `.customdata`. [See here](data.mdx#alarm-system) for more info.

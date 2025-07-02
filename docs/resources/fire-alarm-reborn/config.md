@@ -21,6 +21,7 @@ FAR uses convars for config values. For information on how to correctly install 
 |             [`ic_far_realisticAudio`](#use-realistic-audio-for-sounders)             |          `false`          |
 | [`ic_far_manualInteractions`](#manual-interactions-targetthird-eye-resource-support) |          `false`          |
 |                      [`ic_far_twoStageAlarm`](#two-stage-alarm)                      |          `true`           |
+|                [`ic_far_strobesHaveSpeakers`](#strobes-have-speakers)                |          `false`          |
 |                     [`ic_far_access_token`](#http-access-token)                      |          *None*           |
 |                      [`ic_far_whitelisted_ips`](#api-whitelist)                      |        *See Below*        |
 |                      `ic_far_defaultControlPanelDistanceCheck`                       |            `2`            |
@@ -122,6 +123,11 @@ The events in `editable/client/targeting.lua` will not fire unless `ic_far_manua
 When this value is `true`, the alarm sound will alternate between Stage One ("alarm") and Stage Two ("voice").   
 If this value is `false`, Stage One will loop.  
 Default value is `true`.
+
+### Strobes Have Speakers
+#### `ic_far_strobesHaveSpeakers`
+When this value is `true`, alarm sound effects will play from strobes (the default strobe model has a speaker modelled into it).  
+Default value is `false`.
 
 ### HTTP Access Token
 #### `ic_far_access_token`

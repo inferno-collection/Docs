@@ -216,4 +216,4 @@ Some example use cases for custom data include:
 - If the station should be alerted from other scripts
 - Etc.
 
-Custom data can be access from any script via `.customdata`. [See here](data.mdx#station-location) and [here](exports/server.md#get-all-locations-by-group) for more info.
+Custom data can be access from any script via `.customdata`. [See here](data.mdx#station-location) for more info.
