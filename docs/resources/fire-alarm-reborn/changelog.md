@@ -8,7 +8,7 @@ This page documents the changes made to FAR.
 
 ## v1.4.\*
 
-### v1.4.7 - 07/02/2025
+### v1.4.8 - 07/02/2025
 **Added**:
 - Custom Data Attribute for Systems.
 	- Store whatever information you'd like on a per-system basis, to access from any script. [See here](developers/tool.md#adding-custom-data) for more info.
