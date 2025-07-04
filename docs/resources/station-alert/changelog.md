@@ -8,6 +8,17 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 
+### v1.1.6 - 07/04/2025
+
+**Fixes**:
+- Locations with no Wall Lights not appearing in the following:
+  - HTTP API [`locations` GET](developers/api.mdx#locations) request.
+  - [`getAllLocations`](developers/exports/server.md#get-all-locations) server export.
+  - [`getAllLocationsWithPlayers`](developers/exports/server.md#get-all-locations-with-players) server export.
+  - [`getAllLocationsWithPlayersNearestToPosition`](developers/exports/server.md#get-all-locations-with-players-nearest-to-position) server export.
+- Edge case where having multiple [Unit Indicators](usage/components.md#unit-indicators) at one Station could cause game freezing & high resmon on initialization.
+- Edge case where sending a correctly formatted [`Alert`](developers/data.mdx#alert) object via an export would result in a hard server crash with a mono error.
+
 ### v1.1.5 - 06/24/2025
 
 **Added**:
