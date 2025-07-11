@@ -25,7 +25,6 @@ import DocCardList from '@theme/DocCardList';
 | [Zea Development's z_fires](https://forum.cfx.re/t/paid-standalone-esx-qbcore-z-fire/5244464?u=christopherm)                                                         |     ✅     |     ✅      |
 | [London Studios' Smart Fires](https://forum.cfx.re/t/smart-fires-automatic-fires-fire-smoke-types-many-integrations-standalone-paid-resource/4792695?u=christopherm) |     ✅     |     ✅      |
 | [rScript's Fire Generator](https://forum.cfx.re/t/qb-fire-generator/5187113?u=christopherm)                                                                          |     ✅     |     ❌      |
-| [Pickle’s Firefighter Job](https://forum.cfx.re/t/pickles-firefighter-job-built-in-fire-system-scenarios/5110115?u=christopherm) ️                                   |     ❌     |     ❌      |
 
 :::warning
 Some of the above Fire Scripts made changes specially for FAR to be compatible, which means you need to be running the latest version in order for FAR to work correctly. Contact your Fire Script author for help updating.

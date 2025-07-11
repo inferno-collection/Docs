@@ -1,5 +1,5 @@
 ---
-sidebar_position: 999
+sidebar_position: 1999
 ---
 
 # Deprecated Resources
