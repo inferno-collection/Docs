@@ -11,6 +11,12 @@ On this site, you will find documentation for all our FiveM resources, such as h
 
 Our newer resources will have documentation directly here on this website, while our pre-2024 resources will redirect you their respective GitHub wiki pages.
 
+```mdx-code-block
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
+```
+
 ***
 
 ## Tebex Store
@@ -32,8 +38,7 @@ Join our community on Discord to hang out with the team, ask questions, and get 
 
 ## Recent Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/V0MBgqLFetA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/aR8QT05UrMQ?si=N0NncV_XBk8E6fmG" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 ## GitHub Repositories
 
 Explore our open-source projects:

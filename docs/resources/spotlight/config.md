@@ -4,7 +4,7 @@ sidebar_position: 20
 
 # Configuration
 
-Spotlight uses a `config.json` file to store config values. Invalid JSON syntex in this file will cause errors.
+Spotlight uses a `config.json` file to store config values. Invalid JSON syntax in this file will cause errors.
 
 ## Value List
 
@@ -73,14 +73,14 @@ Because FiveM's keymapping is used for the primary keybind, once a player joins 
 
 ### Secondary Keybind
 #### `SecondaryKey`
-The control id to use for the secondary keybind - by default this is mapped to `Left Shift` (`21`).  
+The control id to use for the secondary keybind - by default this is mapped to Sprint / `Left Shift` (`21`).  
 For a full list of options, [see here](https://docs.fivem.net/docs/game-references/controls/#controls).
 
 ### Vehicle Extras Mapping
 #### `VehicleExtras`
 Configuring this optional value will allow the resource to set the correct extras on a vehicle when the spotlight is toggled on or off.
 
-For example, if we have a vehicle with the spawn name `police_car`, and it has 4 spotlight extras as follow:
+For example, if we have a vehicle with the spawn name `police_car`, and it has 4 spotlight extras as below:
 - Extra 1: Driver spotlight flipped down
 - Extra 2: Driver spotlight flipped up
 - Extra 3: Passenger spotlight flipped down
