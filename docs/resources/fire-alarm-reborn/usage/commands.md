@@ -82,3 +82,11 @@ This is not a graceful reset: any isolations, closed Sprinkler Valves, etc. will
 #### Required Ace Permission: [`Tester`](../config#use-detector-tester-spray-can)
 
 This command will either collect or store the player's Detector Tester Spray Can.
+
+***
+
+## Health Check
+### `/firealarm health`
+#### Required Ace Permission: Console Only
+
+This command prints information to the console indicating the state of the resource.
