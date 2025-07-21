@@ -8,6 +8,25 @@ This page documents the changes made to FAR.
 
 ## v1.4.\*
 
+### v1.4.9 - 07/21/2025
+**Added**:
+- Requirement for a minimum server version of 12781 or above.
+- [`firealarm health`](usage/commands.md#health-check) command.
+  - Used to assist with solving problems during tech support.
+- "ConVar Permissions" section to config, which prevents other resources from reading private values (like HTTP Access Token).
+- Corona to strobes when they flash, resulting in a brighter, better looking effect:
+
+| Before                               | After                              |
+|--------------------------------------|------------------------------------|
+| ![Before](assets/strobe_before.webp) | ![After](assets/strobe_after.webp) |
+
+**Changed**:
+- If not provided in an alarm system, `PostalCode` will now return an empty string instead of `nil`.
+
+**Fixed**:
+- Existing strobe flash effect appearing below the strobe.
+- Some strobe shadows being "brighter" than others.
+
 ### v1.4.8 - 07/02/2025
 **Added**:
 - Custom Data Attribute for Systems.
