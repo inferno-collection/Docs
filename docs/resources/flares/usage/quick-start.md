@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Quick Start Guide
 
-This page serves as a quick start guide to Spotlight.
+This page serves as a quick start guide to IF.
 
 ## How do I use IFlares
 To start, type the command `/iflares`, which will open a menu. Within this menu, you can select which IFlare type and flash pattern.

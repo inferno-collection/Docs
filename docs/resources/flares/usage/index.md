@@ -27,10 +27,10 @@ The command for the console can be found [here](../install.md#installing-the-res
 
 ***
 
-### How do I add/edit/remove IFlare models?
-See here. --TODO
+### How do I add/edit/remove Flare Types?
+[See here](../developers/flare-types.md).
 
 ***
 
 ### How do I add/edit/remove Flash Patterns?
-See here. --TODO
+[See here](../developers/flash-patterns.md).

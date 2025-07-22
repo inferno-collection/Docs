@@ -262,7 +262,7 @@ By default, this permission is only granted to admins (`group.admin`).
 ***
 
 ## Default Config File
-``` showLineNumbers
+```text showLineNumbers
 # Inferno Collection Fire Alarm Reborn
 # 
 # Copyright (c) 2019-2025, Christopher M, Inferno Collection. All rights reserved.

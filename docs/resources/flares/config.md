@@ -4,7 +4,7 @@ sidebar_position: 20
 
 # Configuration
 
-Spotlight uses a `config.json` file to store config values. Invalid JSON syntax in this file will cause errors.
+IF uses convars for config values. For information on how to correctly install the `config.cfg` file, [see here](install.md).
 
 ## Value List
 
@@ -75,7 +75,7 @@ This permission allows players to delete IFlares they did not place themselves.
 By default, this permission is granted to all players.
 
 ## Default Config File
-``` showLineNumbers
+```text showLineNumbers
 # Inferno Collection Flares
 # 
 # Copyright (c) 2019-2025, Christopher M, Inferno Collection. All rights reserved.
