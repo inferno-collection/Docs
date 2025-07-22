@@ -108,7 +108,7 @@ JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your
 :::
 
 ## Default Config File
-``` showLineNumbers
+```text showLineNumbers
 {
   "SpotlightDistance": "40",
   "SpotlightBrightness": "8.5",
