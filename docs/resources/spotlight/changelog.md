@@ -13,7 +13,7 @@ This page documents the changes made to Spotlight.
 **Added**:
 - [`/spotlight debug`](usage/commands.md#spotlight-debugging) command, [see here](usage/commands.md#spotlight-debugging) fore more info.
   - Used to visualize the positions of spotlights on vehicles, and get spotlight indices.
-- [`VehicleSpotlightIgnores`](config.md#spotlight-ignoring) config option, see here for more info.
+- [`VehicleSpotlightIgnores`](config.md#spotlight-ignoring) config option, [see here](config.md#spotlight-ignoring) for more info.
   - Used to tell the resource to ignore specific spotlights on specific vehicles.
 
 ### v1 - 07/11/2025
