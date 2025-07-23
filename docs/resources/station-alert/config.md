@@ -30,8 +30,9 @@ SA uses convars for config values. For information on how to correctly install t
 |                   [`ic_sa_repeatMessage`](#repeat-tts-message-twice)                    |            `true`             |
 |                    [`ic_sa_endingTone`](#repeat-tone-at-end-of-tts)                     |            `true`             |
 |   [`ic_sa_manualInteractions`](#manual-interactions-targetthird-eye-resource-support)   |            `false`            |
-|                          [`ic_sa_slowerDoors`](#slower-doors)                           |             `true             |
-|                  [`ic_sa_wallLightModels`](#default-wall-light-models)                  |          *See Below*          |
+|                          [`ic_sa_slowerDoors`](#slower-doors)                           |            `true`             |
+|                       [`ic_sa_doubleDistance`](#double-distance)                        |            `false`            |
+|                    [`ic_sa_wallLightModels`](#default-light-models)                     |          *See Below*          |
 |               [`ic_sa_bollardLightModels`](#default-bollard-light-models)               |          *See Below*          |
 |               [`ic_sa_trafficLightModels`](#default-traffic-light-models)               |          *See Below*          |
 |         [`ic_sa_addonTrafficLightModels`](#default-addon-traffic-light-models)          |          *See Below*          |
@@ -68,7 +69,7 @@ If value is `-1`, doors will stay open until manually closed.
 ### Seconds Till Lights Reset
 #### `ic_sa_secondsTillLightsReset`
 This must be a whole number, more than 0. Suggested value range: `125` - `150`.  
-This is the number of seconds after an Alert is activated, that Wall Lights and Unit Indicators will reset.
+This is the number of seconds after an Alert is activated, that Lights and Unit Indicators will reset.
 
 ### Self-Closing Doors
 #### `ic_sa_closeDoorsOnDriveThrough`
@@ -129,6 +130,15 @@ If you do not want the resource to change the speed of the doors, set this value
 
 If this value is `true` and your doors do not open like they should, or need to be bumped/hit to be open, change this value to `false` and it should resolve the issue.
 
+### Double Distance
+#### `ic_sa_doubleDistance`
+When this value is `true`, the max distance check for station locations is doubled from the default 100 units, to 200 units.
+
+:::warning
+Unless you know you need this option enabled (such as because your fire station MLOs are massive), you should leave this turned off.  
+Enabling this option can decrease client performance.
+:::
+
 ### Alias Command
 #### `ic_sa_command`
 When this value is anything other than `stationalert`, the value will be used to register an alias command.  
@@ -154,9 +164,9 @@ The default value, `127.0.0.1`, should allow access from the local machine only 
 Regardless of this config option, [`ic_sa_httpAccessToken`](#http-access-token) is required.
 :::
 
-### Default Wall Light Models
+### Default Light Models
 #### `ic_sa_wallLightModels`
-These values determine which prop/model should be used for de/activated Wall Lights.
+These values determine which prop/model should be used for de/activated Lights.
 
 The default value for this option is:
 ```cfg
@@ -165,6 +175,10 @@ setr ic_sa_wallLightModels {
 	"on":	"prop_ic_wall_light"
 }
 ```
+
+:::note
+`ic_sa_wallLightModels` is a misnomer from when Lights could only be placed on walls, and not also ceilings.
+:::
 
 ### Default Bollard Light Models
 #### `ic_sa_bollardLightModels`

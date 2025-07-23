@@ -8,6 +8,14 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 
+### v1.1.7 - 07/23/2025
+**Added**:
+- [`ic_sa_doubleDistance`](config.md#double-distance) config option. [See here](config.md#double-distance) for more info.
+
+**Changed**:
+- Increased the LOD distance for the [Addon Traffic Light](usage/components.md#addon-traffic-lights) from 60 units to 120 units.
+- [Lights](usage/components.md#lights) can now be placed on ceilings, no longer exclusively on walls.
+
 ### v1.1.6 - 07/04/2025
 
 **Fixes**:

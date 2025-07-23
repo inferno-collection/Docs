@@ -153,7 +153,7 @@ If you see the warning below at the bottom of your screen, you are too far from 
 ### Hidden Props
 When a prop is hidden with the SA Tool, it will not appear in-game. The intention is to allow server owners to remove props that conflict with SA and replace them with SA props.
 
-For example, if you have a MLO you purchased on Tebex, and it contains non-functional warning lights outside the building, you could hide these and replace them with SA Wall Lights.
+For example, if you have a MLO you purchased on Tebex, and it contains non-functional warning lights outside the building, you could hide these and replace them with SA Lights.
 
 ### Coloured Radii
 When in the tool, you may notice coloured radii (or circles) - these represent the approximate range of placed Speakers.  
