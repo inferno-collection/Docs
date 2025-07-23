@@ -8,20 +8,21 @@ Spotlight uses a `config.json` file to store config values. Invalid JSON syntax 
 
 ## Value List
 
-|                      Name                       | Default Value |
-|:-----------------------------------------------:|:-------------:|
-|   [`SpotlightDistance`](#spotlight-distance)    |     `40`      |
-| [`SpotlightBrightness`](#spotlight-brightness)  |     `8.5`     |
-|  [`SpotlightRoundness`](#spotlight-roundness)   |      `7`      |
-|     [`SpotlightRadius`](#spotlight-radius)      |     `20`      |
-|    [`SpotlightFallOff`](#spotlight-falloff)     |     `30`      |
-| [`SpotlightMinAngle`](#spotlight-minimum-angle) |     `-60`     |
-| [`SpotlightMaxAngle`](#spotlight-maximum-angle) |     `65`      |
-|        [`KickCheaters`](#kick-cheaters)         |    `false`    |
-|              [`Command`](#command)              |  `spotlight`  |
-| [`DefaultPrimaryKey`](#default-primary-keybind) |  `LCONTROL`   |
-|      [`SecondaryKey`](#secondary-keybind)       |     `21`      |
-|   [`VehicleExtras`](#vehicle-extras-mapping)    |     `[]`      |
+|                       Name                       | Default Value |
+|:------------------------------------------------:|:-------------:|
+|    [`SpotlightDistance`](#spotlight-distance)    |     `40`      |
+|  [`SpotlightBrightness`](#spotlight-brightness)  |     `8.5`     |
+|   [`SpotlightRoundness`](#spotlight-roundness)   |      `7`      |
+|      [`SpotlightRadius`](#spotlight-radius)      |     `20`      |
+|     [`SpotlightFallOff`](#spotlight-falloff)     |     `30`      |
+| [`SpotlightMinAngle`](#spotlight-minimum-angle)  |     `-60`     |
+| [`SpotlightMaxAngle`](#spotlight-maximum-angle)  |     `65`      |
+|         [`KickCheaters`](#kick-cheaters)         |    `false`    |
+|              [`Command`](#command)               |  `spotlight`  |
+| [`DefaultPrimaryKey`](#default-primary-keybind)  |  `LCONTROL`   |
+|       [`SecondaryKey`](#secondary-keybind)       |     `21`      |
+|    [`VehicleExtras`](#vehicle-extras-mapping)    |     `[]`      |
+| [`VehicleSpotlightIgnores`](#spotlight-ignoring) |     `[]`      |
 
 ## Values Explained
 
@@ -107,6 +108,29 @@ The config for the above would look like so:
 JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
 :::
 
+### Spotlight Ignoring
+#### `VehicleSpotlightIgnores`
+Configuring this optional value will tell the resource to ignore specific spotlights.
+
+For example, if we have a vehicle with the spawn name `police_car`, and it has 4 functional 'spotlights'.  
+If however, one of these spotlights is part of the headlight assemble instead of a spotlight, you can tell the resource to ignore it.
+
+Entries for this config option look like the below:
+
+```json
+{
+  "ModelName": "police_car",
+  "SpotlightNumber": 2
+}
+```
+
+- `ModelName` is the name of the vehicle model.
+- `SpotlightNumber` is the spotlight index on that specific vehicle, use the [`/spotlight debug`](usage/commands.md#spotlight-debugging) command to find it.
+
+:::warning
+JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
+:::
+
 ## Default Config File
 ```text showLineNumbers
 {
@@ -125,6 +149,7 @@ JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your
   "DefaultPrimaryKey": "LCONTROL",
   "SecondaryKey": "21",
 
-  "VehicleExtras": []
+  "VehicleExtras": [],
+  "VehicleSpotlightIgnores": []
 }
 ```
