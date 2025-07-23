@@ -113,27 +113,27 @@ Used on:
 
 ***
 
-## Wall Light
+## Light
 ### `white`
-This texture is used as part of the specular map for the Wall Light.
+This texture is used as part of the specular map for the Light.
 
 Used on:
 - `prop_ic_wall_light`
 
 ### `grey`
-This texture is used as part of the diffuse map for the Wall Light.
+This texture is used as part of the diffuse map for the Light.
 
 Used on:
 - `prop_ic_wall_light`
 
 ### `wall_light_d`
-This texture is used as part of the diffuse map for the Wall Light.
+This texture is used as part of the diffuse map for the Light.
 
 Used on:
 - `prop_ic_wall_light`
 
 ### `wall_light_alpha_d`
-This texture is used as part of the diffuse map for the Wall Light.
+This texture is used as part of the diffuse map for the Light.
 
 Used on:
 - `prop_ic_wall_light`
@@ -157,7 +157,7 @@ Used on:
 - `prop_ic_bollard_light_off`
 
 ### `bollard_d`
-This texture is used as part of the diffuse map for the Wall Light.
+This texture is used as part of the diffuse map for the Light.
 
 Used on:
 - `prop_ic_bollard_light_on`

@@ -90,8 +90,9 @@ Functionally identical to [Ceiling Speakers](#ceiling-speakers), but designed to
 
 ***
 
-## Wall Lights
-Wall Lights are designed to be placed outside of Stations, and will flash when an Alert is received.
+## Lights
+Lights are designed to be placed outside of Stations, and will flash when an Alert is received.  
+They can be placed on walls or ceilings, as well as inside.
 
 ***
 
