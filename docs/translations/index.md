@@ -9,7 +9,7 @@ sidebar_position: 20
 | Resource                           | Short Code                                                        | Native Name                                                              | English Name                                                           |
 |------------------------------------|-------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------|
 | [Station Alert](station-alert.mdx) | - `en-us`<br/>- `de-de`<br/>- `da-dk`<br/>- `fr-ca`<br/>- `pl-pl` | - English<br/>- Deutsch<br/>- Dansk<br/>- Français Canadien<br/>- Polski | - English<br/>- German<br/>- Danish<br/>- Canadian French<br/>- Polish |
-| [Flares](flares.mdx)               | - `en-us`<br/>- `de-de`<br/>- `da-dk`<br/>- `pl-pl`               | - English<br/>- Deutsch<br/>- Dansk<br/>- Polski                         | - English<br/>- German<br/>- Danish<br/>- Polish                       |
+| [Flares](flares.mdx)               | - `en-us`<br/>- `de-de`<br/>- `da-dk`<br/>- `pl-pl`<br/>- `es-mx` | - English<br/>- Deutsch<br/>- Dansk<br/>- Polski<br/>- Español Mexicano  | - English<br/>- German<br/>- Danish<br/>- Polish<br/>- Mexican Spanish |
 
 ### Resource not listed?
 If a resource is not listed, this means it does not support multiple languages at this time.  
