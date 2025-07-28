@@ -6,7 +6,7 @@ sidebar_position: 10
 
 # 🎥 Creator Program
 
-Do you create FiveM content on YouTube or other social platforms? Want to showcase our Fire & EMS Resource at no cost to you?
+Do you create FiveM content on YouTube or other social platforms? Want to showcase our premium FiveM resources at no cost to you?
 
 We're looking to collaborate with passionate, talented creators to help share our work with the broader FiveM community. Whether you're a rising content creator or a seasoned channel with an audience, this program is for you.
 
@@ -141,7 +141,7 @@ Once accepted, you'll gain access to our **Creator Kit**, which includes:
 
 - Logos, branding, and other art assets
 - Resource descriptions and suggested talking points
-  - We expect creativity — the materials are there to support you, not script you.
+  - We expect creativity — the materials are there to support you, not be your script.
 - Direct access to us for questions and technical help
 
 We want to make this as easy as possible for you to succeed - your success is our success!
