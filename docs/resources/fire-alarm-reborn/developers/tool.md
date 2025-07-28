@@ -20,7 +20,7 @@ You must be in first-person to use the FAR Tool.
 
 The very first time the FAR Tool is used on your server, it will create a new directory in the root of your server files, this is *generally* the same location as your `resources` folder and `server.cfg` file, see the example below:
 
-![Root Directory](assets/root.png)
+![Root Directory](assets/tool/root.png)
 
 If you are ever unsure, you can use the `/firealarm path` command from your server console, it will tell you exactly where the directory is located.
 
@@ -92,7 +92,7 @@ Either add `dependency "inferno-fire-alarm-reborn"` to the manifest, or update y
 
 Below you will find the controls for the FAR Tool. They will also display in the top left of your screen.
 
-![Controls](assets/controls.png)
+![Controls](assets/tool/controls.png)
 
 In addition to the above, there are the following:
 
@@ -139,7 +139,7 @@ This cycles through created alarm systems inside this draft file.
 :::warning
 If you see the warning below at the bottom of your screen, you are too far from the centre location of your Alarm System.
 
-![Too far away!](assets/distance.png)
+![Too far away!](assets/tool/distance.png)
 :::
 
 #### Space Bar
@@ -158,7 +158,7 @@ Virtual Props are props that will not actually appear in game, but can still be 
 
 For example, in the base-game GTA V LTD Gas Station MLOs, there are call points (similar to pull stations) and sprinklers that are not props and are instead baked into the map, and therefore cannot be removed by [hiding them](#hidden-props). In this case, you can use Virtual Props placed over the top of the exiting fire alarm components.
 
-![Virtual Prop](assets/virtual.png)
+![Virtual Prop](assets/tool/virtual.png)
 
 ## Adding Postal Codes
 Postal codes can be added to alarm systems on a per-system basis, and requires manually adding an extra value to each desired system in a draft file.
