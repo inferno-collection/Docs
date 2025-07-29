@@ -22,6 +22,7 @@ Spotlight uses a `config.json` file to store config values. Invalid JSON syntax 
 | [`DefaultPrimaryKey`](#default-primary-keybind)  |  `LCONTROL`   |
 |       [`SecondaryKey`](#secondary-keybind)       |     `21`      |
 |    [`VehicleExtras`](#vehicle-extras-mapping)    |     `[]`      |
+|      [`VehicleMods`](#vehicle-mod-mapping)       |     `[]`      |
 | [`VehicleSpotlightIgnores`](#spotlight-ignoring) |     `[]`      |
 
 ## Values Explained
@@ -108,6 +109,12 @@ The config for the above would look like so:
 JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
 :::
 
+### Vehicle Mod Mapping
+#### `VehicleMods`
+Configuring this optional value will allow the resource to use mod kits as spotlights, on vehicles that don't have existing functional spotlights. When configured, the resource will change the mod kit based on the spotlight on/off state (i.e., flipped up for on, down for off). 
+
+The steps required to add a vehicle mod are covered on [here](developers/index.md#server-owners--developers).
+
 ### Spotlight Ignoring
 #### `VehicleSpotlightIgnores`
 Configuring this optional value will tell the resource to ignore specific spotlights.
@@ -150,6 +157,7 @@ JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your
   "SecondaryKey": "21",
 
   "VehicleExtras": [],
+  "VehicleMods": [],
   "VehicleSpotlightIgnores": []
 }
 ```
