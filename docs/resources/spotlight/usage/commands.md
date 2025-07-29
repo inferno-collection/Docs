@@ -19,4 +19,4 @@ Toggles the spotlight of the current vehicle.
 ## Spotlight Debugging
 ### `/spotlight debug`
 
-Visually highlights the spotlight positions on the current vehicle, and provides the spotlight number for use in [`VehicleSpotlightIgnores`](../config.md#spotlight-ignoring) config option.
+Visually highlights the spotlight positions on the current vehicle, and provides the spotlight number for use in [`VehicleSpotlightIgnores`](../config.md#spotlight-ignoring) config option. Also displays relevant bone positions and names.
