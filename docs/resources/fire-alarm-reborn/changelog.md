@@ -6,6 +6,18 @@ sidebar_position: 999
 
 This page documents the changes made to FAR.
 
+## v1.5.\*
+
+### v1.5.0 - 07/30/2025
+
+**Changed**:
+- [`customdata`](developers/tool.md#adding-custom-data) now defaults to `""` (empty string) instead of `nil` when not provided.
+
+**Fixed**:
+- [`customdata`](developers/tool.md#adding-custom-data) not being included in editable events.
+- Strobes not counting towards the Sounders count when using [`ic_far_strobesHaveSpeakers`](config.md#strobes-have-speakers)
+  - This resulted in cases where a location might only have Strobes for sound, but because there were no Sounders, the script would disable audio entirely for the sake of performance.
+
 ## v1.4.\*
 
 ### v1.4.9 - 07/21/2025
