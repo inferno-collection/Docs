@@ -9,7 +9,7 @@ This page explains how to edit the `flash-patterns.json` file in IF.
 An entry can contain the following parameters:
 
 - `Name`
-  - The human-readable name that will display in the menu.
+  - The human-readable name that will display to the player.
 - `Red`
   - A value from `0` to `255`. [See here](#rgb) for more info.
 - `Green`

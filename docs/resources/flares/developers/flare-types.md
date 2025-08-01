@@ -9,7 +9,7 @@ This page explains how to edit the `flare-types.json` file in IF.
 Each entry contains two parameters:
 
 - `Name`
-  - The human-readable name that will display in the menu.
+  - The human-readable name that will display to the player.
 - `ModelName`
   - The name of the prop model to use for the IFlare. 
 
@@ -18,7 +18,7 @@ If, for example, you replaced the [textures](textures.md) on one or more flare t
 
 :::warning
 Do not rename the model, either here or the actual model file, unless you know what you are doing (this means you've updated the `ytyp` file!).  
-The model name is not shown in the menu or anywhere else in-game, and can be kept the same even if the textures have been replaced and the `name` changed.
+The model name is not shown anywhere in-game, and can be kept the same even if the textures have been replaced and the `name` changed.
 :::
 
 ## Default Flare Types
