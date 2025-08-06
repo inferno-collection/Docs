@@ -24,6 +24,8 @@ FAR uses convars for config values. For information on how to correctly install 
 |                [`ic_far_strobesHaveSpeakers`](#strobes-have-speakers)                |          `false`          |
 |                     [`ic_far_access_token`](#http-access-token)                      |          *None*           |
 |                      [`ic_far_whitelisted_ips`](#api-whitelist)                      |        *See Below*        |
+|                            [`ic_far_timezone`](#timezone)                            |   `Australia/Melbourne`   |
+|                        [`ic_far_timezone_tag`](#timezone-tag)                        |          `en-AU`          |
 |                      `ic_far_defaultControlPanelDistanceCheck`                       |            `2`            |
 |                       `ic_far_defaultPullStationDistanceCheck`                       |            `1`            |
 |                     `ic_far_defaultSprinklerValveDistanceCheck`                      |            `1`            |
@@ -148,6 +150,16 @@ The default value, `127.0.0.1`, should allow access from the local machine only 
 Regardless of this config option, [`ic_far_access_token`](#http-access-token) is required.
 :::
 
+### Timezone
+#### `ic_far_timezone`
+This value will be used to set the timezone in Control Panels.   
+A full list of timezones can be found [here](https://gist.github.com/diogocapela/12c6617fc87607d11fd62d2a4f42b02a).
+
+### Timezone Tag
+#### `ic_far_timezone_tag`
+This value will be used to set the format of the time in Control Panels.   
+A full list of timezone tags can be found [here](https://github.com/TiagoDanin/Locale-Codes?tab=readme-ov-file#locale-list) (see the `tag` column).
+
 ### Default Control Panel Models
 #### `ic_far_defaultControlPanelModels`
 These values determine which prop/model should be used for each alarm status. For example, when using the default props provided with FAR, there is a version of the prop with flashing LEDs for when the alarm is active.
@@ -267,11 +279,11 @@ By default, this permission is only granted to admins (`group.admin`).
 # 
 # Copyright (c) 2019-2025, Christopher M, Inferno Collection. All rights reserved.
 
-############################################################################
-###                                NOTICE                                ###
-### Be sure to check the documentation before changing these values.     ###
-### https://docs.inferno-collection.com/fire-alarm-reborn/configuration/ ###
-############################################################################
+######################################################################################
+###                                    NOTICE                                      ###
+###       Be sure to check the documentation before changing these values.         ###
+### https://docs.inferno-collection.com/resources/fire-alarm-reborn/configuration/ ###
+######################################################################################
 
 #####################
 ### Configuration ###
@@ -294,6 +306,12 @@ set ic_far_minutesBetweenRandomAlarms "30"
 
 # If there is any active system, do not trigger a random alarm
 set ic_far_randomAlarmsOnlyIfNoActiveAlarms	"true"
+
+# Timezone for Control Panel
+setr ic_far_timezone "Australia/Melbourne"
+
+# Timezone Tag for Control Panel
+setr ic_far_timezone_tag "en-AU"
 
 ### Advanced ###
 ################
@@ -321,6 +339,12 @@ setr ic_far_defaultSprinklerValveDistanceCheck "1"
 
 # Don't display "Press E to..." interactions
 setr ic_far_manualInteractions "false"
+
+# If alarms should have two stages (i.e., "alarm" and "voice")
+setr ic_far_twoStageAlarm "true"
+
+# If strobes should also make sounds like sounders do
+setr ic_far_strobesHaveSpeakers "false"
 
 # The default model to use for the Control Panel at each Alarm Status
 setr ic_far_defaultControlPanelModels {
@@ -386,4 +410,12 @@ add_ace builtin.everyone "InfernoFireAlarmReborn.Tester" allow
 add_ace group.admin "InfernoFireAlarmReborn.RandomAlarms" allow
 add_ace group.admin "InfernoFireAlarmReborn.Tool" allow
 add_ace group.admin "InfernoFireAlarmReborn.ResetAlarm" allow
+
+##########################
+### ConVar Permissions ###
+##########################
+
+# Prevents other resources from reading these private values
+add_convar_permission inferno-fire-alarm-reborn read ic_far_access_token
+add_convar_permission inferno-fire-alarm-reborn read ic_far_whitelisted_ips
 ```
