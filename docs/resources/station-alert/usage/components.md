@@ -21,6 +21,7 @@ Door Controls can also be access from a Station Computer.
 The Door Controls Menu allows players to:
 - Open and close individual doors
 - Open and close all doors
+- Temporarily activate traffic lights
 - Isolate doors
   - When a door is isolated, it will not open or close with other doors, and will remain "locked" in whatever position (open or closed) it was isolated in.
 
@@ -53,6 +54,18 @@ See the video below for more information.
 
 **YouTube Video**:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ezGdlphpJg0?si=qqfgW74iNxR-JU7P" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+***
+
+## Warning Lights
+Warning Lights are a cross between a road sign and a traffic light.  
+The Warning Lights will flash yellow when a vehicle drives through an open door connected to a station.
+
+:::note
+[`ic_sa_closeDoorsOnDriveThrough`](../config.md#self-closing-doors) must be `true` for vehicle detection to work.
+:::
+
+![Warning Lights](assets/warning_lights.webp)
 
 ***
 
@@ -93,6 +106,12 @@ Functionally identical to [Ceiling Speakers](#ceiling-speakers), but designed to
 ## Lights
 Lights are designed to be placed outside of Stations, and will flash when an Alert is received.  
 They can be placed on walls or ceilings, as well as inside.
+
+***
+
+## Status Lights
+Status Lights are designed to be placed outside of Stations, and will flash either red or green depending on the status of the Station.  
+When an alert is received, the light will flash red. When a message is received, the light will flash green.
 
 ***
 
