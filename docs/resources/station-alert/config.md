@@ -37,9 +37,11 @@ SA uses convars for config values. For information on how to correctly install t
 |               [`ic_sa_trafficLightModels`](#default-traffic-light-models)               |          *See Below*          |
 |         [`ic_sa_addonTrafficLightModels`](#default-addon-traffic-light-models)          |          *See Below*          |
 |              [`ic_sa_unitIndicatorModels`](#default-unit-indicator-models)              |          *See Below*          |
+|               [`ic_sa_statusLightModels`](#default-status-lights-models)                |          *See Below*          |
 |                [`ic_sa_doorControlsModel`](#default-door-controls-model)                |    `prop_ic_door_controls`    |
 |              [`ic_sa_ceilingSpeakerModel`](#default-ceiling-speaker-model)              | `v_serv_metro_ceilingspeaker` |
 |             [`ic_sa_exteriorSpeakerModel`](#default-exterior-speaker-model)             |    `h4_prop_h4_tannoy_01a`    |
+|               [`ic_sa_warningLightsModel`](#default-warning-lights-model)               |   `prop_ic_warning_lights`    |
 |                      [`ic_sa_httpAccessToken`](#http-access-token)                      |             `""`              |
 |                        [`ic_sa_whitelistedIps`](#api-whitelist)                         |          *See Below*          |
 |                                 [`ic_sa_debug`](#debug)                                 |            `false`            |
@@ -219,6 +221,19 @@ setr ic_sa_addonTrafficLightModels {
 }
 ```
 
+### Default Status Lights Models
+#### `ic_sa_statusLightModels`
+These values determine which prop/model should be used for Status Lights.
+
+The default value for this option is:
+```cfg
+setr ic_sa_statusLightModels {
+	"None":			"prop_ic_status_lights_off",
+	"Red":			"prop_ic_status_lights_red",
+	"Green":		"prop_ic_status_lights_green"
+}
+```
+
 ### Default Unit Indicator Models
 #### `ic_sa_unitIndicatorModels`
 These values determine which prop/model should be used for Unit Indicators.
@@ -258,6 +273,15 @@ These values determine which prop/model should be used for Exterior Speakers.
 The default value for this option is:
 ```cfg
 setr ic_sa_exteriorSpeakerModel "h4_prop_h4_tannoy_01a"
+```
+
+### Default Warning Lights Model
+#### `ic_sa_warningLightsModel`
+These values determine which prop/model should be used for Warning Lights.
+
+The default value for this option is:
+```cfg
+setr ic_sa_warningLightsModel "prop_ic_warning_lights"
 ```
 
 ### Debug
@@ -635,11 +659,11 @@ By default, this permission is only granted to admins (`group.admin`).
 # 
 # Copyright (c) 2019-2025, Christopher M, Inferno Collection. All rights reserved.
 
-############################################################################
-###                                NOTICE                                ###
-###   Be sure to check the documentation before changing these values.   ###
-###   https://docs.inferno-collection.com/station-alert/configuration/   ###
-############################################################################
+######################################################################################
+###                                     NOTICE                                     ###
+###        Be sure to check the documentation before changing these values.        ###
+###   https://docs.inferno-collection.com/resources/station-alert/configuration/   ###
+######################################################################################
 
 #####################
 ### Configuration ###
@@ -748,9 +772,9 @@ setr ic_sa_bollardLightModels {
 
 # The model to use for the traffic lights
 setr ic_sa_trafficLightModels {
-	"Red":		"prop_ic_traffic_light_r",
-	"Yellow":	"prop_ic_traffic_light_y",
-	"Green":	"prop_ic_traffic_light_g"
+	"Red":			"prop_ic_traffic_light_r",
+	"Yellow":		"prop_ic_traffic_light_y",
+	"Green":		"prop_ic_traffic_light_g"
 }
 
 # The model to use for the addon traffic lights
@@ -763,12 +787,18 @@ setr ic_sa_addonTrafficLightModels {
 
 # The model to use for the unit indicators
 setr ic_sa_unitIndicatorModels {
-	"None":		"prop_ic_unit_indicator",
-	"Red":		"prop_ic_unit_indicator_r",
-	"Green":	"prop_ic_unit_indicator_g",
-	"Blue":		"prop_ic_unit_indicator_b",
-	"Magenta":	"prop_ic_unit_indicator_m",
-	"Yellow":	"prop_ic_unit_indicator_y"
+	"None":			"prop_ic_unit_indicator",
+	"Red":			"prop_ic_unit_indicator_r",
+	"Green":		"prop_ic_unit_indicator_g",
+	"Blue":			"prop_ic_unit_indicator_b",
+	"Magenta":		"prop_ic_unit_indicator_m",
+	"Yellow":		"prop_ic_unit_indicator_y"
+}
+
+setr ic_sa_statusLightModels {
+	"None":			"prop_ic_status_lights_off",
+	"Red":			"prop_ic_status_lights_red",
+	"Green":		"prop_ic_status_lights_green"
 }
 
 # The model to use for the door controls
@@ -780,8 +810,8 @@ setr ic_sa_ceilingSpeakerModel "v_serv_metro_ceilingspeaker"
 # The model to use for the external speaker
 setr ic_sa_exteriorSpeakerModel "h4_prop_h4_tannoy_01a"
 
-# The model to use for the addon traffic light
-setr ic_sa_addonTrafficLightModel "prop_ic_exterior_traffic_light"
+# The model to use for the warning lights
+setr ic_sa_warningLightsModel "prop_ic_warning_lights"
 
 # HTTP Access Token
 set ic_sa_httpAccessToken ""
@@ -794,9 +824,11 @@ set ic_sa_whitelistedIps [
 # Change command name
 set ic_sa_command "stationalert"
 
+# Double the distance for station location checks
+setr ic_sa_doubleDistance "false"
+
 # If the resource should run in debug mode
 setr ic_sa_debug "false"
-
 
 ###################
 ### Permissions ###

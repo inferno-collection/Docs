@@ -8,6 +8,21 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 
+### v1.1.8 - 08/06/2025
+**Added**:
+- [Status Lights](usage/components.md#status-lights)
+  - Designed to placed outside a station, they flash red for alerts, and green for messages. [See here](usage/components.md#status-lights) for more info.
+- [Warning Lights](usage/components.md#warning-lights)
+  - Designed to be placed outside, they will flash when a vehicle exits the station via an open door. [See here](usage/components.md#warning-lights) for more info.
+- Option to [Door Controls](usage/components.md#door-controls) menu to temporarily active configured traffic lights.
+  - Designed to allow entering/exiting stations safely by stopping traffic.
+
+**Changed**:
+- LODs for [Addon Traffic Lights](usage/components.md#addon-traffic-lights).
+
+**Fixes**:
+- Harmless NUI error when sending messages without any voice data.
+
 ### v1.1.7 - 07/23/2025
 **Added**:
 - [`ic_sa_doubleDistance`](config.md#double-distance) config option. [See here](config.md#double-distance) for more info.
