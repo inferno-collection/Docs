@@ -8,6 +8,17 @@ This page documents the changes made to FAR.
 
 ## v1.5.\*
 
+### v1.5.1 - 08/06/2025
+
+**Added**:
+- Support for displaying custom date and time in Control Panel
+  - Uses the new [`ic_far_timezone`](config.md#timezone) and [`ic_far_timezone_tag`](config.md#timezone-tag) config options. [See here](config.md#timezone) for more info.
+  - Replace UTC/GMT time always been used.
+
+**Changed**:
+- [Detectors](usage/components.md#detectors--sprinklers) can now be placed on walls, not just the ceiling.
+- Wording of the [FAR Tool](developers/tool.md) save message to avoid confusion.
+
 ### v1.5.0 - 07/30/2025
 
 **Changed**:

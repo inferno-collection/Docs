@@ -73,6 +73,10 @@ Strobes will automatically reset along with the reset of the Alarm System.
 
 Learn how to use the Control Panel by viewing the dedicated [page](panel.md).
 
+:::tip
+You can change the timezone of the Control Panel with [`ic_far_timezone`](../config.md#timezone) and [`ic_far_timezone_tag`](../config.md#timezone-tag). [See here](../config.md#timezone) for more info.
+:::
+
 ***
 
 ## Sprinkler Valves
