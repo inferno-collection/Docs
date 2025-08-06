@@ -19,7 +19,7 @@ If you have not done so already, you will need to purchase the resource from [ou
 1. In your Downloads folder on your computer, extract the file, then locate the folder named `[inferno-collection]` and copy it.
 2. Go to the server's "resources" folder, or wherever you normally place resources.
 3. Paste the entire folder.
-   :::note
+   :::tip
    If you have previously downloaded our resources, and already have a folder named `[inferno-collection]`, you can still paste the new folder; the files will merge as required.
    :::
 4. Go to your `server-data` folder and open your `server.cfg` file, at the very top add the following: `exec @inferno-fire-alarm-reborn/config.cfg`
@@ -33,6 +33,6 @@ If you have not done so already, you will need to purchase the resource from [ou
 1. [Download the files](https://github.com/inferno-collection/Alarm-Locations/releases/latest) from GitHub.
 2. Go to the server's "resources" folder, or wherever you normally place resources.
 3. Paste the entire folder.
-   :::note
+   :::tip
    If you have previously downloaded our resources, and already have a folder named `[inferno-collection]`, you can still paste the new folder; the files with merge as required.
    :::
