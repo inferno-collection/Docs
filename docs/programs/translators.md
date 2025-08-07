@@ -18,7 +18,7 @@ By helping us translate our resources, you’ll make them more accessible to eve
 
 ### What's in it for you?
 
-We will provide **$15 USD** in [Tebex Store](https://store.inferno-collection.com/) credit per complete translation, per resource.  
+We will provide **$15 USD** in Inferno Collection [Tebex Store](https://store.inferno-collection.com/) credit per complete translation, per resource.  
 Rewards are first-come, first-served; meaning if you submit a translation after someone else, only the first person gets the reward.
 
 ### Which languages are needed?
