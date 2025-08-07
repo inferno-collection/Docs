@@ -17,4 +17,4 @@ All Inferno Collection resources posted after January 2025 support multiple lang
 
 ### Language not listed?
 If your language is not listed, it means we do not have a translation for it yet.  
-Want to provide a translation and get rewarded for it? [See here](..)!
+Want to provide a translation and get rewarded for it? [See here](../programs/translators.md)!
