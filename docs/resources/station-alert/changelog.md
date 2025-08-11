@@ -8,6 +8,16 @@ This page documents the changes made to SA.
 
 ## v1.1.\*
 
+### v1.1.9 - 08/11/2025
+**Changed**:
+- Menus can now be exited via `Backspace` or `Escape`
+  - Only the Traffic Light selection menu in the [SA Tool](developers/tool.md) disallows this.
+
+**Fixed**:
+- Typo in the EmergencyDispatch sample code inside `events.lua`
+  - The `wache` (job) was accidentally called `station_name`, which was leading to confusion.
+- Edge case where [Status Lights](usage/components.md#status-lights) could flash red and green at the same time.
+
 ### v1.1.8 - 08/06/2025
 **Added**:
 - [Status Lights](usage/components.md#status-lights)
