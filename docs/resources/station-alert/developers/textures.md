@@ -47,36 +47,42 @@ This texture is used for the entire Addon Traffic Light model, except the yellow
 
 Used on:
 - `prop_ic_exterior_traffic_light`
+- [`prop_ic_warning_lights`](#warning-lights)
 
 ### `exterior_traffic_light_lod`
 This texture is used for the entire Addon Traffic Light model LOD.
 
 Used on:
 - `prop_ic_exterior_traffic_light`
+- [`prop_ic_warning_lights`](#warning-lights)
 
 ### `exterior_traffic_light_s`
 This texture is a specular map for the Addon Traffic Light.
 
 Used on:
 - `prop_ic_exterior_traffic_light`
+- [`prop_ic_warning_lights`](#warning-lights)
 
 ### `exterior_traffic_light_sign_back_d`
 This texture is used for the yellow sign attached to the Addon Traffic Light.
 
 Used on:
 - `prop_ic_exterior_traffic_light`
+- [`prop_ic_warning_lights`](#warning-lights)
 
 ### `exterior_traffic_light_sign_back_n`
 This texture is a normal/bump map for the yellow sign attached to the Addon Traffic Light.
 
 Used on:
 - `prop_ic_exterior_traffic_light`
+- [`prop_ic_warning_lights`](#warning-lights)
 
 ### `exterior_traffic_light_sign_chrome_s`
 This texture is a specular map for the Addon Traffic Light.
 
 Used on:
 - `prop_ic_exterior_traffic_light`
+- [`prop_ic_warning_lights`](#warning-lights)
 
 ### `exterior_traffic_light_sign_d`
 This texture is used for the yellow sign attached to the Addon Traffic Light.
@@ -140,7 +146,6 @@ Used on:
 
 ***
 
-
 ## Bollard Light
 ### `white`
 This texture is used as part of the specular map for the Bollard Light.
@@ -173,3 +178,59 @@ Used on:
 :::tip
 This texture has a matching entry in the `hi` YTD file.
 :::
+
+***
+
+## Status Light
+### `status_lights_red_d`
+This texture is used as part of the diffuse map for the Status Light.
+
+Used on:
+- `prop_ic_status_lights_green`
+- `prop_ic_status_lights_off`
+- `prop_ic_status_lights_red`
+
+### `status_lights_green_d`
+This texture is used as part of the diffuse map for the Status Light.
+
+Used on:
+- `prop_ic_status_lights_green`
+- `prop_ic_status_lights_off`
+- `prop_ic_status_lights_red`
+
+### `status_lights_s`
+This texture is a specular map for the Status Light.
+
+Used on:
+- `prop_ic_status_lights_green`
+- `prop_ic_status_lights_off`
+- `prop_ic_status_lights_red`
+
+### `status_lights_n`
+This texture is a normal/bump map for the Status Light.
+
+Used on:
+- `prop_ic_status_lights_green`
+- `prop_ic_status_lights_off`
+- `prop_ic_status_lights_red`
+
+***
+
+## Warning Lights
+### `warning_lights_d`
+This texture is used as part of the diffuse map for the Warning Lights.
+
+Used on:
+- `prop_ic_warning_lights`
+
+### `warning_lights_sign_d`
+This texture is used for the diffuse map for the yellow sign on the Warning Lights.
+
+Used on:
+- `prop_ic_warning_lights`
+
+### `warning_lights_s`
+This texture is a specular map for the Warning Lights.
+
+Used on:
+- `prop_ic_warning_lights`
