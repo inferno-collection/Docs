@@ -6,6 +6,17 @@ sidebar_position: 999
 
 This page documents the changes made to SA.
 
+## v1.2.\*
+
+### v1.2.0 - 08/15/2025
+**Added**:
+- [Door Button](usage/components.md) to open/close a specific door, linked via the [SA Tool](developers/tool.md).
+  - Targeting editable file has been updated.
+- Support for [`customdata`](developers/data.mdx#alert) to be passed to [Alerts](developers/data.mdx#alert) which is then passed to the [Call Screen](config.md#custom-call-screen) for use in [custom screens](config.md#custom_urls).
+
+**Changed**:
+- Refactored interaction checks to not be depended on spawned props.
+
 ## v1.1.\*
 
 ### v1.1.9 - 08/11/2025

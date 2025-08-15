@@ -32,6 +32,7 @@ SA uses convars for config values. For information on how to correctly install t
 |   [`ic_sa_manualInteractions`](#manual-interactions-targetthird-eye-resource-support)   |            `false`            |
 |                          [`ic_sa_slowerDoors`](#slower-doors)                           |            `true`             |
 |                       [`ic_sa_doubleDistance`](#double-distance)                        |            `false`            |
+|      [`ic_sa_trafficLightsFromBuzzer`](#activate-traffic-lights-from-buzzer-menu)       |            `false`            |
 |                    [`ic_sa_wallLightModels`](#default-light-models)                     |          *See Below*          |
 |               [`ic_sa_bollardLightModels`](#default-bollard-light-models)               |          *See Below*          |
 |               [`ic_sa_trafficLightModels`](#default-traffic-light-models)               |          *See Below*          |
@@ -135,6 +136,10 @@ If this value is `true` and your doors do not open like they should, or need to 
 ### Double Distance
 #### `ic_sa_doubleDistance`
 When this value is `true`, the max distance check for station locations is doubled from the default 100 units, to 200 units.
+
+### Activate Traffic Lights from Buzzer Menu
+#### `ic_sa_trafficLightsFromBuzzer`
+When this value is `true`, the option to temporarily activate the traffic lights, normally only available from the Door Controls menu, will also be available in the [Buzzer menu](usage/commands.md#door-buzzer).
 
 :::warning
 Unless you know you need this option enabled (such as because your fire station MLOs are massive), you should leave this turned off.  
@@ -381,6 +386,7 @@ The following query parameters are passed with the URL:
 - `s` - Station name
 - `m` - Message provided with Alert
 - `d` - JSON array of door names and their state (open or closed)
+- `cd` - Custom data provided [with the Alert via `customData`](developers/data.mdx#alert).
 
 ***
 
@@ -746,6 +752,9 @@ setr ic_sa_repeatMessage "true"
 # Play the selected tone again after the Text-to-Speech message
 setr ic_sa_endingTone "true"
 
+# Allow activation of traffic lights from the Door Buzzer menu
+setr ic_sa_trafficLightsFromBuzzer "false"
+
 ### Advanced ###
 ################
 
@@ -803,6 +812,9 @@ setr ic_sa_statusLightModels {
 
 # The model to use for the door controls
 setr ic_sa_doorControlsModel "prop_ic_door_controls"
+
+# The model to use for the door button
+setr ic_sa_doorButtonModel "hei_prop_bank_alarm_01"
 
 # The model to use for the ceiling speaker
 setr ic_sa_ceilingSpeakerModel "v_serv_metro_ceilingspeaker"
