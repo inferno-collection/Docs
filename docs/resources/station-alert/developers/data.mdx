@@ -121,6 +121,7 @@ alert.tones
 alert.message
 alert.locations
 alert.unitcolors
+alert.customdata
 ```
 
 <Tabs>
@@ -157,6 +158,12 @@ alert.unitcolors
 	<TabItem value="alert.unitcolors" label="unitcolors">
 		<p>`table`</p>
 		<p>A table containing the unit colors this Alert.</p>
+	</TabItem>
+
+	<TabItem value="alert.customdata" label="customdata">
+		<p>`any`</p>
+		<p>Any data passed here will be send to the [Call Screen](../config#custom-alert-url).</p>
+		<p>Data will be encoded as JSON and then sent as a URI Encoded string.</p>
 	</TabItem>
 </Tabs>
 

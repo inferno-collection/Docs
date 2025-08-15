@@ -27,6 +27,11 @@ The Door Controls Menu allows players to:
 
 ***
 
+## Door Button
+The Door Button can be linked to a specific door, and allows the opening/closing of just the linked door.
+
+***
+
 ## Traffic Lights
 Interior Traffic Lights are linked to a specific door, and will change color depending on the door's state.  
 When a door is closed, it will be red. When a door is opening or closing, it will flash yellow. When a door is open, it will be green.
