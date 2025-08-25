@@ -85,7 +85,7 @@ From the Station Computer menu, players can:
 - Control doors
   - See [Door Controls](#door-controls).
 - Activate a local station alert
-  - Play a generic tone over the station speakers - designed for walk-in emergencies.
+  - Select a tone to play over the station speakers - designed for walk-in emergencies.
 - Rename doors
   - Allows players to temporarily rename doors - such as if a truck is moved around - reverts after server restart.
 

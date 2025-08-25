@@ -8,6 +8,17 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.1 - 08/25/2025
+**Added**:
+- Animation and sound effect when pushing [Door Buttons](usage/components.md#door-button).
+
+**Changed**:
+- Added tone selection to 'Station Alert' option in [Station Computer](usage/components.md#station-computer) menu.
+  - Instead of always playing the default tone, players can now select which tone to play.
+
+**Fixed**:
+- Regression in [SA Tool](developers/tool.md) that preventing the removal of existing [Hiddens](developers/tool.md#hidden-props).
+
 ### v1.2.0 - 08/15/2025
 **Added**:
 - [Door Button](usage/components.md) to open/close a specific door, linked via the [SA Tool](developers/tool.md).
