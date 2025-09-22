@@ -33,6 +33,7 @@ FAR uses convars for config values. For information on how to correctly install 
 |          [`ic_far_defaultPullStationModels`](#default-pull-station-models)           |        *See Below*        |
 |              [`ic_far_defaultDetectorModels`](#default-detector-models)              |        *See Below*        |
 |             [`ic_far_defaultSprinklerModels`](#default-sprinkler-models)             |        *See Below*        |
+|                 [`ic_far_strobeRGBColors`](#strobe-light-rgb-colors)                 |        *See Below*        |
 |                             `ic_far_defaultSounderModel`                             |     `prop_ic_sounder`     |
 |                             `ic_far_defaultStrobeModel`                              |     `prop_ic_strobe`      |
 |                         `ic_far_defaultSprinklerValveModel`                          | `prop_ic_sprinkler_valve` |
@@ -214,6 +215,30 @@ set ic_far_defaultSprinklerModels {
 }
 ```
 
+### Strobe Light RGB Colors
+#### `ic_far_strobeRGBColors`
+These values determine what color [Strobe Lights](usage/components.md#strobes) should flash.
+
+The default value for this option is:
+```cfg
+setr ic_far_strobeRGBColors {
+	"r":	255,
+	"g":	0,
+	"b":	0
+}
+```
+
+Some common combinations include:
+
+| Color  | R     | G     | B     |
+|--------|-------|-------|-------|
+| Red    | `255` | `0`   | `0`   |
+| White  | `128` | `128` | `128` |
+| Yellow | `255` | `255` | `0`   |
+
+More examples can be found [here](https://www.rapidtables.com/web/color/RGB_Color.html#color-chart).
+
+
 ### Debug
 #### `ic_far_debug`
 If this value is `true`, a ton of extra logs will be outputted to both the client and server consoles. Not suggested at all for production use, nor for when using the [FAR Tool](developers/tool.md).
@@ -384,6 +409,13 @@ setr ic_far_defaultStrobeModel "prop_ic_strobe"
 
 # The default model to use for the Sprinkler Valve
 setr ic_far_defaultSprinklerValveModel "prop_ic_sprinkler_valve"
+
+# RGB color code for strobe lights
+setr ic_far_strobeRGBColors {
+	"r":	255,
+	"g":	0,
+	"b":	0
+}
 
 # HTTP Access Token
 set ic_far_access_token ""
