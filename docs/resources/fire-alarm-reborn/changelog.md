@@ -8,6 +8,15 @@ This page documents the changes made to FAR.
 
 ## v1.5.\*
 
+### v1.5.2 - 09/22/2025
+
+**Added**:
+- [`ic_far_strobeRGBColors`](config.md#strobe-light-rgb-colors) config value to change strobe color, [see here](config.md#strobe-light-rgb-colors) for details.
+  - Allows you to change the color of the strobe lights. Be default they are red.
+
+**Fixed**:
+- Error logging for default config values not showing their JSON values in the console.
+
 ### v1.5.1 - 08/06/2025
 
 **Added**:
