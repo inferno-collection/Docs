@@ -38,6 +38,7 @@ SA uses convars for config values. For information on how to correctly install t
 |               [`ic_sa_trafficLightModels`](#default-traffic-light-models)               |          *See Below*          |
 |         [`ic_sa_addonTrafficLightModels`](#default-addon-traffic-light-models)          |          *See Below*          |
 |              [`ic_sa_unitIndicatorModels`](#default-unit-indicator-models)              |          *See Below*          |
+|                 [`ic_sa_unitBeaconModels`](#default-unit-beacon-models)                 |          *See Below*          |
 |               [`ic_sa_statusLightModels`](#default-status-lights-models)                |          *See Below*          |
 |                [`ic_sa_doorControlsModel`](#default-door-controls-model)                |    `prop_ic_door_controls`    |
 |              [`ic_sa_ceilingSpeakerModel`](#default-ceiling-speaker-model)              | `v_serv_metro_ceilingspeaker` |
@@ -245,11 +246,29 @@ These values determine which prop/model should be used for Unit Indicators.
 
 The default value for this option is:
 ```cfg
-setr ic_sa_trafficLightModels {
-	"None":		"prop_ic_unit_indicator",
-	"Red":		"prop_ic_unit_indicator_r",
-	"Green":	"prop_ic_unit_indicator_g",
-	"Blue":		"prop_ic_unit_indicator_b"
+setr ic_sa_unitIndicatorModels {
+	"None":			"prop_ic_unit_indicator",
+	"Red":			"prop_ic_unit_indicator_r",
+	"Green":		"prop_ic_unit_indicator_g",
+	"Blue":			"prop_ic_unit_indicator_b",
+	"Magenta":		"prop_ic_unit_indicator_m",
+	"Yellow":		"prop_ic_unit_indicator_y"
+}
+```
+
+### Default Unit Beacon Models
+#### `ic_sa_unitIndicatorModels`
+These values determine which prop/model should be used for Unit Beacons.
+
+The default value for this option is:
+```cfg
+setr ic_sa_unitBeaconModels {
+	"None":			"prop_ic_unit_beacon",
+	"Red":			"prop_ic_unit_beacon_r",
+	"Green":		"prop_ic_unit_beacon_g",
+	"Blue":			"prop_ic_unit_beacon_b",
+	"Magenta":		"prop_ic_unit_beacon_m",
+	"Yellow":		"prop_ic_unit_beacon_y"
 }
 ```
 
@@ -804,6 +823,17 @@ setr ic_sa_unitIndicatorModels {
 	"Yellow":		"prop_ic_unit_indicator_y"
 }
 
+# The model to use for the unit beacons
+setr ic_sa_unitBeaconModels {
+	"None":			"prop_ic_unit_beacon",
+	"Red":			"prop_ic_unit_beacon_r",
+	"Green":		"prop_ic_unit_beacon_g",
+	"Blue":			"prop_ic_unit_beacon_b",
+	"Magenta":		"prop_ic_unit_beacon_m",
+	"Yellow":		"prop_ic_unit_beacon_y"
+}
+
+# The model to use for the status lights
 setr ic_sa_statusLightModels {
 	"None":			"prop_ic_status_lights_off",
 	"Red":			"prop_ic_status_lights_red",

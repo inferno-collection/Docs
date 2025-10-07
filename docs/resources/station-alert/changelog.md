@@ -8,6 +8,19 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.2 - 10/07/2025
+**Added**:
+- [`stationalert message`](usage/commands.md#manual-message) command, for entering messages with non-English characters, or to paste message. [See here](usage/commands.md#manual-message) for more info.
+- [Unit Beacons](usage/components.md#unit-beacons) supporting 5 colors. [See here](usage/components.md#unit-beacons) for more info.
+  - ![Unit Beacons](https://i.imgur.com/TfVX3Qi.png)
+
+**Changed**:
+- On-screen text inside [SA Tool](developers/tool.md) when selecting existing components, better indicating what is being removed.
+
+**Fixed**:
+- [HTTP](developers/api.mdx) Authorization header being case-sensitive instead of case-insensitive.
+- Issue where [Lights](usage/components.md#lights) placed on a ceiling in the [SA Tool](developers/tool.md) would appear upside down.
+
 ### v1.2.1 - 08/25/2025
 **Added**:
 - Animation and sound effect when pushing [Door Buttons](usage/components.md#door-button).

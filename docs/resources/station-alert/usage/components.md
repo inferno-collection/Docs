@@ -138,6 +138,22 @@ Available colors:
 
 ***
 
+## Unit Beacons
+Unit Beacons are similar to [Unit Indicators](#unit-indicators), with one key difference: they are only a single color.
+Whereas a [Unit Indicator](#unit-indicators) can show many colors, Unit Beacons only show a single, pre-determined color.
+The color of the Beacon is selected when placed in the [SA Tool](../developers/tool.md).
+
+For example, if each bedroom in the fire station was for a single truck, you might place only the matching colored Unit Beacon in that room.
+
+Available colors:
+- Red
+- Green
+- Blue
+- Yellow
+- Magenta
+
+***
+
 ## Call Screens
 Call Screens will display information about the Station they are located in, and if configured, the current time.  
 When Alerted, they will change screens to display information about the current Alert, which doors are open and closed, and how long since the Alert was received.  

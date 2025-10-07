@@ -65,7 +65,6 @@ This command opens the Buzzer menu, which allows the player to open/close Doors 
 
 This command prints information to the console indicating the state of the resource.
 
-
 ## DUI Fix
 ### `/stationalert duifix`
 #### Required Ace Permission: None
@@ -76,3 +75,21 @@ If you don't have this bug, you do not need to use this command.
 
 You only need to do the command once, then the script will remember your preference.  
 If you ever need to un-flip the DUI, simply run the command again.
+
+## Manual Message
+### `/stationalert message`
+#### Required Ace Permission: None
+
+This command was added for players who's native language is not support by the standard in-game textbox used to write out messages.
+To use this command, first start to create a new alert as normal using [`/stationalert new`](#stationalert-new).
+Instead of clicking the menu item to enter a message, with the menu still open, open your chat and type `/stationalert message <your message here>`.  
+Once entered, your message will be saved to the new alert.
+
+:::note
+The menu will attempt to display your message in the menu, **it may look broken/corrupted**.  
+However, once submitted, it should work fine regardless.
+:::
+
+:::tip
+This command can also be used if players want to copy/paste in a message, since the standard in-game textbox does not allow this.
+:::
