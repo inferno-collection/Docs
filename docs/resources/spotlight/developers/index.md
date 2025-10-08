@@ -10,7 +10,7 @@ The make a vehicle compatible with Spotlight, ensure that all spotlights modeled
 ## Server Owners / Developers
 If your vehicle(s) do not have an existing functional spotlight via an `extralight_*` bone, the resource will not automatically be able to determine the position of the spotlight.
 
-However, the resource still supports manual configuration for vehicles with spotlights added via mod kits - follow the steps bellow to add a vehicle.
+However, the resource still supports manual configuration for vehicles with spotlights added via mod kits - follow the steps below to add a vehicle.
 
 ### In-game steps
 #### Mod Kits

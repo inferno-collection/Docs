@@ -104,6 +104,10 @@ const config: Config = {
 							label: 'Station Alert',
 							to: '/resources/station-alert',
 						},
+						{
+							label: 'All Resources',
+							to: '/resources',
+						},
 					],
 				},
 				{
