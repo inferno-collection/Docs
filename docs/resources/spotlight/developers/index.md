@@ -101,7 +101,7 @@ Once pasted, update the values to the ones you noted down previously.
   - This is the text from the bottom of your screen from the placement tool.
 
 Save your changes, restart the resource, and you should be good to go.  
-If you're struggling, [join our Discord](https://inferno.gay/discord) for help.
+If you're struggling, [join our Discord](https://inferno.codes/discord) for help.
 
 You can check the configuration position of spotlights at any time using the command: `/spotlight debug`
 

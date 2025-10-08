@@ -48,7 +48,7 @@ For further assistance with Sonoran CAD, contact Sonoran Support [here](https://
 
 ### How do I integrate SA with XYZ resource?
 For documented integrations, see here.  
-If your resource is not listed, contact us on [Discord](https://inferno.gay/discord) for support.
+If your resource is not listed, contact us on [Discord](https://inferno.codes/discord) for support.
 
 ***
 

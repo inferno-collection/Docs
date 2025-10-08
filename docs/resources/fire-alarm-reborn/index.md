@@ -36,4 +36,4 @@ Some of the above Fire Scripts made changes specially for FAR to be compatible, 
 
 ### Fire Script not listed?
 
-If you use a Fire Script that is not listed above and would like to check if it is compatible with FAR before purchase, please reach out to us in our [Discord](https://inferno.gay/discord).
+If you use a Fire Script that is not listed above and would like to check if it is compatible with FAR before purchase, please reach out to us in our [Discord](https://inferno.codes/discord).

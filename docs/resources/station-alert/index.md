@@ -83,4 +83,4 @@ Third-Party Resource Integrations only work with the [Standalone Version](#stati
 For more information, see [here](developers/third-party.md).
 
 Just because a resource is not listed below, does not mean it will not work with SA: if you can add an export, it will likely work with SA. 
-If you would like to check if a resource is compatible before purchase, ask us in our [Discord](https://inferno.gay/discord).
+If you would like to check if a resource is compatible before purchase, ask us in our [Discord](https://inferno.codes/discord).

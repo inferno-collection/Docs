@@ -121,7 +121,7 @@ Default value is `5`.
 If this value is `true`, "Press E ..." interaction pop-ups and keybindings will be disabled, and instead events will be fired that can be used in `editable/client/targeting.lua`; to enable support for [OxTarget](https://overextended.dev/ox_target), [QBTarget](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-target), or any other target/third-eye resource, changes will need to be made in this file.
 
 For [OxTarget](https://overextended.dev/ox_target) or [QBTarget](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-target), simply uncomment the lines under the sections named either [OxTarget](https://overextended.dev/ox_target) or [QBTarget](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-target).  
-For any other target/third-eye resource, use the provided event handlers and variables to add your own exports/events. Reach out in [Discord](https://inferno.gay/discord) if you need help adding other resources.
+For any other target/third-eye resource, use the provided event handlers and variables to add your own exports/events. Reach out in [Discord](https://inferno.codes/discord) if you need help adding other resources.
 
 :::note
 The events in `editable/client/targeting.lua` will not fire unless `ic_sa_manualInteractions` is `true`.
