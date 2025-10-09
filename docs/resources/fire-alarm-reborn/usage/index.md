@@ -53,7 +53,7 @@ The command for the console can be found [here](../install.md#installing-the-res
 ### How do I change the sounds
 To replace the sounds FAR uses, you will need to edit the Audio Wave Container (`.awc`) file, and Dat 54 (`.dat54`) file.  
 You can read a guide about how to do this [here](https://github.com/ChatDisabled/nativeAudio/tree/master/SimpleSound).  
-For assistance, join our [Discord](https://inferno.gay/discord).
+For assistance, join our [Discord](https://inferno.codes/discord).
 
 ***
 

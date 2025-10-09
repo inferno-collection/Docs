@@ -38,4 +38,4 @@ With this export you can place it in existing resources, such as Fire Scripts, 9
 
 ## "I'm not good with coding" / "How do I make it work with XYZ script?" / Etc.
 
-If you need help adding SA to your server, join our [Discord server](https://inferno.gay/discord) and create a post in our Priority Support channel.
+If you need help adding SA to your server, join our [Discord server](https://inferno.codes/discord) and create a post in our Priority Support channel.
