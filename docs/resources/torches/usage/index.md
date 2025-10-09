@@ -19,7 +19,7 @@ You have one or more syntax errors in your `config.json`, use a website [like th
 ***
 
 ### How do I create presets for my MP/Peds
-You can create presets using the in-game tool. [See here](../developers) for more info.
+You can create presets using the in-game tool. [See here](../developers/tool.md) for more info.
 
 ***
 

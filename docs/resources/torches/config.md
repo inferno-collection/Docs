@@ -17,6 +17,7 @@ Torches uses a `config.json` file to store config values. Invalid JSON syntax in
 |     [`torchesRadius`](#torch-radius)     |     `20`      |
 |    [`torchesFallOff`](#torch-falloff)    |     `100`     |
 |          [`command`](#command)           |    `torch`    |
+|   [`defaultKeybind`](#default-keybind)   |    *None*     |
 |         [`defaults`](#defaults)          |  *See Below*  |
 |             [`peds`](#peds)              |  *See Below*  |
 |           [`mppeds`](#mp-peds)           |  *See Below*  |
@@ -52,6 +53,14 @@ This value controls the falloff a Torch will be drawn with.
 #### `Command`
 The name of the command.
 
+### Default Keybind
+#### `defaultKeybind`
+The keyboard mapping name for the key to use for the keybind.  
+For a full list of options, [see here](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/).
+
+By default, no default is provided, meaning there is no keybind.  
+Players can add one via their GTA V/FiveM Keybind Settings
+
 ### Defaults
 #### `defaults`
 The values listed in the `defaults` are values used when no other matching preset can be found.  
@@ -63,7 +72,7 @@ Changing these values will change the default torch positions on a ped.
 This config option is where you list presets for non-MP Peds, such as base game peds or addon peds.  
 Unlike [MP Peds](#mp-peds), this config option **is not** split into Male and Female.
 
-Entries for this config option can be created in-game using the Tool. [See here](developers) for more info.
+Entries for this config option can be created in-game using the Tool. [See here](developers/tool.md) for more info.
 
 Below is an example of an entry:
 ```json
@@ -93,7 +102,7 @@ Below is an example of an entry:
 This config option is where you list presets for MP Peds.  
 This config option is split into Male and Female.
 
-Entries for this config option can be created in-game using the Tool. [See here](developers) for more info.
+Entries for this config option can be created in-game using the Tool. [See here](developers/tool.md) for more info.
 
 Below is an example of an entry:
 ```json
