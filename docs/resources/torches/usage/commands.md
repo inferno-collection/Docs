@@ -36,6 +36,6 @@ Toggles your chest torch on or off.
 ***
 
 ## Torch Tool
-### `/spotlight tool`
+### `/torch tool`
 
 Starts the Torch Tool process. [See here](../developers/tool.md) for more info. 

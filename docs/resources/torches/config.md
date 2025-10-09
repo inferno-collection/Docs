@@ -136,101 +136,137 @@ Below is an example of an entry:
 ## Default Config File
 ```json showLineNumbers title="config.json"
 {
-  "allowAnyPed": false,
+	"allowAnyPed": false,
 
-  "torchDistance": "30",
-  "torchBrightness": "1.5",
-  "torchRoundness": "0.5",
-  "torchRadius": "20",
-  "torchFallOff": "100",
+	"torchDistance": "30",
+	"torchBrightness": "1.5",
+	"torchRoundness": "0.5",
+	"torchRadius": "20",
+	"torchFallOff": "100",
 
-  "command": "torch",
+	"command": "torch",
+	"defaultKeybind": "",
 
-  "defaults": {
-    "head": {
-      "source": {
-        "X": 0.15,
-        "Y": 0,
-        "Z": -0.15
-      },
-      "corona": {
-        "X": 0.15,
-        "Y": 0,
-        "Z": -0.15
-      }
-    },
+	"defaults": {
+		"head": {
+			"source": {
+				"X": 0.15,
+				"Y": 0,
+				"Z": -0.15
+			},
+			"corona": {
+				"X": 0.15,
+				"Y": 0,
+				"Z": -0.15
+			}
+		},
 
-    "chest": {
-      "source": {
-        "X": 0.16,
-        "Y": 0.225,
-        "Z": 0.15
-      },
-      "corona": {
-        "X": 0.16,
-        "Y": 0.2,
-        "Z": 0.15
-      }
-    }
-  },
+		"chest": {
+			"source": {
+				"X": 0.16,
+				"Y": 0.225,
+				"Z": 0.15
+			},
+			"corona": {
+				"X": 0.16,
+				"Y": 0.2,
+				"Z": 0.15
+			}
+		}
+	},
 
-  "peds": [
-    {
-      "model": "s_m_y_fireman_01",
-      "mountType": "Chest",
-      "source": {
-        "X": 0.16,
-        "Y": 0.212,
-        "Z": 0.148
-      },
-      "corona": {
-        "X": 0.16,
-        "Y": 0.212,
-        "Z": 0.148
-      }
-    }
-  ],
+	"peds": [
+		{
+			"model": "s_m_y_fireman_01",
+			"mountType": "Chest",
+			"source": {
+				"X": 0.16,
+				"Y": 0.212,
+				"Z": 0.148
+			},
+			"corona": {
+				"X": 0.16,
+				"Y": 0.212,
+				"Z": 0.148
+			}
+		}
+	],
 
-  "mppeds": {
-    "male": [
-      {
-        "collectionName": "mp_m_smuggler_01",
-        "localIndex": 6,
-        "isProp": true,
-        "variationId": 0,
-        "mountType": "Head",
-        "source": {
-          "X": 0.15,
-          "Y": 0,
-          "Z": 0.15
-        },
-        "corona": {
-          "X": 0.148,
-          "Y": 0.0735,
-          "Z": 0.115
-        }
-      }
-    ],
+	"mppeds": {
+		"male": [
+			{
+				"collectionName": "mp_m_smuggler_01",
+				"localIndex": 6,
+				"isProp": true,
+				"variationId": 0,
+				"mountType": "Head",
+				"source": {
+					"X": 0.15,
+					"Y": 0,
+					"Z": 0.15
+				},
+				"corona": {
+					"X": 0.148,
+					"Y": 0.0735,
+					"Z": 0.115
+				}
+			},
+			{
+				"collectionName": "mp_m_heist3",
+				"localIndex": 0,
+				"isProp": false,
+				"variationId": 8,
+				"mountType": "Chest",
+				"source": {
+					"X": 0.157,
+					"Y": 0.22,
+					"Z": 0.15
+				},
+				"corona": {
+					"X": 0.157,
+					"Y": 0.215,
+					"Z": 0.15
+				}
+			}
+		],
 
-    "female": [
-      {
-        "CollectionName": "mp_f_smuggler_01",
-        "LocalIndex": 6,
-        "IsProp": true,
-        "VariationId": 0,
-        "MountType": "Head",
-        "Source": {
-          "X": 0.1475,
-          "Y": 0.0575,
-          "Z": 0.1199
-        },
-        "Corona": {
-          "X": 0.1475,
-          "Y": 0.0525,
-          "Z": 0.1199
-        }
-      }
-    ]
-  }
+		"female": [
+			{
+				"CollectionName": "mp_f_smuggler_01",
+				"LocalIndex": 6,
+				"IsProp": true,
+				"VariationId": 0,
+				"MountType": "Head",
+				"Source": {
+					"X": 0.1475,
+					"Y": 0.0575,
+					"Z": 0.1199
+				},
+				"Corona": {
+					"X": 0.1475,
+					"Y": 0.0525,
+					"Z": 0.1199
+				}
+			},
+
+			{
+				"collectionName": "mp_f_heist3",
+				"localIndex": 0,
+				"isProp": false,
+				"variationId": 8,
+				"mountType": "Chest",
+				"source": {
+					"X": 0.155,
+					"Y": 0.222,
+					"Z": 0.15
+				},
+				"corona": {
+					"X": 0.155,
+					"Y": 0.217,
+					"Z": 0.15
+				}
+			}
+		]
+	}
 }
 ```
