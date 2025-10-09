@@ -21,13 +21,18 @@ const config: Config = {
 	projectName: '', // Usually your repo name.
 
 	onBrokenLinks: 'throw',
-	onBrokenMarkdownLinks: 'warn',
 
 	// Even if you don't use internationalization, you can use this field to set
 	// useful metadata like html lang.
 	i18n: {
 		defaultLocale: 'en',
 		locales: ['en'],
+	},
+
+	markdown: {
+		hooks: {
+			onBrokenMarkdownLinks: 'warn',
+		},
 	},
 
 	presets: [
@@ -69,17 +74,17 @@ const config: Config = {
 					label: 'Documentation',
 				},
 				{
-					to: 'https://inferno.gay/store',
+					to: 'https://inferno.codes/store',
 					label: 'Store',
 					position: 'left',
 				},
 				{
-					to: 'https://inferno.gay/github',
+					to: 'https://inferno.codes/github',
 					label: 'GitHub',
 					position: 'left',
 				},
 				{
-					to: 'https://inferno.gay/yt',
+					to: 'https://inferno.codes/yt',
 					label: 'YouTube',
 					position: 'left',
 				},
@@ -99,6 +104,10 @@ const config: Config = {
 							label: 'Station Alert',
 							to: '/resources/station-alert',
 						},
+						{
+							label: 'All Resources',
+							to: '/resources',
+						},
 					],
 				},
 				{
@@ -110,11 +119,11 @@ const config: Config = {
 						},
 						{
 							label: 'Discord',
-							href: 'https://inferno.gay/discord',
+							href: 'https://inferno.codes/discord',
 						},
 						{
 							label: 'YouTube',
-							href: 'https://inferno.gay/yt',
+							href: 'https://inferno.codes/yt',
 						},
 					],
 				},

@@ -10,7 +10,7 @@ The make a vehicle compatible with Spotlight, ensure that all spotlights modeled
 ## Server Owners / Developers
 If your vehicle(s) do not have an existing functional spotlight via an `extralight_*` bone, the resource will not automatically be able to determine the position of the spotlight.
 
-However, the resource still supports manual configuration for vehicles with spotlights added via mod kits - follow the steps bellow to add a vehicle.
+However, the resource still supports manual configuration for vehicles with spotlights added via mod kits - follow the steps below to add a vehicle.
 
 ### In-game steps
 #### Mod Kits
@@ -101,7 +101,7 @@ Once pasted, update the values to the ones you noted down previously.
   - This is the text from the bottom of your screen from the placement tool.
 
 Save your changes, restart the resource, and you should be good to go.  
-If you're struggling, [join our Discord](https://inferno.gay/discord) for help.
+If you're struggling, [join our Discord](https://inferno.codes/discord) for help.
 
 You can check the configuration position of spotlights at any time using the command: `/spotlight debug`
 

@@ -59,7 +59,7 @@ The events in `editable/client/targeting.lua` and `editables/server/inventory.lu
 :::
 
 For Ox or QB, simply uncomment the lines under the named sections in both files.
-For any other resources, use the provided event handlers and variables to add your own exports/events. Reach out in [Discord](https://inferno.gay/discord) if you need help adding other resources.
+For any other resources, use the provided event handlers and variables to add your own exports/events. Reach out in [Discord](https://inferno.codes/discord) if you need help adding other resources.
 
 :::tip
 The "items.lua" entry for both Ox and QB are located at the top of `editables/server/inventory.lua`, and a 100x100 png image of an IFlare is located download root directory.

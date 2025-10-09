@@ -183,7 +183,7 @@ This page documents the changes made to FAR.
 
 :::danger
 Major breaking changes to `editable`s and OxTarget were made in this version, do not blindly update.  
-Reach out in [Discord](https://inferno.gay/discord) if you need help updating.  
+Reach out in [Discord](https://inferno.codes/discord) if you need help updating.  
 Always make a back-up before updating!
 :::
 
@@ -195,10 +195,10 @@ Always make a back-up before updating!
 - Moved all targeting logic into a new client `editable`s folder
   - Allows support for OxTarget & QBTarget out-of-the-box.
   - Owners/developers who previously used `ic_far_oxTargetSupport` will need to enable [`ic_far_manualInteractions`](config.md#manual-interactions-targetthird-eye-resource-support) and edit their `editable/client/targeting.lua` to re-enable support.
-    - Reach out in [Discord](https://inferno.gay/discord) if you need help with this.
+    - Reach out in [Discord](https://inferno.codes/discord) if you need help with this.
 - Moved server editable files from `editables/` to `editables/server/`.
   - **Existing users will need to manually move their existing `editables` files to the new directory.**
-    - Reach out in [Discord](https://inferno.gay/discord) if you need help with this.
+    - Reach out in [Discord](https://inferno.codes/discord) if you need help with this.
 
 **Fixed**:
 - OxTarget zones being removed twice, resulting in a harmless error.
@@ -295,7 +295,7 @@ Always make a back-up before updating!
 - Per-Control Panel passcodes.
   - Passcodes are now per-Alarm System.
   - Existing Alarm Systems can be updated by moving `passcode = "..."` from the Control Panel entry into the Alarm System entry.
-    - Reach out in [Discord](https://inferno.gay/discord) if you need help converting old systems.
+    - Reach out in [Discord](https://inferno.codes/discord) if you need help converting old systems.
 
 ### v1.3.4 - 12/04/2024
 
