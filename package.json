@@ -18,8 +18,8 @@
     "fix": "gts fix"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.9.1",
-    "@docusaurus/preset-classic": "^3.9.1",
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "docusaurus-lunr-search": "^3.5.0",
@@ -28,9 +28,9 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.9.1",
-    "@docusaurus/tsconfig": "^3.9.1",
-    "@docusaurus/types": "^3.9.1",
+    "@docusaurus/module-type-aliases": "^3.9.2",
+    "@docusaurus/tsconfig": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
     "@types/node": "^22.7.5",
     "gts": "^6.0.2",
     "stylelint": "^16.10.0",
