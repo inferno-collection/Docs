@@ -8,19 +8,20 @@ Torches uses a `config.json` file to store config values. Invalid JSON syntax in
 
 ## Value List
 
-|                   Name                   | Default Value |
-|:----------------------------------------:|:-------------:|
-|     [`allowAnyPed`](#allow-any-ped)      |    `false`    |
-|   [`torchesDistance`](#torch-distance)   |     `30`      |
-| [`torchesBrightness`](#torch-brightness) |     `1.5`     |
-|  [`torchesRoundness`](#torch-roundness)  |     `0.5`     |
-|     [`torchesRadius`](#torch-radius)     |     `20`      |
-|    [`torchesFallOff`](#torch-falloff)    |     `100`     |
-|          [`command`](#command)           |    `torch`    |
-|   [`defaultKeybind`](#default-keybind)   |    *None*     |
-|         [`defaults`](#defaults)          |  *See Below*  |
-|             [`peds`](#peds)              |  *See Below*  |
-|           [`mppeds`](#mp-peds)           |  *See Below*  |
+|                      Name                       | Default Value |
+|:-----------------------------------------------:|:-------------:|
+|         [`allowAnyPed`](#allow-any-ped)         |    `false`    |
+|      [`torchesDistance`](#torch-distance)       |     `30`      |
+|    [`torchesBrightness`](#torch-brightness)     |     `1.5`     |
+|     [`torchesRoundness`](#torch-roundness)      |     `0.5`     |
+|        [`torchesRadius`](#torch-radius)         |     `20`      |
+|       [`torchesFallOff`](#torch-falloff)        |     `100`     |
+|              [`command`](#command)              |    `torch`    |
+|      [`defaultKeybind`](#default-keybind)       |    *None*     |
+| [`disableHeadMovement`](#disable-head-movement) |    `true`     |
+|             [`defaults`](#defaults)             |  *See Below*  |
+|                 [`peds`](#peds)                 |  *See Below*  |
+|              [`mppeds`](#mp-peds)               |  *See Below*  |
 
 ## Values Explained
 
@@ -60,6 +61,14 @@ For a full list of options, [see here](https://docs.fivem.net/docs/game-referenc
 
 By default, no default is provided, meaning there is no keybind.  
 Players can add one via their GTA V/FiveM Keybind Settings
+
+### Disable Head Movement
+#### `disableHeadMovement`
+When enabled, prevents head movement when moving third-person camera, allowing light source to stay "attached" to helmets.
+
+| `DisableHeadMovement` Disabled       | `DisableHeadMovement` Enabled       |
+|--------------------------------------|-------------------------------------|
+| ![Disabled](assets/head_before.webp) | ![Disabled](assets/head_after.webp) |
 
 ### Defaults
 #### `defaults`

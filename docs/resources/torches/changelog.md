@@ -8,6 +8,15 @@ This page documents the changes made to Torches.
 
 ## v1.0.\*
 
+### v1.0.1 - 11/09/2025
+**Added**:
+- [`DisableHeadMovement`](config.md#disable-head-movement) config option. [See here](config.md#disable-head-movement) for more info.
+  - When enabled, prevents head movement when moving third-person camera, allowing light source to stay "attached" to helmets.
+  - 
+	| `DisableHeadMovement` Disabled       | `DisableHeadMovement` Enabled       |
+	|--------------------------------------|-------------------------------------|
+	| ![Disabled](assets/head_before.webp) | ![Disabled](assets/head_after.webp) |
+
 ### v1 - 10/09/2025
 Resource release.
 
