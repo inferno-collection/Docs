@@ -217,3 +217,16 @@ Some example use cases for custom data include:
 - Etc.
 
 Custom data can be access from any script via `.customdata`. [See here](data.mdx#station-location) for more info.
+
+## Changing Door Speed
+Door opening/closing speed can be changed on a per-door basis, and requires manually adding an extra value to each desired door in a draft file.
+
+To change a door's speed, open the draft file and locate the `door { ... }` line of the door you want to edit.  
+On the same line, within the `{ }`, add `speed = "..."`, where `...` is your speed (e.g. `"0.5"`").
+
+```lua
+door { name = "Bay One", position = vec3(1, 2, 3), archetype = "fire_truck_door", speed = "0.5" }
+```
+
+The `speed` value must be between `0.1` and `1`, where `0.1` is very slow and `1` is very fast.  
+The default global door speed, as set by [`ic_sa_doorSpeed`](../config.md#door-speed), is `0.15`.

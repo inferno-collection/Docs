@@ -30,9 +30,10 @@ SA uses convars for config values. For information on how to correctly install t
 |                   [`ic_sa_repeatMessage`](#repeat-tts-message-twice)                    |            `true`             |
 |                    [`ic_sa_endingTone`](#repeat-tone-at-end-of-tts)                     |            `true`             |
 |   [`ic_sa_manualInteractions`](#manual-interactions-targetthird-eye-resource-support)   |            `false`            |
-|                          [`ic_sa_slowerDoors`](#slower-doors)                           |            `true`             |
+|                            [`ic_sa_doorSpeed`](#door-speed)                             |            `0.15`             |
 |                       [`ic_sa_doubleDistance`](#double-distance)                        |            `false`            |
 |      [`ic_sa_trafficLightsFromBuzzer`](#activate-traffic-lights-from-buzzer-menu)       |            `false`            |
+|                       [`ic_sa_realisticAudio`](#realistic-audio)                        |            `true`             |
 |                    [`ic_sa_wallLightModels`](#default-light-models)                     |          *See Below*          |
 |               [`ic_sa_bollardLightModels`](#default-bollard-light-models)               |          *See Below*          |
 |               [`ic_sa_trafficLightModels`](#default-traffic-light-models)               |          *See Below*          |
@@ -127,12 +128,15 @@ For any other target/third-eye resource, use the provided event handlers and var
 The events in `editable/client/targeting.lua` will not fire unless `ic_sa_manualInteractions` is `true`.
 :::
 
-### Slower Doors
-#### `ic_sa_slowerDoors`
-When this value is `true`, doors will open and closer slower than normal to be more realistic.  
-If you do not want the resource to change the speed of the doors, set this value to `false`.
+### Door Speed
+#### `ic_sa_slowerDoors` (replaces `ic_sa_slowerDoors`)
+This value determines the global default opening/closing speed for doors. The default value is `0.15`, which is slow.
 
-If this value is `true` and your doors do not open like they should, or need to be bumped/hit to be open, change this value to `false` and it should resolve the issue.
+Valid values are between `0.1` and `1`, where `0.1` is very slow and `1` is very fast.
+
+:::tip
+To change the speed of a specific door, [see here](developers/tool.md#changing-door-speed).
+:::
 
 ### Double Distance
 #### `ic_sa_doubleDistance`
@@ -146,6 +150,12 @@ When this value is `true`, the option to temporarily activate the traffic lights
 Unless you know you need this option enabled (such as because your fire station MLOs are massive), you should leave this turned off.  
 Enabling this option can decrease client performance.
 :::
+
+### Realistic Audio
+#### `ic_sa_realisticAudio`
+When this value is `true`, and sounds (such as tones, voice turnout messages, etc.) are being played over station speakers, the NUI 3D Audio will play from multiple sources. Meaning, for example, if you have two speakers near each other, you will hear two sets of the same audio, one from each speaker.
+
+When this value is `false`, and sounds are being played, you will only hear audio from the nearest speaker. This disables overlap, as moving away from one speaker and near another will swap your active audio source.
 
 ### Alias Command
 #### `ic_sa_command`
@@ -780,11 +790,14 @@ setr ic_sa_trafficLightsFromBuzzer "false"
 # Don't display "Press E to..." interactions
 setr ic_sa_manualInteractions "false"
 
-# Slower Doors
-setr ic_sa_slowerDoors "true"
+# Default door opening speed
+setr ic_sa_doorSpeed "0.15"
 
 # NUI Volume
 setr ic_sa_nuiVolume "5"
+
+# Mutliple 3D Audio sources
+setr ic_sa_realisticAudio "true"
 
 # The model to use for the wall lights
 setr ic_sa_wallLightModels {
