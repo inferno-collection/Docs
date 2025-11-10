@@ -8,6 +8,21 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.3 - 11/10/2025
+**Added**:
+- Optional per-door opening/closing speed. [See here](developers/tool.md#changing-door-speed) for more info.
+  - Global default door opening/closing speed can be overridden per-door via their Draft File.
+- [`ic_sa_realisticAudio`](config.md#realistic-audio) config option. [See here](config.md#realistic-audio) for more info.
+	- When `true`, will play NUI audio from multiple sources.
+	- When `false`, will only play audio from nearest source (disables overlapping audio).
+
+**Changed**:
+- The [`ic_sa_slowerDoors`](config.md#door-speed) config option has been replaced with `ic_sa_doorSpeed`. See here for more info.
+  - The new config option allows server owners and developers to specify a default opening/closing door speed.
+  - :::tip
+    If you previously had `ic_sa_slowerDoors` set to `false`, you may want to set [`ic_sa_doorSpeed`](config.md#door-speed) >= `0.5`.
+    :::
+
 ### v1.2.2 - 10/07/2025
 **Added**:
 - [`stationalert message`](usage/commands.md#manual-message) command, for entering messages with non-English characters, or to paste message. [See here](usage/commands.md#manual-message) for more info.
@@ -338,7 +353,7 @@ Significant changes to [`ic_sa_language`](config.md#language) were made in this 
 ### v1.0.4 - 04/19/2025
 **Added**:
 - Hook for EmergencyDispatch.
-- [`ic_sa_slowerDoors`](config.md#slower-doors) config option.
+- [`ic_sa_slowerDoors`](config.md#door-speed) config option.
 - Coloured radii in the [SA Tool](developers/tool.md#coloured-radii) that indicate the approximate range of Speakers.
   - To help prevent excess overlap and aid in proper coverage of stations.
 
