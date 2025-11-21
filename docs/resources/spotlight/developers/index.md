@@ -10,7 +10,7 @@ The make a vehicle compatible with Spotlight, ensure that all spotlights modeled
 ## Server Owners / Developers
 If your vehicle(s) do not have an existing functional spotlight via an `extralight_*` bone, the resource will not automatically be able to determine the position of the spotlight.
 
-However, the resource still supports manual configuration for vehicles with spotlights added via mod kits - follow the steps below to add a vehicle.
+However, the resource still supports manual configuration for vehicles with spotlights added via mod kits, or that are attached permanently - follow the steps below to add a vehicle.
 
 ### In-game steps
 #### Mod Kits
@@ -64,13 +64,17 @@ Once positioned, take note of the text at the bottom of your screen.
 
 ![Placement Coords](assets/tool_coords.png)
 
+You can also press `Enter` to have the values pasted in your F8 Console, which you can select and copy from.
+
 ### Configuration Changes
-Inside your `config.cfg`, locate the `VehicleMods` section.  
+Inside your `config.cfg`, locate the `VehicleMods` or `VehiclePersistents` section.  
 Copy the snippet below and paste as a new entry in the array.
 
 :::warning
 JSON syntax is important: missing `,`s, `[]`s, etc. will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
 :::
+
+#### Vehicle Mods (Mod Kits)
 
 ```json
 {
@@ -99,6 +103,27 @@ Once pasted, update the values to the ones you noted down previously.
 	- This should be the flipped up variant.
 - `LightPosition`
   - This is the text from the bottom of your screen from the placement tool.
+
+#### Vehicle Persistents (Permanent Spotlight)
+
+```json
+{
+	"ModelName": "police_car",
+	"DriversSide": true,
+	"LightPosition": { "x": -0.815, "y": 1.135, "z": 0.435 }
+}
+```
+
+Once pasted, update the values to the ones you noted down previously.
+
+- `ModelName`
+	- The model name of the vehicle.
+- `DriversSide`
+	- If this spotlight is on the driver's side (`true`), or the passenger side (`false`).
+- `LightPosition`
+	- This is the text from the bottom of your screen from the placement tool.
+
+***
 
 Save your changes, restart the resource, and you should be good to go.  
 If you're struggling, [join our Discord](https://inferno.codes/discord) for help.

@@ -8,6 +8,15 @@ This page documents the changes made to Spotlight.
 
 ## v1.0.\*
 
+### v1.0.3 - 11/21/2025
+**Added**:
+- Support for [Persistent Spotlights](config.md#vehicles-with-persistent-spotlights). [See here](config.md#vehicles-with-persistent-spotlights) for more info.
+  - For vehicles that have spotlights permanently modeled, and cannot be toggled with extras or mod kits.
+- `To Console` button to the [Placement Tool](developers/index.md), that pastes the current offset to the F8 Console for easy selection and copying.
+
+**Fixed**:
+- Rounding error in the `Z` value of the [Placement Tool](developers/index.md), resulting in values being shown as whole numbers (i.e. `1`) instead of with decimals (i.e. `0.456`).
+
 ### v1.0.2 - 07/29/2025
 **Added**:
 - Support for automatic updating of vehicle mod kits on configured vehicles.
