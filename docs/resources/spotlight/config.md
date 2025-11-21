@@ -8,22 +8,23 @@ Spotlight uses a `config.json` file to store config values. Invalid JSON syntax 
 
 ## Value List
 
-|                       Name                       | Default Value |
-|:------------------------------------------------:|:-------------:|
-|    [`SpotlightDistance`](#spotlight-distance)    |     `40`      |
-|  [`SpotlightBrightness`](#spotlight-brightness)  |     `8.5`     |
-|   [`SpotlightRoundness`](#spotlight-roundness)   |      `7`      |
-|      [`SpotlightRadius`](#spotlight-radius)      |     `20`      |
-|     [`SpotlightFallOff`](#spotlight-falloff)     |     `30`      |
-| [`SpotlightMinAngle`](#spotlight-minimum-angle)  |     `-60`     |
-| [`SpotlightMaxAngle`](#spotlight-maximum-angle)  |     `65`      |
-|         [`KickCheaters`](#kick-cheaters)         |    `false`    |
-|              [`Command`](#command)               |  `spotlight`  |
-| [`DefaultPrimaryKey`](#default-primary-keybind)  |  `LCONTROL`   |
-|       [`SecondaryKey`](#secondary-keybind)       |     `21`      |
-|    [`VehicleExtras`](#vehicle-extras-mapping)    |     `[]`      |
-|      [`VehicleMods`](#vehicle-mod-mapping)       |     `[]`      |
-| [`VehicleSpotlightIgnores`](#spotlight-ignoring) |     `[]`      |
+|                             Name                             | Default Value |
+|:------------------------------------------------------------:|:-------------:|
+|          [`SpotlightDistance`](#spotlight-distance)          |     `40`      |
+|        [`SpotlightBrightness`](#spotlight-brightness)        |     `8.5`     |
+|         [`SpotlightRoundness`](#spotlight-roundness)         |      `7`      |
+|            [`SpotlightRadius`](#spotlight-radius)            |     `20`      |
+|           [`SpotlightFallOff`](#spotlight-falloff)           |     `30`      |
+|       [`SpotlightMinAngle`](#spotlight-minimum-angle)        |     `-60`     |
+|       [`SpotlightMaxAngle`](#spotlight-maximum-angle)        |     `65`      |
+|               [`KickCheaters`](#kick-cheaters)               |    `false`    |
+|                    [`Command`](#command)                     |  `spotlight`  |
+|       [`DefaultPrimaryKey`](#default-primary-keybind)        |  `LCONTROL`   |
+|             [`SecondaryKey`](#secondary-keybind)             |     `21`      |
+|          [`VehicleExtras`](#vehicle-extras-mapping)          |     `[]`      |
+|            [`VehicleMods`](#vehicle-mod-mapping)             |     `[]`      |
+| [`VehiclePersistents`](#vehicles-with-persistent-spotlights) |     `[]`      |
+|       [`VehicleSpotlightIgnores`](#spotlight-ignoring)       |     `[]`      |
 
 ## Values Explained
 
@@ -115,6 +116,23 @@ Configuring this optional value will allow the resource to use mod kits as spotl
 
 The steps required to add a vehicle mod are covered on [here](developers/index.md#server-owners--developers).
 
+### Vehicles with Persistent Spotlights
+#### `VehiclePersistents`
+For vehicles that have spotlights that are persistent or permanent, meaning that cannot be removed via extra or mod kits, they can be added to this config option.  
+All that is required is the vehicle model name, if the spotlight is the driver's or passenger's, and the position of the spotlight.
+
+The config for the above would look like so:
+
+```json
+{
+  "ModelName": "police_car",
+  "DriversSide": true,
+  "LightPosition": { "x": 1.0, "y": 1.0, "z": 1.0 }
+}
+```
+
+To get the light position, use the [Placement Tool](developers/index.md#spotlight-placement).
+
 ### Spotlight Ignoring
 #### `VehicleSpotlightIgnores`
 Configuring this optional value will tell the resource to ignore specific spotlights.
@@ -157,7 +175,8 @@ JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your
   "SecondaryKey": "21",
 
   "VehicleExtras": [],
-  "VehicleMods": [],
+  "VehicleMods": [], 
+  "VehiclePersistents": [],
   "VehicleSpotlightIgnores": []
 }
 ```
