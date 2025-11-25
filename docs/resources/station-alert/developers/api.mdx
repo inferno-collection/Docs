@@ -55,6 +55,14 @@ POST alert
 - `message` - `string|undefined`
 	- Optional message to be read out via Text-to-Speech.
 		- Requires Voice Turnout Addon, [see here](../config.md#voice-turnout-addon-values-explained) for details.
+- `displayMessage` - `string|undefined`
+	- Optional message to show on call screens.
+	- If not provided, `message` will be used.
+	- If neither provided, `New Alert` will show on call screens.
+- `unitcolors` - `string[]|undefined`
+	- Optional list of Unit Indicator colors to show in-game.
+	- Options are: `red`, `green`, and/or `blue`.
+	- If not provided, no colors will show.
 - `tone` - `string|undefined`
 	- Optional tone to play.
 	- If not provided, default tone will be used.
@@ -68,10 +76,6 @@ POST alert
 		      "Station Two": "Tone 2"
 		}
 		```
-- `unitcolors` - `string[]|undefined`
-	- Optional list of Unit Indicator colors to show in-game.
-		- Options are: `red`, `green`, and/or `blue`.
-	- If not provided, no colors will show.
 
 #### Example Request
 <Tabs>
@@ -112,11 +116,12 @@ POST alert
 		```json showLineNumbers
 		{
 			"message": "Ladder 7, Rescue 7. Carson Avenue intersection of Davis Avenue, Strawberry, Los Santos. Vehicle Accident, possible persons trapped. Postal 0 9 0.",
+			"displayMessage": "L7, R7 - Carson Ave / Davis Ave // Strawberry, Los Santos - MVA, poss. persons trapped // Postal 090",
 			"locations": {
 				"Davis": ["Bay Two", "Bay Three"]
 			},
-			"tone": "Tone 2",
 			"unitcolors": ["red", "green"]
+			"tone": "Tone 2"
 		}
 		```
 	</TabItem>
