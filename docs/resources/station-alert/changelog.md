@@ -8,6 +8,10 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.4 - 11/25/2025
+**Fixed**:
+- Special characters (`&`, `/`, etc.) not showing correctly on [Call Screens](usage/components.md#call-screens).
+
 ### v1.2.3 - 11/10/2025
 **Added**:
 - Optional per-door opening/closing speed. [See here](developers/tool.md#changing-door-speed) for more info.
