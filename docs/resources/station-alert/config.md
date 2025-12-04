@@ -737,6 +737,12 @@ set ic_sa_closeAllDoorsOnTimeout "false"
 # Addon traffic lights should always flash yellow instead of turning off
 setr ic_sa_addonTrafficLightAlwaysFlashYellow "false"
 
+# Allow activation of traffic lights from the Door Buzzer menu
+setr ic_sa_trafficLightsFromBuzzer "false"
+
+# Can only use the door buzzer inside a vehicle
+setr ic_sa_buzzerRequiresVehicle "true"
+
 # Labels and files names for tones
 setr ic_sa_tones {
     "Tone 1":   "alert1.mp3",
@@ -789,9 +795,6 @@ setr ic_sa_repeatMessage "true"
 
 # Play the selected tone again after the Text-to-Speech message
 setr ic_sa_endingTone "true"
-
-# Allow activation of traffic lights from the Door Buzzer menu
-setr ic_sa_trafficLightsFromBuzzer "false"
 
 ### Advanced ###
 ################
