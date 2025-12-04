@@ -140,7 +140,7 @@ local value = exports["inferno-station-alert"]:getNearestLocationWithPlayersToPo
 
 ## Alerts
 ### Create New Alert
-Use this export to create a new Alert.
+Use this export to create a new Alert sent to one or more specific Station Locations.
 
 #### Export Name
 ```
@@ -148,36 +148,49 @@ newAlert
 ```
 
 #### Parameters
-- `alert` - `table`
-  - `locations` - `table`
-    - Location - `object`
-      - Location Name - `string`
-      - Door Names - `table`
-        - Door Name - `string`
-      - If empty table provided, all doors will open.
-      - If table with single empty string provided, no doors will open.
-  - `message` - `string`
-    - Optional Text-to-Speech message.
-    - Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
-  - `displayMessage` - `string`
-    - Optional message to show on call screens.
-    - If not provided, `message` will be used.
-    - If neither provided, `New Alert` will show on call screens.
-  - `unitColors` - `table`
-    - Color Name - `string`
-    - Optionally provide unit indicator colors, or no colors show.
-  - `tone` - `string`
-    - Optionally provide a specific tone to use, or default tone is used.
-  - `tones` - `table`
-    - Optionally provide a specific tone for each location.
-    - If provided, `tone` is ignored.
-    - Example:
-      - ```lua
-        ["tones"] = {
-        	["Station One"] = "Tone One",
-        	["Station Two"] = "Tone Two",
-	    },
-        ```
+
+* `alert` - `table`
+	* `locations` - `table`
+		* Key: Location Name (`string`)
+		* Value: Door Names (`table`)
+			* Each entry is a door name (`string`)
+			* If an empty table is provided, all doors will open
+            	* E.g. `[]`
+			* If a table with a single empty string is provided, **no doors will open**
+            	* E.g. `['']`
+          
+	* `message` - `string`
+		* Optional Text-to-Speech message
+		* Requires [Voice Turnout Addon](../../config.md#voice-turnout-addon-values-explained)
+      
+	* `displayMessage` - `string`
+		* Optional message for call screens
+		* Defaults to `message`
+      
+	* `unitColors` - `table`
+		* Optional indicator colors
+
+	* `tone` - `string`
+		* Optional
+		* Applies a single tone to all locations, *unless a toneset entry overrides it*
+		* If omitted, a default tone is used
+
+	* `toneset` - `table`
+		* Allows for one or more tones per location
+		* Example:
+
+		  ```lua
+		  ["toneset"] = {
+			  ["Station One"] = {"Tone One", "Tone Two"},
+			  ["Station Two"] = {"Tone Three"},
+		  }
+		  ```
+
+    * *`tones` - `table` (obsolete)*
+        :::warning
+        `tones` is obsolete, please use `toneset` instead.
+        :::
+        * One tone per location
 
 #### Example
 ```lua
@@ -195,7 +208,7 @@ local success = exports["inferno-station-alert"]:newAlert({
 `bool`
 
 ### Create New Alert At Nearest Station
-Use this export to create a new Alert at the Station Location nearest to the provided position within a radius.
+This export automatically finds the nearest Station Location within a radius and sends an alert there.
 
 #### Export Name
 ```
@@ -203,33 +216,16 @@ newAlertNearestStation
 ```
 
 #### Parameters
-- `position` - `vector3`
-  - Position to use to search for nearest Station Location.
-- `radius`
-	- Search radius in meters. -1 for no radius.
-- `alert` - `table`
-	- `message` - `string`
-		- Optional Text-to-Speech message.
-		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
-    - `displayMessage` - `string`
-      - Optional message to show on call screens.
-      - If not provided, `message` will be used.
-      - If neither provided, `New Alert` will show on call screens.
-	- `unitColors` - `table`
-		- Color Name - `string`
-		- Optionally provide unit indicator colors, or no colors show.
-	- `tone` - `string`
-		- Optionally provide a specific tone to use, or default tone is used.
-	- `tones` - `table`
-		- Optionally provide a specific tone for each location.
-		- If provided, `tone` is ignored.
-          - Example:
-            - ```lua
-              ["tones"] = {
-	          	["Station One"] = "Tone One",
-	           	["Station Two"] = "Tone Two",
-	          },
-	          ```
+
+* `position` - `vector3`
+* `radius`
+	* Search radius in meters
+	* `-1` = unlimited
+* `alert` - `table`
+	* `message`, `displayMessage`, `unitColors` (same as [`newAlert`](#create-new-alert))
+    * `tone` - `string`
+        * Optional
+        * Single tone applied to the selected station
 
 #### Example
 ```lua
@@ -244,7 +240,8 @@ local success = exports["inferno-station-alert"]:newAlertNearestStation(vec3(1, 
 `bool`
 
 ### Create New Alert At Nearest Station With Players
-Use this export to create a new Alert at the Station Location nearest to the provided position only if it has players nearby.
+This export automatically finds the nearest Station Location with players nearby.  
+Useful for finding the nearest crewed fire station.
 
 #### Export Name
 ```
@@ -252,31 +249,13 @@ newAlertNearestStationWithPlayers
 ```
 
 #### Parameters
-- `position` - `vector3`
-	- Position to use to search for nearest Station Location.
-- `alert` - `table`
-	- `message` - `string`
-		- Optional Text-to-Speech message.
-		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
-	- `displayMessage` - `string`
-      - Optional message to show on call screens.
-      - If not provided, `message` will be used.
-      - If neither provided, `New Alert` will show on call screens.
-	- `unitColors` - `table`
-		- Color Name - `string`
-		- Optionally provide unit indicator colors, or no colors show.
-	- `tone` - `string`
-		- Optionally provide a specific tone to use, or default tone is used.
-	- `tones` - `table`
-		- Optionally provide a specific tone for each location.
-		- If provided, `tone` is ignored.
-			- Example:
-              - ```lua
-                ["tones"] = {
-                  	["Station One"] = "Tone One",
-                   	["Station Two"] = "Tone Two",
-                },
-                ```
+
+* `position` - `vector3`
+* `alert` - `table`
+	* `message`, `displayMessage`, `unitColors` (same as [`newAlert`](#create-new-alert))
+	* `tone` - `string`
+		* Optional
+		* Single tone applied to the selected station
 
 #### Example
 ```lua
@@ -291,8 +270,7 @@ local success = exports["inferno-station-alert"]:newAlertNearestStationWithPlaye
 `bool`
 
 ### Create New Alert For Group of Stations
-Use this export to create a new Alert for a Group of Stations.  
-[See here](../tool.md#adding-groups) for info on how to assign groups.
+Sends an alert to all stations in a group, [see here](../tool.md#adding-groups) for info on how to assign groups.
 
 #### Export Name
 ```
@@ -300,31 +278,18 @@ newGroupAlert
 ```
 
 #### Parameters
-- `group` - `string`
-	- Name of group to send alert to.
-- `alert` - `table`
-	- `message` - `string`
-		- Optional Text-to-Speech message.
-		- Requires Voice Turnout Addon, [see here](../../config.md#voice-turnout-addon-values-explained) for details.
-	- `displayMessage` - `string`
-		- Optional message to show on call screens.
-		- If not provided, `message` will be used.
-		- If neither provided, `New Alert` will show on call screens.
-	- `unitColors` - `table`
-		- Color Name - `string`
-		- Optionally provide unit indicator colors, or no colors show.
-	- `tone` - `string`
-		- Optionally provide a specific tone to use, or default tone is used.
-	- `tones` - `table`
-		- Optionally provide a specific tone for each location.
-		- If provided, `tone` is ignored.
-			- Example:
-				- ```lua
-					["tones"] = {
-						["Station One"] = "Tone One",
-						["Station Two"] = "Tone Two",
-					},
-                ```
+* `group` - `string`
+* `alert` - `table`
+	* `message`, `displayMessage`, `unitColors` (same as [`newAlert`](#create-new-alert))
+	* `tone` - `string`
+		* Optional
+		* Acts as a default for the entire group
+		* Only applies to locations not already defined in toneset
+	* `toneset` - `table`
+		* One tone per location
+		* Multiple tones per location
+		* Accepts a partial definition
+          * Missing entries will fall back to `tone` or default tone
 
 #### Example
 ```lua

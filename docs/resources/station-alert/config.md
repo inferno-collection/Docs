@@ -17,6 +17,7 @@ SA uses convars for config values. For information on how to correctly install t
 |                 [`ic_sa_closeDoorsOnDriveThrough`](#self-closing-doors)                 |            `true`             |
 |              [`ic_sa_closeAllDoorsOnTimeout`](#close-all-doors-on-timeout)              |            `false`            |
 | [`ic_sa_addonTrafficLightAlwaysFlashYellow`](#addon-traffic-lights-always-flash-yellow) |            `false`            |
+|             [`ic_sa_buzzerRequiresVehicle`](#door-buzzer-requires-vehicle)              |            `false`            |
 |                           [`ic_sa_tones`](#alert-tone-sounds)                           |          *See Below*          |
 |                            [`ic_sa_nuiVolume`](#nui-volume)                             |              `5`              |
 |              [`ic_sa_callScreenSettings`](#call-screen-settings-explained)              |          *See Below*          |
@@ -91,6 +92,14 @@ When this value is `false`, only Door Two is closed, Door One remains open.
 ### Addon Traffic Lights Always Flash Yellow
 #### `ic_sa_addonTrafficLightAlwaysFlashYellow`
 When this value is `true`, instead of turning off entirely when not alerted, [Addon Traffic Lights](usage/components.md#addon-traffic-lights) will continuously flash yellow.
+
+### Door Buzzer Requires Vehicle
+#### `ic_sa_buzzerRequiresVehicle`
+When this value is `true`, players must be in a vehicle when using the [Door Buzzer](usage/commands.md#door-buzzer).
+
+:::note
+This config option does not change the requirement for players to have the correct permissions to use the command.
+:::
 
 ### Alert Tone Sounds
 #### `ic_sa_tones`
