@@ -8,6 +8,22 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.5 - 12/05/2025
+**Added**:
+- Support for playing multiple tones per-station when creating alerts.
+  - The following now support the `toneset` parameter, which allows for multiple tones per-location:
+    - [Create Alert](developers/api.mdx#create-a-new-alert) via [API](developers/api.mdx).
+    - [In-game menu](usage/commands.md#stationalert-new) (menu now allows selecting multiple tones).
+    - [`newAlert`](developers/exports/server.md#create-new-alert) and [`newGroupAlert`](developers/exports/server.md#create-new-alert-for-group-of-stations) via [exports](developers/exports/server.md).
+  - The `tones` parameter, anywhere it was previously accepted, has been marked obsolete and should be replaced with `toneset`.
+  - Where multiple tones are selected for a station, they will queue in the order provided, and play one at a time.
+- [`ic_sa_buzzerRequiresVehicle`](config.md#door-buzzer-requires-vehicle) config option, [see here](config.md#door-buzzer-requires-vehicle) for more info.
+  - If `false`, allows players to use [Door Buzzer](usage/commands.md#door-buzzer) when on foot, versus needing a vehicle.
+
+**Changed**:
+- Small tweak to Sonoran CAD integration (for Standalone versions)
+  - Improves handling when SA starts before SonoranCAD.
+
 ### v1.2.4 - 11/25/2025
 **Fixed**:
 - Special characters (`&`, `/`, etc.) not showing correctly on [Call Screens](usage/components.md#call-screens).

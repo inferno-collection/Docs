@@ -66,14 +66,14 @@ POST alert
 - `tone` - `string|undefined`
 	- Optional tone to play.
 	- If not provided, default tone will be used.
-- `tones` - `object`
-	- Optionally provide a specific tone for each location.
-	- If provided, `tone` is ignored.
+- `toneset` - `object`
+	- Optionally provide one or more tones for each location.
+	- Where locations are missing from `toneset`, `tone` or default tone will be used as a fall back
 	- Example:
 		```json
-		"tones": {
-		      "Station One": "Tone 1",
-		      "Station Two": "Tone 2"
+		"toneset": {
+			"Station One": ["Tone 1", "Tone 2"],
+			"Station Two": ["Tone 3"]
 		}
 		```
 
@@ -121,7 +121,10 @@ POST alert
 				"Davis": ["Bay Two", "Bay Three"]
 			},
 			"unitcolors": ["red", "green"]
-			"tone": "Tone 2"
+			"toneset": {
+				"Station One": ["Tone 1", "Tone 2"],
+				"Station Two": ["Tone 3"]
+			}
 		}
 		```
 	</TabItem>
