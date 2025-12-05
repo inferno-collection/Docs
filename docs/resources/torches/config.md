@@ -19,6 +19,7 @@ Torches uses a `config.json` file to store config values. Invalid JSON syntax in
 |              [`command`](#command)              |    `torch`    |
 |      [`defaultKeybind`](#default-keybind)       |    *None*     |
 | [`disableHeadMovement`](#disable-head-movement) |    `true`     |
+|    [`inventorySupport`](#inventory-support)     |    `false`    |
 |             [`defaults`](#defaults)             |  *See Below*  |
 |                 [`peds`](#peds)                 |  *See Below*  |
 |              [`mppeds`](#mp-peds)               |  *See Below*  |
@@ -69,6 +70,22 @@ When enabled, prevents head movement when moving third-person camera, allowing l
 | `DisableHeadMovement` Disabled       | `DisableHeadMovement` Enabled       |
 |--------------------------------------|-------------------------------------|
 | ![Disabled](assets/head_before.webp) | ![Disabled](assets/head_after.webp) |
+
+### Inventory Support
+#### `inventorySupport`
+When this value is `true`, inventory support for resources such as [OxInventory](https://overextended.dev/ox_inventory) and [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory) will be enabled.
+
+:::note
+You must also uncomment/edit the `editable/server/inventory.lua` file in addition to setting this value to `true` in order for inventory resources to work.
+Code inside `editable/server/inventory.lua` will not run unless `inventorySupport` is `true`.
+:::
+
+Inside the `editable/server/inventory.lua` file, server owners/developers can either uncomment the code for [OxInventory](https://overextended.dev/ox_inventory) or [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory), or add their own inventory code as required.
+Reach out in [Discord](https://inferno.codes/discord) if you need help adding other resources.
+
+:::tip
+The "items.lua" entry for both Ox and QB are located at the top of `editables/server/inventory.lua`, and 100x100 png images are located in the download root directory.
+:::
 
 ### Defaults
 #### `defaults`
@@ -155,6 +172,9 @@ Below is an example of an entry:
 
 	"command": "torch",
 	"defaultKeybind": "",
+
+	"disableHeadMovement": true,
+	"inventorySupport": false,
 
 	"defaults": {
 		"head": {
