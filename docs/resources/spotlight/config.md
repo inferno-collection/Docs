@@ -25,6 +25,7 @@ Spotlight uses a `config.json` file to store config values. Invalid JSON syntax 
 |            [`VehicleMods`](#vehicle-mod-mapping)             |     `[]`      |
 | [`VehiclePersistents`](#vehicles-with-persistent-spotlights) |     `[]`      |
 |       [`VehicleSpotlightIgnores`](#spotlight-ignoring)       |     `[]`      |
+|      [`VehicleCustomRGB`](#custom-spotlight-rgb-colors)      |     `[]`      |
 
 ## Values Explained
 
@@ -153,6 +154,27 @@ Entries for this config option look like the below:
 - `SpotlightNumber` is the spotlight index on that specific vehicle, use the [`/spotlight debug`](usage/commands.md#spotlight-debugging) command to find it.
 
 :::warning
+JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
+:::
+
+### Custom Spotlight RGB Colors
+#### `VehicleCustomRGB`
+Configuring this optional value will tell the resource to use a specific RGB color value for designated model spotlights.
+
+Entries for this config option look like the below:
+
+```json
+{
+  "ModelName": "police_car", 
+  "RGB": { "r": 255, "g": 0, "b": 255 }
+}
+```
+
+- `ModelName` is the name of the vehicle model.
+- `RGB` is the color code to use, [see here](https://share.google/Eskx96nQ8MkC8btNO).
+
+:::warning
+`r`, `g`, and `b` **must** be lowercase.  
 JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
 :::
 
