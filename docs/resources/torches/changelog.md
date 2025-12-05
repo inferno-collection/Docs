@@ -8,6 +8,12 @@ This page documents the changes made to Torches.
 
 ## v1.0.\*
 
+### v1.0.2 - 12/05/2025
+**Added**:
+- Inventory support, [see here](config.md#inventory-support) for more info.
+  - Sample code provided for [OxInventory](https://overextended.dev/ox_inventory) and [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory).
+  - Inventory code is unescrowed, and so should support any inventory resource.
+
 ### v1.0.1 - 11/09/2025
 **Added**:
 - [`DisableHeadMovement`](config.md#disable-head-movement) config option. [See here](config.md#disable-head-movement) for more info.
