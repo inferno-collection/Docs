@@ -8,6 +8,12 @@ This page documents the changes made to Spotlight.
 
 ## v1.0.\*
 
+### v1.0.4 - 12/05/2025
+**Added**:
+- Support for custom spotlight colors with RGB overrides, [see here](config.md#custom-spotlight-rgb-colors) for more info.
+  - Allows changing the spotlight color with RGB on a per model basis.
+  - Where no custom color exists, the default spotlight color will be used.
+
 ### v1.0.3 - 11/21/2025
 **Added**:
 - Support for [Persistent Spotlights](config.md#vehicles-with-persistent-spotlights). [See here](config.md#vehicles-with-persistent-spotlights) for more info.
