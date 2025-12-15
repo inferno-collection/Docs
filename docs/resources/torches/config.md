@@ -8,21 +8,22 @@ Torches uses a `config.json` file to store config values. Invalid JSON syntax in
 
 ## Value List
 
-|                      Name                       | Default Value |
-|:-----------------------------------------------:|:-------------:|
-|         [`allowAnyPed`](#allow-any-ped)         |    `false`    |
-|      [`torchesDistance`](#torch-distance)       |     `30`      |
-|    [`torchesBrightness`](#torch-brightness)     |     `1.5`     |
-|     [`torchesRoundness`](#torch-roundness)      |     `0.5`     |
-|        [`torchesRadius`](#torch-radius)         |     `20`      |
-|       [`torchesFallOff`](#torch-falloff)        |     `100`     |
-|              [`command`](#command)              |    `torch`    |
-|      [`defaultKeybind`](#default-keybind)       |    *None*     |
-| [`disableHeadMovement`](#disable-head-movement) |    `true`     |
-|    [`inventorySupport`](#inventory-support)     |    `false`    |
-|             [`defaults`](#defaults)             |  *See Below*  |
-|                 [`peds`](#peds)                 |  *See Below*  |
-|              [`mppeds`](#mp-peds)               |  *See Below*  |
+|                            Name                            | Default Value |
+|:----------------------------------------------------------:|:-------------:|
+|              [`allowAnyPed`](#allow-any-ped)               |    `false`    |
+|            [`torchesDistance`](#torch-distance)            |     `30`      |
+|          [`torchesBrightness`](#torch-brightness)          |     `1.5`     |
+|           [`torchesRoundness`](#torch-roundness)           |     `0.5`     |
+|              [`torchesRadius`](#torch-radius)              |     `20`      |
+|             [`torchesFallOff`](#torch-falloff)             |     `100`     |
+|                   [`command`](#command)                    |    `torch`    |
+|            [`defaultKeybind`](#default-keybind)            |    *None*     |
+|      [`disableHeadMovement`](#disable-head-movement)       |    `true`     |
+| [`disableKeybindInVehicles`](#disable-keybind-in-vehicles) |    `false`    |
+|          [`inventorySupport`](#inventory-support)          |    `false`    |
+|                  [`defaults`](#defaults)                   |  *See Below*  |
+|                      [`peds`](#peds)                       |  *See Below*  |
+|                    [`mppeds`](#mp-peds)                    |  *See Below*  |
 
 ## Values Explained
 
@@ -70,6 +71,14 @@ When enabled, prevents head movement when moving third-person camera, allowing l
 | `DisableHeadMovement` Disabled       | `DisableHeadMovement` Enabled       |
 |--------------------------------------|-------------------------------------|
 | ![Disabled](assets/head_before.webp) | ![Disabled](assets/head_after.webp) |
+
+### Disable Keybind in Vehicles
+#### `disableKeybindInVehicles`
+When enabled, the keybind to toggle the torch will be disabled.
+
+:::note
+The command and inventory toggles (if configured) are not impacted, and can still be used in vehicles.
+:::
 
 ### Inventory Support
 #### `inventorySupport`
@@ -175,6 +184,7 @@ Below is an example of an entry:
 
 	"disableHeadMovement": true,
 	"inventorySupport": false,
+	"disableKeybindInVehicles": false,
 
 	"defaults": {
 		"head": {

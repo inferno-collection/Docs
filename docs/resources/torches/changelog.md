@@ -8,6 +8,11 @@ This page documents the changes made to Torches.
 
 ## v1.0.\*
 
+### v1.0.3 - 12/15/2025
+**Added**:
+- [`disableKeybindInVehicles`](config.md#disable-keybind-in-vehicles) config option, [see here](config.md#disable-keybind-in-vehicles) for more info.
+  - If enabled, prevents the toggling of torches via the keybind when inside vehicles .
+
 ### v1.0.2 - 12/05/2025
 **Added**:
 - Inventory support, [see here](config.md#inventory-support) for more info.
