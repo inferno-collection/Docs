@@ -8,6 +8,15 @@ This page documents the changes made to Flares.
 
 ## v1.0.\*
 
+### v1.0.2 - 12/15/2025
+**Changed**:
+- Removed the `slowTraffic` config option, and replaced with a per-cone traffic impact option.
+  - The options are as follows:
+    - No impact
+    - Stop traffic
+    - Slow traffic
+  - These can be selected when a cone is placed by press Spacebar.
+
 ### v1.0.1 - 08/01/2025
 **YouTube Video**:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/h_L8NF9mohY?si=IszEN_K1CTFn1ftw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
