@@ -11,7 +11,6 @@ IF uses convars for config values. For information on how to correctly install t
 |                                      Name                                       | Default Value |
 |:-------------------------------------------------------------------------------:|:-------------:|
 |                          [`ic_if_language`](#language)                          |    `en-us`    |
-|                    [`ic_if_slowTraffic`](#slow-traffic-down)                    |    `true`     |
 |                        [`ic_if_animations`](#animations)                        |    `true`     |
 |                     [`ic_if_kickCheaters`](#kick-cheaters)                      |    `false`    |
 |                        [`ic_if_command`](#alias-command)                        |   `iflares`   |
@@ -64,10 +63,6 @@ For any other resources, use the provided event handlers and variables to add yo
 :::tip
 The "items.lua" entry for both Ox and QB are located at the top of `editables/server/inventory.lua`, and a 100x100 png image of an IFlare is located in the download root directory.
 :::
-
-### Slow Traffic Down
-#### `ic_if_slowTraffic`
-If this value is `true`, traffic will slow down when it is near placed IFlares.
 
 ### Disable IFlare Collisions
 #### `ic_if_disableCollisions`
