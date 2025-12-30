@@ -31,7 +31,7 @@ This page documents the changes made to Flares.
 - Updated permissions to match new command versus third-eye/inventory placement options. [See here](config.md#permissions) for more info.
 
 **Fixes**:
-- Bug where traffic would be slowed even if [`ic_if_slowTraffic`](config.md#slow-traffic-down) was `false`.
+- Bug where traffic would be slowed even if `ic_if_slowTraffic` was `false`.
 - Bug where, when placed, IFlares would appear slightly above the preview, resulting in them "floating" slightly.
 - Edge case where passing malformed data to the removal event would result in a "successful" log entry of a removal, but no actual removal of any IFlares.
 

@@ -138,7 +138,7 @@ The events in `editable/client/targeting.lua` will not fire unless `ic_sa_manual
 :::
 
 ### Door Speed
-#### `ic_sa_slowerDoors` (replaces `ic_sa_slowerDoors`)
+#### `ic_sa_doorSpeed` (replaces `ic_sa_slowerDoors`)
 This value determines the global default opening/closing speed for doors. The default value is `0.15`, which is slow.
 
 Valid values are between `0.1` and `1`, where `0.1` is very slow and `1` is very fast.
