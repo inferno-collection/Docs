@@ -186,7 +186,47 @@ triggerSprinklerAtPosition
 
 ***
 
-## Miscellaneous
+## AOP
+
+### Get Alarm System AOP
+This export returns the currently set AOP for random alarms.
+For more info on how to set an Alarm System's AOP, [see here](../tool.md#adding-aop).
+
+#### Export Name
+```
+getAlarmAOP
+```
+#### Parameters
+
+None
+
+#### Return Value
+`string`
+
+### Set Alarm System AOP
+This export determines which AOP should be used when activating Random Alarms.  
+For example, if the AOP is set to `LS`, only Alarm Systems with their AOP defined as `LS` will be selected.  
+For more info on how to set an Alarm System's AOP, [see here](../tool.md#adding-aop).
+
+#### Export Name
+```
+setAlarmAOP
+```
+#### Parameters
+
+- `aop` - `string`
+	- Either a string that is the AOP, or an empty string (`""`) to remove AOP.
+
+#### Return Value
+`void`
+
+:::tip
+AOP can also be changed via the [`firealarm aop`](../../usage/commands.md#get-or-set-random-alarm-aop) command.
+:::
+
+***
+
+## Random Alarms
 
 ### Trigger Random Alarm
 Use this export to trigger a random [Random Alarms](../../config.md#random-alarms).
@@ -235,23 +275,6 @@ enableAlarms
 
 - `value` - `bool`
 	- `true` to enable Alarms, `false` to disable Alarms.
-
-#### Return Value
-`void`
-
-### Set Alarm System AOP
-This export determines which AOP should be used when activating Random Alarms.  
-For example, if the AOP is set to `LS`, only Alarm Systems with their AOP defined as `LS` will be selected.  
-For more info on how to set an Alarm System's AOP, [see here](../tool.md#adding-aop).
-
-#### Export Name
-```
-setAlarmAOP
-```
-#### Parameters
-
-- `aop` - `string`
-	- Either a string that is the AOP, or an empty string (`""`) to remove AOP.
 
 #### Return Value
 `void`

@@ -8,6 +8,19 @@ This page documents the changes made to FAR.
 
 ## v1.5.\*
 
+### v1.5.3 - 12/30/2025
+
+**Added**:
+- [`firealarm aop`](usage/commands.md#get-or-set-random-alarm-aop) command. [See here](usage/commands.md#get-or-set-random-alarm-aop) for more info.
+  - Get or set the current alarm system AOP.
+- [`getAlarmAOP`](developers/exports/server.md#get-alarm-system-aop) export, to get current alarm system AOP. [`See here`](developers/exports/server.md#get-alarm-system-aop) for more info.
+- `toggle` and `last` options to the [`firealarm randomalarm`](usage/commands.md#random-alarm) command. [See here](usage/commands.md#random-alarm) for more info.
+  - `toggle` enables or disabled random alarm activations globally.
+  - `last` returns the last time a random alarm was activated.
+
+**Fixed**:
+- [HTTP](developers/api.mdx) Authorization header being case-sensitive instead of case-insensitive.
+
 ### v1.5.2 - 09/22/2025
 
 **Added**:

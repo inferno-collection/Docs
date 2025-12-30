@@ -244,6 +244,7 @@ More examples can be found [here](https://www.rapidtables.com/web/color/RGB_Colo
 If this value is `true`, a ton of extra logs will be outputted to both the client and server consoles. Not suggested at all for production use, nor for when using the [FAR Tool](developers/tool.md).
 
 ***
+
 ## Permissions
 There are several permissions for FAR, they are as follows:
 
@@ -281,9 +282,14 @@ By default, this permission is granted to all players.
 This permission allows players to use the Smoke Detector Tester Can, used with WalkTesting to activate Detectors.  
 By default, this permission is granted to all players.
 
-### Trigger Random Alarms via Command
+### Get or Set Random Alarm AOP via Command
+#### `InfernoFireAlarmReborn.AOP`
+This permission allows players to use the [`/firealarm aop`](usage/commands.md#firealarm-aop) command to get or set the random alarm AOP.  
+By default, this permission is only granted to admins (`group.admin`).
+
+### Random Alarms via Command
 #### `InfernoFireAlarmReborn.RandomAlarms`
-This permission allows players to use the [`/firealarm randomalarm`](usage/commands.md#firealarm-randomalarm) command to generate a random alarm.  
+This permission allows players to use the [`/firealarm randomalarm`](usage/commands.md#firealarm-randomalarm) command to generate and toggle random alarms.  
 By default, this permission is only granted to admins (`group.admin`).
 
 ### Reset Alarm Systems via Command
@@ -442,6 +448,7 @@ add_ace builtin.everyone "InfernoFireAlarmReborn.Tester" allow
 add_ace group.admin "InfernoFireAlarmReborn.RandomAlarms" allow
 add_ace group.admin "InfernoFireAlarmReborn.Tool" allow
 add_ace group.admin "InfernoFireAlarmReborn.ResetAlarm" allow
+add_ace group.admin "InfernoFireAlarmReborn.AOP" allow
 
 ##########################
 ### ConVar Permissions ###

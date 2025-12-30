@@ -45,11 +45,27 @@ This command only works from the server console, and cannot be used from the cli
 
 ***
 
-## Trigger Random Alarm
+## Random Alarm
 ### `/firealarm randomalarm`
-#### Required Ace Permission: [`RandomAlarms`](../config#trigger-random-alarms-via-command)
+#### Required Ace Permission: [`RandomAlarms`](../config#random-alarms-via-command)
 
-This command will trigger a Random Fire Alarm somewhere on the map.
+This command has three options, depending on the arguments passed:
+1. No arguments (`/firealarm randomalarm`) - a random alarm is triggered somewhere on the map
+2. `toggle` (`/firealarm randomalarm toggle`) - dis/enables random alarm activations globally
+3. `last` (`/firealarm randomalarm last`) - returns when the last random alarm was activated
+
+***
+
+## Get or Set Random Alarm AOP
+### `/firealarm aop`
+#### Required Ace Permission: [`AOP`](../config#get-or-set-random-alarm-aop-via-command)
+
+When no second argument is passed, the current AOP is returned (e.g. `/firealarm aop`).  
+With a second argument, the current AOP is updated (e.g `/firealarm aop sandy`).
+
+:::tip
+AOP can also be changed via the [`setAlarmAOP`](../developers/exports/server.md#set-alarm-system-aop) export.
+:::
 
 ***
 
