@@ -8,6 +8,22 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.6 - 01/14/2026
+**Added:**
+- Linked door validation for [Traffic Lights](usage/components.md#traffic-lights) and [Door Buttons](usage/components.md#door-button).
+	- Linked doors are now validated when a location is loaded, and when a draft is loaded.
+    - The validation checks that linked doors exist (i.e. prevent traffic lights connecting to non-existent doors).
+    - If an issue is found, a chat/console message will be logged.
+- Warning message when attempting to call exports in the Sonoran Edition.
+  - Previously nothing would happen, leading to some confusion.
+
+**Changed:**
+- Improved console logging for Sonoran Validation in both version of SA.
+
+**Fixed**:
+- Sonoran subscription level not being validated in SA Standalone.
+- File encoding on `pl-pl.json` that prevented loading of the language file.
+
 ### v1.2.5 - 12/05/2025
 **Added**:
 - Support for playing multiple tones per-station when creating alerts.
@@ -178,10 +194,10 @@ Significant changes to [Server Exports](developers/exports/server.md) were made 
   - To update existing implementations, remove `.locations` from any code, see example below:
     - ```lua
       -- Old implementation
-      local stations = exports["inferno-station-alert"]getAllLocations().locations
+      local oldStations = exports["inferno-station-alert"]:getAllLocations().locations
       
       -- New implementation
-      local stations = exports["inferno-station-alert"]getAllLocations()
+      local newStations = exports["inferno-station-alert"]:getAllLocations()
       ```
 
 ### v1.1.2 - 06/05/2025
