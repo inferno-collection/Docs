@@ -82,7 +82,7 @@ This is not a graceful reset: any isolations, closed Sprinkler Valves, etc. will
 ***
 
 ## Reset last Alarm Systems
-### `/firealarm resetlasr`
+### `/firealarm resetlast`
 #### Required Ace Permission: [`ResetAlarm`](../config#reset-alarm-systems-via-command)
 
 This command will forcefully reset the most recently triggered Alarm System.
