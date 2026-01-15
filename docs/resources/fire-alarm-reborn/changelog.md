@@ -8,6 +8,18 @@ This page documents the changes made to FAR.
 
 ## v1.5.\*
 
+### v1.5.4 - 01/15/2026
+
+**Changed**:
+- Decreased the performance impact when un/loading systems and using [`ic_far_manualInteraction`](config.md#manual-interactions-targetthird-eye-resource-support).
+  - Should prevent the resmon spiking momentarily when un/loading larger alarm systems.
+
+**Fixed**:
+- Targeting warnings sometimes appearing in the console when using [`ic_far_manualInteraction`](config.md#manual-interactions-targetthird-eye-resource-support).
+  - :::warning
+  	Changes have been made to `editable/client/targeting.lua` in this version, update this file by hand!
+  	:::
+
 ### v1.5.3 - 12/30/2025
 
 **Added**:
