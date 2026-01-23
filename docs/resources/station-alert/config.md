@@ -670,6 +670,16 @@ There are several permissions for SA, they are as follows:
 This permission allows players to interact with the Door Controls to open/close Doors.  
 By default, this permission is granted to all players.
 
+### Rename Doors
+#### `InfernoStationAlert.DoorRenaming`
+This permission allows players to temporarily rename doors - such as if a truck is moved around - reverts after server restart.
+
+:::note
+To rename doors, players must be able to access a [Station Computer](usage/components.md#station-computer), and thus require the [`Computer`](#use-station-computer) permission as well.
+:::
+
+By default, this permission is granted to all players.
+
 ### Use Station Computer
 #### `InfernoStationAlert.Computer`
 This permission allows players to interact with the Station Computer to create Alerts.  
@@ -902,6 +912,7 @@ setr ic_sa_debug "false"
 ###################
 
 add_ace builtin.everyone "InfernoStationAlert.DoorControls" allow
+add_ace builtin.everyone "InfernoStationAlert.DoorRenaming" allow
 add_ace builtin.everyone "InfernoStationAlert.Computer" allow
 add_ace builtin.everyone "InfernoStationAlert.Buzzer" allow
 

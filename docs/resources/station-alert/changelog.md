@@ -8,8 +8,22 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.7 - 01/23/2026
+
+:::warning
+Permission required to rename doors was changed in this version, see below for details.
+:::
+
+**Changed**:
+- Increased LOD distance for [Addon Traffic Lights](usage/components.md#addon-traffic-lights) and [Warning Lights](usage/components.md#warning-lights).
+- Door renaming uses new permission [`DoorRenaming`](config.md#rename-doors). [See here](config.md#rename-doors) for more info.
+  - Previously [`Computer`](config.md#use-station-computer) was solely used; [`DoorRenaming`](config.md#rename-doors) is now additionally required.
+
+**Fixed**:
+- [Door Buttons](usage/components.md#door-button) not working after a Door was renaming while in-game.
+
 ### v1.2.6 - 01/14/2026
-**Added:**
+**Added**:
 - Linked door validation for [Traffic Lights](usage/components.md#traffic-lights) and [Door Buttons](usage/components.md#door-button).
 	- Linked doors are now validated when a location is loaded, and when a draft is loaded.
     - The validation checks that linked doors exist (i.e. prevent traffic lights connecting to non-existent doors).
@@ -17,7 +31,7 @@ This page documents the changes made to SA.
 - Warning message when attempting to call exports in the Sonoran Edition.
   - Previously nothing would happen, leading to some confusion.
 
-**Changed:**
+**Changed**:
 - Improved console logging for Sonoran Validation in both version of SA.
 
 **Fixed**:
