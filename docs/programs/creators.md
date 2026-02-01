@@ -60,7 +60,7 @@ About you:
 - Custom thumbnails on most uploads
 
 What we offer:
-- We'll provide access to the resource in exchange for a video — simple and fair
+- We'll provide access to the resource in exchange for a video — a straightforward and fair exchange
 - We'll post any Inferno Collection related videos you make in our Discord
 - Discounts for Early Access resources
 - Access to Creator channel to communicate directly with us
@@ -75,14 +75,14 @@ About you:
 - Custom thumbnails on all uploads
 
 What we offer:
-- We'll provide access to the resource in exchange for a video — simple and fair
+- We'll provide access to the resource in exchange for a video — a straightforward and fair exchange
 - We'll post any Inferno Collection related videos you make in our Discord
 - Access to Early Access resources
 - Access to Creator channel to communicate directly with us
 - Video suggestions and talking points
   - Everything from roleplay scenario ideas to installation tutorials, we're here to help.
-- 5% revenue sharing for referred purchases
-  - Using creator codes, if your viewer makes a purchase, you get 5% of that purchase
+- 5% revenue sharing & 5% discount for customers on referred purchases
+  - Using creator codes, if your viewer makes a purchase, they get 5% off, and you get 5% of that purchase
 - Copies of resources for Giveaways
   - Run giveaways in your videos using our resources - we'll provide the keys!
 
@@ -100,10 +100,12 @@ What we offer:
 - Access to Creator channel to communicate directly with us
 - Video suggestions and talking points
 	- Everything from roleplay scenario ideas to installation tutorials, we're here to help.
-- 10% revenue sharing & 10% discount for customers on referred purchases
-  - Using creator codes, if your viewer makes a purchase, they get 10% off, and you get 10% of that purchase
+- 15% revenue sharing & 10% discount for customers on referred purchases
+  - Using creator codes, if your viewer makes a purchase, they get 10% off, and you get 15% of that purchase
 - Copies of resources for Giveaways
 	- Run giveaways in your videos using our resources - we'll provide the keys!
+
+### Overview
 
 | Perk                                    |    Creator (1K–5K)    |  Ambassador (5K–50K)  |  Affiliate (50K+)   |
 |-----------------------------------------|:---------------------:|:---------------------:|:-------------------:|
@@ -114,9 +116,13 @@ What we offer:
 | Creator Kit (logos, branding, etc.)     |           ✅           |           ✅           |          ✅          |
 | Technical help & installation support   |           ✅           |           ✅           |          ✅          |
 | Early access resources                  |      Discounted       |           ✅           |          ✅          |
-| Revenue sharing on referred purchases   |           ❌           |          5%           |         10%         |
+| Customer discount on referred purchases |           ❌           |          5%           |         10%         |
+| Revenue sharing on referred purchases   |           ❌           |          5%           |         15%         |
 | Giveaway keys for your audience         |           ❌           |        Limited        |          ✅          |
-| Customer discount on referred purchases |           ❌           |           ❌           |         10%         |
+
+:::tip
+A reminder that the requirements are only guidelines - if you think you might be interested, please reach out!
+:::
 
 ---
 
@@ -128,7 +134,7 @@ If you refer a creator to us, and we end up collaborating with them, you'll rece
 
 :::note
 To receive the credit, you must directly refer the creator to us - this means putting them in contact with us, or vice versa.  
-For example, simply suggesting the name of a creator without providing us with an introduction **does not** count.
+For example, simply suggesting the name of a creator without providing us with an introduction does not count as a referral for store credit.
 
 If you are unsure, please ask us ahead of time!
 :::
@@ -234,3 +240,12 @@ This Creator Program is part of our broader **Creator & Contributor Program**, w
 
 Help improve our products, grow our community, and earn rewards along the way!
 
+
+
+***
+
+:::note
+Creator tiers and benefits may be reviewed over time based on activity and performance.  
+Creator codes and revenue sharing may be paused or adjusted if there is no meaningful activity or referrals over time.  
+Creators are responsible for disclosing sponsored or affiliate relationships.
+:::
