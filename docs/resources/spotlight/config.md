@@ -4,7 +4,11 @@ sidebar_position: 20
 
 # Configuration
 
-Spotlight uses a `config.json` file to store config values. Invalid JSON syntax in this file will cause errors.
+Spotlight uses a `config.json` file to store config values.
+
+:::danger
+JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
+:::
 
 ## Value List
 
@@ -26,6 +30,8 @@ Spotlight uses a `config.json` file to store config values. Invalid JSON syntax 
 | [`VehiclePersistents`](#vehicles-with-persistent-spotlights) |     `[]`      |
 |       [`VehicleSpotlightIgnores`](#spotlight-ignoring)       |     `[]`      |
 |      [`VehicleCustomRGB`](#custom-spotlight-rgb-colors)      |     `[]`      |
+|     [`IgnoredVehicleClasses`](#ignored-vehicle-classes)      |     `[]`      |
+|            [`IgnoredVehicles`](#ignored-vehicles)            |     `[]`      |
 
 ## Values Explained
 
@@ -93,23 +99,23 @@ For example, if we have a vehicle with the spawn name `police_car`, and it has 4
 The config for the above would look like so:
 
 ```json
-{
-  "ModelName": "police_car",
-  "DriversSide": true,
-  "DisabledExtra": 1,
-  "EnabledExtra": 2
-},
-{
-  "ModelName": "police_car",
-  "DriversSide": false,
-  "DisabledExtra": 3,
-  "EnabledExtra": 4
-}
+[
+	{
+	  "ModelName": "police_car",
+	  "DriversSide": true,
+	  "DisabledExtra": 1,
+	  "EnabledExtra": 2, 
+	  "EnableHighBeams": false
+	},
+	{
+	  "ModelName": "police_car",
+	  "DriversSide": false,
+	  "DisabledExtra": 3,
+	  "EnabledExtra": 4, 
+	  "EnableHighBeams": false
+	}
+]
 ```
-
-:::warning
-JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
-:::
 
 ### Vehicle Mod Mapping
 #### `VehicleMods`
@@ -125,11 +131,14 @@ All that is required is the vehicle model name, if the spotlight is the driver's
 The config for the above would look like so:
 
 ```json
-{
-  "ModelName": "police_car",
-  "DriversSide": true,
-  "LightPosition": { "x": 1.0, "y": 1.0, "z": 1.0 }
-}
+[
+	{
+	  "ModelName": "police_car",
+	  "DriversSide": true,
+	  "LightPosition": { "x": 1.0, "y": 1.0, "z": 1.0 }, 
+	  "EnableHighBeams": false
+	}
+]
 ```
 
 To get the light position, use the [Placement Tool](developers/index.md#spotlight-placement).
@@ -144,18 +153,16 @@ If however, one of these spotlights is part of the headlight assemble instead of
 Entries for this config option look like the below:
 
 ```json
-{
-  "ModelName": "police_car",
-  "SpotlightNumber": 2
-}
+[
+	{
+	  "ModelName": "police_car",
+	  "SpotlightNumber": 2
+	}
+]
 ```
 
 - `ModelName` is the name of the vehicle model.
 - `SpotlightNumber` is the spotlight index on that specific vehicle, use the [`/spotlight debug`](usage/commands.md#spotlight-debugging) command to find it.
-
-:::warning
-JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
-:::
 
 ### Custom Spotlight RGB Colors
 #### `VehicleCustomRGB`
@@ -164,19 +171,85 @@ Configuring this optional value will tell the resource to use a specific RGB col
 Entries for this config option look like the below:
 
 ```json
-{
-  "ModelName": "police_car", 
-  "RGB": { "r": 255, "g": 0, "b": 255 }
-}
+[
+	{
+	  "ModelName": "police_car", 
+	  "RGB": { "r": 255, "g": 0, "b": 255 }
+	}
+]
 ```
 
 - `ModelName` is the name of the vehicle model.
 - `RGB` is the color code to use, [see here](https://share.google/Eskx96nQ8MkC8btNO).
 
 :::warning
-`r`, `g`, and `b` **must** be lowercase.  
-JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
+`r`, `g`, and `b` **must** be lowercase.
 :::
+
+### Ignored Vehicle Classes
+#### `IgnoredVehicleClasses`
+Configuring this optional value will tell the resource to disallow spotlights on the listed vehicle classes.  
+
+:::tip
+This only applies for automatically detected spotlights; if a vehicle has an entry in `VehicleExtras`, `VehicleMods`, or `VehiclePersistents`, they will ignore this config option and work regardless.
+:::
+
+<details>
+  <summary>Vehicle class list</summary>
+	:::warning
+	The classes must be worded exactly as below.  
+	For example, `OffRoad` cannot be `Off-Road`.
+	:::
+
+	- `Compacts`
+	- `Sedans`
+	- `SUVs`
+	- `Coupes`
+	- `Muscle`
+	- `SportsClassics`
+	- `Sports`
+	- `Super`
+	- `Motorcycles`
+	- `OffRoad`
+	- `Industrial`
+	- `Utility`
+	- `Vans`
+	- `Cycles`
+	- `Boats`
+	- `Helicopters`
+	- `Planes`
+	- `Service`
+	- `Emergency`
+	- `Military`
+	- `Commercial`
+	- `Trains`
+</details>
+
+Entries for this config option look like the below:
+
+```json
+[
+	"Cycles",
+	"Trains"
+]
+```
+
+### Ignored Vehicles
+#### `IgnoredVehicles`
+Configuring this optional value will tell the resource to disallow spotlights on the listed vehicles.
+
+:::tip
+This config option takes priority overs, meaning even if a vehicle is listed in `VehicleExtras`, `VehicleMods`, or `VehiclePersistents`, if it is listed here, it will be disallowed.
+:::
+
+Entries for this config option look like the below:
+
+```json
+[
+	"police",
+	"police2"
+]
+```
 
 ## Default Config File
 ```json showLineNumbers title="config.json"
@@ -199,6 +272,11 @@ JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your
   "VehicleExtras": [],
   "VehicleMods": [], 
   "VehiclePersistents": [],
-  "VehicleSpotlightIgnores": []
+  "VehicleSpotlightIgnores": [],
+
+  "VehicleCustomRGB": [],
+
+  "IgnoredVehicleClasses": [],
+  "IgnoredVehicles": []
 }
 ```

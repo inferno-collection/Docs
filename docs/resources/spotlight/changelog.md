@@ -8,6 +8,15 @@ This page documents the changes made to Spotlight.
 
 ## v1.0.\*
 
+### v1.0.5 - 02/03/2026
+**Added**:
+- Support for `EnableHighBeams` for all spotlight types.
+  - Adding `"EnableHighBeams": true` to a config entry will turn on vehicle high beams with the spotlight.
+    - Note: Only works for driver's side spotlights.
+- [`IgnoredVehicleClasses`](config.md#ignored-vehicle-classes) and [`IgnoredVehicles`](config.md#ignored-vehicles) config options. See [here](config.md#ignored-vehicle-classes) and [here](config.md#ignored-vehicles) for more info.
+  - [`IgnoredVehicleClasses`](config.md#ignored-vehicle-classes) disallows listed vehicle classes from using spotlights. 
+  - [`IgnoredVehicles`](config.md#ignored-vehicles) disallows listed vehicles from using spotlights. 
+
 ### v1.0.4 - 12/05/2025
 **Added**:
 - Support for custom spotlight colors with RGB overrides, [see here](config.md#custom-spotlight-rgb-colors) for more info.
