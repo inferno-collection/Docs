@@ -83,7 +83,8 @@ JSON syntax is important: missing `,`s, `[]`s, etc. will break the file. Check y
   "ModType": 1,
   "DisabledMod": 0,
   "EnabledMod": 1,
-  "LightPosition": { "x": 1.0, "y": 1.0, "z": 1.0 }
+  "LightPosition": { "x": 1.0, "y": 1.0, "z": 1.0 },
+  "EnableHighBeams": false
 }
 ```
 
@@ -103,6 +104,9 @@ Once pasted, update the values to the ones you noted down previously.
 	- This should be the flipped up variant.
 - `LightPosition`
   - This is the text from the bottom of your screen from the placement tool.
+- `EnableHighBeams`
+  - If true, will enable vehicle high beams when spotlight is toggled on.
+    - Note: Only works for driver's side spotlights.
 
 #### Vehicle Persistents (Permanent Spotlight)
 
@@ -110,7 +114,8 @@ Once pasted, update the values to the ones you noted down previously.
 {
 	"ModelName": "police_car",
 	"DriversSide": true,
-	"LightPosition": { "x": -0.815, "y": 1.135, "z": 0.435 }
+	"LightPosition": { "x": -0.815, "y": 1.135, "z": 0.435 },
+	"EnableHighBeams": false
 }
 ```
 
@@ -122,6 +127,9 @@ Once pasted, update the values to the ones you noted down previously.
 	- If this spotlight is on the driver's side (`true`), or the passenger side (`false`).
 - `LightPosition`
 	- This is the text from the bottom of your screen from the placement tool.
+- `EnableHighBeams`
+	- If true, will enable vehicle high beams when spotlight is toggled on.
+		- Note: Only works for driver's side spotlights.
 
 ***
 
