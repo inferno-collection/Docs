@@ -8,6 +8,12 @@ This page documents the changes made to FAR.
 
 ## v1.5.\*
 
+### v1.5.5 - 02/04/2026
+
+**Fixed**:
+- Props despawning and not reappearing when using [`ic_far_manualInteraction`](config.md#manual-interactions-targetthird-eye-resource-support).
+  - A race condition regression was introduced in v1.5.4 that has now been fixed.
+
 ### v1.5.4 - 01/15/2026
 
 **Changed**:
