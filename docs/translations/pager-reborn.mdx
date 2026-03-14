@@ -1,0 +1,176 @@
+---
+title: Pager Reborn
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Below you can find several translations for PR. The language files are provided with the resource, inside the `languages` folder, but translated `sounds.json` can be found on this page.
+
+## `sounds.json`
+In the root directory of the resource is a file called `sounds.json`. This file contains the names and file paths of all the alert tones and vibrations used by the resource. The names of the sounds can be changed by server owners or developers to be anything in any language, however, if you would like to use the default names but in your own language, you can find their translations below.
+
+## Translations
+
+<Tabs>
+	<TabItem value="english" label="English" default>
+		#### English
+		Translation by: [Inferno Collection](https://inferno-collection.com)
+
+		```json title="en-us.json" showLineNumbers
+		{
+			"Emergency": "EMERGENCY",
+			"NonEmergency": "NON-EMERGENCY",
+			"Administrative": "ADMINISTRATIVE",
+
+			"Shared_Close": "Close",
+			"Shared_Cancel": "Cancel",
+			"Shared_SearchPlaceholder": "Search…",
+			"Shared_ClearSearch": "Clear search",
+			"Shared_EmptyNodes": "No nodes to show.",
+			"Shared_AlertSettings": "ALERT SETTINGS",
+
+			"PagerUI_MenuOptions": "MENU OPTIONS",
+			"PagerUI_MenuOptions_Escape": "ESCAPE",
+			"PagerUI_MenuOptions_SoundModeAudible": "AUDIBLE ALERT",
+			"PagerUI_MenuOptions_SoundModeVibration": "VIBRATION:",
+			"PagerUI_MenuOptions_AlertSettings": "@Shared_AlertSettings",
+			"PagerUI_MenuOptions_PowerOff": "TURN PAGER OFF",
+
+			"PagerUI_AlertSettings": "@Shared_AlertSettings",
+
+			"PagerUI_New": "NEW",
+
+			"CapcodesUI_Title": "Pager Network",
+			"CapcodesUI_Subtitle": "Select nodes to join",
+			"CapcodesUI_Close": "@Shared_Close",
+			"CapcodesUI_SearchPlaceholder": "@Shared_SearchPlaceholder",
+			"CapcodesUI_ClearSearch": "@Shared_ClearSearch",
+			"CapcodesUI_HideUnchangeable": "Hide unchangeable",
+			"CapcodesUI_CollapseAll": "Collapse all",
+			"CapcodesUI_ExpandAll": "Expand all",
+			"CapcodesUI_Empty": "@Shared_EmptyNodes",
+			"CapcodesUI_Apply": "Apply",
+			"CapcodesUI_Reset": "Reset",
+			"CapcodesUI_Cancel": "@Shared_Cancel",
+			"CapcodesUI_JoinedSuffix": "joined",
+			"CapcodesUI_CannotLeaveHint": "You have joined this node, but cannot leave it.",
+
+			"PageCreatorUI_Title": "Create Page Message",
+			"PageCreatorUI_Subtitle": "Select recipients and compose a message",
+			"PageCreatorUI_Close": "@Shared_Close",
+			"PageCreatorUI_AddressesLabel": "Addresses",
+			"PageCreatorUI_AddressPlaceholder": "Search & select addresses…",
+			"PageCreatorUI_AddressSearchPlaceholder": "@Shared_SearchPlaceholder",
+			"PageCreatorUI_ClearAddressSearch": "@Shared_ClearSearch",
+			"PageCreatorUI_HideUnpageable": "Hide unpageable",
+			"PageCreatorUI_Collapse": "Collapse",
+			"PageCreatorUI_Expand": "Expand",
+			"PageCreatorUI_AddressTreeEmpty": "@Shared_EmptyNodes",
+			"PageCreatorUI_AddressHintPrefix": "Click to select one address.",
+			"PageCreatorUI_AddressHintSuffix": "+ Click selects all children.",
+			"PageCreatorUI_PlayersLabel": "Players",
+			"PageCreatorUI_PlayerPlaceholder": "Select players...",
+			"PageCreatorUI_PlayerSearchPlaceholder": "Search by player or id...",
+			"PageCreatorUI_ClearPlayerSearch": "@Shared_ClearSearch",
+			"PageCreatorUI_PlayerEmpty": "No players to show.",
+			"PageCreatorUI_NatureLabel": "Nature",
+			"PageCreatorUI_MessageLabel": "Message",
+			"PageCreatorUI_MessagePlaceholder": "Type your message here...",
+			"PageCreatorUI_MessageHintPrefix": "Allowed: A–Z, 0–9, space, and",
+			"PageCreatorUI_Send": "Send",
+			"PageCreatorUI_Cancel": "@Shared_Cancel",
+			"PageCreatorUI_MoreSuffix": "more",
+
+			"SettingsUI_Title": "Settings",
+			"SettingsUI_Subtitle": "Adjust pager settings",
+			"SettingsUI_VolumeLabel": "Pager Volume",
+			"SettingsUI_Save": "Save",
+			"SettingsUI_ClearStoredKVP": "Clear Stored KVP",
+			"SettingsUI_ClearStoredKVPConfirm": "Are you sure?",
+
+			"Command_ClientOnly": "Command can only be used on the client",
+			"Command_ConsoleOnly": "Command can only be used from the console",
+
+			"Capcodes_NotAllowedAny": "You do not have permissions for any nodes",
+			"Capcodes_AddressNotFound": "No node with that address exists",
+			"Capcodes_AddressNotJoinable": "Provided address is not assignable - only capcodes can be assigned",
+			"Capcodes_NoPermissionForThisNode": "You do not have permission to assign this node",
+			"Capcodes_Added": "Added to",
+			"Capcodes_Removed": "Removed from",
+			"Capcodes_Updated": "Pager capcodes updated",
+
+			"CreatePage_NoPermissions": "You do not have permission to create pages for addresses or players",
+			"CreatePage_PlayersButNoNatures": "You have permission to page players, but lack permission for any page nature",
+			"CreatePage_Success": "Page message created",
+			"CreatePage_Failed": "Failed to create page message",
+
+			"General_CannotRightNow": "Cannot perform action right now",
+			"General_YouDoNotHaveAPager": "You do not have a pager",
+			"General_YourPagerIsTurnedOff": "Your pager is turned off",
+			"General_PagerTurnedOn": "Your pager has been turned on",
+			"General_PagerTurnedOff": "Your pager has been turned off"
+		}
+		```
+
+		```json title="sounds.json" showLineNumbers
+		{
+			"alertTones": {
+				"General": {
+					"General #1": "audio/pager/general/general-1.mp3",
+					"General #2": "audio/pager/general/general-2.mp3",
+					"General #3": "audio/pager/general/general-3.mp3",
+					"General #4": "audio/pager/general/general-4.mp3",
+					"General #5": "audio/pager/general/general-5.mp3",
+					"General #6": "audio/pager/general/general-6.mp3",
+					"General #7": "audio/pager/general/general-7.mp3",
+					"General #8": "audio/pager/general/general-8.mp3",
+					"General #9": "audio/pager/general/general-9.mp3",
+					"General #10": "audio/pager/general/general-10.mp3",
+					"General #11": "audio/pager/general/general-11.mp3",
+					"General #12": "audio/pager/general/general-12.mp3",
+					"General #13": "audio/pager/general/general-13.mp3",
+					"General #14": "audio/pager/general/general-14.mp3",
+					"General #15": "audio/pager/general/general-15.mp3",
+					"General #16": "audio/pager/general/general-16.mp3"
+				},
+
+				"Escalating": {
+					"Escalating #1": "audio/pager/escalating/escalating-1*.mp3",
+					"Escalating #2": "audio/pager/escalating/escalating-2*.mp3",
+					"Escalating #3": "audio/pager/escalating/escalating-3*.mp3",
+					"Escalating #4": "audio/pager/escalating/escalating-4*.mp3",
+					"Escalating #5": "audio/pager/escalating/escalating-5*.mp3",
+					"Escalating #6": "audio/pager/escalating/escalating-6*.mp3",
+					"Escalating #7": "audio/pager/escalating/escalating-7*.mp3",
+					"Escalating #8": "audio/pager/escalating/escalating-8*.mp3",
+					"Escalating #9": "audio/pager/escalating/escalating-9*.mp3",
+					"Escalating #10": "audio/pager/escalating/escalating-10*.mp3",
+					"Escalating #11": "audio/pager/escalating/escalating-11*.mp3",
+					"Escalating #12": "audio/pager/escalating/escalating-12*.mp3",
+					"Escalating #13": "audio/pager/escalating/escalating-13*.mp3",
+					"Escalating #14": "audio/pager/escalating/escalating-14*.mp3",
+					"Escalating #15": "audio/pager/escalating/escalating-15*.mp3",
+					"Escalating #16": "audio/pager/escalating/escalating-16*.mp3"
+				}
+			},
+
+			"defaultAlertTones": {
+				"Emergency": "Escalating #12",
+				"NonEmergency": "General #5",
+				"Administrative": "General #8"
+			},
+
+			"vibrations": {
+				"OneShot": {
+					"Long": "audio/pager/vibrate/long-vibrate.mp3",
+					"Short": "audio/pager/vibrate/short-vibrate.mp3"
+				},
+
+				"Looping": {
+					"Loop": "audio/pager/vibrate/vibrate.mp3"
+				}
+			}
+		}
+		```
+	</TabItem>
+</Tabs>
