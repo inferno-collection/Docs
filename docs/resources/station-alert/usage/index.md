@@ -47,7 +47,7 @@ For further assistance with Sonoran CAD, contact Sonoran Support [here](https://
 ***
 
 ### How do I integrate SA with XYZ resource?
-For documented integrations, see here.  
+For documented integrations, [see here](../developers/third-party.md).  
 If your resource is not listed, contact us on [Discord](https://inferno.codes/discord) for support.
 
 ***
