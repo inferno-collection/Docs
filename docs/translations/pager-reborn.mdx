@@ -173,4 +173,165 @@ In the root directory of the resource is a file called `sounds.json`. This file 
 		}
 		```
 	</TabItem>
+	<TabItem value="german" label="Deutsch">
+		#### German - Deutsch
+		Translation by: timanier
+
+		```json title="de-de.json" showLineNumbers
+		{
+			"Emergency": "NOTFALL",
+			"NonEmergency": "KEIN-NOTFALL",
+			"Administrative": "ADMINISTRATIV",
+
+			"Shared_Close": "Schließen",
+			"Shared_Cancel": "Abbrechen",
+			"Shared_SearchPlaceholder": "Suche…",
+			"Shared_ClearSearch": "Suche leeren",
+			"Shared_EmptyNodes": "Es sind keine Elemente vorhanden.",
+			"Shared_AlertSettings": "ALARM EINSTELLUNGEN",
+
+			"PagerUI_MenuOptions": "MENÜ OPTIONEN",
+			"PagerUI_MenuOptions_Escape": "ESCAPE",
+			"PagerUI_MenuOptions_SoundModeAudible": "AUDIO ALARMIERUNG",
+			"PagerUI_MenuOptions_SoundModeVibration": "VIBRATION:",
+			"PagerUI_MenuOptions_AlertSettings": "@Shared_AlertSettings",
+			"PagerUI_MenuOptions_PowerOff": "PAGER AUSSCHALTEN",
+
+			"PagerUI_AlertSettings": "@Shared_AlertSettings",
+
+			"PagerUI_New": "NEU",
+
+			"CapcodesUI_Title": "Pager Netzwerk",
+			"CapcodesUI_Subtitle": "Knoten zum Verbinden auswählen",
+			"CapcodesUI_Close": "@Shared_Close",
+			"CapcodesUI_SearchPlaceholder": "@Shared_SearchPlaceholder",
+			"CapcodesUI_ClearSearch": "@Shared_ClearSearch",
+			"CapcodesUI_HideUnchangeable": "Unveränderliches ausblenden",
+			"CapcodesUI_CollapseAll": "Alle zusammenklappen",
+			"CapcodesUI_ExpandAll": "Alle aufklappen",
+			"CapcodesUI_Empty": "@Shared_EmptyNodes",
+			"CapcodesUI_Apply": "Bestätigen",
+			"CapcodesUI_Reset": "Zurücksetzen",
+			"CapcodesUI_Cancel": "@Shared_Cancel",
+			"CapcodesUI_JoinedSuffix": "beigetreten",
+			"CapcodesUI_CannotLeaveHint": "Sie haben sich diesem Knoten angeschlossen, können ihn jedoch nicht verlassen.",
+
+			"PageCreatorUI_Title": "Meldung erstellen",
+			"PageCreatorUI_Subtitle": "Einheiten auswählen und Nachricht eingeben",
+			"PageCreatorUI_Close": "@Shared_Close",
+			"PageCreatorUI_AddressesLabel": "Adressen",
+			"PageCreatorUI_AddressPlaceholder": "Adressen suchen und auswählen…",
+			"PageCreatorUI_AddressSearchPlaceholder": "@Shared_SearchPlaceholder",
+			"PageCreatorUI_ClearAddressSearch": "@Shared_ClearSearch",
+			"PageCreatorUI_HideUnpageable": "Nicht alarmierbare ausblenden",
+			"PageCreatorUI_Collapse": "Schließen",
+			"PageCreatorUI_Expand": "Öffnen",
+			"PageCreatorUI_AddressTreeEmpty": "@Shared_EmptyNodes",
+			"PageCreatorUI_AddressHintPrefix": "Klicken, um Adresse auszuwählen.",
+			"PageCreatorUI_AddressHintSuffix": "+ Klick wählt alle untergeordneten Einträge aus.",
+			"PageCreatorUI_PlayersLabel": "Spieler",
+			"PageCreatorUI_PlayerPlaceholder": "Spieler auswählen...",
+			"PageCreatorUI_PlayerSearchPlaceholder": "Suche nach Spieler oder ID...",
+			"PageCreatorUI_ClearPlayerSearch": "@Shared_ClearSearch",
+			"PageCreatorUI_PlayerEmpty": "Keine Spieler zum Anzeigen.",
+			"PageCreatorUI_NatureLabel": "Einsatzart",
+			"PageCreatorUI_MessageLabel": "Nachricht",
+			"PageCreatorUI_MessagePlaceholder": "Gib deine Nachricht hier ein...",
+			"PageCreatorUI_MessageHintPrefix": "Erlaubt: A–Z, 0–9, Leer, und",
+			"PageCreatorUI_Send": "Senden",
+			"PageCreatorUI_Cancel": "@Shared_Cancel",
+			"PageCreatorUI_MoreSuffix": "mehr",
+
+			"SettingsUI_Title": "Einstellungen",
+			"SettingsUI_Subtitle": "Pager Einstellungen anpassen",
+			"SettingsUI_VolumeLabel": "Pager Lautstärke",
+			"SettingsUI_Save": "Speichern",
+			"SettingsUI_ClearStoredKVP": "Einstellungen zurücksetzen",
+			"SettingsUI_ClearStoredKVPConfirm": "Bist du sicher?",
+
+			"Command_ClientOnly": "Der Befehl kann nur auf dem Client verwendet werden.",
+			"Command_ConsoleOnly": "Der Befehl kann nur über die Konsole verwendet werden.",
+
+			"Capcodes_NotAllowedAny": "Sie haben keine Berechtigungen für irgendwelche Knoten.",
+			"Capcodes_AddressNotFound": "Es gibt keinen Knoten mit dieser Adresse.",
+			"Capcodes_AddressNotJoinable": "Die angegebene Adresse ist nicht zuweisbar – es können nur Capcodes zugewiesen werden.",
+			"Capcodes_NoPermissionForThisNode": "Sie haben keine Berechtigung, diesen Knoten zuzuweisen.",
+			"Capcodes_Added": "Hinzugefügt zu",
+			"Capcodes_Removed": "Entfernt von",
+			"Capcodes_Updated": "Pager Capcodes aktualisiert",
+
+			"CreatePage_NoPermissions": "Du hast keine Berechtigung, Seiten für Adressen oder Spieler zu erstellen.",
+			"CreatePage_PlayersButNoNatures": "Du hast die Berechtigung, Spieler zu alarmieren, aber keine Berechtigung für Alarmierungen jeglicher Art.",
+			"CreatePage_Success": "Meldung erstellt",
+			"CreatePage_Failed": "Fehler beim erstellen der Nachricht",
+
+			"General_CannotRightNow": "Die Aktion kann derzeit nicht ausgeführt werden.",
+			"General_YouDoNotHaveAPager": "Du hast keinen Pager.",
+			"General_YourPagerIsTurnedOff": "Dein Pager ist ausgeschaltet",
+			"General_PagerTurnedOn": "Dein Pager wurde angeschaltet",
+			"General_PagerTurnedOff": "Dein Pager wurde ausgeschaltet"
+		}
+		```
+
+		```json title="sounds.json" showLineNumbers
+		{
+			"alertTones": {
+				"General": {
+					"Standard #1": "audio/pager/general/general-1.mp3",
+					"Standard #2": "audio/pager/general/general-2.mp3",
+					"Standard #3": "audio/pager/general/general-3.mp3",
+					"Standard #4": "audio/pager/general/general-4.mp3",
+					"Standard #5": "audio/pager/general/general-5.mp3",
+					"Standard #6": "audio/pager/general/general-6.mp3",
+					"Standard #7": "audio/pager/general/general-7.mp3",
+					"Standard #8": "audio/pager/general/general-8.mp3",
+					"Standard #9": "audio/pager/general/general-9.mp3",
+					"Standard #10": "audio/pager/general/general-10.mp3",
+					"Standard #11": "audio/pager/general/general-11.mp3",
+					"Standard #12": "audio/pager/general/general-12.mp3",
+					"Standard #13": "audio/pager/general/general-13.mp3",
+					"Standard #14": "audio/pager/general/general-14.mp3",
+					"Standard #15": "audio/pager/general/general-15.mp3",
+					"Standard #16": "audio/pager/general/general-16.mp3"
+				},
+
+				"Escalating": {
+					"Eskalierend #1": "audio/pager/escalating/escalating-1*.mp3",
+					"Eskalierend #2": "audio/pager/escalating/escalating-2*.mp3",
+					"Eskalierend #3": "audio/pager/escalating/escalating-3*.mp3",
+					"Eskalierend #4": "audio/pager/escalating/escalating-4*.mp3",
+					"Eskalierend #5": "audio/pager/escalating/escalating-5*.mp3",
+					"Eskalierend #6": "audio/pager/escalating/escalating-6*.mp3",
+					"Eskalierend #7": "audio/pager/escalating/escalating-7*.mp3",
+					"Eskalierend #8": "audio/pager/escalating/escalating-8*.mp3",
+					"Eskalierend #9": "audio/pager/escalating/escalating-9*.mp3",
+					"Eskalierend #10": "audio/pager/escalating/escalating-10*.mp3",
+					"Eskalierend #11": "audio/pager/escalating/escalating-11*.mp3",
+					"Eskalierend #12": "audio/pager/escalating/escalating-12*.mp3",
+					"Eskalierend #13": "audio/pager/escalating/escalating-13*.mp3",
+					"Eskalierend #14": "audio/pager/escalating/escalating-14*.mp3",
+					"Eskalierend #15": "audio/pager/escalating/escalating-15*.mp3",
+					"Eskalierend #16": "audio/pager/escalating/escalating-16*.mp3"
+				}
+			},
+
+			"defaultAlertTones": {
+				"Emergency": "Eskalierend #12",
+				"NonEmergency": "Standard #5",
+				"Administrative": "Standard #8"
+			},
+
+			"vibrations": {
+				"OneShot": {
+					"Lang": "audio/pager/vibrate/long-vibrate.mp3",
+					"Kurz": "audio/pager/vibrate/short-vibrate.mp3"
+				},
+
+				"Looping": {
+					"Loop": "audio/pager/vibrate/vibrate.mp3"
+				}
+			}
+		}
+		```
+	</TabItem>
 </Tabs>
