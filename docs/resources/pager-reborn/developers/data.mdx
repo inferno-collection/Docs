@@ -1,0 +1,98 @@
+---
+sidebar_position: 10
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Data Structures
+
+This page documents the data structures used by PR exports and API payloads.
+
+***
+
+## Page Request (Server)
+
+Used by:
+- [`newPage` server export](exports/server.md#create-new-page)
+- [`POST /page` API endpoint](api.mdx#create-a-new-page)
+
+```lua
+request.addresses
+request.players
+request.nature
+request.body
+```
+
+<Tabs>
+	<TabItem value="request.addresses" label="addresses">
+		<p>`string[]`</p>
+		<p>List of capcodes/addresses to send the page to.</p>
+		<p>Example: <code>\{ "emg.fire.bc", "emg.ems.bc" \}</code></p>
+	</TabItem>
+
+	<TabItem value="request.players" label="players">
+		<p>`number[]`</p>
+		<p>Optional list of player server IDs to directly page.</p>
+		<p>Example: <code>\{ 1, 2, 3 \}</code></p>
+	</TabItem>
+
+	<TabItem value="request.nature" label="nature">
+		<p><code>PageNature</code> as lowercase <code>string</code> or enum <code>number</code></p>
+		<p>The page type/nature.</p>
+		<p>Example: <code>administrative</code> or <code>2</code></p>
+	</TabItem>
+
+	<TabItem value="request.body" label="body">
+		<p>`string`</p>
+		<p>Page message body.</p>
+		<p>Must not be empty and must respect the configured max length.</p>
+	</TabItem>
+</Tabs>
+
+***
+
+## Local Page Request (Client)
+
+Used by:
+- [`newLocalPage` client export](exports/client.md#create-new-local-page)
+
+```lua
+request.nature
+request.body
+```
+
+<Tabs>
+	<TabItem value="localrequest.nature" label="nature">
+		<p><code>PageNature</code> as lowercase <code>string</code> or enum <code>number</code></p>
+		<p>The page type/nature.</p>
+		<p>Example: <code>administrative</code> or <code>2</code></p>
+	</TabItem>
+
+	<TabItem value="localrequest.body" label="body">
+		<p>`string`</p>
+		<p>Page message body.</p>
+	</TabItem>
+</Tabs>
+
+***
+
+## Page Nature
+
+Used by:
+- [`newPage` server export](exports/server.md#create-new-page)
+- [`newLocalPage` client export](exports/client.md#create-new-local-page)
+- [`POST /page` API endpoint](api.mdx#create-a-new-page)
+
+```lua
+nature
+```
+
+- `emergency` or `0`
+- `nonemergency` or `1`
+- `administrative` or `2`
+
+:::tip
+Even if the nature types are renamed in the language file, they will still need to be written as above.
+If you plan to rename the natures, we suggest using the enum values to avoid confusion.
+:::
