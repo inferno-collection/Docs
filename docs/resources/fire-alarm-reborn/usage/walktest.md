@@ -14,7 +14,7 @@ To enable WalkTest, access a Control Panel, enter the passcode if required, then
 
 ## Using WalkTest
 
-So long as WalkTest is enabled, simpling activating [Components](components.md) as normal will return the audio response expected.
+So long as WalkTest is enabled, simply activating [Components](components.md) as normal will return the audio response expected.
 
 ## Detector Tester Spray Can
 

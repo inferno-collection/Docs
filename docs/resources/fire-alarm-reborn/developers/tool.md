@@ -124,7 +124,7 @@ If it says `Hide a Prop`, then this will unhide the selected prop.
 
 This changes between all the prop types, as well as the `Hide a Prop` option.
 
-#### Tilda ( ` )
+#### Tilde ( ` )
 
 This creates a new fire Alarm System. When creating a system, you need to be roughly at the center or middle of the building you are using, as your current location is saved.
 
@@ -170,7 +170,7 @@ On the same line, within the `{ }`, add `postalcode = "123"`, where `123` is you
 system { name = "Ammu-Nation", location = "Popular Street", position = vec3(0, 0, 0), postalcode = "123" }
 ```
 
-Postal codes are used in the Sonoran CAD hook, and can be access from any script via `.postalcode`. [See here](data.mdx#alarm-system) for more info.
+Postal codes are used in the Sonoran CAD hook, and can be accessed from any script via `.postalcode`. [See here](data.mdx#alarm-system) for more info.
 
 ## Adding AOP
 An AOP (Area of Patrol) can be added to an Alarm System on a per-system basis, and requires manually adding an extra value to each desired system in a draft file.
@@ -201,4 +201,4 @@ Some example use cases for custom data include:
 - The type of building
 - Etc.
 
-Custom data can be access from any script via `.customdata`. [See here](data.mdx#alarm-system) for more info.
+Custom data can be accessed from any script via `.customdata`. [See here](data.mdx#alarm-system) for more info.

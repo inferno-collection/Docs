@@ -131,7 +131,7 @@ If it says `Hide a Prop`, then this will unhide the selected prop.
 
 This changes between all the prop types, as well as the `Hide a Prop` option.
 
-#### Tilda ( ` )
+#### Tilde ( ` )
 
 This creates a new station location.  
 You must do this before you are able to place any props.
@@ -216,7 +216,7 @@ Some example use cases for custom data include:
 - If the station should be alerted from other scripts
 - Etc.
 
-Custom data can be access from any script via `.customdata`. [See here](data.mdx#station-location) for more info.
+Custom data can be accessed from any script via `.customdata`. [See here](data.mdx#station-location) for more info.
 
 ## Changing Door Speed
 Door opening/closing speed can be changed on a per-door basis, and requires manually adding an extra value to each desired door in a draft file.

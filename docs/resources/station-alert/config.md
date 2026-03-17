@@ -741,7 +741,7 @@ set ic_sa_secondsTillLightsReset "150"
 # Close doors once driven through
 setr ic_sa_closeDoorsOnDriveThrough "true"
 
-# Close all doors when alert timesout
+# Close all doors when alert times out
 set ic_sa_closeAllDoorsOnTimeout "false"
 
 # Addon traffic lights should always flash yellow instead of turning off
@@ -818,7 +818,7 @@ setr ic_sa_doorSpeed "0.15"
 # NUI Volume
 setr ic_sa_nuiVolume "5"
 
-# Mutliple 3D Audio sources
+# Multiple 3D Audio sources
 setr ic_sa_realisticAudio "true"
 
 # The model to use for the wall lights

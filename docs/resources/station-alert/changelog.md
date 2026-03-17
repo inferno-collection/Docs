@@ -95,7 +95,7 @@ Permission required to rename doors was changed in this version, see below for d
   - Instead of always playing the default tone, players can now select which tone to play.
 
 **Fixed**:
-- Regression in [SA Tool](developers/tool.md) that preventing the removal of existing [Hiddens](developers/tool.md#hidden-props).
+- Regression in [SA Tool](developers/tool.md) that prevented the removal of existing [Hiddens](developers/tool.md#hidden-props).
 
 ### v1.2.0 - 08/15/2025
 **Added**:
@@ -415,7 +415,7 @@ Significant changes to [`ic_sa_language`](config.md#language) were made in this 
 - Improved logic that sends location data to the client.
 
 **Fixed**:
-- Bug in the third-eye code that preventing interaction with most Computers and Door Controls.
+- Bug in the third-eye code that prevented interaction with most Computers and Door Controls.
 
 ### v1.0.3 - 04/17/2025
 **Added**:

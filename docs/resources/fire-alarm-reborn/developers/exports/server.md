@@ -59,7 +59,7 @@ getAlarmSystemComponents
 	- The ID of an Alarm System.
 
 #### Return Value
-[`AlarmSystemCompontents`](../data.mdx#alarm-system-components) | `null`
+[`AlarmSystemComponents`](../data.mdx#alarm-system-components) | `null`
 
 ### Get System Passcode
 Use this export to get an Alarm System's passcode.
