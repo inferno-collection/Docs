@@ -17,9 +17,9 @@ SA has a lot to offer Developers, but the bare minimum required to build a funct
 
 ## Creating Station Locations
 
-Creating Station Locations is the proces of placing the required props for SA to work, as well as linking existing doors fire station MLOs so they open and close as required.
+Creating Station Locations is the process of placing the required props for SA to work, as well as linking existing doors in fire station MLOs so they open and close as required.
 
-The process is make easy by the SA Tool, an in-game feature that allows Server Owners or Developers to easily create and edit drafts before deploying them to their live servers.
+The process is made easy by the SA Tool, an in-game feature that allows Server Owners or Developers to easily create and edit drafts before deploying them to their live servers.
 
 For more information on the [SA Tool](tool.md), [see here](tool.md).
 

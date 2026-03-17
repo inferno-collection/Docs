@@ -38,10 +38,10 @@ Any Base Game GTA V incendiary/explosive will trigger both Detectors and Sprinkl
 
 ### Fire Scripts
 
-So long as the server runs a Fire Script that is [compatible](../index.md#fire-script-compatibility-list) with FAR, smoke/fire from Fire Scripts will trigger Detectors and Sprinklers, and where indicated on our [compatibility chart](../index.md#fire-script-compatibility-list) as being Sprinkler compatible, FAR Sprinklers will put our Fire Script fires.
+So long as the server runs a Fire Script that is [compatible](../index.md#fire-script-compatibility-list) with FAR, smoke/fire from Fire Scripts will trigger Detectors and Sprinklers, and where indicated on our [compatibility chart](../index.md#fire-script-compatibility-list) as being Sprinkler compatible, FAR Sprinklers will put out Fire Script fires.
 
 :::note
-Some Fire Scripts have "smoke" options as well as fires, however, compatability was determined off of whether FAR could successfully detect fires, not smoke. FAR will correctly detect smoke only (i.e. Sprinklers will not activate) in some Fire Scripts, however, in others it may not react at all. Please report these scripts to us, and we will do our best to work with the respective Fire Script authors to add better compatability.
+Some Fire Scripts have "smoke" options as well as fires, however, compatibility was determined off of whether FAR could successfully detect fires, not smoke. FAR will correctly detect smoke only (i.e. Sprinklers will not activate) in some Fire Scripts, however, in others it may not react at all. Please report these scripts to us, and we will do our best to work with the respective Fire Script authors to add better compatibility.
 :::
 
 Where a Detector has been triggered, for an Alarm System to be fully reset, the smoke or fire must be cleared around the Detector.
