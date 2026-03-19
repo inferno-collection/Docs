@@ -10,7 +10,7 @@ Want to be rewarded for finding and reporting vulnerabilities in our software? Y
 
 The **Inferno Collection Bug Bounty Program** is open to both existing clients and members of the public. We provide rewards for responsible disclosure of security issues in our supported FiveM resources and web services.
 
-> 📢 **Submissions must be made through our [Discord server](https://discord.gg/5GZ3Jzt).** Create a private thread in the #bug-bounty channel to get started.
+> 📢 **Submissions must be made through our [Discord server](https://discord.gg/5GZ3Jzt).** Create a private thread in the #general-support channel to get started.
 
 ---
 
@@ -89,7 +89,7 @@ We are committed to working with ethical researchers. If you comply with this po
 To submit a report:
 
 1. Join our [Discord](https://discord.gg/5GZ3Jzt).
-2. Navigate to [`#general`](https://discord.com/channels/346941064344764416/388981595928788992).
+2. Navigate to [`#general-support`](https://discord.com/channels/346941064344764416/388981595928788992).
 3. Create a **private thread** and include:
 	- A detailed description of the issue
 	- Steps to reproduce

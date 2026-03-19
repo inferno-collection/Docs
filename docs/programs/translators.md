@@ -38,7 +38,7 @@ No need to own or even download the resources!
 
 ### Submissions
 
-All submissions must be made via a private thread in [`#general`](https://discord.com/channels/346941064344764416/388981595928788992) in our [Discord](https://discord.gg/5GZ3Jzt).  
+All submissions must be made via a private thread in [`#general-support`](https://discord.com/channels/346941064344764416/388981595928788992) in our [Discord](https://discord.gg/5GZ3Jzt).  
 All work must be original – no Google Translate, ChatGPT, etc.
 
 1. Review [this page](../translations) for the list of resources that can be translated.
