@@ -27,7 +27,7 @@ IF uses convars for config values. For information on how to correctly install t
 #### `ic_if_language`
 This value is the short code for the language you'd like to use.  
 You can check the list of available language by viewing [this page](../../translations).  
-If your language has not been translated yet, feel free to check out our [Translation program](../../programs/translators.md#want-to-help-us-translate-a-resources), where you get rewarded for translating resources!
+If your language has not been translated yet, feel free to check out our [Translation program](../../programs/translators.md#want-to-help-us-translate-a-resource), where you get rewarded for translating resources!
 
 The default value is `en-us` for English.
 
