@@ -8,25 +8,25 @@ Pager Reborn uses convars for config values. For information on how to correctly
 
 ## Value List
 
-|                                       Name                                        |  Default Value   |
-|:---------------------------------------------------------------------------------:|:----------------:|
-|                            [`ic_pr_language`](#language)                          |     `en-us`      |
-|                      [`ic_pr_statebagPrefix`](#statebag-prefix)                   |       `""`       |
-|                       [`ic_pr_kickCheaters`](#kick-cheaters)                      |     `false`      |
-|                        [`ic_pr_maxToneTime`](#max-tone-time)                      |       `15`       |
-|                [`ic_pr_globalDefaultAddresses`](#global-default-addresses)        |       `[]`       |
-|                             [`ic_pr_timezone`](#timezone)                         | `Australia/Melbourne` |
-|                          [`ic_pr_timezoneTag`](#timezone-tag)                     |     `en-AU`      |
-|                [`ic_pr_playersStartWithPager`](#players-start-with-pager)         |      `true`      |
-|               [`ic_pr_maxAddressesPerPage`](#max-addresses-per-page)              |       `25`       |
-|                 [`ic_pr_maxPageBodyLength`](#max-page-body-length)                |      `256`       |
-|                [`ic_pr_timeBetweenMessages`](#time-between-messages)              |       `2`        |
-|                    [`ic_pr_sortMessageOrder`](#sort-message-order)                |      `true`      |
-|                 [`ic_pr_suffixWithShortCode`](#suffix-with-short-code)            |      `true`      |
-|                      [`ic_pr_httpAccessToken`](#http-access-token)                |       `""`       |
-|                        [`ic_pr_whitelistedIps`](#api-whitelist)                   |   *See Below*    |
-|                          [`ic_pr_command`](#alias-command)                        |     `pager`      |
-|                              [`ic_pr_debug`](#debug)                              |     `false`      |
+|                            Name                             |     Default Value     |
+|:-----------------------------------------------------------:|:---------------------:|
+|                [`ic_pr_language`](#language)                |        `en-us`        |
+|         [`ic_pr_statebagPrefix`](#statebag-prefix)          |         `""`          |
+|           [`ic_pr_kickCheaters`](#kick-cheaters)            |        `false`        |
+|            [`ic_pr_maxToneTime`](#max-tone-time)            |         `15`          |
+| [`ic_pr_globalDefaultAddresses`](#global-default-addresses) |         `[]`          |
+|                [`ic_pr_timezone`](#timezone)                | `Australia/Melbourne` |
+|            [`ic_pr_timezoneTag`](#timezone-tag)             |        `en-AU`        |
+| [`ic_pr_playersStartWithPager`](#players-start-with-pager)  |        `true`         |
+|   [`ic_pr_maxAddressesPerPage`](#max-addresses-per-page)    |         `25`          |
+|     [`ic_pr_maxPageBodyLength`](#max-page-body-length)      |         `256`         |
+|    [`ic_pr_timeBetweenMessages`](#time-between-messages)    |          `2`          |
+|       [`ic_pr_sortMessageOrder`](#sort-message-order)       |        `true`         |
+|   [`ic_pr_suffixWithShortCode`](#suffix-with-short-code)    |        `true`         |
+|        [`ic_pr_httpAccessToken`](#http-access-token)        |         `""`          |
+|          [`ic_pr_whitelistedIps`](#api-whitelist)           |      *See Below*      |
+|              [`ic_pr_command`](#alias-command)              |        `pager`        |
+|                   [`ic_pr_debug`](#debug)                   |        `false`        |
 
 ## Values Explained
 
@@ -83,6 +83,10 @@ A full list of timezone tags can be found [here](https://github.com/TiagoDanin/L
 ### Players Start with Pager
 #### `ic_pr_playersStartWithPager`
 If `true`, players join the server already having a pager. If `false`, pagers will need to be manually provided via exports.
+
+:::warning
+This value is superseded by the [`UsePager`](#use-pager) permission. Even if [`ic_pr_playersStartWithPager`](#players-start-with-pager) is `true`, players without the [`UsePager`](#use-pager) permission will not be able to open the Pager UI.
+:::
 
 ### Max Addresses Per Page
 #### `ic_pr_maxAddressesPerPage`
@@ -144,6 +148,14 @@ If this value is `true`, extra debug logs are written to both client and server 
 
 ## Permissions
 Pager Reborn uses Ace permissions.
+
+### Use Pager
+#### `InfernoPagerReborn.UsePager`
+Allows users to open the Pager UI.
+
+:::warning
+This permission supersedes [`ic_pr_playersStartWithPager`](#players-start-with-pager). If players lack this permission, regardless of [`ic_pr_playersStartWithPager`](#players-start-with-pager), they will not be able to open the Pager UI.
+:::
 
 ### Page Emergency
 #### `InfernoPagerReborn.PageEmergency`
