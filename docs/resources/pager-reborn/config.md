@@ -144,7 +144,125 @@ For example, setting it to `pr` would allow `/pr`.
 #### `ic_pr_debug`
 If this value is `true`, extra debug logs are written to both client and server consoles. Not suggested at all for production use.
 
----
+***
+
+## Sound Configuration
+Pager Reborn uses a `sounds.json` file to define alert tone names and file paths.
+
+### Alert Tones
+There are two types of alert tones:
+- General
+- Escalating
+
+For both types, the name (e.g., `General #1`) can be anything (and in any language), but the object names (`General` and `Escalating`) must not be changed.
+
+#### General Tones
+General Tones are sounds that loop continuously while playing.
+For example, an activation might look something like this:
+
+```
+Activation -> Play Sound -> Play Sound -> Play Sound -> Page Acknowledged 
+```
+
+While these sounds can be anything, because they loop, we suggest using sounds that loop properly.
+
+#### Escalating Tones
+Escalating Tones are a set of two sounds: the first sound plays, then the second sound loops continuously.
+For example, an activation might look something like this:
+
+```
+Activation -> Play Sound A -> Play Sound B -> Play Sound B -> Play Sound B -> Page Acknowledged 
+```
+
+Escalating tone file names must contain a `*`, which will be replaced with either `a` or `b` depending on what stage of the sound is being played. This means you must have both an `a` and `b` sound file. If you only have one sound file, you should add it as a [General Tone](#general-tones) instead.
+
+### Default Alert Tones
+The tones defined in `defaultAlertTones` determine the default tone used for each [Page Nature](developers/data.mdx#page-nature), until a player overrides it.  
+The values should match a tone name defined in [`alertTones`](#alert-tones).
+
+:::note
+Even if you have renamed the page natures in your language file, you must not change them here.  
+I.e., do not rename `Emergency`, `NonEmergency`, and `Administrative`.
+:::
+
+### Vibrations
+There are two types of vibrations:
+- One-Shots
+- Looping
+
+For both types, the name (e.g., `General #1`) can be anything (and in any language), but the object names (`OneShot` and `Looping`) must not be changed.
+
+#### One-Shots
+One-Shot Vibrations are sounds that play once and then stop.
+
+#### Looping
+Looping Vibrations are sounds that loop continuously while playing.
+
+### Default `sounds.json`
+Below is the default `sounds.json` file, loaded in the resource's root directory.
+
+```json showLineNumbers title="sounds.json"
+{
+  "alertTones": {
+    "General": {
+      "General #1": "audio/pager/general/general-1.mp3",
+      "General #2": "audio/pager/general/general-2.mp3",
+      "General #3": "audio/pager/general/general-3.mp3",
+      "General #4": "audio/pager/general/general-4.mp3",
+      "General #5": "audio/pager/general/general-5.mp3",
+      "General #6": "audio/pager/general/general-6.mp3",
+      "General #7": "audio/pager/general/general-7.mp3",
+      "General #8": "audio/pager/general/general-8.mp3",
+      "General #9": "audio/pager/general/general-9.mp3",
+      "General #10": "audio/pager/general/general-10.mp3",
+      "General #11": "audio/pager/general/general-11.mp3",
+      "General #12": "audio/pager/general/general-12.mp3",
+      "General #13": "audio/pager/general/general-13.mp3",
+      "General #14": "audio/pager/general/general-14.mp3",
+      "General #15": "audio/pager/general/general-15.mp3",
+      "General #16": "audio/pager/general/general-16.mp3"
+    },
+
+    "Escalating": {
+      "Escalating #1": "audio/pager/escalating/escalating-1*.mp3",
+      "Escalating #2": "audio/pager/escalating/escalating-2*.mp3",
+      "Escalating #3": "audio/pager/escalating/escalating-3*.mp3",
+      "Escalating #4": "audio/pager/escalating/escalating-4*.mp3",
+      "Escalating #5": "audio/pager/escalating/escalating-5*.mp3",
+      "Escalating #6": "audio/pager/escalating/escalating-6*.mp3",
+      "Escalating #7": "audio/pager/escalating/escalating-7*.mp3",
+      "Escalating #8": "audio/pager/escalating/escalating-8*.mp3",
+      "Escalating #9": "audio/pager/escalating/escalating-9*.mp3",
+      "Escalating #10": "audio/pager/escalating/escalating-10*.mp3",
+      "Escalating #11": "audio/pager/escalating/escalating-11*.mp3",
+      "Escalating #12": "audio/pager/escalating/escalating-12*.mp3",
+      "Escalating #13": "audio/pager/escalating/escalating-13*.mp3",
+      "Escalating #14": "audio/pager/escalating/escalating-14*.mp3",
+      "Escalating #15": "audio/pager/escalating/escalating-15*.mp3",
+      "Escalating #16": "audio/pager/escalating/escalating-16*.mp3"
+    }
+  },
+
+  "defaultAlertTones": {
+    "Emergency": "Escalating #12",
+    "NonEmergency": "General #5",
+    "Administrative": "General #8"
+  },
+
+  "vibrations": {
+    "OneShot": {
+      "Long": "audio/pager/vibrate/long-vibrate.mp3",
+      "Short": "audio/pager/vibrate/short-vibrate.mp3"
+    },
+
+    "Looping": {
+      "Loop": "audio/pager/vibrate/vibrate.mp3"
+    }
+  }
+}
+```
+
+***
 
 ## Permissions
 Pager Reborn uses Ace permissions.
@@ -178,7 +296,7 @@ By default, this permission is only granted to admins (`group.admin`).
 Even with `InfernoPagerReborn.PageAnyPlayer`, users will still need to be granted access to one or more of the three page types above.
 :::
 
----
+***
 
 ## Default Config File
 ```cfg showLineNumbers title="config.cfg"
