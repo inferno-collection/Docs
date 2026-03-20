@@ -23,9 +23,14 @@ Not all systems are in scope. Below is a list of what currently qualifies.
 - **FiveM Resources**
 	- Fire Alarm: Reborn
 	- Station Alert
+    - Hands-Free Siren
+    - Torches
+    - Spotlight
+    - IFlares
 
 - **Web Services**
 	- Inferno Collection API
+    - Inferno Collection Store
 
 ### 🚫 Out of Scope
 

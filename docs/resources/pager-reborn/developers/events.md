@@ -31,6 +31,75 @@ Inferno-Collection:Server:PagerReborn:Editable:NewPage
 
 ***
 
+### Create Page - **Server**
+Allows other resources to request that Pager Reborn create a new page.
+
+:::warning Work in Progress
+This event is a work in progress and may change without notice.
+:::
+
+#### Event Name
+```
+Inferno-Collection:Server:PagerReborn:Editable:CreatePage
+```
+
+#### Parameters
+
+- `data` - `table`
+	- Request payload used to build the page.
+	- `addresses` - `table` (optional)
+		- Capcodes/addresses to send the page to.
+	- `players` - `table` (optional)
+		- Player IDs to send the page to.
+	- `coords` - `table` (optional)
+		- Coordinates payload.
+        - NOTE: Currently unused
+	- `nature` - `string` (optional)
+		- [Page Nature](data.mdx#page-nature).
+        - Defaults to `emergency`.
+	- `message` - `string` (optional)
+		- Explicit page body text.
+	- `description` - `string` (optional)
+		- Used for body text if `message` is not provided.
+	- `location` - `string` (optional)
+		- Used for body text if `message` is not provided.
+	- `type` - `string` (optional)
+		- Extra call type value from source data.
+        - NOTE: Currently unused
+	- `extra` - `table` (optional)
+		- Additional passthrough data for custom usage.
+        - NOTE: Currently unused
+
+At least one target (`addresses` or `players`) must currently be provided to create a page.
+
+#### Example One
+```lua
+TriggerEvent("Inferno-Collection:Server:PagerReborn:Editable:CreatePage", {
+	addresses = {"emg.fire.bc"},
+	message = "Station 7, reported house fire, 123 Main St."
+})
+```
+
+#### Example Two
+```lua
+TriggerEvent("Inferno-Collection:Server:PagerReborn:Editable:CreatePage", {
+	players = {1},
+	nature = "administrative",
+	message = "Gear ready for collection at Fire Station 7"
+})
+```
+
+#### Example Three
+```lua
+TriggerEvent("Inferno-Collection:Server:PagerReborn:Editable:CreatePage", {
+	addresses = {"emg.fire.bc"},
+	description = "Structure Fire",
+	location = "123 Main St."
+})
+```
+
+***
+
 ### Player Capcodes Changed - **Server**
 Fired when a player's capcodes/addresses are changed.
 
