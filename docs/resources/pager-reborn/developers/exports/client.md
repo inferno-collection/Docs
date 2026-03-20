@@ -68,6 +68,25 @@ exports["inferno-pager-reborn"]:setPagerTurnedOff(true)
 #### Return Value
 `void`
 
+### Toggle Pager
+Use this export to toggle the local player's Pager UI.
+
+#### Export Name
+```
+togglePager
+```
+
+#### Parameters
+*None*
+
+#### Example
+```lua
+exports["inferno-pager-reborn"]:togglePager()
+```
+
+#### Return Value
+`void`
+
 ***
 
 ## Paging
