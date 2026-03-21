@@ -287,6 +287,17 @@ Allows users to send non-emergency page messages.
 #### `InfernoPagerReborn.PageAdministrative`
 Allows users to send administrative page messages.
 
+### Page Any Address
+#### `InfernoPagerReborn.PageAnyAddress`
+Allows users to page any address.  
+By default, this permission is only granted to admins (`group.admin`).
+
+:::note
+Even with `InfernoPagerReborn.PageAnyAddress`, users will still need to be granted access to one or more of the three page types above.
+:::
+
+***
+
 ### Page Any Player
 #### `InfernoPagerReborn.PageAnyPlayer`
 Allows users to page any player (bypass capcodes).  

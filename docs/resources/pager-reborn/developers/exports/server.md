@@ -73,6 +73,59 @@ local hasPager = exports["inferno-pager-reborn"]:hasPager(player)
 
 ***
 
+## Role Management
+
+### Get Player Roles
+Use this export to get the role names currently assigned to a player.
+
+#### Export Name
+```
+getPlayerRoles
+```
+
+#### Parameters
+- `player` - `string`
+	- The player's server ID as a string.
+
+#### Example
+```lua
+local roles = exports["inferno-pager-reborn"]:getPlayerRoles(player)
+```
+
+#### Return Value
+`table`
+	- A list of role names (`string`).
+	- Returns an empty list if the player is invalid or not found.
+
+### Set Player Roles
+Use this export to replace a player's role assignments.
+
+#### Export Name
+```
+setPlayerRoles
+```
+
+#### Parameters
+- `player` - `string`
+	- The player's server ID as a string.
+- `roles` - `table`
+	- A list of role names (`string`) to assign to the player.
+	- Every role name must already exist in the permissions file.
+
+:::tip
+To remove all roles, pass an empty table `{}` for `roles`.
+:::
+
+#### Example
+```lua
+exports["inferno-pager-reborn"]:setPlayerRoles(player, {"Dispatch", "EMS"})
+```
+
+#### Return Value
+`void`
+
+***
+
 ## Paging
 
 ### Create New Page

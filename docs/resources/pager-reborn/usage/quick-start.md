@@ -7,7 +7,7 @@ sidebar_position: 0
 This page serves as a quick start guide to Pager Reborn.
 
 ## Open the Pager
-Type `/pager` to open Pager Reborn. You can also set a keybind:
+Type `/pager` to open the Pager UI. You can also set a keybind:
 
 Pause Menu → Settings → Key Bindings → FiveM → "Open Pager" → Assign a key.  
 Once you have assigned a key, you can use it like so:
@@ -17,7 +17,7 @@ Once you have assigned a key, you can use it like so:
 - **Long Hold**: Holding the key for more than ~2 seconds will open the Pager but allow you to keep moving and looking around.
   - The Pager will remain open until you release the key.
 
-With the Pager open, pressing the `Home` key will toggle Zoomed View. When not zoomed, the Pager can be dragged around the screen with the mouse, and if `Left Shift` + `Home` is pressed, the Pager will return to the default position in the bottom right of the screen.
+With the Pager open, pressing the `Home` key will toggle Big Mode. When not in Big Mode, the Pager can be dragged around the screen with the mouse and zoomed in or out with the mouse scroll wheel. If `Left Shift` + `Home` is pressed, the Pager will return to the default position in the bottom right of the screen. Pager position and zoom level are saved across sessions.
 
 ## Joining Capcodes
 Type `/pager capcodes` to open the Capcode Selection UI.
