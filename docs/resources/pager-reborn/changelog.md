@@ -8,6 +8,24 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.0.*
 
+### v1.0.3 - 03/21/2026
+
+**Added**:
+- Scroll wheel zoom in/out support for the Pager UI.
+  - Like with position, zoom level is saved between sessions.
+- [`PageAnyAddress`](config.md#page-any-address) Ace Permission. For more info, [see here](config.md#page-any-address).
+  - Players with this permission can page any address.
+
+**Changed**:
+- Pager UI can now be dragged using the Pager buttons.
+  - Previously, all drag events were ignored if started from a button.
+
+**Fixed**:
+- `editable` files being escrowed by accident.
+- [`/pager capcodes`](usage/commands.md#pager-capcodes) and [`/pager new`](usage/commands.md#pager-new) having no nodes to select from.
+- Some client-side-only commands being accessible from the server console.
+- Oversight where invalid player server IDs could be passed to server exports.
+
 ### v1.0.2 - 03/20/2026
 
 **Added**:
