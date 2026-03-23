@@ -17,6 +17,7 @@ Pager Reborn uses convars for config values. For information on how to correctly
 | [`ic_pr_globalDefaultAddresses`](#global-default-addresses) |         `[]`          |
 |                [`ic_pr_timezone`](#timezone)                | `Australia/Melbourne` |
 |            [`ic_pr_timezoneTag`](#timezone-tag)             |        `en-AU`        |
+|       [`ic_pr_inventorySupport`](#inventory-support)        |        `false`        |
 | [`ic_pr_playersStartWithPager`](#players-start-with-pager)  |        `true`         |
 |   [`ic_pr_maxAddressesPerPage`](#max-addresses-per-page)    |         `25`          |
 |     [`ic_pr_maxPageBodyLength`](#max-page-body-length)      |         `256`         |
@@ -79,6 +80,22 @@ A full list of timezones can be found [here](https://gist.github.com/diogocapela
 #### `ic_pr_timezoneTag`
 This value controls the locale tag used when formatting date/time text.  
 A full list of timezone tags can be found [here](https://github.com/TiagoDanin/Locale-Codes?tab=readme-ov-file#locale-list) (see the `tag` column).
+
+### Inventory Support
+#### `ic_pr_inventorySupport`
+When this value is `true`, inventory support for resources such as [OxInventory](https://overextended.dev/ox_inventory) and [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory) will be enabled.
+
+:::note
+You must also uncomment/edit the `editable/client/inventory.lua` and `editable/server/inventory.lua` files in addition to setting this value to `true` in order for inventory resources to work.
+Code inside `editable/client/inventory.lua` and `editable/server/inventory.lua` will not run unless `ic_pr_inventorySupport` is `true`.
+:::
+
+Inside the `editable/client/inventory.lua` and `editable/server/inventory.lua` files, server owners/developers can either uncomment the code for [OxInventory](https://overextended.dev/ox_inventory) or [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory), or add their own inventory code as required.
+Reach out in [Discord](https://inferno.codes/discord) if you need help adding other resources.
+
+:::tip
+The "items.lua" entry for both Ox and QB are located at the top of `editables/server/inventory.lua`, and 100x100 png images are located in the download root directory.
+:::
 
 ### Players Start with Pager
 #### `ic_pr_playersStartWithPager`

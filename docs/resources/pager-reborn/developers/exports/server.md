@@ -71,6 +71,32 @@ local hasPager = exports["inferno-pager-reborn"]:hasPager(player)
 #### Return Value
 `bool`
 
+### Get Pager Turned Off
+Use this export to check whether a player's pager is currently turned off.
+
+#### Export Name
+```
+getPagerTurnedOff
+```
+
+#### Parameters
+- `player` - `string`
+	- The player's server ID as a string.
+
+#### Example
+```lua
+local isTurnedOff = exports["inferno-pager-reborn"]:getPagerTurnedOff(player)
+```
+
+#### Return Value
+`bool`
+	- Returns `false` if the player is invalid, not found, or has no pager.
+
+:::tip
+The player controls whether their pager is turned off. To turn it off, use the [`setPagerTurnedOff`](client#set-pager-turned-off) client export.  
+Alternatively, use the [`givePager`](#give-pager) and [`takePager`](#take-pager) server exports to give or take a pager from a player.
+:::
+
 ***
 
 ## Role Management
