@@ -360,9 +360,14 @@ setr ic_pr_maxToneTime 15
 # Addresses that *all* players will be forced to join
 set ic_pr_globalDefaultAddresses []
 
+# Timezone for pager - see docs for more info
 setr ic_pr_timezone "Australia/Melbourne"
 
+# Timezone Tag for pager - see docs for more info
 setr ic_pr_timezoneTag "en-AU"
+
+# Enables inventory support
+setr ic_pr_inventorySupport "false"
 
 ### Advanced ###
 ################
@@ -403,11 +408,14 @@ setr ic_pr_debug "false"
 ### Permissions ###
 ###################
 
+add_ace builtin.everyone "InfernoPagerReborn.UsePager" allow
+
 add_ace builtin.everyone "InfernoPagerReborn.PageEmergency" allow
 add_ace builtin.everyone "InfernoPagerReborn.PageNonEmergency" allow
 add_ace builtin.everyone "InfernoPagerReborn.PageAdministrative" allow
 
 add_ace group.admin "InfernoPagerReborn.PageAnyPlayer" allow
+add_ace group.admin "InfernoPagerReborn.PageAnyAddress" allow
 
 ##########################
 ### ConVar Permissions ###
