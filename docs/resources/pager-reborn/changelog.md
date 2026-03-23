@@ -8,6 +8,16 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.0.*
 
+### v1.0.4 - 03/23/2026
+
+**Added**:
+- [`getPagerTurnedOff`](developers/exports/server.md#get-pager-turned-off) server export. For more info, [see here](developers/exports/server.md#get-pager-turned-off).
+  - Check from the server is a player's pager is turned off.
+- Inventory support for [OxInventory](https://overextended.dev/ox_inventory) and [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory). For more info, [see here](config.md#inventory-support).
+
+**Fixed**:
+- Maximum body length check incorrectly reading from [`ic_pr_maxAddressesPerPage`](config.md#max-addresses-per-page) instead of [`ic_pr_maxPageBodyLength`](config.md#max-page-body-length).
+
 ### v1.0.3 - 03/21/2026
 
 **Added**:
