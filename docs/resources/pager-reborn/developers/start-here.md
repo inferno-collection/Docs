@@ -44,9 +44,14 @@ When adding player identifiers to a role (or player override), ensure to include
 > GOOD: `license:749dd9f14e664f89164c5106d11a35932caf26e1`  
 > BAD: `749dd9f14e664f89164c5106d11a35932caf26e1`
 
+The "Name" field in the table is for your reference only, to help you tell players apart, and does not need to be their username.
+
 For information on what each option does, see the 'Help' button in the top-right corner of the editor.  
 When finished, ensure to click 'Export Permissions' to download your `permissions.lua` file.  
 This file needs to go in the Pager Reborn resource folder.
+
+### Ace Permissions
+Roles support an optional "Ace Permission" input. When the server loads, this will automatically assign the Pager Role to any players with the matching Ace Permission. For example, you might have the principal `group.fire_chiefs`. You could then create an ace called `all_fire_calls` and assign it to that group (`add_ace group.fire_chiefs "all_fire_calls" allow`). In the Ace Permission field, you would enter `all_fire_calls` and assign all Fire capcodes to that role. As a result, any player in `group.fire_chiefs` will automatically receive all Fire capcodes.
 
 ## Deciding how to create Pages.
 
