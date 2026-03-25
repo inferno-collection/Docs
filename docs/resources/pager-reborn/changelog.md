@@ -8,6 +8,26 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.0.*
 
+### v1.0.5 - 03/25/2026
+
+**Added**:
+- Ability to tie Pager Roles directly to Ace Principals. For more info, [see here](developers/start-here.md#ace-permissions).
+- **Pager Network Designer Additions**:
+  - Permissions Editor
+    - Ability to add player names with identifiers, so you can better tell apart players.
+    - Optional "Ace Permission" input for roles to add the Pager Role to players with the matching Ace Permission in server.
+    - "Duplicate" and "Delete" buttons for Roles and Players.
+
+**Changed**:
+- [`/pager health`](usage/commands.md#health-check) output to include capcode assignments for players with pagers.
+  - Allows you to see what capcodes users are assigned to.
+- **Pager Network Designer Changes**:
+	- Permissions Editor
+		- Roles/Players are now listed alphabetically.
+
+**Fixed**:
+- Implementation error in [`PageAnyAddress`](config.md#page-any-address) that incorrectly built an array from addresses instead of permissions.
+
 ### v1.0.4 - 03/23/2026
 
 **Added**:
