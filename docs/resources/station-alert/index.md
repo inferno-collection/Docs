@@ -78,7 +78,7 @@ Third-Party Resource Integrations only work with the [Standalone Version](#stati
 | [CD_Dispatch](https://forum.cfx.re/t/paid-codesign-police-dispatch/2007097?u=christopherm) by Codesign                                                               | - Alert on notification per job                                  | [See here](developers/third-party.md#cd_dispatch)        |
 | [Emergency Dispatch](https://love-rp.tebex.io/package/4887641) by LoveRP                                                                                             | - Alert on notification per station                              | [See here](developers/third-party.md#emergency-dispatch) |
 | [SmartFires](https://forum.cfx.re/t/smart-fires-automatic-fires-fire-smoke-types-many-integrations-standalone-paid-resource/4792695?u=christopherm) by LondonStudios | - Alert on player started fire<br/>- Alert on automatic fire     | [See here](developers/third-party.md#smart-fires)        |
-| [Fire Alarm Reborn](../fire-alarm-reborn)                                                                                                                            | - Alert on Fire Alarm activation                                 | [See here](developers/third-party.md#fire-alarm-reborn)  |
+| [Fire Alarm Reborn](../fire-alarm-reborn)                                                                                                                            | - Alert on Fire Alarm activation                                 | [See here](developers/first-party.md#fire-alarm-reborn)  |
 
 For more information, see [here](developers/third-party.md).
 

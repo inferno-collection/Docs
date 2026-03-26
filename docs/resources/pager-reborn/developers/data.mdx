@@ -77,6 +77,45 @@ request.body
 
 ***
 
+## Page Message
+
+Used by:
+- [`subscribeToNodes` server export](exports/server.md#subscribe-to-nodes)
+
+```lua
+page.read
+page.nature
+page.timestamp
+page.body
+```
+
+<Tabs>
+	<TabItem value="pagemessage.read" label="read">
+		<p>`bool`</p>
+		<p>Whether the message has been read.</p>
+		<p>Will be omitted in server-side payloads.</p>
+	</TabItem>
+
+	<TabItem value="pagemessage.nature" label="nature">
+		<p>`number` (`PageNature` enum value)</p>
+		<p>The page type/nature as an enum value.</p>
+		<p>Example: <code>0</code> (`emergency`)</p>
+	</TabItem>
+
+	<TabItem value="pagemessage.timestamp" label="timestamp">
+		<p>`string`</p>
+		<p>ISO 8601 timestamp string (round-trip format).</p>
+		<p>Example: <code>2026-03-26T04:05:06.7890000+00:00</code></p>
+	</TabItem>
+
+	<TabItem value="pagemessage.body" label="body">
+		<p>`string`</p>
+		<p>The page message body text, in uppercase.</p>
+	</TabItem>
+</Tabs>
+
+***
+
 ## Page Nature
 
 Used by:

@@ -169,7 +169,7 @@ newPage
 	- `players` - `table`
 		- Optional list of target player server IDs.
 	- `nature` - `string | number`
-		- Page nature.
+		- [Page nature](../data.mdx#page-nature).
 		- Accepts lowercase names (`emergency`, `nonemergency`, `administrative`) or enum values (`0`-`2`).
 	- `body` - `string`
 		- Page message body text.
@@ -185,3 +185,90 @@ local success = exports["inferno-pager-reborn"]:newPage({
 
 #### Return Value
 `bool`
+
+### Create New Page Around Position
+Use this export to create a new page for players with pagers within range of a position.
+
+#### Export Name
+```
+newPagePlayersAround
+```
+
+#### Parameters
+- `request` - `table`
+	- `nature` - `string | number`
+		- [Page nature](../data.mdx#page-nature).
+		- Accepts lowercase names (`emergency`, `nonemergency`, `administrative`) or enum values (`0`-`2`).
+	- `body` - `string`
+		- Page message body text.
+	- `source` - `string` (optional)
+		- Optional source label used in logs.
+	- `addresses` - `table` (ignored)
+		- This export rebuilds targets from nearby players.
+	- `players` - `table` (ignored)
+		- This export rebuilds targets from nearby players.
+- `position` - `vector3`
+	- Position to measure distance from.
+- `radius` - `string`
+	- Search radius as a string parseable to a float.
+	- If less than `0` or greater than `9999`, it is treated as `9999`.
+
+#### Example
+```lua
+local success = exports["inferno-pager-reborn"]:newPagePlayersAround({
+    ["nature"] = "emergency",
+    ["body"] = "Stage for welfare check at 101 Main St."
+}, vector3(101.0, 202.0, 25.0), "250")
+```
+
+#### Return Value
+`bool`
+	- Returns `false` for invalid input, invalid page data, or if no players with pagers are found within range.
+
+***
+
+## Node Subscriptions
+
+### Subscribe To Nodes
+Use this export to subscribe your resource to pageable nodes.
+
+#### Export Name
+```
+subscribeToNodes
+```
+
+#### Parameters
+- `subscriptions` - `table`
+	- A object where each key is a node address (`string`, for example `emg.fire.bc`).
+	- Each value is a list/set of custom strings associated with that node subscription.
+- `eventName` - `string`
+	- Server event name to trigger for matching node subscription activity.
+	- Must not be empty.
+
+#### Example
+```lua
+exports["inferno-pager-reborn"]:subscribeToNodes({
+    ["emg.fire.bc"] = {"district-1", "priority-high"},
+    ["emg.ems.bc"] = {"district-1"}
+}, "my-resource:server:onNodePage")
+
+AddEventHandler("my-resource:server:onNodePage", function(customStrings, page)
+	print(json.encode(customStrings)) -- E.g.: ["district-1", "priority-high"]
+	print(page.body) -- E.g.: "This is a test page."
+end)
+```
+
+#### Return Value
+`void`
+	- This export does not return success/failure data. It only attempts to register subscriptions.
+
+#### Event Parameters
+When a subscribed node matches, the provided `eventName` is triggered with:
+- `customStrings` - `table`
+	- The custom string values configured for the matching node subscription.
+- `page` - [`Page Message`](../data.mdx#page-message)
+	- The page payload for the triggered subscription.
+
+:::tip
+Subscriptions are only added for nodes that exist and are pageable. Duplicate subscriptions are ignored.
+:::

@@ -8,6 +8,18 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.8 - 03/26/2026
+
+**Changed**:
+- Increased distance check for exports that check player position from 35 units to 70 units.
+  - Should help exports perform more reliably in large MLOs/interiors.
+  - Exports impacted:
+    - [`getAllLocationsWithPlayers`](developers/exports/server.md#get-all-locations-with-players)
+    - [`newAlertNearestStationWithPlayers`](developers/exports/server.md#create-new-alert-at-nearest-station-with-players)
+    - [`getNearestLocationWithPlayersToPosition`](developers/exports/server.md#get-nearest-location-with-players-to-position)
+    - [`getAllLocationsWithPlayersNearestToPosition`](developers/exports/server.md#get-all-locations-with-players-nearest-to-position)
+- Inferno Fire/EMS Pager (2019) integration code with Inferno Pager Reborn (2026) integration code. For more info, [see here](developers/first-party.md#pager-reborn).
+
 ### v1.2.7 - 01/23/2026
 
 :::warning
