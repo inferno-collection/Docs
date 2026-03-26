@@ -8,6 +8,15 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.0.*
 
+### v1.0.6 - 03/26/2026
+
+**Added**:
+- [`subscribeToNodes`](developers/exports/server.md#subscribe-to-nodes) server export. For more info, [see here](developers/exports/server.md#subscribe-to-nodes).
+	- Allows subscribing to node activity from external resources.
+	- For example, when a specific node is paged, run custom Lua to send a message to Discord.
+- [`newPagePlayersAround`](developers/exports/server.md#create-new-page-around-position) server export. For more info, [see here](developers/exports/server.md#create-new-page-around-position).
+  - Allows targeting players around a position to create a new page (e.g., a fire station).
+
 ### v1.0.5 - 03/25/2026
 
 **Added**:
@@ -81,7 +90,6 @@ This page documents the changes made to Pager Reborn.
 
 **Fixed**:
 - [Global Defaults](config.md#global-default-addresses) not being applied when a player had no other role/player permissions.
-
 
 ### v1 - 03/17/2024
 Easy Access release.
