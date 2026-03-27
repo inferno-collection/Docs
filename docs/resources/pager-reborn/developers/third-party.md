@@ -39,39 +39,12 @@ end
 ## SmartFires
 Follow the steps below to send a page when a player started fire is created, and when automatic fires are created.
 
-:::warning
-This is a temporary integration; the resource will be updated soon so you do not need to copy/paste by hand.
-:::
+1. Inside `SmartFires`, open `config.lua`.
+2. Locate `fireAlerts = {...}`, then find `['infernoPagerReborn'] = {...}`.
+	![SmartFires 1](assets/third-party/smart_fires/1.png)
+3. Set `enabled` to `true`, and update `addressesToPage` to the addresses you would like to use.
 
-Old - Lines 459-465:
-```lua title="sv_utils.lua"
-if main.fireAlerts.infernoPager.enabled then
-    local message = {firstToUpper(fires[id].type), translations.fireDescription}
-    if fires[id].automatic.created then
-        message = {fires[id].automatic.type, translations.fireDescription}
-    end
-    TriggerClientEvent("Fire-EMS-Pager:PlayTones", -1, main.fireAlerts.infernoPager.pagersToTrigger, true, message)
-end
-```
-
-New - Lines 458-472:
-```lua title="sv_utils.lua"
-if main.fireAlerts.infernoPager.enabled then
-    local description = translations.fireDescription
-
-    if fires[id].automatic.created then
-        description = fires[id].automatic.type .. " " .. description
-    else
-        description = firstToUpper(fires[id].type) .. " " .. description
-    end
-
-    TriggerEvent("Inferno-Collection:Server:PagerReborn:Editable:CreatePage", {
-        addresses = main.fireAlerts.infernoPager.pagersToTrigger,
-        description = description,
-        location = fires[id].streetName
-    })
-end
-```
+To customize even further, you can find the `infernoPagerReborn` section in `sv_utils.lua` and make changes directly to the server event using the same parameters as the [`newPage`](exports/server.md#create-new-page) export.
 
 ## CD_Dispatch
 Follow the steps below to send a page when a new notification is created for one or more specific jobs.
