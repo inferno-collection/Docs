@@ -334,4 +334,165 @@ In the root directory of the resource is a file called `sounds.json`. This file 
 		}
 		```
 	</TabItem>
+	<TabItem value="danish" label="Dansk">
+		#### Danish - Dansk
+		Translation by: [Kristian Madsen](https://kristianmadsen.dk)
+
+		```json title="da-dk.json" showLineNumbers
+		{
+			"Emergency": "AKUT",
+			"NonEmergency": "IKKE-AKUT",
+			"Administrative": "ADMINISTRATIV",
+
+			"Shared_Close": "Luk",
+			"Shared_Cancel": "Annuller",
+			"Shared_SearchPlaceholder": "Søg…",
+			"Shared_ClearSearch": "Ryd søgning",
+			"Shared_EmptyNodes": "Ingen noder at vise.",
+			"Shared_AlertSettings": "ALARMINDSTILLINGER",
+
+			"PagerUI_MenuOptions": "MENUINDSTILLINGER",
+			"PagerUI_MenuOptions_Escape": "AFSLUT",
+			"PagerUI_MenuOptions_SoundModeAudible": "LYDALARM",
+			"PagerUI_MenuOptions_SoundModeVibration": "VIBRATION:",
+			"PagerUI_MenuOptions_AlertSettings": "@Shared_AlertSettings",
+			"PagerUI_MenuOptions_PowerOff": "SLUK PAGER",
+
+			"PagerUI_AlertSettings": "@Shared_AlertSettings",
+
+			"PagerUI_New": "NY",
+
+			"CapcodesUI_Title": "Pager-netværk",
+			"CapcodesUI_Subtitle": "Vælg noder at tilslutte",
+			"CapcodesUI_Close": "@Shared_Close",
+			"CapcodesUI_SearchPlaceholder": "@Shared_SearchPlaceholder",
+			"CapcodesUI_ClearSearch": "@Shared_ClearSearch",
+			"CapcodesUI_HideUnchangeable": "Skjul uforanderlige",
+			"CapcodesUI_CollapseAll": "Fold alle sammen",
+			"CapcodesUI_ExpandAll": "Udvid alle",
+			"CapcodesUI_Empty": "@Shared_EmptyNodes",
+			"CapcodesUI_Apply": "Anvend",
+			"CapcodesUI_Reset": "Nulstil",
+			"CapcodesUI_Cancel": "@Shared_Cancel",
+			"CapcodesUI_JoinedSuffix": "tilsluttet",
+			"CapcodesUI_CannotLeaveHint": "Du er tilsluttet dette node, men kan ikke forlade det.",
+
+			"PageCreatorUI_Title": "Opret pagerbesked",
+			"PageCreatorUI_Subtitle": "Vælg modtagere og skriv en besked",
+			"PageCreatorUI_Close": "@Shared_Close",
+			"PageCreatorUI_AddressesLabel": "Adresser",
+			"PageCreatorUI_AddressPlaceholder": "Søg og vælg adresser…",
+			"PageCreatorUI_AddressSearchPlaceholder": "@Shared_SearchPlaceholder",
+			"PageCreatorUI_ClearAddressSearch": "@Shared_ClearSearch",
+			"PageCreatorUI_HideUnpageable": "Skjul ikke-alarmérbare",
+			"PageCreatorUI_Collapse": "Fold",
+			"PageCreatorUI_Expand": "Udvid",
+			"PageCreatorUI_AddressTreeEmpty": "@Shared_EmptyNodes",
+			"PageCreatorUI_AddressHintPrefix": "Klik for at vælge én adresse.",
+			"PageCreatorUI_AddressHintSuffix": "+ Klik vælger alle underliggende.",
+			"PageCreatorUI_PlayersLabel": "Spillere",
+			"PageCreatorUI_PlayerPlaceholder": "Vælg spillere...",
+			"PageCreatorUI_PlayerSearchPlaceholder": "Søg efter spiller eller id...",
+			"PageCreatorUI_ClearPlayerSearch": "@Shared_ClearSearch",
+			"PageCreatorUI_PlayerEmpty": "Ingen spillere at vise.",
+			"PageCreatorUI_NatureLabel": "Type",
+			"PageCreatorUI_MessageLabel": "Besked",
+			"PageCreatorUI_MessagePlaceholder": "Skriv din besked her...",
+			"PageCreatorUI_MessageHintPrefix": "Tilladt: A–Z, 0–9, mellemrum og",
+			"PageCreatorUI_Send": "Send",
+			"PageCreatorUI_Cancel": "@Shared_Cancel",
+			"PageCreatorUI_MoreSuffix": "mere",
+
+			"SettingsUI_Title": "Indstillinger",
+			"SettingsUI_Subtitle": "Juster pagerindstillinger",
+			"SettingsUI_VolumeLabel": "Pager-lydstyrke",
+			"SettingsUI_Save": "Gem",
+			"SettingsUI_ClearStoredKVP": "Nulstil alle indstillinger",
+			"SettingsUI_ClearStoredKVPConfirm": "Er du sikker?",
+
+			"Command_ClientOnly": "Kommandoen kan kun bruges på klienten",
+			"Command_ConsoleOnly": "Kommandoen kan kun bruges fra konsollen",
+
+			"Capcodes_NotAllowedAny": "Du har ikke tilladelse til nogen noder",
+			"Capcodes_AddressNotFound": "Ingen node med den adresse findes",
+			"Capcodes_AddressNotJoinable": "Den angivne adresse kan ikke tildeles - kun capcodes kan tildeles",
+			"Capcodes_NoPermissionForThisNode": "Du har ikke tilladelse til at tildele dette node",
+			"Capcodes_Added": "Tilføjet til",
+			"Capcodes_Removed": "Fjernet fra",
+			"Capcodes_Updated": "Pager-capcodes opdateret",
+
+			"CreatePage_NoPermissions": "Du har ikke tilladelse til at oprette pagerbeskeder til adresser eller spillere",
+			"CreatePage_PlayersButNoNatures": "Du har tilladelse til at page spillere, men mangler tilladelse til nogen beskedtyper",
+			"CreatePage_Success": "Pagerbesked oprettet",
+			"CreatePage_Failed": "Oprettelse af pagerbesked mislykkedes",
+
+			"General_CannotRightNow": "Handlingen kan ikke udføres lige nu",
+			"General_YouDoNotHaveAPager": "Du har ikke en pager",
+			"General_YourPagerIsTurnedOff": "Din pager er slukket",
+			"General_PagerTurnedOn": "Din pager er blevet tændt",
+			"General_PagerTurnedOff": "Din pager er blevet slukket"
+		}
+		```
+
+		```json title="sounds.json" showLineNumbers
+		{
+			"alertTones": {
+				"Generel": {
+					"Generel #1": "audio/pager/general/general-1.mp3",
+					"Generel #2": "audio/pager/general/general-2.mp3",
+					"Generel #3": "audio/pager/general/general-3.mp3",
+					"Generel #4": "audio/pager/general/general-4.mp3",
+					"Generel #5": "audio/pager/general/general-5.mp3",
+					"Generel #6": "audio/pager/general/general-6.mp3",
+					"Generel #7": "audio/pager/general/general-7.mp3",
+					"Generel #8": "audio/pager/general/general-8.mp3",
+					"Generel #9": "audio/pager/general/general-9.mp3",
+					"Generel #10": "audio/pager/general/general-10.mp3",
+					"Generel #11": "audio/pager/general/general-11.mp3",
+					"Generel #12": "audio/pager/general/general-12.mp3",
+					"Generel #13": "audio/pager/general/general-13.mp3",
+					"Generel #14": "audio/pager/general/general-14.mp3",
+					"Generel #15": "audio/pager/general/general-15.mp3",
+					"Generel #16": "audio/pager/general/general-16.mp3"
+				},
+
+				"Escalating": {
+					"Eskalering #1": "audio/pager/escalating/escalating-1*.mp3",
+					"Eskalering #2": "audio/pager/escalating/escalating-2*.mp3",
+					"Eskalering #3": "audio/pager/escalating/escalating-3*.mp3",
+					"Eskalering #4": "audio/pager/escalating/escalating-4*.mp3",
+					"Eskalering #5": "audio/pager/escalating/escalating-5*.mp3",
+					"Eskalering #6": "audio/pager/escalating/escalating-6*.mp3",
+					"Eskalering #7": "audio/pager/escalating/escalating-7*.mp3",
+					"Eskalering #8": "audio/pager/escalating/escalating-8*.mp3",
+					"Eskalering #9": "audio/pager/escalating/escalating-9*.mp3",
+					"Eskalering #10": "audio/pager/escalating/escalating-10*.mp3",
+					"Eskalering #11": "audio/pager/escalating/escalating-11*.mp3",
+					"Eskalering #12": "audio/pager/escalating/escalating-12*.mp3",
+					"Eskalering #13": "audio/pager/escalating/escalating-13*.mp3",
+					"Eskalering #14": "audio/pager/escalating/escalating-14*.mp3",
+					"Eskalering #15": "audio/pager/escalating/escalating-15*.mp3",
+					"Eskalering #16": "audio/pager/escalating/escalating-16*.mp3"
+				}
+			},
+
+			"defaultAlertTones": {
+				"Emergency": "Eskalering #12",
+				"NonEmergency": "Generel #5",
+				"Administrative": "Generel #8"
+			},
+
+			"vibrations": {
+				"OneShot": {
+					"Lang": "audio/pager/vibrate/long-vibrate.mp3",
+					"Kort": "audio/pager/vibrate/short-vibrate.mp3"
+				},
+
+				"Looping": {
+					"Loop": "audio/pager/vibrate/vibrate.mp3"
+				}
+			}
+		}
+		```
+	</TabItem>
 </Tabs>
