@@ -22,6 +22,7 @@ FAR uses convars for config values. For information on how to correctly install 
 | [`ic_far_manualInteractions`](#manual-interactions-targetthird-eye-resource-support) |          `false`          |
 |                      [`ic_far_twoStageAlarm`](#two-stage-alarm)                      |          `true`           |
 |                [`ic_far_strobesHaveSpeakers`](#strobes-have-speakers)                |          `false`          |
+|                    [`ic_far_strobeFlashRate`](#strobe-flash-rate)                    |           `750`           |
 |                     [`ic_far_access_token`](#http-access-token)                      |          *None*           |
 |                      [`ic_far_whitelisted_ips`](#api-whitelist)                      |        *See Below*        |
 |                            [`ic_far_timezone`](#timezone)                            |   `Australia/Melbourne`   |
@@ -131,6 +132,12 @@ Default value is `true`.
 #### `ic_far_strobesHaveSpeakers`
 When this value is `true`, alarm sound effects will play from strobes (the default strobe model has a speaker modelled into it).  
 Default value is `false`.
+
+### Strobe Flash Rate
+#### `ic_far_strobeFlashRate`
+This value determines how quickly [Strobe Lights](usage/components.md#strobes) flash, in milliseconds.
+
+Default value is `750`.
 
 ### HTTP Access Token
 #### `ic_far_access_token`
@@ -284,7 +291,7 @@ By default, this permission is granted to all players.
 
 ### Get or Set Random Alarm AOP via Command
 #### `InfernoFireAlarmReborn.AOP`
-This permission allows players to use the [`/firealarm aop`](usage/commands.md#firealarm-aop) command to get or set the random alarm AOP.  
+This permission allows players to use the [`/firealarm aop`](usage/commands.md#get-or-set-random-alarm-aops) command to get or set the random alarm AOP list.  
 By default, this permission is only granted to admins (`group.admin`).
 
 ### Random Alarms via Command
@@ -349,6 +356,9 @@ setr ic_far_timezone_tag "en-AU"
 
 # Percentage chance that sprinklers will put out detected fires
 set ic_far_sprinklerChance "100"
+
+# Flash rate for strobe lights in milliseconds
+setr ic_far_strobeFlashRate "750"
 
 # Time in minutes before an alarm system automatically resets
 set ic_far_alarmSystemTimeout "-1"

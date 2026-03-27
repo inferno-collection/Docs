@@ -31,3 +31,6 @@ You can customize the `Pager:NewPage` to your liking using the same parameters a
 This setup is designed such that Station Alert stations/locations can "listen in" (subscribe) to existing Nodes on Pager Reborn. For example, you might design your Pager Network such that each Fire Station has its own Node. Then to activate a station alert, you would only need to page that station's Node. Another example would be subscribing all fire stations to all fire-related nodes, so that all stations activate for all calls.
 
 To enable this kind of integration, [see here](../../station-alert/developers/first-party.md#pager-reborn--station-alert).
+
+## Fire Alarm Reborn
+To create a page when a fire alarm is triggered, [see here](../../fire-alarm-reborn/developers/first-party.md#pager-reborn).
