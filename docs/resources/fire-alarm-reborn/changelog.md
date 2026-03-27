@@ -8,6 +8,29 @@ This page documents the changes made to FAR.
 
 ## v1.5.\*
 
+### v1.5.6 - 03/27/2026
+
+:::danger
+Major breaking changes to `editable`s and [exports](developers/exports/server.md) were made in this version, do not blindly update.  
+Reach out in [Discord](https://inferno.codes/discord) if you need help updating. Always make a back-up before updating!
+:::
+
+**Added**:
+- Integration for LoveRP Emergency Dispatch. For more info, [see here](developers/third-party.md#loverp-emergency-dispatch).
+- [`ic_far_strobeFlashRate`](config.md#strobe-flash-rate) to change the strobe flash rate. For more info, [see here](config.md#strobe-flash-rate).
+
+**Changed**:
+- AOP now accepts multiple values.
+  - [`/firealarm aop`](usage/commands.md#get-or-set-random-alarm-aops) has also been updated accordingly.
+  - [`getAlarmAOP`](developers/exports/server.md#get-alarm-system-aop) and [`setAlarmAOP`](developers/exports/server.md#set-alarm-system-aop) now give/take a list of strings.
+- Alarm System middle points are now calculated automatically.
+  - Previously, when creating an Alarm System via the [FAR Tool](developers/tool.md), the ped's current position was used as the middle point.
+  - This has caused issues where the stored middle point could actually be far off where it should be.
+  - Now, when a system is loaded, the middle point is calculated based on the system's props.
+  - The `position` value in Alarm System draft entries is now ignored, and isn't included in new draft creations.
+    - Existing drafts will not break if they are still present; the resource just ignores them.
+- Inferno Fire/EMS Pager (2019) integration code with Inferno Pager Reborn (2026) integration code. For more info, [see here](developers/first-party.md#pager-reborn).
+
 ### v1.5.5 - 02/04/2026
 
 **Fixed**:
@@ -29,7 +52,7 @@ This page documents the changes made to FAR.
 ### v1.5.3 - 12/30/2025
 
 **Added**:
-- [`firealarm aop`](usage/commands.md#get-or-set-random-alarm-aop) command. [See here](usage/commands.md#get-or-set-random-alarm-aop) for more info.
+- [`firealarm aop`](usage/commands.md#get-or-set-random-alarm-aops) command. [See here](usage/commands.md#get-or-set-random-alarm-aops) for more info.
   - Get or set the current alarm system AOP.
 - [`getAlarmAOP`](developers/exports/server.md#get-alarm-system-aop) export, to get current alarm system AOP. [`See here`](developers/exports/server.md#get-alarm-system-aop) for more info.
 - `toggle` and `last` options to the [`firealarm randomalarm`](usage/commands.md#random-alarm) command. [See here](usage/commands.md#random-alarm) for more info.

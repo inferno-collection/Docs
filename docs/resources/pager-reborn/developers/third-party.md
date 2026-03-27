@@ -83,8 +83,8 @@ Follow the steps below to send a page when a new notification is created for one
 
 You can customize the `Pager:NewPage` to your liking using the same parameters as the [`newPage`](exports/server.md#create-new-page) export.
 
-## Emergency Dispatch
-Follow the steps below to create alerts when a new notification is created for one or more specific jobs.
+## LoveRP Emergency Dispatch
+Follow the steps below to send a page when a new notification is created for one or more specific jobs.
 
 1. Inside `inferno-pager-report`, open `editable/server/events.lua`.
 2. Locate the `LoveRP Emergency Dispatch`, then uncomment (remove the `--`) the section below.

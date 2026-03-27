@@ -16,7 +16,7 @@ Follow the steps below to create alerts when a player started fire is created, a
 2. Locate `integrations = {...}`, then find `['infernoStationAlert'] = false` and change to `true`.
     ![zFires ](assets/third-party/zfires/1.png)
 
-You can customize the `exports` to liking, see [here](exports/server.md) for more information.
+You can customize the `exports` to your liking, see [here](exports/server.md) for more information.
 
 ## CD_Dispatch
 Follow the steps below to create alerts when a new notification is created for one or more specific jobs.
@@ -26,9 +26,9 @@ Follow the steps below to create alerts when a new notification is created for o
    ![CD_Dispatch 1](assets/third-party/cd_dispatch/1.png)
 3. Update `fireJobs` with the names of jobs you would like to use for alerts.
 
-You can customize the `exports` to liking, see [here](exports/server.md) for more information.
+You can customize the `exports` to your liking, see [here](exports/server.md) for more information.
 
-## Emergency Dispatch
+## LoveRP Emergency Dispatch
 Follow the steps below to create alerts when a new notification is created for one or more specific stations.
 
 1. Inside `inferno-station-alert`, open `editable/server/events.lua`.
@@ -36,7 +36,7 @@ Follow the steps below to create alerts when a new notification is created for o
    ![EMG Dispatch 1](assets/third-party/emg_dispatch/1.png)
 3. Update `stationLocations` as you wish.
 
-You can customize the `exports` to liking, see [here](exports/server.md) for more information.
+You can customize the `exports` to your liking, see [here](exports/server.md) for more information.
 
 ## Smart Fires
 Follow the steps below to create alerts when a player started fire is created, and when automatic fires are created.
@@ -47,7 +47,7 @@ Follow the steps below to create alerts when a player started fire is created, a
    - Leaving `tone` empty will use the default tone.
    - Set `unitIndicatorColors` to `{}` to not have any colors.
 
-You can customize the `exports` to liking, see [here](exports/server.md) for more information.
+You can customize the `exports` to your liking, see [here](exports/server.md) for more information.
 
 ## Sonoran CAD
 To connect Sonoran CAD and Inferno Collection, ensure that Sonoran CAD starts before SA does.  

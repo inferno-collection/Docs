@@ -56,12 +56,13 @@ This command has three options, depending on the arguments passed:
 
 ***
 
-## Get or Set Random Alarm AOP
+## Get or Set Random Alarm AOPs
 ### `/firealarm aop`
 #### Required Ace Permission: [`AOP`](../config#get-or-set-random-alarm-aop-via-command)
 
-When no second argument is passed, the current AOP is returned (e.g. `/firealarm aop`).  
-With a second argument, the current AOP is updated (e.g `/firealarm aop sandy`).
+When no second argument is passed, the current AOP list is returned (e.g. `/firealarm aop`).  
+With one or more additional arguments, the current AOP list is updated (e.g `/firealarm aop sandy paleto`).
+If `reset` is passed by itself (e.g. `/firealarm aop reset`), all configured AOPs are removed.
 
 :::tip
 AOP can also be changed via the [`setAlarmAOP`](../developers/exports/server.md#set-alarm-system-aop) export.
