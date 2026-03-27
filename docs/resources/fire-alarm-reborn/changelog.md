@@ -409,7 +409,7 @@ Breaking changes to the [Exports](developers/exports/server.md) were made in thi
   	:::
 
 **Removed**:
-- Server console warning about permissions not being correctly set-up.
+- Server console warning about permissions not being correctly setup.
   - Replaced by the [`config.cfg` error message](#v11---11112024) added in v1.1.
 
 ***
