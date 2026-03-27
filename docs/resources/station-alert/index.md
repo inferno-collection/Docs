@@ -64,23 +64,14 @@ Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-c
 
 ***
 
-## Third-Party Resource Integrations
-
-Below is a list of resources that we have added optional compatibility with, should you wish to connect them with SA.
+## Resource Integrations
 
 :::tip
-Third-Party Resource Integrations only work with the [Standalone Version](#station-alert-1) of SA.
+Most Resource Integrations only work with the [Standalone Version](#station-alert-1) of SA.
 :::
 
-| Resource                                                                                                                                                             | Features                                                         | How to enable                                            |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|----------------------------------------------------------|
-| [zFires](https://forum.cfx.re/t/paid-standalone-esx-qbcore-z-fire/5244464?u=christopherm) by Zea                                                                     | - Alert on player started fire<br/>- Alert on automatic incident | [See here](developers/third-party.md#zfires)             |
-| [CD_Dispatch](https://forum.cfx.re/t/paid-codesign-police-dispatch/2007097?u=christopherm) by Codesign                                                               | - Alert on notification per job                                  | [See here](developers/third-party.md#cd_dispatch)        |
-| [Emergency Dispatch](https://love-rp.tebex.io/package/4887641) by LoveRP                                                                                             | - Alert on notification per station                              | [See here](developers/third-party.md#emergency-dispatch) |
-| [SmartFires](https://forum.cfx.re/t/smart-fires-automatic-fires-fire-smoke-types-many-integrations-standalone-paid-resource/4792695?u=christopherm) by LondonStudios | - Alert on player started fire<br/>- Alert on automatic fire     | [See here](developers/third-party.md#smart-fires)        |
-| [Fire Alarm Reborn](../fire-alarm-reborn)                                                                                                                            | - Alert on Fire Alarm activation                                 | [See here](developers/first-party.md#fire-alarm-reborn)  |
-
-For more information, see [here](developers/third-party.md).
+For a list of integrations with other Inferno Collection resources, [see here](developers/first-party.md).  
+For a list of integrations with other third-party resources, [see here](developers/third-party.md).  
 
 Just because a resource is not listed below, does not mean it will not work with SA: if you can add an export, it will likely work with SA. 
 If you would like to check if a resource is compatible before purchase, ask us in our [Discord](https://inferno.codes/discord).

@@ -8,6 +8,16 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.0.*
 
+### v1.0.7 - 03/27/2026
+
+**Added**:
+- Integration for Station Alert. For more info, [see here](developers/first-party.md#station-alert).
+- Integration for CodeSign Dispatch. For more info, [see here](developers/third-party.md#cd_dispatch).
+- Integration for LoveRP Emergency Dispatch. For more info, [see here](developers/third-party.md#emergency-dispatch).
+
+**Fixed**:
+- Issue where page creation from inside the `events.lua` file could fail.
+
 ### v1.0.6 - 03/26/2026
 
 **Added**:

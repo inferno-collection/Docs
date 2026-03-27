@@ -41,8 +41,8 @@ Inferno-Collection:Server:StationAlert:Editable:NewMessage
 ```
 #### Parameters
 
-- `message` - `string`
-	- The message that was sent.
+- `message` - [`Message`](data.mdx#message)
+	- The message payload that was sent.
 
 ***
 
