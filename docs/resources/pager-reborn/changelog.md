@@ -6,6 +6,18 @@ sidebar_position: 999
 
 This page documents the changes made to Pager Reborn.
 
+## v1.1.*
+
+### v1.1.0 - 04/01/2026
+Full release.
+
+**Added**:
+- Chat suggestions for commands as an editable client file.
+
+**Changed**:
+- Added a short delay inside editable page creations.
+  - Reduces strain on the server by not making so many calls at once.
+
 ## v1.0.*
 
 ### v1.0.7 - 03/27/2026
