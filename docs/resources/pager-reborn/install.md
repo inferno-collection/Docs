@@ -28,3 +28,6 @@ If you have not done so already, you will need to purchase the resource from [ou
    :::
 5. If you have not already, add `ensure [inferno-collection]` somewhere in your `server.cfg`.
 6. Save and close your `server.cfg`.
+7. Read these two guides:
+   1. [How to use the Pager](usage/quick-start.md)
+   2. [How to create a Pager Network](developers/start-here.md)
