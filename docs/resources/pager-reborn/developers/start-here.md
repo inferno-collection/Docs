@@ -19,7 +19,7 @@ PR has a lot to offer Developers, but the bare minimum required to build a funct
 ## Creating a Pager Network
 Creating a network is made easy by using our Pager Network Designer, located here:
 
-> [https://inferno-collection.com/node-editor](https://inferno-collection.com/node-editor)
+> [https://inferno-collection.com/pager-network-designer](https://inferno.codes/pnd)
 
 With this editor you can create a new network from scratch, or edit an existing network by uploading your `nodes.lua`.  
 When starting from scratch, you can choose from a Blank Network, a Simple Network, or a Complex Network.
