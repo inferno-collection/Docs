@@ -164,15 +164,17 @@ newPage
 
 #### Parameters
 - `request` - `table`
-	- `addresses` - `table`
+	- `addresses` - `table` (optional)
 		- List of capcodes/addresses.
-	- `players` - `table`
+	- `players` - `table` (optional)
 		- Optional list of target player server IDs.
 	- `nature` - `string | number`
 		- [Page nature](../data.mdx#page-nature).
 		- Accepts lowercase names (`emergency`, `nonemergency`, `administrative`) or enum values (`0`-`2`).
 	- `body` - `string`
 		- Page message body text.
+
+At least one of `addresses` or `players` must be provided.
 
 #### Example
 ```lua
@@ -201,16 +203,14 @@ newPagePlayersAround
 		- Accepts lowercase names (`emergency`, `nonemergency`, `administrative`) or enum values (`0`-`2`).
 	- `body` - `string`
 		- Page message body text.
-	- `source` - `string` (optional)
-		- Optional source label used in logs.
 	- `addresses` - `table` (ignored)
 		- This export rebuilds targets from nearby players.
 	- `players` - `table` (ignored)
 		- This export rebuilds targets from nearby players.
 - `position` - `vector3`
 	- Position to measure distance from.
-- `radius` - `string`
-	- Search radius as a string parseable to a float.
+- `radius` - `number | string`
+	- Search radius as a number (or string parseable to a float).
 	- If less than `0` or greater than `9999`, it is treated as `9999`.
 
 #### Example
@@ -218,7 +218,7 @@ newPagePlayersAround
 local success = exports["inferno-pager-reborn"]:newPagePlayersAround({
     ["nature"] = "emergency",
     ["body"] = "Stage for welfare check at 101 Main St."
-}, vector3(101.0, 202.0, 25.0), "250")
+}, vector3(101.0, 202.0, 25.0), 250)
 ```
 
 #### Return Value

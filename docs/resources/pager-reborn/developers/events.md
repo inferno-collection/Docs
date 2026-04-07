@@ -34,10 +34,6 @@ Inferno-Collection:Server:PagerReborn:Editable:NewPage
 ### Create Page - **Server**
 Allows other resources to request that Pager Reborn create a new page.
 
-:::warning Work in Progress
-This event is a work in progress and may change without notice.
-:::
-
 #### Event Name
 ```
 Inferno-Collection:Server:PagerReborn:Editable:CreatePage
@@ -52,25 +48,42 @@ Inferno-Collection:Server:PagerReborn:Editable:CreatePage
 	- `players` - `table` (optional)
 		- Player IDs to send the page to.
 	- `coords` - `table` (optional)
-		- Coordinates payload.
-        - NOTE: Currently unused
-	- `nature` - `string` (optional)
+		- Coordinates used for nearby-player paging.
+		- Supports numeric arrays such as `{ x, y, z }`.
+	- `pos` - `table` (optional)
+		- Alias for `coords`.
+	- `radius` - `number | string` (optional)
+		- Radius for nearby-player paging when `coords`/`pos` is provided.
+		- Defaults to `50`.
+	- `nature` - `string | number` (optional)
 		- [Page Nature](data.mdx#page-nature).
-        - Defaults to `emergency`.
+		- Accepts lowercase names (`emergency`, `nonemergency`, `administrative`) or enum values (`0`-`2`).
+		- Defaults to `emergency`.
 	- `message` - `string` (optional)
-		- Explicit page body text.
+		- Explicit page body text. If set, this is always used.
 	- `description` - `string` (optional)
-		- Used for body text if `message` is not provided.
+		- Used to build body text when `message` is not provided.
 	- `location` - `string` (optional)
-		- Used for body text if `message` is not provided.
+		- Used to build body text when `message` is not provided.
 	- `type` - `string` (optional)
 		- Extra call type value from source data.
-        - NOTE: Currently unused
+		- NOTE: Currently unused in the default implementation.
 	- `extra` - `table` (optional)
 		- Additional passthrough data for custom usage.
-        - NOTE: Currently unused
+		- NOTE: Currently unused in the default implementation.
 
-At least one target (`addresses` or `players`) must currently be provided to create a page.
+Body generation order:
+
+1. `message`
+2. `description` + `location` (joined with `, `), or whichever one exists
+3. `"Fire Call!"`
+
+Target resolution order:
+
+1. If `addresses` or `players` are provided, Pager Reborn calls [`newPage`](exports/server.md#create-new-page).
+2. Otherwise, if `coords`/`pos` is provided, Pager Reborn calls [`newPagePlayersAround`](exports/server.md#create-new-page-around-position) with `radius`.
+
+At least one target input (`addresses`, `players`, `coords`, or `pos`) must be provided.
 
 #### Example One
 ```lua
@@ -92,7 +105,9 @@ TriggerEvent("Inferno-Collection:Server:PagerReborn:Editable:CreatePage", {
 #### Example Three
 ```lua
 TriggerEvent("Inferno-Collection:Server:PagerReborn:Editable:CreatePage", {
-	addresses = {"emg.fire.bc"},
+	coords = {101.0, 202.0, 25.0},
+	radius = 250,
+	nature = "emergency",
 	description = "Structure Fire",
 	location = "123 Main St."
 })
