@@ -8,6 +8,23 @@ This page documents the changes made to SA.
 
 ## v1.2.\*
 
+### v1.2.9 - 04/08/2026
+
+**Added**:
+- Three new permissions to provide more control over [Station Computer](usage/components.md#station-computer) actions:
+	- [`InfernoStationAlert.NewAlert`](config.md#create-new-alert), allows creating Alerts from the Station Computer. For more info, [see here](config.md#create-new-alert).
+	- [`InfernoStationAlert.NewMessage`](config.md#create-new-message), allows creating Messages from the Station Computer. For more info, [see here](config.md#create-new-message).
+	- [`InfernoStationAlert.LocalAlert`](config.md#activate-local-alert), allows activating a local alert from the Station Computer. For more info, [see here](config.md#activate-local-alert).
+
+**Changed**:
+- Replaced radius-based player distance checks
+  - The positions of components are now used to determine if a player is within or nearby the station.
+  - Exports impacted:
+    - [`getAllLocationsWithPlayers`](developers/exports/server.md#get-all-locations-with-players)
+    - [`newAlertNearestStationWithPlayers`](developers/exports/server.md#create-new-alert-at-nearest-station-with-players)
+    - [`getNearestLocationWithPlayersToPosition`](developers/exports/server.md#get-nearest-location-with-players-to-position)
+    - [`getAllLocationsWithPlayersNearestToPosition`](developers/exports/server.md#get-all-locations-with-players-nearest-to-position)
+
 ### v1.2.8 - 03/26/2026
 
 **Changed**:

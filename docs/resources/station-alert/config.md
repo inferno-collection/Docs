@@ -665,6 +665,33 @@ If this value is `true`, the selected Tone for an Alert will be played again at 
 ## Permissions
 There are several permissions for SA, they are as follows:
 
+### Create New Alert
+#### `InfernoStationAlert.NewAlert`
+This permission allows players to use the Station Computer to create new Alerts.  
+By default, this permission is granted to all players.
+
+:::note
+To create alerts from the Computer, players must be able to access a [Station Computer](usage/components.md#station-computer), and thus require the [`Computer`](#use-station-computer) permission as well.
+:::
+
+### Create New Message
+#### `InfernoStationAlert.NewMessage`
+This permission allows players to use the Station Computer to create new Messages.  
+By default, this permission is granted to all players.
+
+:::note
+To create messages from the Computer, players must be able to access a [Station Computer](usage/components.md#station-computer), and thus require the [`Computer`](#use-station-computer) permission as well.
+:::
+
+### Activate Local Alert
+#### `InfernoStationAlert.LocalAlert`
+This permission allows players to use the Station Computer to activate a local Station Alert.  
+By default, this permission is granted to all players.
+
+:::note
+To activate a local alert from the Computer, players must be able to access a [Station Computer](usage/components.md#station-computer), and thus require the [`Computer`](#use-station-computer) permission as well.
+:::
+
 ### Use Door Controls
 #### `InfernoStationAlert.DoorControls`
 This permission allows players to interact with the Door Controls to open/close Doors.  
@@ -682,7 +709,7 @@ By default, this permission is granted to all players.
 
 ### Use Station Computer
 #### `InfernoStationAlert.Computer`
-This permission allows players to interact with the Station Computer to create Alerts.  
+This permission allows players to access and use the Station Computer menu.  
 By default, this permission is granted to all players.
 
 ### Use All Station Broadcast
@@ -711,7 +738,7 @@ By default, this permission is only granted to admins (`group.admin`).
 ```text showLineNumbers
 # Inferno Collection Station Alert
 # 
-# Copyright (c) 2019-2025, Christopher M, Inferno Collection. All rights reserved.
+# Copyright (c) 2019-2026, Christopher M, Inferno Collection. All rights reserved.
 
 ######################################################################################
 ###                                     NOTICE                                     ###
@@ -911,6 +938,9 @@ setr ic_sa_debug "false"
 ### Permissions ###
 ###################
 
+add_ace builtin.everyone "InfernoStationAlert.NewAlert" allow
+add_ace builtin.everyone "InfernoStationAlert.NewMessage" allow
+add_ace builtin.everyone "InfernoStationAlert.LocalAlert" allow
 add_ace builtin.everyone "InfernoStationAlert.DoorControls" allow
 add_ace builtin.everyone "InfernoStationAlert.DoorRenaming" allow
 add_ace builtin.everyone "InfernoStationAlert.Computer" allow
