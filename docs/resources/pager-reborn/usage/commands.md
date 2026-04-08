@@ -55,7 +55,6 @@ This command prints information to the console indicating the state of the resou
 
 ## Permission Debug
 ### `/pager permissiondebug [server ID]`
-#### Console Only
 This command prints to the console the paging permissions for the specified player.  
 If executed from the client, it will print that player's permissions to the server console.  
 If executed from the server, a server ID must be specified.
