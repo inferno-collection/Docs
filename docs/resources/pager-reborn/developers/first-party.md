@@ -25,7 +25,7 @@ Follow the steps below to enable this functionality:
 4. To send an administrative page to players inside the station when a station alert is messaged, uncomment (remove the `--`) the section below.
    ![SA 3](assets/first-party/sa/3.png)
 
-You can customize the `Pager:NewPage` to your liking using the same parameters as the [`newPage`](exports/server.md#create-new-page) export.
+You can customize `Pager:NewPage` to your liking using the same parameters as the [`CreatePage` event](events.md#create-page---server).
 
 ### Pager Reborn → Station Alert
 This setup is designed such that Station Alert stations/locations can "listen in" (subscribe) to existing Nodes on Pager Reborn. For example, you might design your Pager Network such that each Fire Station has its own Node. Then to activate a station alert, you would only need to page that station's Node. Another example would be subscribing all fire stations to all fire-related nodes, so that all stations activate for all calls.

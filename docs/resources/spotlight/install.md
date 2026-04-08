@@ -9,7 +9,7 @@ Follow the steps below to install Spotlight on your FiveM Server.
 ## Purchase the Resource
 If you have not done so already, you will need to purchase the resource from [our store](https://store.inferno-collection.com/).
 
-## Download from Cfx.re Keymaster
+## Download from CFX Portal
 1. Go to [this url](https://portal.cfx.re/assets/granted-assets?search=Inferno+Collection).
 2. Click 'Sign in'.
 3. Sign in with the same Cfx.re account you used to purchase the resource.

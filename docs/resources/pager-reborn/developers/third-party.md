@@ -44,7 +44,7 @@ Follow the steps below to send a page when a player started fire is created, and
 	![SmartFires 1](assets/third-party/smart_fires/1.png)
 3. Set `enabled` to `true`, and update `addressesToPage` to the addresses you would like to use.
 
-To customize even further, you can find the `infernoPagerReborn` section in `sv_utils.lua` and make changes directly to the server event using the same parameters as the [`newPage`](exports/server.md#create-new-page) export.
+To customize even further, you can find the `infernoPagerReborn` section in `sv_utils.lua` and make changes directly to the server event using the same parameters as the [`CreatePage` event](events.md#create-page---server).
 
 ## CD_Dispatch
 Follow the steps below to send a page when a new notification is created for one or more specific jobs.
@@ -54,7 +54,7 @@ Follow the steps below to send a page when a new notification is created for one
 	![CD_Dispatch 1](assets/third-party/cd_dispatch/1.png)
 3. Update `fireJobs` with the names of jobs you would like to use.
 
-You can customize the `Pager:NewPage` to your liking using the same parameters as the [`newPage`](exports/server.md#create-new-page) export.
+You can customize `Pager:NewPage` to your liking using the same parameters as the [`CreatePage` event](events.md#create-page---server).
 
 ## LoveRP Emergency Dispatch
 Follow the steps below to send a page when a new notification is created for one or more specific jobs.
@@ -64,4 +64,4 @@ Follow the steps below to send a page when a new notification is created for one
    ![EMG Dispatch 1](assets/third-party/emg_dispatch/1.png)
 3. Update `fireJobs` with the names of jobs you would like to use.
 
-You can customize the `Pager:NewPage` to your liking using the same parameters as the [`newPage`](exports/server.md#create-new-page) export.
+You can customize `Pager:NewPage` to your liking using the same parameters as the [`CreatePage` event](events.md#create-page---server).
