@@ -8,6 +8,21 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.1 - 04/13/2026
+**Added**:
+- "Mark All Read" option to Pager UI.
+  - When selected, will mark all unread messages as read.
+- "Delete All Messages" option to Pager UI.
+  - When selected, will delete all saved messages.
+- Confirmation step for the "Power Off" option in Pager UI.
+
+**Changed**:
+- The animation for holding the Pager will now restart if interrupted.
+
+**Fixed**:
+- Duplicate KVP write on Page acknowledgement.
+- Issue where using the [`/pager clearkvp`](usage/commands.md#clear-saved-data) command would only null out data, not delete it.
+
 ### v1.1.0 - 04/01/2026
 Full release.
 
