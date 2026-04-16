@@ -8,6 +8,15 @@ This page documents the changes made to Flares.
 
 ## v1.0.\*
 
+### v1.0.3 - 04/16/2026
+**Added**:
+- Chat suggestions for commands as an editable client file.
+
+**Changed**:
+- Replace the existing UI with a new NUI-based design.
+  - The UI is still controlled via the keyboard, does not require mouse input, and still supports multiple languages.
+  - ![New UI](assets/changelog/new_ui.png)
+
 ### v1.0.2 - 12/15/2025
 **Changed**:
 - Removed the `slowTraffic` config option, and replaced with a per-cone traffic impact option.
