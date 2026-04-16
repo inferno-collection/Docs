@@ -21,34 +21,12 @@ import DocCardList from '@theme/DocCardList';
 
 ## Tebex Store
 
-Explore our premium FiveM resources:
-
-- **Station Alert**  
-  A standalone, in-depth Station Alerting script for FiveM, featuring easy customization and support for multiple languages.  
-  [View on Store](https://store.inferno-collection.com/)
-
-- **Fire Alarm Reborn**  
-  A standalone, in-depth Fire Alarm script for FiveM, offering easy customization and compatibility with several fire scripts.  
-  [View on Store](https://store.inferno-collection.com/)
+Explore our premium FiveM resources on our [Tebex Store](https://inferno.codes/store)
 
 ## Discord
 
-Join our community on Discord to hang out with the team, ask questions, and get support.  
-[Join Discord](https://discord.gg/inferno-collection)
+Ask questions, get support, and provide feedback on our [Discord server](https://inferno.codes/discord).
 
-## Recent Video
+## YouTube
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/aR8QT05UrMQ?si=N0NncV_XBk8E6fmG" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-## GitHub Repositories
-
-Explore our open-source projects:
-
-- **Vehicle Attachment**  
-  A lightweight vehicle attachment/tow script for FiveM.  
-  [View on GitHub](https://github.com/inferno-collection/vehicle-attachment)
-
-- **Ladders Reborn**  
-  OneSync Ladder script for FiveM.  
-  [View on GitHub](https://github.com/inferno-collection/ladders-reborn)
-
-[View All Repositories](https://github.com/inferno-collection)
+Find videos about our resources on our [YouTube channel](https://inferno.codes/yt).
