@@ -21,6 +21,8 @@ Creating a network is made easy by using our Pager Network Designer, located her
 
 > [https://inferno-collection.com/pager-network-designer](https://inferno.codes/pnd)
 
+You can watch a YouTube video demonstration [here](https://www.youtube.com/watch?v=z_4yNaRmlpQ&t=639s).
+
 With this editor you can create a new network from scratch, or edit an existing network by uploading your `nodes.lua`.  
 When starting from scratch, you can choose from a Blank Network, a Simple Network, or a Complex Network.
 
@@ -37,6 +39,8 @@ This file needs to go in the Pager Reborn resource folder.
 ## Setting up permissions
 Once you've created your network in the Pager Network Designer, click the 'Permissions' button in the top-left corner of the editor.  
 If editing an existing network, you can also upload an existing `permissions.lua` file.
+
+You can watch a YouTube video explanation [here](https://www.youtube.com/watch?v=z_4yNaRmlpQ&t=443s).
 
 Permissions are role-based, allowing you to create different roles for the various types of players in your server.  
 When adding player identifiers to a role (or player override), ensure to include the prefix:
