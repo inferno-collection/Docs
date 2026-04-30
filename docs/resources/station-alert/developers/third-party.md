@@ -90,3 +90,11 @@ location { name = "Sandy Shores Fire Station", icon = "fa-solid fa-dumpster-fire
 
 location { name = "Paleto Bay Fire Station", icon = "https://example.com/some/path/to/your/image.png" }
 ```
+
+
+## Sonoran Radio
+To connect Sonoran Radio and Inferno Collection, ensure that Sonoran Radio starts before SA does.  
+Station Alerts can be configured to be read out loud over Sonoran Radio.  
+This feature requires the Voice Turnout Addon, for more info [see here](../config.md#voice-turnout-addon-values-explained).
+
+For more info on enabling and configuring Sonoran Radio, [see here](../config.md#sonoran-radio-settings-explained).
