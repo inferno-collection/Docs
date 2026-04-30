@@ -46,6 +46,7 @@ SA uses convars for config values. For information on how to correctly install t
 |              [`ic_sa_ceilingSpeakerModel`](#default-ceiling-speaker-model)              | `v_serv_metro_ceilingspeaker` |
 |             [`ic_sa_exteriorSpeakerModel`](#default-exterior-speaker-model)             |    `h4_prop_h4_tannoy_01a`    |
 |               [`ic_sa_warningLightsModel`](#default-warning-lights-model)               |   `prop_ic_warning_lights`    |
+|            [`ic_sa_sonoranRadioSettings`](#sonoran-radio-settings-explained)            |          *See Below*          |
 |                      [`ic_sa_httpAccessToken`](#http-access-token)                      |             `""`              |
 |                        [`ic_sa_whitelistedIps`](#api-whitelist)                         |          *See Below*          |
 |                                 [`ic_sa_debug`](#debug)                                 |            `false`            |
@@ -661,6 +662,29 @@ If this value is `true`, the TTS message will be repeated twice when it is read.
 If this value is `true`, the selected Tone for an Alert will be played again at the end of the TTS.
 
 ***
+
+## Sonoran Radio Settings Explained
+The Sonoran Radio integration for SA is an optional feature that broadcasts Alerts over configured Sonoran Radio channels.  
+This means when a Station Alert is activated, everyone listening to the configured channels will hear the Alert read out loud.  
+This is achieved using the Voice Turnout Addon, which is an optional, subscription-based, addon for SA; for more info, [see here](#voice-turnout-addon-values-explained).
+
+**YouTube Video**:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OAIQunhayP8?si=vlKUKOGKq4Ga98kJ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Enable Radio Broadcasts
+#### `enabled`
+Set this value to `true` to enable the Sonoran Radio integration.
+
+### Channel Selection
+#### `channel_ids`
+This value is a list of Sonoran Radio channel IDs. You can find channel IDs via the [Dispatch Panel](https://docs.sonoransoftware.com/radio/tutorials/usage/dispatch-panel/using-the-dispatch-panel#channel-ids) or the [in-game radio](https://docs.sonoransoftware.com/radio/tutorials/usage/in-game-radio/using-the-in-game-radio/fivem-keybinds-and-commands#copying-channel-and-scan-list-ids).  
+The value must be a valid JSON array, for example:
+
+```json
+{
+	"channel_ids":	[98465, 48910]
+}
+```
 
 ## Permissions
 There are several permissions for SA, they are as follows:

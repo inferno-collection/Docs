@@ -28,7 +28,8 @@ The standalone version of Station Alert is just called "Station Alert" or "Stati
 It supports all features, with some caveats:
 
 - Text-to-Speech is supported, but requires the Voice Turnout Addon ([see here](usage/tts.md)).
-- Sonoran CAD is supported, but requires at least the Plus version of Sonoran CAD ([see here](https://sonorancad.com/pricing)).
+- ~~Sonoran CAD is supported, but requires at least the Plus version of Sonoran CAD.~~
+  - As of [Station Alert v1.3.0](changelog.md#v130---04302026) and [Sonoran CAD v4](https://sonoran.link/cadupdate), all Sonoran CAD versions (including Free) are supported.
 
 Station Alert can be purchased [here](https://store.inferno-collection.com/category/sa).
 
@@ -43,7 +44,7 @@ Some important notes for Sonoran Edition:
 - Only Sonoran CAD integration works.
   - All other activation types (menu, command, exports, third-party resources, etc.) will not work.
 
-Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-collection.com/package/station-alert-sonoran-edition).
+Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-collection.com/sonoran).
 
 ### Feature Comparison
 
@@ -52,13 +53,12 @@ Station Alert - Sonoran Edition can be downloaded [here](https://store.inferno-c
 | Create Alerts in-game via Menu or Command                              |                 ❌                 |               ✅                |
 | Create Alerts and get data via [Exports](developers/exports)           |                 ❌                 |               ✅                |
 | Create Alerts and get data via [API](developers/api.mdx)               |                 ❌                 |               ✅                |
-| Create Alerts via [Third-Party Resources](developers/third-party.md)      |                 ❌                 |               ✅                |
+| Create Alerts via [Third-Party Resources](developers/third-party.md)   |                 ❌                 |               ✅                |
 | Working Traffic Lights, Door Controls, Lights, Speakers, & Call Screen |                 ✅                 |               ✅                |
 | [SA Tool](developers/tool.md) for Location creation                    |                 ✅                 |               ✅                |
-| Sonoran CAD Support                                                    |                 ✅                 |              ✅\^               |
+| Sonoran CAD Support                                                    |                 ✅                 |               ✅                |
 | Support Text-to-Speech                                                 |                ✅\#                |              ✅\*               |
 
-\^ - Requires the Plus or Pro version of Sonoran CAD.  
 \# - Free for the duration of the Sonoran Subscription.  
 \* - Requires the Voice Turnout Addon ([see here](usage/tts.md)).
 

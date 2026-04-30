@@ -6,6 +6,25 @@ sidebar_position: 999
 
 This page documents the changes made to SA.
 
+## v1.3.\*
+
+### v1.3.0 - 04/30/2026
+
+**YouTube Video**:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OAIQunhayP8?si=vlKUKOGKq4Ga98kJ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**Added**:
+- Support for broadcasting Alerts via [Sonoran Radio](https://sonoranradio.com/)
+  - Requires the Voice Turnout Addon, for more info [see here](config.md#voice-turnout-addon-values-explained).
+  - For more info on the configuration of Sonoran Radio, [see here](config.md#sonoran-radio-settings-explained).
+
+**Changed**:
+- Sonoran CAD version check to support Sonoran API v2.
+  - Station Alert (Standalone) no longer requires Sonoran CAD Plus or Pro, all versions (including Free) are now supported.
+  - Station Alert (Sonoran Edition) will still only work for Sonoran CAD Pro customers.
+  - To ensure compatibility, update your Sonoran CAD resource to v4. [See here](https://sonoran.link/cadupdate) for more info.
+- Health command to indicate if config values were loaded correctly when the resource was started.
+
 ## v1.2.\*
 
 ### v1.2.9 - 04/08/2026

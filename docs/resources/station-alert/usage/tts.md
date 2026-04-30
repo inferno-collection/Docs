@@ -4,7 +4,8 @@ sidebar_position: 40
 
 # Text-to-Speech
 
-Text-to-Speech, or the [Station Alert - Voice Turnout](https://store.inferno-collection.com/package/station-alert-addon) as it is referred to on the [store](https://store.inferno-collection.com/), is a paid Addon which adds text-to-speech reading of messages sent in SA.  
+Text-to-Speech, or the [Station Alert - Voice Turnout](https://store.inferno-collection.com/package/station-alert-addon) as it is referred to on the [store](https://store.inferno-collection.com/), is a paid Addon that adds text-to-speech reading of messages sent in SA.  
+The Voice Turnout Addon also adds support for Sonoran Radio, for more info, [see here](../config.md#sonoran-radio-settings-explained).
 
 ## How to configure TTS
 
