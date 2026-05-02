@@ -857,6 +857,15 @@ setr ic_sa_repeatMessage "true"
 # Play the selected tone again after the Text-to-Speech message
 setr ic_sa_endingTone "true"
 
+### Sonoran Radio ###
+#####################
+
+# Broadcast Station Alerts over Sonoran Radio
+set ic_sa_sonoranRadioSettings {
+    "enabled":		"false",
+    "channel_ids":	[]
+}
+
 ### Advanced ###
 ################
 
