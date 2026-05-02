@@ -8,6 +8,15 @@ This page documents the changes made to SA.
 
 ## v1.3.\*
 
+### v1.3.1 - 05/02/2026
+
+**Changed**:
+- Improved error logging for the built-in [HTTP API](developers/api.mdx).
+
+**Fixed**:
+- Edge case race condition where a console log printed prior to config initialization caused a crash.
+- Regression introduced in [v1.3.0](#v130---04302026) where Sonoran validation could fail if server start-up took too long (due to hundreds of resources).
+
 ### v1.3.0 - 04/30/2026
 
 **YouTube Video**:
