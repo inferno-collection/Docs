@@ -388,6 +388,9 @@ set ic_pr_kickCheaters "false"
 # Max seconds before pager sound stops
 setr ic_pr_maxToneTime 15
 
+# Max distance pagers can be heard from
+setr ic_pr_maxAudioDistance 20
+
 # Addresses that *all* players will be forced to join
 set ic_pr_globalDefaultAddresses []
 
@@ -399,6 +402,11 @@ setr ic_pr_timezoneTag "en-AU"
 
 # Enables inventory support
 setr ic_pr_inventorySupport "false"
+
+# Pager skins
+setr ic_pr_skins {
+	"Legendary Alpha": "legendary_alpha"
+}
 
 ### Advanced ###
 ################
