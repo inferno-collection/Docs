@@ -21,9 +21,11 @@ Pager Reborn uses convars for config values. For information on how to correctly
 | [`ic_pr_playersStartWithPager`](#players-start-with-pager)  |        `true`         |
 |   [`ic_pr_maxAddressesPerPage`](#max-addresses-per-page)    |         `25`          |
 |     [`ic_pr_maxPageBodyLength`](#max-page-body-length)      |         `256`         |
+|       [`ic_pr_maxAudioDistance`](#max-audio-distance)       |         `20`          |
 |    [`ic_pr_timeBetweenMessages`](#time-between-messages)    |          `2`          |
 |       [`ic_pr_sortMessageOrder`](#sort-message-order)       |        `true`         |
 |   [`ic_pr_suffixWithShortCode`](#suffix-with-short-code)    |        `true`         |
+|                   [`ic_pr_skins`](#skins)                   |      *See Below*      |
 |        [`ic_pr_httpAccessToken`](#http-access-token)        |         `""`          |
 |          [`ic_pr_whitelistedIps`](#api-whitelist)           |      *See Below*      |
 |              [`ic_pr_command`](#alias-command)              |        `pager`        |
@@ -113,6 +115,10 @@ This value sets the maximum number of addresses that can be attached to a single
 #### `ic_pr_maxPageBodyLength`
 This value sets the maximum character length of a page's body text.
 
+### Max Audio Distance
+#### `ic_pr_maxAudioDistance`
+This value sets the maximum distance in meters that a pager can be heard from.
+
 ### Time Between Messages
 #### `ic_pr_timeBetweenMessages`
 This value sets the seconds between sending page messages. This value is primarily for roleplaying purposes and can be set to any value.
@@ -134,6 +140,31 @@ For example, if a non-emergency page that targets 10 capcodes is sent and [`ic_p
 ### Suffix with Short Code
 #### `ic_pr_suffixWithShortCode`
 If `true`, page messages will include a short code suffix. This shortcode can either be defined in the Pager Network Designer, or if not provided, will be automatically generated.
+
+### Skins
+#### `ic_pr_skins`
+Skins are used as an overlay for the Pager UI in-game. By default, the resource includes one skin. Additional skins can be purchased from our [Tebex Store](https://store.inferno-collection.com/addons), or you can create your own by copying the `.png` and `.xml` files from the `ui/assets` directory.
+
+The default value of `ic_pr_skins` is:
+
+```
+setr ic_pr_skins {
+	"Legendary Alpha": "legendary_alpha"
+}
+```
+
+The key is the human-readable name of the skin, and the value is the filename of both the `.png` and `.xml` files. For example, if the value was `my_skin`, the image file would need to be named `my_skin.png` and the XML file `my_skin.xml`. The PNG file determines what the skin looks like, and the XML file determines where the Pager UI components (i.e., buttons, screen, etc.) fit on the skin.
+
+To add Additional skins, place the new skin files in `ui/assets`, and then edit `ic_pr_skins`, like so:
+
+```
+setr ic_pr_skins {
+	"Legendary Alpha": "legendary_alpha",
+	"My Skin": "my_skin"
+}
+```
+
+Whichever skin is first in the list will be the default skin for new players. To limit which skins players can select, delete entries from the list (e.g., if you add a new skin and only want players using that one, delete all other entries).
 
 ### HTTP Access Token
 #### `ic_pr_httpAccessToken`

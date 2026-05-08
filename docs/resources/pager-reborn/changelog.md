@@ -8,7 +8,28 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.2 - 05/08/2026
+
+**Added**:
+- New [`/pager settings`](usage/commands.md#open-pager-settings-ui) options:
+  - Option to only hear own Pager sounds.
+    - When enabled, players will only hear their own Pager sounds.
+  - Option to disable unread message chirps.
+      - When disabled, no chirps will play when a player has any unread messages.
+  - Option to change the skin of the Pager UI.
+      - A dropdown shows the list of skins, and hovering over an option will show a preview.
+      - ![Skins Dropdown](assets/changelog/skins_dropdown.png)
+- [`ic_pr_skins`](config.md#skins) config option. For more info, [see here](config.md#skins).
+  - Defines skins that can be used for the Pager UI, selectable from the [Pager Settings UI](usage/quick-start.md#pager-settings).
+- [`ic_pr_maxAudioDistance`](config.md#max-audio-distance) config option. For more info, [see here](config.md#max-audio-distance).
+  - Defines the maximum distance at which Pager sounds can be heard.
+
+**Fixed**:
+- Edge case where resource would crash if an empty permissions file was provided.
+- Addresses defined in [`ic_pr_globalDefaultAddresses`](config.md#global-default-addresses) not being applied if address differed from permission name.
+
 ### v1.1.1 - 04/13/2026
+
 **Added**:
 - "Mark All Read" option to Pager UI.
   - When selected, will mark all unread messages as read.

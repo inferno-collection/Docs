@@ -38,4 +38,10 @@ Type `/pager settings` to open the Pager Settings UI.
 
 ![Pager Settings](assets/settings.png)
 
-From this UI you can change the master volume of all Pager alert sounds, and also clear KVP data. Clearing the stored KVP data will delete all stored page messages, alert settings, NUI Position, and NUI volume.
+From this UI you can:
+- Change the master volume of all Pager alert sounds
+- [Change Pager Skin](../config.md#skins)
+- Toggle only hearing your own Pager sounds
+- Toggle missed/unread message chirp
+- Clear KVP data.
+  - This will delete all stored page messages, alert settings, NUI Position, and NUI volume.
