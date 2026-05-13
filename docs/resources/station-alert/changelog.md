@@ -8,6 +8,19 @@ This page documents the changes made to SA.
 
 ## v1.3.\*
 
+### v1.3.2 - 05/13/2026
+
+**Added**:
+- Support for the [Door Buzzer](usage/commands.md#door-buzzer) to be used as an item.
+	- Adds [`ic_sa_inventorySupport`](config.md#inventory-support), for more info, [see here](config.md#inventory-support).
+
+**Changed**:
+- Replaced existing Sonoran CAD resource logic with the Sonoran.Net library
+  - Uses new v2 endpoints directly instead of through a legacy adapter
+  - Significantly faster subscription validation times on resource start
+- [Warning Lights](usage/components.md#warning-lights) now flash with Traffic Light activation via [Door Controls](usage/components.md#door-controls) & [Buzzer](usage/commands.md#door-buzzer)
+- Improved [drive-through door](config.md#self-closing-doors) checking logic to better detect vehicles driven at fast speeds.
+
 ### v1.3.1 - 05/02/2026
 
 **Changed**:

@@ -18,6 +18,7 @@ SA uses convars for config values. For information on how to correctly install t
 |              [`ic_sa_closeAllDoorsOnTimeout`](#close-all-doors-on-timeout)              |            `false`            |
 | [`ic_sa_addonTrafficLightAlwaysFlashYellow`](#addon-traffic-lights-always-flash-yellow) |            `false`            |
 |             [`ic_sa_buzzerRequiresVehicle`](#door-buzzer-requires-vehicle)              |            `false`            |
+|                     [`ic_sa_inventorySupport`](#inventory-support)                      |            `false`            |
 |                           [`ic_sa_tones`](#alert-tone-sounds)                           |          *See Below*          |
 |                            [`ic_sa_nuiVolume`](#nui-volume)                             |              `5`              |
 |              [`ic_sa_callScreenSettings`](#call-screen-settings-explained)              |          *See Below*          |
@@ -100,6 +101,22 @@ When this value is `true`, players must be in a vehicle when using the [Door Buz
 
 :::note
 This config option does not change the requirement for players to have the correct permissions to use the command.
+:::
+
+### Inventory Support
+#### `ic_sa_inventorySupport`
+When this value is `true`, inventory support for resources such as [OxInventory](https://overextended.dev/ox_inventory) and [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory) will be enabled.
+
+:::note
+You must also uncomment/edit the `editable/client/inventory.lua` and `editable/server/inventory.lua` files in addition to setting this value to `true` in order for inventory resources to work.
+Code inside `editable/client/inventory.lua` and `editable/server/inventory.lua` will not run unless `ic_sa_inventorySupport` is `true`.
+:::
+
+Inside the `editable/client/inventory.lua` and `editable/server/inventory.lua` files, server owners/developers can either uncomment the code for [OxInventory](https://overextended.dev/ox_inventory) or [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory), or add their own inventory code as required.
+Reach out in [Discord](https://inferno.codes/discord) if you need help adding other resources.
+
+:::tip
+The "items.lua" entry for both Ox and QB are located at the top of `editables/server/inventory.lua`, and 100x100 png images are located in the download root directory.
 :::
 
 ### Alert Tone Sounds
