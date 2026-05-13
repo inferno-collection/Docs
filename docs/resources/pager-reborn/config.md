@@ -155,7 +155,7 @@ setr ic_pr_skins {
 
 The key is the human-readable name of the skin, and the value is the filename of both the `.png` and `.xml` files. For example, if the value was `my_skin`, the image file would need to be named `my_skin.png` and the XML file `my_skin.xml`. The PNG file determines what the skin looks like, and the XML file determines where the Pager UI components (i.e., buttons, screen, etc.) fit on the skin.
 
-To add Additional skins, place the new skin files in `ui/assets`, and then edit `ic_pr_skins`, like so:
+To add additional skins, place the new skin files in `ui/assets`, and then edit `ic_pr_skins`, like so:
 
 ```
 setr ic_pr_skins {
