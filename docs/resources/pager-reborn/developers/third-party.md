@@ -5,6 +5,10 @@ sidebar_position: 50
 # Third-Party Resources
 This page explains how to integrate PR with third-party resources.
 
+:::info
+All third-party integrations on this page required Pager Reborn, and do not work for Sonoran Edition. For more info, [see here](../index.md#available-versions).
+:::
+
 ## zFires
 Follow the steps below to send a page when a player started fire is created, and when automatic incidents are created.
 
@@ -65,3 +69,13 @@ Follow the steps below to send a page when a new notification is created for one
 3. Update `fireJobs` with the names of jobs you would like to use.
 
 You can customize `Pager:NewPage` to your liking using the same parameters as the [`CreatePage` event](events.md#create-page---server).
+
+## Sonoran CAD
+To connect Sonoran CAD and Pager Reborn, ensure that Sonoran CAD starts before PR does.  
+When PR connects with Sonoran CAD, you will see a log entry in the console:
+
+```
+Sonoran CAD detected
+```
+
+You can now use Sonoran CAD to send Page messages. For more info, [see here](https://sonoran.link/Y3HffqTd).

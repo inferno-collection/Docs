@@ -9,6 +9,10 @@ This page documents the server exports that can be used with Pager Reborn.
 All the exports listed below are **server** exports, not client exports.  
 For client exports, see [here](client.md).
 
+:::info
+All the exports on this page required Pager Reborn, and do not work for Sonoran Edition. For more info, [see here](../../index.md#available-versions).
+:::
+
 ## Pager Management
 
 ### Give Pager
