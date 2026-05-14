@@ -18,6 +18,7 @@ Pager Reborn uses convars for config values. For information on how to correctly
 |                [`ic_pr_timezone`](#timezone)                | `Australia/Melbourne` |
 |            [`ic_pr_timezoneTag`](#timezone-tag)             |        `en-AU`        |
 |       [`ic_pr_inventorySupport`](#inventory-support)        |        `false`        |
+|             [`ic_pr_dataSource`](#data-source)              |          `0`          |
 | [`ic_pr_playersStartWithPager`](#players-start-with-pager)  |        `true`         |
 |   [`ic_pr_maxAddressesPerPage`](#max-addresses-per-page)    |         `25`          |
 |     [`ic_pr_maxPageBodyLength`](#max-page-body-length)      |         `256`         |
@@ -98,6 +99,15 @@ Reach out in [Discord](https://inferno.codes/discord) if you need help adding ot
 :::tip
 The "items.lua" entry for both Ox and QB are located at the top of `editables/server/inventory.lua`, and 100x100 png images are located in the download root directory.
 :::
+
+### Data Source
+#### `ic_pr_dataSource`
+This value determines where PR should read Node and Permission Data from.
+
+- `0` - Local Files
+  - Nodes will be read from `nodes.lua` and Permissions from `permissions.lua`
+- `1` - Sonoran CAD
+  - Nodes and Permissions will be read from Sonoran CAD, to update, use the [Embedded Pager Network Designer](https://sonoran.link/Y3HffqTd)
 
 ### Players Start with Pager
 #### `ic_pr_playersStartWithPager`
