@@ -8,6 +8,16 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.3 - 05/14/2026
+
+**Added**:
+- Sonoran CAD Support.
+  - Works with all versions of Sonoran CAD, including the free version.
+  - Send Page messages to addresses or individual units from Sonoran CAD.
+  - If [`ic_pr_dataSource`](config.md#data-source) is configured for Sonoran, Embedded Pager Network Designer can store data in Sonoran CAD.
+- [Pager Reborn: Sonoran Edition](https://sonoran.link/Y3HffqTd). For more info, [see here](https://sonoran.link/Y3HffqTd).
+  - ![Pager Reborn: Sonoran Edition](assets/changelog/se.png)
+
 ### v1.1.2 - 05/08/2026
 
 **Added**:

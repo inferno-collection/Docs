@@ -23,6 +23,10 @@ Creating a network is made easy by using our Pager Network Designer, located her
 
 You can watch a YouTube video demonstration [here](https://www.youtube.com/watch?v=z_4yNaRmlpQ&t=639s).
 
+:::tip
+If you are using [Pager Reborn - Sonoran Edition](../index.md#pager-reborn---sonoran-edition), or have the [data source](../config.md#data-source) set to Sonoran CAD, you can use the built-in Pager Network Designer inside Sonoran CAD: Admin > Customization > Inferno Pagers. The steps are the same as below, but both Node and Permission data is automatically stored in Sonoran CAD, so you do not need to download files to upload to your server, or upload existing files to the Pager Network Designer.
+:::
+
 With this editor you can create a new network from scratch, or edit an existing network by uploading your `nodes.lua`.  
 When starting from scratch, you can choose from a Blank Network, a Simple Network, or a Complex Network.
 
@@ -64,6 +68,7 @@ PR provides several ways to create Page messages, these include:
 - In-game via the Page Creation UI.
 - Using server Exports.
 - Using the built-in HTTP API.
+- Via [Sonoran CAD](https://sonoran.link/Y3HffqTd).
 
 There are also integrations for common third-party resources, [see here](third-party.md).
 

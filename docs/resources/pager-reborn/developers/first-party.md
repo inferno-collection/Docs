@@ -3,7 +3,11 @@ sidebar_position: 50
 ---
 
 # First-Party Resources
-This page explains how to integrate SA with first-party resources (other Inferno Collection resources).
+This page explains how to integrate PR with first-party resources (other Inferno Collection resources).
+
+:::info
+All first-party integrations on this page required Pager Reborn, and do not work for Sonoran Edition. For more info, [see here](../index.md#available-versions).
+:::
 
 ## Station Alert
 There are two options for integrating Station Alert:
