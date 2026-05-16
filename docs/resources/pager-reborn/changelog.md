@@ -8,6 +8,11 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.4 - 05/16/2026
+
+**Fixed**:
+- Issue with data being loaded from Sonoran CAD when [`ic_pr_dataSource`](config.md#data-source) was set to `1` (Sonoran).
+
 ### v1.1.3 - 05/14/2026
 
 **Added**:
