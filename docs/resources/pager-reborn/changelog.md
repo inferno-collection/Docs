@@ -8,6 +8,12 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.5 - 05/18/2026
+
+**Fixed**:
+- Players not populating the Player list in Page Creation UI when [`ic_pr_inventorySupport`](config.md#inventory-support) was `true`.
+- Issue with nodes becoming malformed when syncing back to Sonoran CAD when [`ic_pr_dataSource`](config.md#data-source) was set to `1` (Sonoran).
+
 ### v1.1.4 - 05/16/2026
 
 **Fixed**:
