@@ -413,6 +413,11 @@ setr ic_pr_timezoneTag "en-AU"
 # Enables inventory support
 setr ic_pr_inventorySupport "false"
 
+# Where should the resource read data from?
+# 0 = Local files (nodes.lua & permissions.lua)
+# 1 = Sonoran CAD
+set ic_pr_dataSource 0
+
 # Pager skins
 setr ic_pr_skins {
 	"Legendary Alpha": "legendary_alpha"
