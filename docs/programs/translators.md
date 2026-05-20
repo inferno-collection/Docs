@@ -49,13 +49,3 @@ All work must be original – no Google Translate, ChatGPT, etc.
 6. Receive your reward!
 
 Questions, comments, concerns? [Create a thread in Discord!](https://discord.gg/5GZ3Jzt)
-
----
-
-## 🧪 Part of the Creator & Contributor Program
-
-This Translators Program is part of our broader **Creator & Contributor Program**, which also includes:
-- 🐛 [Bug Bounty Program](bug-bounty.md)
-- 🎥 [Creator Program](creators.md)
-
-Help improve our products, grow our community, and earn rewards along the way!

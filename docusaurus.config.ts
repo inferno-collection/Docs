@@ -139,10 +139,6 @@ const config: Config = {
 							href: 'https://github.com/inferno-collection/',
 						},
 						{
-							label: 'Bug Bounty Program 🐛',
-							href: '/programs/bug-bounty',
-						},
-						{
 							label: 'Translations 🌐',
 							href: '/programs/translators',
 						},
