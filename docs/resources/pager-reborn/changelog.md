@@ -8,6 +8,26 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.6 - 05/28/2026
+
+**Added**:
+- [`getAllCapcodes`](developers/exports/server.md#get-all-capcodes) server export. For more info, [see here](developers/exports/server.md#get-all-capcodes).
+  - Returns all capcodes and their currently assigned player server IDs.
+- [`/get-all-capcodes`](developers/api.mdx#get-all-capcodes) HTTP API endpoint. For more info, [see here](developers/api.mdx#get-all-capcodes).
+  - Returns all capcodes and their currently assigned player server IDs.
+
+**Changed**:
+- [`/page`](developers/api.mdx#create-a-new-page) HTTP API endpoint now returns response code 202 instead of 200.
+
+**Fixed**:
+- Missing default value for [`ic_pr_statebagPrefix`](config.md#statebag-prefix) in `config.cfg`.
+- Issue where paging a wildcard address would not include the top-level address.
+  - For example, paging `emg.fire.*` would page `emg.fire.bc`, `emg.fire.ls`, etc., but not `emg.fire`.
+- Crash when players changed capcode assignments while a page was being queued.
+- Error in server console when [`ic_pr_statebagPrefix`](config.md#statebag-prefix) was set to the default 'shared' value (`ic`).
+- Issue with Page Creation UI that resulted in a client-side-only resource crash during Page Creation.
+- Edge case where nodes with duplicate addresses would be incorrectly ingested if the `id` and `address` did not match.
+
 ### v1.1.5 - 05/18/2026
 
 **Fixed**:
