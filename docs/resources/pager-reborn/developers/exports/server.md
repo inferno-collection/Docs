@@ -156,6 +156,32 @@ exports["inferno-pager-reborn"]:setPlayerRoles(player, {"Dispatch", "EMS"})
 
 ***
 
+## Capcode Management
+
+### Get All Capcodes
+Use this export to get all capcodes/addresses and the players currently assigned to each one.
+
+#### Export Name
+```
+getAllCapcodes
+```
+
+#### Parameters
+None.
+
+#### Example
+```lua
+local capcodes = exports["inferno-pager-reborn"]:getAllCapcodes()
+```
+
+#### Return Value
+`table`
+	- A dictionary where each key is a capcode/address (`string`).
+	- Each value is a list of player server IDs (`number`) currently assigned to that capcode.
+	- Capcodes with no assigned players are still included, with an empty list.
+
+***
+
 ## Paging
 
 ### Create New Page

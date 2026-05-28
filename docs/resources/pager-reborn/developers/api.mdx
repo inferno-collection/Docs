@@ -54,7 +54,7 @@ POST /page
 ```
 
 #### Return Value
-- `200 - OK`
+- `202 - Accepted`
 	- No return body, headers only.
 - `400 - Bad Request`
 	- `Request contains an invalid nature`
@@ -68,3 +68,36 @@ POST /page
 	- `Request body cannot exceed X characters (body was Y characters)`
 - `416 - Requested Range Not Satisfiable`
 	- `Request contains no recipients`
+
+***
+
+## Capcodes
+
+### Get All Capcodes
+Use this endpoint to retrieve all capcodes/addresses and the players currently assigned to each one.
+
+#### Endpoint
+```
+GET /get-all-capcodes
+```
+
+#### Body
+No request body.
+
+#### Example Response
+```json
+{
+  "emg.fire.bc": [1, 2, 3],
+  "emg.ems.bc": [],
+  "emg.pd.main": [7]
+}
+```
+
+#### Return Value
+- `200 - OK`
+	- Returns a JSON object where each key is a capcode/address and each value is a list of player server IDs currently assigned to that capcode.
+- `401 - Unauthorized`
+	- API access token does not match, or caller IP is not allowed by [`ic_pr_whitelistedIps`](../config.md#api-whitelist).
+- `404 - Not Found`
+	- Endpoint not found, or API access token is not configured.
+	- May return a message in the response body.
