@@ -6,14 +6,15 @@ sidebar_position: 51
 This page explains how to integrate FAR with third-party resources.
 
 ## Fire Scripts
-FAR has automatic integration with all the fire resource listed below, no changes are required to be made by the end-user.
+FAR has automatic integration with all the fire resources listed below, no changes are required to be made by the end-user.
 
 - Albo1125's Fire Script
 - GIMIcz's Fire Script
 - GRC's MRC Fire
 - Toxic Scripts' Realistic Fire Script
 - Zea Development's z_fires
-- London Studios' Smart Fires
+- London Studios' Smart Fires V1
+- London Studios' Smart Fires V2
 - rScript's Fire Generator
 
 For more information, [see here](../index.md#fire-script-compatibility-list).
