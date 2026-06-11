@@ -8,6 +8,12 @@ This page documents the changes made to FAR.
 
 ## v1.5.\*
 
+### v1.5.7 - 06/11/2026
+
+**Added**:
+- Support for [London Studios' SmartFires V2](https://forum.cfx.re/t/smart-fires-v2-realistic-fire-spread-reignition-advanced-weather-mechanics-paid-resource/5406276?u=christopherm).
+  - Sprinklers will put out fires and Detectors will activate correctly.
+
 ### v1.5.6 - 03/27/2026
 
 :::danger
