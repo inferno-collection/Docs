@@ -473,13 +473,17 @@ Default value is `false`; changing to `true` without a valid subscription will r
 
 ### Tebex Subscription Payment Reference
 #### `ic_sa_addonPaymentReference`
-This value is the Subscription specific Payment Reference, not the normal Payment Reference.  
+This value is the Subscription-specific Payment Reference, not the normal Payment Reference.  
 You can tell the two apart, as the Subscription Payment Reference starts with `tbx-r-` and *not* `tbx-`.  
-You can find the Subscription Payment Reference in three places:
+You can find the Subscription Payment Reference in your Tebex Payment History, located [here](https://checkout.tebex.io/payment-history).
 
-1. On the payment confirmation screen after completing your purchase.
-2. In your subscription confirmation email from Tebex after purchase.
-3. In your Tebex Payment History, located [here](https://checkout.tebex.io/payment-history).
+<details>
+	<summary>Payment History Example</summary>
+	## Home Page
+	![Home Page](assets/config/history_1.png)
+	## Subscription Page
+	![Subscription Page](assets/config/history_2.png)
+</details>
 
 :::danger
 Treat your Subscription Payment Reference like a password.  
