@@ -479,9 +479,7 @@ You can find the Subscription Payment Reference in your Tebex Payment History, l
 
 <details>
 	<summary>Payment History Example</summary>
-	## Home Page
 	![Home Page](assets/config/history_1.png)
-	## Subscription Page
 	![Subscription Page](assets/config/history_2.png)
 </details>
 
