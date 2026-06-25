@@ -59,6 +59,8 @@ This command opens a menu to create a new Station Alert from anywhere.
 
 This command opens the Buzzer menu, which allows the player to open/close Doors from outside a Station.
 
+This command also has an optional keybind; to enable it, go to your Pause Menu → Settings → Keybinds → FiveM → Inferno Station Alert Door Buzzer.
+
 ## Health Check
 ### `/stationalert health`
 #### Required Ace Permission: Console Only
