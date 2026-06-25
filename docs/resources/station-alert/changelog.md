@@ -8,6 +8,20 @@ This page documents the changes made to SA.
 
 ## v1.3.\*
 
+### v1.3.3 - 06/25/2026
+
+**Added**:
+- Chat suggestions as an `editable` file.
+- Optional keybind for [`/stationalert buzzer`](usage/commands.md#door-buzzer). For more info, [see here](usage/commands.md#door-buzzer).
+
+**Changed**:
+- Improved door opening/closing logic to better support gates/sliding doors.
+- [Unit Beacons](usage/components.md#unit-beacons) and [Status Lights](usage/components.md#status-lights) are now considered in the [Dispatch Center](usage/components.md#dispatch-centers) check.
+
+**Fixed**:
+- GET [`doors/{name}`](developers/api.mdx#doors) HTTP API endpoint returning garbled data.
+- [Interior Traffic Lights](usage/components.md#traffic-lights) sometimes showing Red when doors/gates are fully open, instead of Green.
+
 ### v1.3.2 - 05/13/2026
 
 **Added**:
