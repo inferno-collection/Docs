@@ -8,6 +8,14 @@ This page documents the changes made to Flares.
 
 ## v1.0.\*
 
+### v1.0.4 - 06/27/2026
+
+**Changed**:
+- Update the UI design to match the new Inferno Collection design.
+
+**Fixed**:
+- Placement issue causing large error in client console.
+
 ### v1.0.3 - 04/16/2026
 **Added**:
 - Chat suggestions for commands as an editable client file.
