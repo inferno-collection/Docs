@@ -34,7 +34,7 @@ In your server's existing resource folder:
 
 1. Keep your existing config file.
 2. Keep any `editable` files you have changed.
-3. Keep any resource-specific data files you own, such as Pager Reborn's `nodes.lua` and `permissions.lua`.
+3. Keep any resource-specific data files you own, such as Pager Reborn's `nodes.lua` and `permissions.lua`, or IFlares' `flare-types.json` and `flash-patterns.json` if you changed them yourself.
 4. Delete the rest of the old resource files and folders.
 5. Copy in the new files from the download.
 6. Do not overwrite the config, `editable` files, or owned data files you kept.
@@ -107,7 +107,7 @@ After the files are replaced and hand-merged:
 ### Flares
 
 - Manual interaction support uses `editable/client/targeting.lua` and the server inventory editable. Keep any Ox, QB, or custom third-eye/inventory changes.
-- If you changed `flare-types.json` or `flash-patterns.json`, hand-merge those files so your custom flare names, models, RGB values, and flash timings are not lost.
+- If you changed IFlares' `flare-types.json` or `flash-patterns.json` yourself, keep and hand-merge those files so your custom flare names, models, RGB values, and flash timings are not lost.
 - If you edited textures, keep your edited texture files when replacing the rest of the resource.
 
 ### Torches
