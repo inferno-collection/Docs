@@ -1,0 +1,330 @@
+---
+title: Spotlight
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Below you can find several translations for Spotlight. These are provided with the resource, inside the `languages`, but are provided here for reference.
+
+## Translations
+
+<Tabs>
+	<TabItem value="english" label="English" default>
+		#### English
+		Translation by: [Inferno Collection](https://inferno-collection.com)
+
+		```json title="en-us.json" showLineNumbers
+		{
+			"Shared_Back": "Back",
+			"Shared_Cancel": "Cancel",
+			"Shared_Next": "Next",
+			"Shared_CreateNew": "Create New",
+			"Shared_EditExisting": "Edit Existing",
+			"Shared_Persistent": "Persistent",
+			"Shared_FlippedUpSpotlight": "Flipped-up Spotlight",
+			"Shared_FlippedDownSpotlight": "Flipped-down Spotlight",
+			"Shared_UseFlippedUpForBoth": "Use flipped-up spotlight for both",
+
+			"Main_VehicleCannotUseSpotlight": "This vehicle is not allowed to use spotlights",
+			"Main_VehicleClassCannotUseSpotlight": "This class of vehicle is not allowed to use spotlights",
+			"Main_SeatHasNoSpotlight": "This seat has no spotlight",
+
+			"ToolSetup_Kicker": "Spotlight Tool",
+
+			"ToolSetup_Start_Title": "Choose Setup Mode",
+			"ToolSetup_Start_Subtitle": "Place a new spotlight or edit an existing one.",
+			"ToolSetup_Start_CreateNew_Description": "Create a new spotlight",
+			"ToolSetup_Start_EditExisting_Description": "Edit an existing spotlight",
+
+			"ToolSetup_Create_Title": "Choose Spotlight Type",
+			"ToolSetup_Create_Subtitle": "Choose how this spotlight will be attached to the vehicle.",
+			"ToolSetup_Create_Modkit_Title": "Modkit",
+			"ToolSetup_Create_Modkit_Description": "Use a modkit for the spotlight",
+			"ToolSetup_Create_Extras_Title": "Extras",
+			"ToolSetup_Create_Extras_Description": "Use an extra for the spotlight",
+			"ToolSetup_Create_Persistent_Description": "For spotlights that cannot be hidden/toggled",
+
+			"ToolSetup_Options_Title": "Configure Spotlight",
+			"ToolSetup_Options_Subtitle": "Configure the appearance and behavior.",
+			"ToolSetup_Options_Location": "Location",
+			"ToolSetup_Options_Location_Driver": "Driver's Side",
+			"ToolSetup_Options_Location_Passenger": "Passenger's Side",
+			"ToolSetup_Options_EnableHighbeams": "Enable Highbeams",
+			"ToolSetup_Options_EnableHighbeams_Help": "When toggled, highbeams will turn on with spotlight.",
+			"ToolSetup_Options_Color": "Color",
+			"ToolSetup_Options_RestoreDefault": "Restore Default",
+			"ToolSetup_Options_Red": "Red",
+			"ToolSetup_Options_Green": "Green",
+			"ToolSetup_Options_Blue": "Blue",
+			"ToolSetup_Options_AdvancedOptions": "Advanced Options",
+			"ToolSetup_Options_Brightness": "Brightness",
+			"ToolSetup_Options_Radius": "Radius",
+			"ToolSetup_Options_Falloff": "Falloff",
+			"ToolSetup_Options_InnerCone": "Inner Cone",
+			"ToolSetup_Options_OuterCone": "Outer Cone",
+			"ToolSetup_Options_MinimumAngle": "Minimum Angle",
+			"ToolSetup_Options_MaximumAngle": "Maximum Angle",
+
+			"ToolSetup_Modkit_Title": "Select Vehicle Mods",
+			"ToolSetup_Modkit_Subtitle": "Choose the mods for the raised and lowered spotlight positions.",
+			"ToolSetup_Modkit_Status_Fetching": "Fetching vehicle modkits...",
+			"ToolSetup_Modkit_Status_Empty": "No modkits were found for this vehicle.",
+			"ToolSetup_Modkit_SelectType": "Select a type",
+			"ToolSetup_Modkit_SelectValue": "Select a value",
+			"ToolSetup_Modkit_UseUpForBoth_Help": "Use the same mod for both flipped up and down spotlights.",
+
+			"ToolSetup_Extras_Title": "Select Vehicle Extras",
+			"ToolSetup_Extras_Subtitle": "Choose the extras for the raised and lowered spotlight positions.",
+			"ToolSetup_Extras_Status_Fetching": "Fetching vehicle extras...",
+			"ToolSetup_Extras_Status_Empty": "No extras were found for this vehicle.",
+			"ToolSetup_Extras_SelectExtra": "Select an extra",
+			"ToolSetup_Extras_ExtraLabel": "Extra {0}",
+			"ToolSetup_Extras_UseUpForBoth_Help": "Use the same extra for both flipped up and down spotlights.",
+
+			"ToolSetup_Edit_Title": "Edit Existing Spotlight",
+			"ToolSetup_Edit_Subtitle": "Edit a spotlight that already exists.",
+			"ToolSetup_Edit_File_Title": "Select from File",
+			"ToolSetup_Edit_File_Subtitle": "Load a saved spotlight from the server",
+			"ToolSetup_Edit_Paste_Title": "Paste Spotlight Config",
+			"ToolSetup_Edit_Paste_Subtitle": "Paste a saved spotlight JSON config to continue editing.",
+			"ToolSetup_Edit_Paste_Label": "Spotlight Config",
+			"ToolSetup_Edit_Paste_Invalid": "That spotlight config could not be read. Check the JSON and try again.",
+			"ToolSetup_Edit_Status_Searching": "Searching...",
+			"ToolSetup_Edit_Status_Error": "Error occurred while searching.",
+			"ToolSetup_Edit_Status_Empty": "No existing spotlight was found for this vehicle.",
+			"ToolSetup_Edit_Label": "Existing Spotlight",
+			"ToolSetup_Edit_NoExisting": "No existing spotlights",
+			"ToolSetup_Edit_SelectExisting": "Select existing spotlight",
+			"ToolSetup_Edit_Type_Extra": "Extra Based",
+			"ToolSetup_Edit_Type_Modkit": "Modkit Based",
+			"ToolSetup_Edit_Source_Draft": "Draft",
+			"ToolSetup_Edit_Source_Live": "Live",
+
+			"CameraGizmo_Title": "Camera",
+			"CameraGizmo_Recenter": "Recenter",
+
+			"SuggestedLocations_Title": "Suggested Locations",
+			"SuggestedLocations_Subtitle": "Hover to preview, click to select.",
+			"SuggestedLocations_Item": "Location #{0}",
+
+			"Placement_Title": "Place Spotlight",
+			"Placement_Subtitle": "Use both gizmos to position and view the spotlight.",
+
+			"Placement_WorldGizmo_Label": "World Gizmo",
+			"Placement_WorldGizmo_Value": "Drag an axis arrow to move the spotlight along that axis.",
+
+			"Placement_CenterHandle_Label": "Center Handle",
+			"Placement_CenterHandle_Value": "Drag the center handle to move across the visible placement plane.",
+			"Placement_CameraGizmo_Label": "Camera Gizmo",
+			"Placement_CameraGizmo_Value": "Use the top-right gizmo to snap the camera around the vehicle.",
+
+			"Placement_CameraControls_Label": "Camera Controls",
+			"Placement_CameraControls_Move": "Move: Right Mouse Button + Move Mouse",
+			"Placement_CameraControls_Rotate": "Rotate: Middle Mouse Button + Move Mouse",
+			"Placement_CameraControls_Zoom": "Zoom In/Out: Scroll Wheel",
+
+			"Placement_ResetGizmo": "Reset Gizmo Position",
+			"Placement_Confirm": "Confirm",
+			"Placement_Return_Title": "Return to Setup?",
+			"Placement_Return_Copy": "The placement position will be lost.",
+			"Placement_Return_Button": "Go Back",
+			"Placement_Confirm_Title": "Confirm Placement",
+
+			"Placement_SaveDraft_Title": "Save to draft file",
+			"Placement_SaveDraft_Description": "Write this placement into draft-spotlights.json.",
+
+			"Placement_ShowConfig_Title": "Show config code",
+			"Placement_ShowConfig_Description": "Preview the generated config snippet.",
+
+			"Placement_CopyConfig_Button": "Click to Copy",
+			"Placement_CopyConfig_Copied": "Copied",
+			"Placement_CopyConfig_Failed": "Copy failed",
+
+			"Placement_Config_Loading_Title": "Loading Config Code",
+			"Placement_Config_Loading_Copy": "Building Config Code...",
+			"Placement_Config_Title": "Config Code",
+			"Placement_Config_Failed_Title": "Config Code Failed",
+			"Placement_Config_Failed_Copy": "The Config Code could not be built.",
+
+			"Placement_Close": "Close",
+			"Placement_CloseEditor": "Close Editor",
+
+			"Placement_Saving_Title": "Saving Draft",
+			"Placement_Saving_Copy": "Saving spotlight data...",
+			"Placement_Saved_Title": "Draft Saved",
+			"Placement_Saved_CopyPrefix": "The spotlight data has been saved to ",
+
+			"Placement_SendFailed": "The spotlight data could not be sent to the client.",
+
+			"Placement_DraftExists_Title": "Draft Already Exists",
+			"Placement_DraftExists_Fallback": "A draft spotlight already exists for this vehicle.",
+			"Placement_DraftExists_ConfirmSuffix": " Overwrite it with this placement?",
+
+			"Placement_SaveFailed_Title": "Save Failed",
+			"Placement_SaveFailed_Fallback": "The draft could not be saved.",
+
+			"Placement_OverwriteDraft": "Overwrite Draft",
+			"Placement_BackToEditor": "Back to Editor"
+		}
+		```
+	</TabItem>
+	<TabItem value="mexican-spanish" label="Español Mexicano">
+		#### Mexican Spanish - Español Mexicano
+		Translation by: Felipe Vergara
+
+		```json title="es-mx.json" showLineNumbers
+		{
+			"Shared_Back": "Atrás",
+			"Shared_Cancel": "Cancelar",
+			"Shared_Next": "Siguiente",
+			"Shared_CreateNew": "Crear Nuevo",
+			"Shared_EditExisting": "Editar Existente",
+			"Shared_Persistent": "Permanente",
+			"Shared_FlippedUpSpotlight": "Reflector Arriba",
+			"Shared_FlippedDownSpotlight": "Reflector Abajo",
+			"Shared_UseFlippedUpForBoth": "Usar el mismo reflector de arriba para las dos posiciones",
+
+			"Main_VehicleCannotUseSpotlight": "Este vehículo no puede llevar reflector",
+			"Main_VehicleClassCannotUseSpotlight": "Este tipo de vehículo no puede llevar reflector",
+			"Main_SeatHasNoSpotlight": "Desde este asiento no hay reflector",
+
+			"ToolSetup_Kicker": "Herramienta de Reflectores",
+
+			"ToolSetup_Start_Title": "¿Qué Quieres Hacer?",
+			"ToolSetup_Start_Subtitle": "Coloca un reflector nuevo o edita uno existente.",
+			"ToolSetup_Start_CreateNew_Description": "Poner un reflector nuevo",
+			"ToolSetup_Start_EditExisting_Description": "Modificar un reflector existente",
+
+			"ToolSetup_Create_Title": "¿Cómo va Montado el Reflector?",
+			"ToolSetup_Create_Subtitle": "Elige cómo se va a montar el reflector.",
+			"ToolSetup_Create_Modkit_Title": "Modkit",
+			"ToolSetup_Create_Modkit_Description": "Usa un modkit del vehículo",
+			"ToolSetup_Create_Extras_Title": "Extras",
+			"ToolSetup_Create_Extras_Description": "Usa un extra del vehículo",
+			"ToolSetup_Create_Persistent_Description": "Para reflectores que no se pueden ocultar ni apagar",
+
+			"ToolSetup_Options_Title": "Ajusta tu Reflector",
+			"ToolSetup_Options_Subtitle": "Define cómo se ve y cómo funciona.",
+			"ToolSetup_Options_Location": "¿De qué Lado Va?",
+			"ToolSetup_Options_Location_Driver": "Lado del Conductor",
+			"ToolSetup_Options_Location_Passenger": "Lado del Copiloto",
+			"ToolSetup_Options_EnableHighbeams": "Prender Luces Altas con el Reflector",
+			"ToolSetup_Options_EnableHighbeams_Help": "Prende las luces altas junto con el reflector.",
+			"ToolSetup_Options_Color": "Color de la Luz",
+			"ToolSetup_Options_RestoreDefault": "Regresar a lo Normal",
+			"ToolSetup_Options_Red": "Rojo",
+			"ToolSetup_Options_Green": "Verde",
+			"ToolSetup_Options_Blue": "Azul",
+			"ToolSetup_Options_AdvancedOptions": "Más Opciones",
+			"ToolSetup_Options_Brightness": "Brillo",
+			"ToolSetup_Options_Radius": "Alcance",
+			"ToolSetup_Options_Falloff": "Caída de Luz",
+			"ToolSetup_Options_InnerCone": "Cono Interior",
+			"ToolSetup_Options_OuterCone": "Cono Exterior",
+			"ToolSetup_Options_MinimumAngle": "Ángulo Mínimo",
+			"ToolSetup_Options_MaximumAngle": "Ángulo Máximo",
+
+			"ToolSetup_Modkit_Title": "Elige los Mods del Vehículo",
+			"ToolSetup_Modkit_Subtitle": "Elige el mod para cuando el reflector está subido y cuando está bajado.",
+			"ToolSetup_Modkit_Status_Fetching": "Buscando modkits...",
+			"ToolSetup_Modkit_Status_Empty": "Este vehículo no tiene modkits disponibles.",
+			"ToolSetup_Modkit_SelectType": "Elige un tipo",
+			"ToolSetup_Modkit_SelectValue": "Elige una opción",
+			"ToolSetup_Modkit_UseUpForBoth_Help": "Usa el mismo mod para las dos posiciones.",
+
+			"ToolSetup_Extras_Title": "Elige los Extras del Vehículo",
+			"ToolSetup_Extras_Subtitle": "Elige el extra para cuando el reflector está subido y cuando está bajado.",
+			"ToolSetup_Extras_Status_Fetching": "Buscando extras...",
+			"ToolSetup_Extras_Status_Empty": "Este vehículo no tiene extras disponibles.",
+			"ToolSetup_Extras_SelectExtra": "Elige un extra",
+			"ToolSetup_Extras_ExtraLabel": "Extra {0}",
+			"ToolSetup_Extras_UseUpForBoth_Help": "Usa el mismo extra para las dos posiciones.",
+
+			"ToolSetup_Edit_Title": "Modificar un Reflector Existente",
+			"ToolSetup_Edit_Subtitle": "Edita un reflector que ya creaste.",
+			"ToolSetup_Edit_File_Title": "Seleccionar desde un Archivo",
+			"ToolSetup_Edit_File_Subtitle": "Carga un reflector guardado en el servidor",
+			"ToolSetup_Edit_Paste_Title": "Pegar la Configuración",
+			"ToolSetup_Edit_Paste_Subtitle": "Pega el JSON guardado para seguir editando.",
+			"ToolSetup_Edit_Paste_Label": "Configuración del Reflector",
+			"ToolSetup_Edit_Paste_Invalid": "Esa configuración no es válida. Revisa el JSON e intenta de nuevo.",
+			"ToolSetup_Edit_Status_Searching": "Buscando...",
+			"ToolSetup_Edit_Status_Error": "Algo salió mal al buscar.",
+			"ToolSetup_Edit_Status_Empty": "Este vehículo no tiene ningún reflector todavía.",
+			"ToolSetup_Edit_Label": "Reflector a Editar",
+			"ToolSetup_Edit_NoExisting": "No hay reflectores guardados",
+			"ToolSetup_Edit_SelectExisting": "Elige el reflector a editar",
+			"ToolSetup_Edit_Type_Extra": "Con Extra",
+			"ToolSetup_Edit_Type_Modkit": "Con Modkit",
+			"ToolSetup_Edit_Source_Draft": "Borrador",
+			"ToolSetup_Edit_Source_Live": "Ya Publicado",
+
+			"CameraGizmo_Title": "Cámara",
+			"CameraGizmo_Recenter": "Centrar de Nuevo",
+
+			"SuggestedLocations_Title": "Lugares Sugeridos",
+			"SuggestedLocations_Subtitle": "Pasa el mouse para previsualizar, haz clic para elegir.",
+			"SuggestedLocations_Item": "Lugar #{0}",
+
+			"Placement_Title": "Coloca tu Reflector",
+			"Placement_Subtitle": "Usa los dos controles para mover y ver bien el reflector.",
+
+			"Placement_WorldGizmo_Label": "Flechas de Movimiento",
+			"Placement_WorldGizmo_Value": "Jala una flecha para mover el reflector en esa dirección.",
+
+			"Placement_CenterHandle_Label": "Punto Central",
+			"Placement_CenterHandle_Value": "Jala el punto central para moverlo por el área marcada.",
+			"Placement_CameraGizmo_Label": "Control de Cámara",
+			"Placement_CameraGizmo_Value": "Usa el control de arriba a la derecha para girar la cámara.",
+
+			"Placement_CameraControls_Label": "Cómo Mover la Cámara",
+			"Placement_CameraControls_Move": "Mover: clic derecho + mueve el mouse",
+			"Placement_CameraControls_Rotate": "Girar: clic con la rueda + mueve el mouse",
+			"Placement_CameraControls_Zoom": "Acercar o Alejar: rueda del mouse",
+
+			"Placement_ResetGizmo": "Regresar el Control a su Lugar",
+			"Placement_Confirm": "Confirmar",
+			"Placement_Return_Title": "¿Seguro que Quieres Regresar?",
+			"Placement_Return_Copy": "Vas a perder la posición actual.",
+			"Placement_Return_Button": "Sí, Regresar",
+			"Placement_Confirm_Title": "Confirmar Dónde Quedó",
+
+			"Placement_SaveDraft_Title": "Guardar como Borrador",
+			"Placement_SaveDraft_Description": "Guarda tu reflector en draft-spotlights.json.",
+
+			"Placement_ShowConfig_Title": "Ver el Código de Configuración",
+			"Placement_ShowConfig_Description": "Muestra el código generado para este reflector.",
+
+			"Placement_CopyConfig_Button": "Clic para Copiar",
+			"Placement_CopyConfig_Copied": "¡Copiado!",
+			"Placement_CopyConfig_Failed": "No se pudo copiar",
+
+			"Placement_Config_Loading_Title": "Preparando el Código",
+			"Placement_Config_Loading_Copy": "Generando el código...",
+			"Placement_Config_Title": "Código de Configuración",
+			"Placement_Config_Failed_Title": "No se Pudo Generar el Código",
+			"Placement_Config_Failed_Copy": "No se pudo generar el código.",
+
+			"Placement_Close": "Cerrar",
+			"Placement_CloseEditor": "Cerrar el Editor",
+
+			"Placement_Saving_Title": "Guardando",
+			"Placement_Saving_Copy": "Guardando los datos de tu reflector...",
+			"Placement_Saved_Title": "¡Listo, se Guardó!",
+			"Placement_Saved_CopyPrefix": "Tu reflector se guardó en ",
+
+			"Placement_SendFailed": "No se pudieron enviar los datos al juego.",
+
+			"Placement_DraftExists_Title": "Ya Hay un Borrador Guardado",
+			"Placement_DraftExists_Fallback": "Ya existe un borrador para este vehículo.",
+			"Placement_DraftExists_ConfirmSuffix": " ¿Quieres reemplazarlo con este nuevo?",
+
+			"Placement_SaveFailed_Title": "No se Pudo Guardar",
+			"Placement_SaveFailed_Fallback": "No se pudo guardar el borrador.",
+
+			"Placement_OverwriteDraft": "Sí, Reemplazar",
+			"Placement_BackToEditor": "Regresar a Editar"
+		}
+		```
+	</TabItem>
+</Tabs>
