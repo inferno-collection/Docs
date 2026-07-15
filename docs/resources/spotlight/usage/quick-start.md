@@ -19,4 +19,4 @@ For example, on some European keyboards, the `A` key is the sprint key.
 
 ## Which vehicles does the spotlight work with?
 
-Any vehicle that has a spotlight that turns on with the vehicle's high beams should work automatically. 
+Any vehicle that has a spotlight that turns on with the vehicle's high beams should work automatically. You can add more vehicles using the [Spotlight Tool](../developers/tool.md).
