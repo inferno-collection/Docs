@@ -9,6 +9,11 @@ This page documents the changes made to Spotlight.
 ## v1.1.\*
 
 ### v1.1.0 - TBC
+
+:::danger
+v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for info on how to upgrade from v1.0.5 → v1.1.0.
+:::
+
 **Added**:
 - Complete in-game [Spotlight configuration and placement tool](developers/tool.md).
   - Supports [creating new spotlights](developers/tool.md#create-a-new-spotlight) and [editing existing ones](developers/tool.md#edit-an-existing-spotlight).
