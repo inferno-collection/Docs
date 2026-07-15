@@ -4,279 +4,270 @@ sidebar_position: 20
 
 # Configuration
 
-Spotlight uses a `config.json` file to store config values.
+Spotlight uses `config.cfg` for resource settings and `spotlights.json` for vehicle spotlight definitions. For information on installing `config.cfg`, [see here](install.md).
 
-:::danger
-JSON syntax is important: missing `,`s, or `[]`s will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
+:::tip
+Use the in-game [Spotlight Tool](developers/tool.md) to create and edit vehicle spotlight definitions. It generates the required `spotlights.json` entries and can save them to `draft-spotlights.json`.
 :::
 
 ## Value List
 
-|                             Name                             | Default Value |
-|:------------------------------------------------------------:|:-------------:|
-|          [`SpotlightDistance`](#spotlight-distance)          |     `40`      |
-|        [`SpotlightBrightness`](#spotlight-brightness)        |     `8.5`     |
-|         [`SpotlightRoundness`](#spotlight-roundness)         |      `7`      |
-|            [`SpotlightRadius`](#spotlight-radius)            |     `20`      |
-|           [`SpotlightFallOff`](#spotlight-falloff)           |     `30`      |
-|       [`SpotlightMinAngle`](#spotlight-minimum-angle)        |     `-60`     |
-|       [`SpotlightMaxAngle`](#spotlight-maximum-angle)        |     `65`      |
-|               [`KickCheaters`](#kick-cheaters)               |    `false`    |
-|                    [`Command`](#command)                     |  `spotlight`  |
-|       [`DefaultPrimaryKey`](#default-primary-keybind)        |  `LCONTROL`   |
-|             [`SecondaryKey`](#secondary-keybind)             |     `21`      |
-|          [`VehicleExtras`](#vehicle-extras-mapping)          |     `[]`      |
-|            [`VehicleMods`](#vehicle-mod-mapping)             |     `[]`      |
-| [`VehiclePersistents`](#vehicles-with-persistent-spotlights) |     `[]`      |
-|       [`VehicleSpotlightIgnores`](#spotlight-ignoring)       |     `[]`      |
-|      [`VehicleCustomRGB`](#custom-spotlight-rgb-colors)      |     `[]`      |
-|     [`IgnoredVehicleClasses`](#ignored-vehicle-classes)      |     `[]`      |
-|            [`IgnoredVehicles`](#ignored-vehicles)            |     `[]`      |
+|                                    Name                                     |      Default Value       |
+|:---------------------------------------------------------------------------:|:------------------------:|
+|                       [`ic_spot_language`](#language)                       |         `en-us`          |
+|                  [`ic_spot_kickCheaters`](#kick-cheaters)                   |         `false`          |
+|           [`ic_spot_defaultPrimaryKey`](#default-primary-keybind)           |        `LCONTROL`        |
+|               [`ic_spot_secondaryKeyId`](#secondary-keybind)                |           `21`           |
+|               [`ic_spot_disableFallback`](#disable-fallback)                |         `false`          |
+|         [`ic_spot_ignoredVehicleClasses`](#ignored-vehicle-classes)         |    `Cycles`, `Trains`    |
+|               [`ic_spot_ignoredVehicles`](#ignored-vehicles)                | `cablecar`, `metrotrain` |
+| [`ic_spot_defaultSpotlightConfiguration`](#default-spotlight-configuration) |       *See below*        |
+|                        [`ic_spot_command`](#command)                        |       `spotlight`        |
+|                          [`ic_spot_debug`](#debug)                          |         `false`          |
 
 ## Values Explained
 
-### Spotlight Distance
-#### `SpotlightDistance`
-This value controls the distance a spotlight will be drawn with.
-
-### Spotlight Brightness
-#### `SpotlightBrightness`
-This value controls the brightness a spotlight will be drawn with.
-
-### Spotlight Roundness
-#### `SpotlightRoundness`
-This value controls the roundness a spotlight will be drawn with.
-
-### Spotlight Radius
-#### `SpotlightRadius`
-This value controls the radius a spotlight will be drawn with.
-
-### Spotlight Falloff
-#### `SpotlightFallOff`
-This value controls the falloff a spotlight will be drawn with.
-
-### Spotlight Minimum Angle
-#### `SpotlightMinAngle`
-This value controls how far to the left a spotlight can be angled.
-
-### Spotlight Maximum Angle
-#### `SpotlightMaxAngle`
-This value controls how far to the right a spotlight can be angled.
+### Language
+#### `ic_spot_language`
+This value is the short code for the language Spotlight should use. Available languages are listed on the [translations page](../../translations).
 
 ### Kick Cheaters
-#### `KickCheaters`
-If `true`, the script will kick players it thinks are abusing the script.  
-Even if `false`, script will log suspect players to the console.
-
-### Command
-#### `Command`
-The name of the command that can be used instead of the keybinds to toggle the spotlight.
+#### `ic_spot_kickCheaters`
+If this value is `true`, Spotlight kicks players it detects attempting unauthorized Spotlight actions. Suspected actions are still logged to the server console when this value is `false`.
 
 ### Default Primary Keybind
-#### `DefaultPrimaryKey`
-The keyboard mapping name for the key to use for the primary keybind.  
-For a full list of options, [see here](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/).
+#### `ic_spot_defaultPrimaryKey`
+This value sets the default keyboard mapping for the primary Spotlight keybind. Players can change it through **Pause Menu → Settings → Key Bindings → FiveM**.
 
-:::note
-Because FiveM's keymapping is used for the primary keybind, once a player joins the server for the first time while Spotlight is running, the keybind will be saved. To change the keybind for existing players, they must go to their in-game settings > keybinds > FiveM > `Toggles vehicle spotlight`.
-:::
+For a full list of keyboard values, [see the FiveM documentation](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/).
 
 ### Secondary Keybind
-#### `SecondaryKey`
-The control id to use for the secondary keybind - by default this is mapped to Sprint / `Left Shift` (`21`).  
-For a full list of options, [see here](https://docs.fivem.net/docs/game-references/controls/#controls).
+#### `ic_spot_secondaryKeyId`
+This value sets the control ID for the secondary Spotlight keybind. By default it is Sprint / `Left Shift` (`21`).
 
-### Vehicle Extras Mapping
-#### `VehicleExtras`
-Configuring this optional value will allow the resource to set the correct extras on a vehicle when the spotlight is toggled on or off.
+For a full list of control IDs, [see the FiveM documentation](https://docs.fivem.net/docs/game-references/controls/#controls).
 
-For example, if we have a vehicle with the spawn name `police_car`, and it has 4 spotlight extras as below:
-- Extra 1: Driver spotlight flipped down
-- Extra 2: Driver spotlight flipped up
-- Extra 3: Passenger spotlight flipped down
-- Extra 4: Passenger spotlight flipped down
-
-The config for the above would look like so:
-
-```json
-[
-	{
-	  "ModelName": "police_car",
-	  "DriversSide": true,
-	  "DisabledExtra": 1,
-	  "EnabledExtra": 2, 
-	  "EnableHighBeams": false
-	},
-	{
-	  "ModelName": "police_car",
-	  "DriversSide": false,
-	  "DisabledExtra": 3,
-	  "EnabledExtra": 4, 
-	  "EnableHighBeams": false
-	}
-]
-```
-
-### Vehicle Mod Mapping
-#### `VehicleMods`
-Configuring this optional value will allow the resource to use mod kits as spotlights, on vehicles that don't have existing functional spotlights. When configured, the resource will change the mod kit based on the spotlight on/off state (i.e., flipped up for on, down for off). 
-
-The steps required to add a vehicle mod are covered on [here](developers/index.md#server-owners--developers).
-
-### Vehicles with Persistent Spotlights
-#### `VehiclePersistents`
-For vehicles that have spotlights that are persistent or permanent, meaning that cannot be removed via extra or mod kits, they can be added to this config option.  
-All that is required is the vehicle model name, if the spotlight is the driver's or passenger's, and the position of the spotlight.
-
-The config for the above would look like so:
-
-```json
-[
-	{
-	  "ModelName": "police_car",
-	  "DriversSide": true,
-	  "LightPosition": { "x": 1.0, "y": 1.0, "z": 1.0 }, 
-	  "EnableHighBeams": false
-	}
-]
-```
-
-To get the light position, use the [Placement Tool](developers/index.md#spotlight-placement).
-
-### Spotlight Ignoring
-#### `VehicleSpotlightIgnores`
-Configuring this optional value will tell the resource to ignore specific spotlights.
-
-For example, if we have a vehicle with the spawn name `police_car`, and it has 4 functional 'spotlights'.  
-If however, one of these spotlights is part of the headlight assemble instead of a spotlight, you can tell the resource to ignore it.
-
-Entries for this config option look like the below:
-
-```json
-[
-	{
-	  "ModelName": "police_car",
-	  "SpotlightNumber": 2
-	}
-]
-```
-
-- `ModelName` is the name of the vehicle model.
-- `SpotlightNumber` is the spotlight index on that specific vehicle, use the [`/spotlight debug`](usage/commands.md#spotlight-debugging) command to find it.
-
-### Custom Spotlight RGB Colors
-#### `VehicleCustomRGB`
-Configuring this optional value will tell the resource to use a specific RGB color value for designated model spotlights.
-
-Entries for this config option look like the below:
-
-```json
-[
-	{
-	  "ModelName": "police_car", 
-	  "RGB": { "r": 255, "g": 0, "b": 255 }
-	}
-]
-```
-
-- `ModelName` is the name of the vehicle model.
-- `RGB` is the color code to use, [see here](https://share.google/Eskx96nQ8MkC8btNO).
-
-:::warning
-`r`, `g`, and `b` **must** be lowercase.
-:::
+### Disable Fallback
+#### `ic_spot_disableFallback`
+If this value is `true`, a vehicle must have an entry in `spotlights.json` before its spotlights can be used. If `false`, Spotlight can use compatible vehicle spotlights that do not have an explicit definition.
 
 ### Ignored Vehicle Classes
-#### `IgnoredVehicleClasses`
-Configuring this optional value will tell the resource to disallow spotlights on the listed vehicle classes.  
-
-:::tip
-This only applies for automatically detected spotlights; if a vehicle has an entry in `VehicleExtras`, `VehicleMods`, or `VehiclePersistents`, they will ignore this config option and work regardless.
-:::
+#### `ic_spot_ignoredVehicleClasses`
+This value is a list of vehicle classes that cannot use spotlights.
 
 <details>
   <summary>Vehicle class list</summary>
-	:::warning
-	The classes must be worded exactly as below.  
-	For example, `OffRoad` cannot be `Off-Road`.
-	:::
 
-	- `Compacts`
-	- `Sedans`
-	- `SUVs`
-	- `Coupes`
-	- `Muscle`
-	- `SportsClassics`
-	- `Sports`
-	- `Super`
-	- `Motorcycles`
-	- `OffRoad`
-	- `Industrial`
-	- `Utility`
-	- `Vans`
-	- `Cycles`
-	- `Boats`
-	- `Helicopters`
-	- `Planes`
-	- `Service`
-	- `Emergency`
-	- `Military`
-	- `Commercial`
-	- `Trains`
+The classes must be written exactly as below. For example, use `OffRoad`, not `Off-Road`.
+
+- `Compacts`
+- `Sedans`
+- `SUVs`
+- `Coupes`
+- `Muscle`
+- `SportsClassics`
+- `Sports`
+- `Super`
+- `Motorcycles`
+- `OffRoad`
+- `Industrial`
+- `Utility`
+- `Vans`
+- `Cycles`
+- `Boats`
+- `Helicopters`
+- `Planes`
+- `Service`
+- `Emergency`
+- `Military`
+- `Commercial`
+- `Trains`
 </details>
 
-Entries for this config option look like the below:
-
-```json
-[
-	"Cycles",
-	"Trains"
-]
-```
-
 ### Ignored Vehicles
-#### `IgnoredVehicles`
-Configuring this optional value will tell the resource to disallow spotlights on the listed vehicles.
+#### `ic_spot_ignoredVehicles`
+This value is a list of vehicle spawn names that cannot use spotlights.
 
-:::tip
-This config option takes priority overs, meaning even if a vehicle is listed in `VehicleExtras`, `VehicleMods`, or `VehiclePersistents`, if it is listed here, it will be disallowed.
+### Default Spotlight Configuration
+#### `ic_spot_defaultSpotlightConfiguration`
+This value sets the default appearance and movement values used by all configured spotlights. Individual entries in `spotlights.json` can override any of these values.
+
+| Property | Description | Default |
+|:---|:---|:---:|
+| `Brightness` | Brightness of the spotlight. | `8.5` |
+| `Radius` | Radius of the spotlight. | `20` |
+| `FallOff` | Falloff of the spotlight. | `30` |
+| `InnerCone` | Inner cone angle of the spotlight. | `15` |
+| `OuterCone` | Outer cone angle of the spotlight. | `45` |
+| `MinAngle` | Furthest angle the spotlight can move left. | `-60` |
+| `MaxAngle` | Furthest angle the spotlight can move right. | `65` |
+| `RGB` | Spotlight colour, using `Red`, `Green`, and `Blue` values. | `221`, `221`, `221` |
+
+### Command
+#### `ic_spot_command`
+This value changes the `/spotlight` command name. For a full list of commands, [see here](usage/commands.md).
+
+### Debug
+#### `ic_spot_debug`
+If this value is `true`, extra debug logs are written to the client and server consoles. This is not recommended for production servers.
+
+## Spotlight Definitions
+
+`spotlights.json` stores the vehicle-specific spotlight definitions. It contains three lists:
+
+- `extras` - spotlights controlled with vehicle extras.
+- `mods` - spotlights controlled with vehicle modkits.
+- `persistents` - permanent spotlights that cannot be raised, lowered, or hidden.
+
+Each definition has a `modelName`, a `position` of either `driver` or `passenger`, and a vehicle-relative `lightSource` position with `x`, `y`, and `z` values. The optional `configuration` object overrides the default spotlight configuration for that definition.
+
+:::note
+Use the [Spotlight Tool](developers/tool.md) to generate vehicle definitions. It can preview extras and modkits, position the light source, and produce valid JSON for `spotlights.json`.
 :::
 
-Entries for this config option look like the below:
+### Per-Spotlight Configuration
+
+When present in a vehicle definition, `configuration` can contain any of the following lower-camel-case properties. Omitted properties inherit from [`ic_spot_defaultSpotlightConfiguration`](#default-spotlight-configuration).
+
+| Property | Description |
+|:---|:---|
+| `brightness` | Brightness of the spotlight. |
+| `radius` | Radius of the spotlight. |
+| `fallOff` | Falloff of the spotlight. |
+| `innerCone` | Inner cone angle. |
+| `outerCone` | Outer cone angle. |
+| `minAngle` | Minimum movement angle. |
+| `maxAngle` | Maximum movement angle. |
+| `enableHighbeams` | Turns on the vehicle high beams with the spotlight. |
+| `rgb` | Colour override with lowercase `red`, `green`, and `blue` properties. |
+
+### Vehicle Extras
+
+Entries in `extras` use `enabledExtra` and `disabledExtra` to select the vehicle extras to use while the spotlight is enabled and disabled.
 
 ```json
-[
-	"police",
-	"police2"
-]
+{
+  "modelName": "police_car",
+  "position": "driver",
+  "lightSource": { "x": 0.45, "y": 0.8, "z": 0.6 },
+  "enabledExtra": 2,
+  "disabledExtra": 1
+}
 ```
 
-## Default Config File
-```json showLineNumbers title="config.json"
+### Vehicle Modkits
+
+Entries in `mods` use `up` and `down` objects. Each object contains the vehicle mod `type` and `index` to apply for the raised and lowered spotlight states.
+
+```json
 {
-  "SpotlightDistance": "40",
-  "SpotlightBrightness": "8.5",
-  "SpotlightRoundness": "7",
-  "SpotlightRadius": "20",
-  "SpotlightFallOff": "30",
-  "SpotlightMinAngle": "-60",
-  "SpotlightMaxAngle": "65",
+  "modelName": "police_car",
+  "position": "passenger",
+  "lightSource": { "x": -0.45, "y": 0.8, "z": 0.6 },
+  "up": { "type": 49, "index": 1 },
+  "down": { "type": 49, "index": 0 }
+}
+```
 
-  "KickCheaters": "false",
+### Persistent Spotlights
 
-  "Command": "spotlight",
+Entries in `persistents` are for spotlights that are permanently modelled on the vehicle and do not require an extra or modkit.
 
-  "DefaultPrimaryKey": "LCONTROL",
-  "SecondaryKey": "21",
+```json
+{
+  "modelName": "police_car",
+  "position": "driver",
+  "lightSource": { "x": 0.45, "y": 0.8, "z": 0.6 },
+  "configuration": {
+    "enableHighbeams": true,
+    "rgb": { "red": 255, "green": 255, "blue": 255 }
+  }
+}
+```
 
-  "VehicleExtras": [],
-  "VehicleMods": [], 
-  "VehiclePersistents": [],
-  "VehicleSpotlightIgnores": [],
+## Permissions
 
-  "VehicleCustomRGB": [],
+### Use Spotlight
+#### `InfernoSpotlight.UseSpotlight`
+This permission allows players to use Spotlight. By default, it is granted to all players.
 
-  "IgnoredVehicleClasses": [],
-  "IgnoredVehicles": []
+### Use Spotlight Tool
+#### `InfernoSpotlight.Tool`
+This permission allows players to access the Spotlight placement and configuration tool. By default, it is granted to `group.admin`.
+
+## Default Config Files
+
+```text showLineNumbers title="config.cfg"
+# Inferno Collection Spotlight
+
+#####################
+### Configuration ###
+#####################
+
+### General ###
+
+# Select language
+setr ic_spot_language "en-us"
+
+# Kick suspected cheaters
+set ic_spot_kickCheaters "false"
+
+# Default keybind key (players can change via Pause Menu -> Keybinds)
+setr ic_spot_defaultPrimaryKey "LCONTROL"
+
+# Control ID for second key, default is Sprint (Left Shift)
+setr ic_spot_secondaryKeyId "21"
+
+# If "true", vehicles require a config entry for spotlights to work
+setr ic_spot_disableFallback "false"
+
+# Vehicle classes to ignore
+setr ic_spot_ignoredVehicleClasses [
+  "Cycles",
+  "Trains"
+]
+
+# Vehicle models to ignore
+setr ic_spot_ignoredVehicles [
+  "cablecar",
+  "metrotrain"
+]
+
+### Advanced ###
+
+setr ic_spot_defaultSpotlightConfiguration {
+  "Brightness": "8.5",
+  "Radius": "20",
+  "FallOff": "30",
+  "InnerCone": "15",
+  "OuterCone": "45",
+  "MinAngle": "-60",
+  "MaxAngle": "65",
+  "RGB": {
+    "Red": "221",
+    "Green": "221",
+    "Blue": "221"
+  }
+}
+
+# Change command name
+set ic_spot_command "spotlight"
+
+# If the resource should run in debug mode
+setr ic_spot_debug "false"
+
+###################
+### Permissions ###
+###################
+
+add_ace builtin.everyone "InfernoSpotlight.UseSpotlight" allow
+add_ace group.admin "InfernoSpotlight.Tool" allow
+```
+
+```json showLineNumbers title="spotlights.json"
+{
+  "extras": [],
+  "mods": [],
+  "persistents": []
 }
 ```

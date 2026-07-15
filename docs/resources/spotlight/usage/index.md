@@ -13,13 +13,18 @@ import DocCardList from '@theme/DocCardList';
 ```
 
 ## FAQs
-### My config isn't loading / "Error reading configuration from file, contents are invalid. Reverting to default configuration values."
-You have one or more syntax errors in your `config.json`, use a website [like this](https://jsonformatter.org/) to check the file.
+### My config isn't loading / "The config.cfg file has not been executed correctly, please check the documentation!"
+Spotlight convars are stored in a `config.cfg` file - unlike other resources, you need to "execute" the config file before they will take effect. [See here](../install.md#installing-the-resource) for more info.
 
 ***
 
-### How do I make the vehicle extras change with the spotlight?
-You can find information on adding vehicle extras to the config [here](../config.md#vehicle-extras-mapping).
+### I made changes to the config and restarted the resource, but nothing changed
+Spotlight uses convars stored in a `config.cfg` file - unlike other resources, you need to "execute" the config file before they will take effect. When you restart the resource without re-executing the config, the resource will re-read the previous values. You either need to re-execute the config via the server console, or restart your server. The command for the console can be found [here](../install.md#installing-the-resource).
+
+***
+
+### How do I make the vehicle extras/modkits change with the spotlight?
+Use the [Spotlight Tool](../developers/tool.md), for more info [see here](../developers/tool.md).
 
 ***
 
