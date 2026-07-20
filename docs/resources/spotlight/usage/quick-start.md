@@ -12,9 +12,7 @@ The default keybinds for Spotlight are `Left Control` and `Left Shift` - to togg
 To move the spotlight after turning it on, hold `Left Shift` and move your camera.
 
 :::note
-Unless [changed in the config](../config.md#secondary-keybind), the resource uses the Sprint key as the secondary keybind.  
-By default, `Left Shift` is Sprint on most keyboards, however, it does change.  
-For example, on some European keyboards, the `A` key is the sprint key.
+Both keybinds can be changed through **Pause Menu → Settings → Key Bindings → FiveM**. Server owners can set their [primary](../config.md#default-primary-keybind) and [secondary](../config.md#default-secondary-keybind) defaults in the configuration.
 :::
 
 ## Which vehicles does the spotlight work with?

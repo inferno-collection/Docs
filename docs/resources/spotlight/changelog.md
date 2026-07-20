@@ -52,6 +52,7 @@ v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for
   - The `config.json` has been replaced with `config.cfg`.
   - Configured spotlights no longer reside in the config, and are now stored in `spotlights.json`.
 - Improved server-side validation checks to catch cheaters.
+- The secondary key is now a configurable FiveM keybind, like the primary key. Its default is `LSHIFT`. For more info, [see here](config.md#default-secondary-keybind).
 
 **Fixed**:
 - A vehicle's roll (left/right lean) not being factored into spotlight aim.

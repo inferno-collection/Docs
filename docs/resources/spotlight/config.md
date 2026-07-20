@@ -17,7 +17,7 @@ Use the in-game [Spotlight Tool](developers/tool.md) to create and edit vehicle 
 |                       [`ic_spot_language`](#language)                       |         `en-us`          |
 |                  [`ic_spot_kickCheaters`](#kick-cheaters)                   |         `false`          |
 |           [`ic_spot_defaultPrimaryKey`](#default-primary-keybind)           |        `LCONTROL`        |
-|               [`ic_spot_secondaryKeyId`](#secondary-keybind)                |           `21`           |
+|         [`ic_spot_defaultSecondaryKey`](#default-secondary-keybind)         |         `LSHIFT`         |
 |               [`ic_spot_disableFallback`](#disable-fallback)                |         `false`          |
 |         [`ic_spot_ignoredVehicleClasses`](#ignored-vehicle-classes)         |    `Cycles`, `Trains`    |
 |               [`ic_spot_ignoredVehicles`](#ignored-vehicles)                | `cablecar`, `metrotrain` |
@@ -41,11 +41,11 @@ This value sets the default keyboard mapping for the primary Spotlight keybind. 
 
 For a full list of keyboard values, [see the FiveM documentation](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/).
 
-### Secondary Keybind
-#### `ic_spot_secondaryKeyId`
-This value sets the control ID for the secondary Spotlight keybind. By default it is Sprint / `Left Shift` (`21`).
+### Default Secondary Keybind
+#### `ic_spot_defaultSecondaryKey`
+This value sets the default keyboard mapping for the secondary Spotlight keybind. Players can change it through **Pause Menu → Settings → Key Bindings → FiveM**.
 
-For a full list of control IDs, [see the FiveM documentation](https://docs.fivem.net/docs/game-references/controls/#controls).
+For a full list of keyboard values, [see the FiveM documentation](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/).
 
 ### Disable Fallback
 #### `ic_spot_disableFallback`
@@ -212,11 +212,13 @@ setr ic_spot_language "en-us"
 # Kick suspected cheaters
 set ic_spot_kickCheaters "false"
 
-# Default keybind key (players can change via Pause Menu -> Keybinds)
+# Default primary key (primary + secondary toggles the spotlight)
+# Players can change it via Pause Menu -> Keybinds
 setr ic_spot_defaultPrimaryKey "LCONTROL"
 
-# Control ID for second key, default is Sprint (Left Shift)
-setr ic_spot_secondaryKeyId "21"
+# Default secondary key (hold to move the spotlight)
+# Players can change it via Pause Menu -> Keybinds
+setr ic_spot_defaultSecondaryKey "LSHIFT"
 
 # If "true", vehicles require a config entry for spotlights to work
 setr ic_spot_disableFallback "false"
