@@ -123,6 +123,8 @@ Each definition has a `modelName`, a `position` of either `driver` or `passenger
 
 :::note
 Use the [Spotlight Tool](developers/tool.md) to generate vehicle definitions. It can preview extras and modkits, position the light source, and produce valid JSON for `spotlights.json`.
+
+When upgrading from v1.0.5, use the in-game [`/spotlight convert`](usage/commands.md#spotlight-convert) workflow described in the [migration guide](migration.md) instead of manually translating the old `config.json` vehicle entries.
 :::
 
 ### Per-Spotlight Configuration

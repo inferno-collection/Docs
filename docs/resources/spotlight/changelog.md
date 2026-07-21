@@ -5,6 +5,12 @@ sidebar_position: 999
 import ImageComparison from '@site/src/components/ImageComparison';
 import volumetricLightingAfter from './assets/changelog/vol_after.png';
 import volumetricLightingBefore from './assets/changelog/vol_before.png';
+import lightAfter from './assets/changelog/light_after.png';
+import lightBefore from './assets/changelog/light_before.png';
+import areaAfter from './assets/changelog/area_after.png';
+import areaBefore from './assets/changelog/area_before.png';
+import toolAfter from './assets/changelog/tool_after.png';
+import toolBefore from './assets/changelog/tool_before.png';
 
 # Changelog
 
@@ -24,13 +30,16 @@ v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for
 	- `InfernoSpotlight.Tool` controls access to the placement/editor tool.
 - Volumetric lighting to spotlights.
   <ImageComparison before={volumetricLightingBefore} after={volumetricLightingAfter} />
+  <ImageComparison before={lightBefore} after={lightAfter} />
+  <ImageComparison before={areaBefore} after={areaAfter} />
 - Multi-language support, [see here](../../translations/spotlight.mdx) for more info.
 - `editable` chat suggestions under `editable/client/chat.lua`.
 - Ability to aim spotlights up and down, in addition to left and right.
 - Smooth spotlight moving when aim changes from one extreme to another.
   - I.e., if pointed all the way left, then aimed all the way right, will not smoothly move to new position.
-- Complete in-game [Spotlight configuration and placement tool](developers/tool.md).
-  ![Spotlight Placement Tool](assets/changelog/editor.png)
+  - ![Smooth Spotlight Movement](assets/changelog/smooth.webp)
+- Complete reworking of in-game [Spotlight configuration and placement tool](developers/tool.md).
+  <ImageComparison before={toolBefore} after={toolAfter} />
   - Supports [creating new spotlights](developers/tool.md#create-a-new-spotlight) and [editing existing ones](developers/tool.md#edit-an-existing-spotlight).
   - Supports vehicle extras, vehicle modkits, and persistent spotlights.
   - Shows a live preview of vehicle extras/modkit variants during setup.
