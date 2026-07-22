@@ -18,7 +18,7 @@ This page documents the changes made to Spotlight.
 
 ## v1.1.\*
 
-### v1.1.0 - TBC
+### v1.1.0 - 07/22/2026
 
 :::danger
 v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for info on how to upgrade from v1.0.5 → v1.1.0.
@@ -73,7 +73,7 @@ v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for
   - To ignore a vehicle entirely, add it to [`ic_spot_ignoredVehicles`](config.md#ignored-vehicles), otherwise use the [Spotlight Tool](developers/tool.md) to add it manually.
 - `VehicleCustomRGB` config option.
   - Spotlight colors can now be configured per-vehicle in the [Spotlight Tool](developers/tool.md).
-  - To define a default color for all vehicles, update [`ic_spot_defaultSpotlightConfiguration`](config.md#default-spotlight-configuration) 
+  - To define a default color for all vehicles, update [`ic_spot_defaultSpotlightConfiguration`](config.md#default-spotlight-configuration)
 
 ## v1.0.\*
 
