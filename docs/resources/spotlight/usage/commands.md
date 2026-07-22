@@ -16,7 +16,23 @@ Toggles the spotlight of the current vehicle.
 
 ***
 
-## Spotlight Debugging
-### `/spotlight debug`
+## Spotlight Tool
+### `/spotlight tool`
 
-Visually highlights the spotlight positions on the current vehicle, and provides the spotlight number for use in [`VehicleSpotlightIgnores`](../config.md#spotlight-ignoring) config option. Also displays relevant bone positions and names.
+For detailed information on the [Spotlight Tool](../developers/tool.md), [see here](../developers/tool.md).
+
+***
+
+## Convert Legacy Configuration
+### `/spotlight convert`
+#### In-Game Only
+
+Converts a v1.0.5 `config.json` into a complete v1.1.0 `spotlights.json`. The player running the command needs the `InfernoSpotlight.Tool` permission. Follow the [migration guide](../migration.md) for the required file locations and copy steps.
+
+***
+
+## Health Check
+### `/spotlight health`
+#### Console Only
+
+This command prints information to the console indicating the state of the resource.
