@@ -47,8 +47,8 @@ If your `[inferno-collection]` folder contains more than one resource, only repl
 
 Configs should be merged by hand, not overwritten.
 
-- Resources that use `config.cfg`: Pager Reborn, Fire Alarm Reborn, Station Alert, and Flares.
-- Resources that use `config.json`: Spotlight, Torches, and Hands-Free Siren.
+- Resources that use `config.cfg`: Pager Reborn, Fire Alarm Reborn, Station Alert, Flares, and Spotlight.
+- Resources that use `config.json`: Torches and Hands-Free Siren.
 
 Open the config from the new download next to your current config, then copy across any new, renamed, or removed options. Keep your existing values where they are still valid.
 
@@ -118,9 +118,10 @@ After the files are replaced and hand-merged:
 
 ### Spotlight
 
-- Spotlight uses `config.json`; hand-merge new options and validate the JSON before starting the server.
-- Keep custom vehicle entries in `VehicleExtras`, `VehicleMods`, `VehiclePersistents`, `VehicleSpotlightIgnores`, and any custom RGB spotlight color entries.
-- If an update changes vehicle config structure, rebuild or adjust your custom entries using the Spotlight developer docs before starting the server.
+- Spotlight uses `config.cfg` for resource settings and `spotlights.json` for vehicle spotlight definitions. Hand-merge changes to `config.cfg` and validate `spotlights.json` before starting the server.
+- Keep custom vehicle definitions in the `extras`, `mods`, and `persistents` arrays in `spotlights.json`.
+- When updating from v1.0.5 to v1.1.0, follow the [Spotlight migration guide](../resources/spotlight/migration.md) to move your old `config.json` vehicle configuration to `spotlights.json`.
+- If an update changes vehicle definition structure, rebuild or adjust custom entries using the [Spotlight Tool](../resources/spotlight/developers/tool.md) before starting the server.
 
 ### Hands-Free Siren
 
