@@ -22,5 +22,9 @@ If you have not done so already, you will need to purchase the resource from [ou
    :::note
    If you have previously downloaded our resources, and already have a folder named `[inferno-collection]`, you can still paste the new folder; the files will merge as required.
    :::
-4. If you have not already, add `ensure [inferno-collection]` somewhere in your `server.cfg`.
-5. Save and close your `server.cfg`.
+4. Go to your `server-data` folder and open your `server.cfg` file. At the top, add `exec @inferno-torches/config.cfg`.
+   :::note
+   If you have other entries starting with `exec`, you can put these together.
+   :::
+5. If you have not already, add `ensure [inferno-collection]` somewhere in your `server.cfg`.
+6. Save and close your `server.cfg`.

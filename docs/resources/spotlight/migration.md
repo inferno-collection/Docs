@@ -48,7 +48,7 @@ Modkit and persistent entries retain their existing legacy `LightPosition`. The 
 ### Prepare the Old Configuration
 
 1. Find the backed-up v1.0.5 `config.json` that contains your old `VehicleExtras`, `VehicleMods`, and/or `VehiclePersistents` entries.
-2. Copy that file into the root of the updated `inferno-spotlight` resource folder—the same folder that contains `fxmanifest.lua`, `config.cfg`, and `spotlights.json`.
+2. Copy that file into the root of the updated `inferno-spotlight` resource folder - the same folder that contains `fxmanifest.lua`, `config.cfg`, and `spotlights.json`.
 3. Rename the copied file to `old-config.json`.
 4. Do not replace `spotlights.json` yet. `old-config.json` must contain the complete old `config.json` contents, not only one of its arrays.
 5. Ensure the player running the command has the [`InfernoSpotlight.Tool`](config.md#use-spotlight-tool) ACE permission.

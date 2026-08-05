@@ -47,12 +47,12 @@ If your `[inferno-collection]` folder contains more than one resource, only repl
 
 Configs should be merged by hand, not overwritten.
 
-- Resources that use `config.cfg`: Pager Reborn, Fire Alarm Reborn, Station Alert, Flares, and Spotlight.
-- Resources that use `config.json`: Torches and Hands-Free Siren.
+- Resources that use `config.cfg`: Pager Reborn, Fire Alarm Reborn, Station Alert, Flares, Torches, and Spotlight.
+- Resources that use `config.json`: Hands-Free Siren.
 
 Open the config from the new download next to your current config, then copy across any new, renamed, or removed options. Keep your existing values where they are still valid.
 
-For `config.json` files, check the final file with a JSON validator before starting the server. Missing commas, brackets, or quotes can prevent the resource from loading.
+For `config.cfg` files, make sure the file is executed from `server.cfg` before the resource starts. For JSON files, check the final file with a JSON validator before starting the server. Missing commas, brackets, or quotes can prevent a resource from loading.
 
 ## Update Editable Files by Hand
 
@@ -112,8 +112,9 @@ After the files are replaced and hand-merged:
 
 ### Torches
 
-- Torches uses `config.json`; hand-merge any new options and validate the JSON before starting the server.
-- If you created Ped or MP Ped torch presets with the tool, keep those entries in the `peds` and `mpped` config sections when merging.
+- Torches uses `config.cfg` for resource settings and `torches.json` for Ped and MP Ped torch presets. Hand-merge changes to `config.cfg` and review `torches.json` before starting the server.
+- When updating from v1.0.3 to v1.1.0, follow the [Torches migration guide](../resources/torches/migration.md) and use `/torch convert` to migrate legacy presets.
+- Keep custom Ped and MP Ped torch presets in `torches.json` when replacing the resource.
 - Inventory support uses `editable/server/inventory.lua`, so keep any OxInventory, QBInventory, or custom inventory code.
 
 ### Spotlight

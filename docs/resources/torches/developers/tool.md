@@ -2,129 +2,86 @@
 sidebar_position: 30
 ---
 
-# Tool
-The process for adding new presets for Peds and MP Peds is similar, and only deviates at the end.  
-Follow the process below to create new Torch Presets.
+# Torch Tool
 
-### Enable the tool
-To enable the tool, type the following command: `/torch tool`.
+The Torch Tool is an in-game editor for creating and editing Ped and MP Ped torch presets. It guides you through selecting the torch mount, choosing the clothing or prop target, positioning the torch, and exporting or saving the finished preset.
 
-### Select the Mount Type
-In the top left of your screen, the tool will prompt you to select from either a Chest or Head torch.
+The tool creates entries for [`torches.json`](../config.md#preset-files). You do not need to build the JSON by hand.
 
-![Mount Type](assets/mount_type.png)
+## Before You Start
 
-### Select Corona Position
-Use the controls listed in the top left of your screen to move the gizmo to the position you want the corona to appear from.
+1. Ensure you have the [`InfernoTorches.Tool`](../config.md#use-torch-tool) ACE permission.
+2. Spawn the Ped or MP Ped you want to configure.
+	- Pre-configure the Ped with the torch clothing component or prop already equipped when you want to create a component-specific preset.
+3. Run `/torch tool`. If you changed [`ic_torches_command`](../config.md#command), replace `torch` with your configured command name.
 
-| ![Movement Controls](assets/movement_controls.png) | ![Corona Position](assets/corona_position.png) |
-|----------------------------------------------------|------------------------------------------------|
-
-For example, this corona has been positioned in front of the head torch.
-
-### Confirm Corona Position
-Use the controls listed in the top left of your screen to confirm you are happy with the position of the corona.  
-If not, you can go back and move it again.
-
-| ![Confirm or Change](assets/confirm_change.png) | ![Corona Confirmed](assets/corona_confirmed.png) |
-|-------------------------------------------------|--------------------------------------------------|
-
-:::tip
-View the preview corona from multiple angles to ensure it is positioned correctly.  
-If not, you can go back and move it again.
-:::
-
-### Select Light Source Position
-Use the controls listed in the top left of your screen to move the gizmo to the position you want the light source to appear from.  
-Generally, this will be the same as your Corona Position; however, sometimes due to clipping you may need to move the source further away from the ped.
-
-| ![Movement Controls](assets/movement_controls.png) | ![Source Position](assets/source_position.png) |
-|----------------------------------------------------|------------------------------------------------|
-
-For example, this light source has been positioned in front of the head torch.
-
-### Confirm Light Source Position
-Use the controls listed in the top left of your screen to confirm you are happy with the position of the light source.  
-If not, you can go back and move it again.
-
-| ![Confirm or Change](assets/confirm_change.png) | ![Light Source Confirmed](assets/source_confirmed.png) |
-|-------------------------------------------------|--------------------------------------------------------|
-
-:::tip
-View the preview light source from multiple angles to ensure it is positioned correctly.  
-If not, you can go back and move it again.
-:::
-
-### Select Cloth Type
 :::note
-This step is only for MP Peds; for Peds, skip to [this step](#copy-preset-json).
+The tool uses your current Ped. It can preview clothing and prop targets while you configure an MP Ped preset.
 :::
 
-Use the controls listed in the top left of your screen to select which cloth type to attach this preset to.
+## Create a New Preset
 
-For example, if you're setting up a head torch for a specific helmet, you would select Prop.  
-Another example, if you're setting up a chest torch for a specific jacket, you would select Component.
+Select **Create new**, then choose the mount:
 
-![Prop or Component](assets/prop_component.png)
+- **Head torch** - mounts the torch at the Ped's head.
+- **Chest torch** - mounts the torch at the Ped's chest.
 
-### Select Cloth Item
-Use the controls listed in the top left of your screen to select which cloth item to attach this preset to.
+### Select the Target
 
-Using the previous example, for a helmet torch, you would select `Hats / Helmets`.  
-For the jacket torch, you would select `Shirt Overlay / Jacket`
+For a regular Ped, decide whether the preset should match a specific clothing component:
 
-| ![Change Selection](assets/change_selection.png) | ![Hats](assets/hats.png) | ![Jackets](assets/jackets.png) |
-|--------------------------------------------------|--------------------------|--------------------------------|
+- **Match component enabled** - select the component and drawable that the preset belongs to. The preset will only match that model when it is wearing the selected combination.
+- **Match component disabled** - create a model-only preset. The preset will match the model regardless of its current clothing or drawable. This is useful for non-MP Peds whose torch position does not depend on their clothing.
 
-### Copy Preset JSON
-After final confirmation, you will see this notification:
+For an MP Ped, select the clothing component or prop that the preset belongs to. The tool previews target selections on the current Ped so you can confirm the correct item before placing the torch.
 
-![Done](assets/done.png)
+### Place the Torch
 
-Press F8 to access your client console, there you will see JSON.  
-For example, it may look like this:
+After completing setup, select **Next** to enter placement mode. The editor opens a camera and a 3D world gizmo around the selected Ped.
 
-![Console 1](assets/console_1.png)
+Drag an axis on the world gizmo to move the torch along that direction. Drag the centre handle to move it across the visible placement plane. Select **Reset gizmo position** to restore the default head or chest position.
 
-Select all the JSON like you would select any other text.
+### Control the Camera
 
-![Console 1](assets/console_2.png)
+Use the placement camera to inspect the torch from different angles:
 
-After selecting it, copy it either by pressing `Ctrl` + `C`, or right-clicking in the console and selecting `Copy`.
+- **Move:** hold the right mouse button and move the mouse.
+- **Rotate:** hold the middle mouse button and move the mouse.
+- **Zoom:** use the scroll wheel.
+- **Direction snapping:** select a direction on the camera gizmo.
+- **Recenter:** select **Recenter** to return the camera to its default view.
 
-You will now have something like this in your clipboard:
+The camera transitions smoothly between snapped views and returns to gameplay when the tool closes.
 
-```json
-{
-  "collectionName": "mp_m_smuggler_01",
-  "localIndex": 6,
-  "isProp": true,
-  "variationId": 0,
-  "mountType": "Head",
-  "source": {
-    "X": 0.15,
-    "Y": 0.065,
-    "Z": 0.13
-  },
-  "corona": {
-    "X": 0.15,
-    "Y": 0.065,
-    "Z": 0.13
-  }
-}
-```
+## Confirm the Preset
 
-:::tip
-Ped and MP Ped presets look slightly different, but the process is the same.
-:::
+Select **Confirm placement** when the torch is correctly positioned. Choose one of the following options:
 
-### Adding Preset to Config
-Open your `config.json` and locate the appropriate section.  
-For Peds, this is the `peds` section.  
-For MP Peds, this is the `mpped` section, and within that, either `male` or `female`.
+- **Save to draft file** - saves the preset server-side in `draft-torches.json`.
+- **Show config code** - displays the generated JSON and provides a copy button.
 
-Paste your new preset into the correct section, ensuring proper JSON syntax is used, or the config will break.
+If a matching preset already exists, choose **Replace existing** to overwrite it.
 
 :::warning
-JSON syntax is important: missing `,`s, `[]`s, etc. will break the file. Check your JSON syntax with [this website](https://jsonformatter.org/).
+`draft-torches.json` is a working file. Review the generated preset and copy it into the appropriate `peds` or `mppeds` collection in `torches.json` before using it as a live preset.
 :::
+
+## Edit an Existing Preset
+
+Select **Edit existing** from the opening screen. The tool searches both the live and draft preset files for matching entries for the current Ped.
+
+Select a preset to load it, then update its target, mount, and placement just as you would when creating a new preset. For a non-MP preset, the **Match component** option reflects whether the loaded preset is model-only or component-specific. When editing an MP Ped preset, the tool can update the current Ped's clothing or prop to match the selected preset.
+
+## Troubleshooting
+
+### I cannot open the tool
+
+Confirm that you have the [`InfernoTorches.Tool`](../config.md#use-torch-tool) ACE permission and that the resource configuration has been executed with `exec @inferno-torches/config.cfg`.
+
+### No matching preset is found
+
+Confirm that the current Ped model, mount type, and preset file entry match. For a component-specific non-MP preset, also confirm that the current component and drawable match. If you want a non-MP preset to work across clothing variations, edit it with **Match component** disabled. If you want all Peds to be able to use torches without a matching preset, enable [`ic_torches_allowAnyPed`](../config.md#allow-any-ped).
+
+### My saved preset is not active in-game
+
+Drafts are saved to `draft-torches.json`, not the live `torches.json` file. Copy the reviewed preset into `torches.json` and restart the resource.

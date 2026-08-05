@@ -6,6 +6,45 @@ sidebar_position: 999
 
 This page documents the changes made to Torches.
 
+## v1.1.\*
+
+### v1.1.0 - TBD
+
+:::danger
+v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for info on how to upgrade from v1.0.3 → v1.1.0.
+:::
+
+
+**Added**:
+- [ACE permissions](config.md#permissions).
+  - `InfernoTorches.UseTorches` controls ordinary torch use.
+  - `InfernoTorches.Tool` controls access to the Torch Tool.
+- Volumetric lighting to torches.
+  - TODO Images
+- Multi-language support, [see here](../../translations/torches.mdx) for more info.
+- Complete reworking of in-game [Torch configuration and placement tool](developers/tool.md).
+  - Supports creating and editing Ped and MP Ped presets.
+  - Supports live preview of MP Ped clothing and prop variations.
+  - Includes an interactive 3D placement gizmo and editor camera.
+  - Can load existing presets from `torches.json` and `torches.draft.json`.
+  - Can save new or edited presets to `torches.draft.json`, or show the generated JSON in-game.
+- Torches configuration workflow improvements.
+	- Save drafts directly to the server (saves to `draft-torches.json`), or view and copy JSON from in-game.
+	- Load drafts from:
+		- The live torches file (`torches.json`).
+		- The draft file (`draft-torches.json`).
+		- Or paste JSON directly in-game.
+- `editable` chat suggestions under `editable/client/chat.lua`.
+
+**Changed**:
+- Config from JSON to CFG:
+  - `config.json` has been replaced with `config.cfg`.
+  - Ped and MP Ped presets have moved from `config.json` to `torches.json`.
+- Torch presets now store a single position instead of separate source and corona positions.
+
+**Removed**:
+- The `torchDistance`, `torchBrightness`, `torchRoundness`, `torchRadius`, and `torchFallOff` config values. Their supported appearance settings are now part of `ic_torches_defaultTorchConfiguration`.
+
 ## v1.0.\*
 
 ### v1.0.3 - 12/15/2025
