@@ -1,6 +1,11 @@
 ---
 sidebar_position: 999
 ---
+import ImageComparison from '@site/src/components/ImageComparison';
+import moveAfter from './assets/changelog/move_after.webp';
+import moveBefore from './assets/changelog/move_before.webp';
+import drawAfter from './assets/changelog/draw_after.png';
+import drawBefore from './assets/changelog/draw_before.png';
 
 # Changelog
 
@@ -20,9 +25,11 @@ v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for
   - `InfernoTorches.UseTorches` controls ordinary torch use.
   - `InfernoTorches.Tool` controls access to the Torch Tool.
 - Volumetric lighting to torches.
-  - TODO Images
+  <ImageComparison after={drawAfter} before={drawBefore} />
+  <ImageComparison after={moveAfter} before={moveBefore} />
 - Multi-language support, [see here](../../translations/torches.mdx) for more info.
 - Complete reworking of in-game [Torch configuration and placement tool](developers/tool.md).
+  ![New Tool](assets/changelog/new_tool.png)
   - Supports creating and editing Ped and MP Ped presets.
   - Supports live preview of MP Ped clothing and prop variations.
   - Includes an interactive 3D placement gizmo and editor camera.
@@ -65,7 +72,7 @@ v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for
   - 
 	| `DisableHeadMovement` Disabled       | `DisableHeadMovement` Enabled       |
 	|--------------------------------------|-------------------------------------|
-	| ![Disabled](assets/head_before.webp) | ![Disabled](assets/head_after.webp) |
+	| ![Disabled](assets/changelog/head_before.webp) | ![Disabled](assets/changelog/head_after.webp) |
 
 ### v1 - 10/09/2025
 Resource release.

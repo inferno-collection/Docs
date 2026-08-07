@@ -26,12 +26,16 @@ Select **Create new**, then choose the mount:
 - **Head torch** - mounts the torch at the Ped's head.
 - **Chest torch** - mounts the torch at the Ped's chest.
 
+![Step One](assets/tool/1.png)
+
 ### Select the Target
 
 For a regular Ped, decide whether the preset should match a specific clothing component:
 
 - **Match component enabled** - select the component and drawable that the preset belongs to. The preset will only match that model when it is wearing the selected combination.
 - **Match component disabled** - create a model-only preset. The preset will match the model regardless of its current clothing or drawable. This is useful for non-MP Peds whose torch position does not depend on their clothing.
+
+![Step Two B](assets/tool/2b.png)
 
 For an MP Ped, select the clothing component or prop that the preset belongs to. The tool previews target selections on the current Ped so you can confirm the correct item before placing the torch.
 
@@ -40,6 +44,8 @@ For an MP Ped, select the clothing component or prop that the preset belongs to.
 After completing setup, select **Next** to enter placement mode. The editor opens a camera and a 3D world gizmo around the selected Ped.
 
 Drag an axis on the world gizmo to move the torch along that direction. Drag the centre handle to move it across the visible placement plane. Select **Reset gizmo position** to restore the default head or chest position.
+
+![Step Three](assets/tool/3.png)
 
 ### Control the Camera
 
@@ -61,6 +67,8 @@ Select **Confirm placement** when the torch is correctly positioned. Choose one 
 - **Show config code** - displays the generated JSON and provides a copy button.
 
 If a matching preset already exists, choose **Replace existing** to overwrite it.
+
+![Step Three](assets/tool/4.png)
 
 :::warning
 `draft-torches.json` is a working file. Review the generated preset and copy it into the appropriate `peds` or `mppeds` collection in `torches.json` before using it as a live preset.
