@@ -52,6 +52,6 @@
 		"node": ">=20.0"
 	},
 	"allowScripts": {
-		"core-js@3.49.0": true
+		"core-js@3.50.0": true
 	}
 }
