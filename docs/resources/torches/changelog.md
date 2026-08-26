@@ -19,6 +19,9 @@ This page documents the changes made to Torches.
 v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for info on how to upgrade from v1.0.3 → v1.1.0.
 :::
 
+**YouTube Video**:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nLG1o_E6ZBc?si=dO98ll3s2V365Ziy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 **Added**:
 - [ACE permissions](config.md#permissions).
   - `InfernoTorches.UseTorches` controls ordinary torch use.
