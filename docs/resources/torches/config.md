@@ -4,308 +4,253 @@ sidebar_position: 20
 
 # Configuration
 
-Torches uses a `config.json` file to store config values. Invalid JSON syntax in this file will cause errors.
+Torches uses `config.cfg` for resource settings and `torches.json` for Ped and MP Ped torch presets. The in-game [Torch Tool](developers/tool.md) can create, edit, preview, and save preset definitions to `torches.draft.json`.
+
+:::warning
+Version 1.1.0 replaces `config.json` with `config.cfg`. Presets that were previously stored in `config.json` are now stored in `torches.json`. See the [migration guide](migration.md) before updating an existing installation.
+:::
 
 ## Value List
 
-|                            Name                            | Default Value |
-|:----------------------------------------------------------:|:-------------:|
-|              [`allowAnyPed`](#allow-any-ped)               |    `false`    |
-|            [`torchesDistance`](#torch-distance)            |     `30`      |
-|          [`torchesBrightness`](#torch-brightness)          |     `1.5`     |
-|           [`torchesRoundness`](#torch-roundness)           |     `0.5`     |
-|              [`torchesRadius`](#torch-radius)              |     `20`      |
-|             [`torchesFallOff`](#torch-falloff)             |     `100`     |
-|                   [`command`](#command)                    |    `torch`    |
-|            [`defaultKeybind`](#default-keybind)            |    *None*     |
-|      [`disableHeadMovement`](#disable-head-movement)       |    `true`     |
-| [`disableKeybindInVehicles`](#disable-keybind-in-vehicles) |    `false`    |
-|          [`inventorySupport`](#inventory-support)          |    `false`    |
-|                  [`defaults`](#defaults)                   |  *See Below*  |
-|                      [`peds`](#peds)                       |  *See Below*  |
-|                    [`mppeds`](#mp-peds)                    |  *See Below*  |
+|                                  Name                                  | Default Value |
+|:----------------------------------------------------------------------:|:-------------:|
+|                   [`ic_torches_language`](#language)                   |    `en-us`    |
+|              [`ic_torches_kickCheaters`](#kick-cheaters)               |    `false`    |
+|            [`ic_torches_defaultKeybind`](#default-keybind)             |    *None*     |
+| [`ic_torches_disableKeybindInVehicles`](#disable-keybind-in-vehicles)  |    `false`    |
+|       [`ic_torches_disableHeadMovement`](#disable-head-movement)       |    `true`     |
+|          [`ic_torches_inventorySupport`](#inventory-support)           |    `false`    |
+| [`ic_torches_defaultTorchConfiguration`](#default-torch-configuration) |  *See below*  |
+|                    [`ic_torches_command`](#command)                    |    `torch`    |
+|               [`ic_torches_allowAnyPed`](#allow-any-ped)               |    `false`    |
+|                   [`ic_torches_defaults`](#defaults)                   |  *See below*  |
+|                      [`ic_torches_debug`](#debug)                      |    `false`    |
 
 ## Values Explained
 
-### Allow Any Ped
-#### `allowAnyPed`
-If this value is `false`, only preconfigured Peds and MP Peds will be able to use Torches.  
-If this value is `true`, any Ped or MP Ped can use Torches. Where no preset exists, [defaults](#defaults) will be used.
+### Language
+#### `ic_torches_language`
+The short code for the language Torches should use. Available languages are listed on the [translations page](../../translations).
 
-### Torch Distance
-#### `torchDistance`
-This value controls the distance a Torch will be drawn with.
-
-### Torch Brightness
-#### `torchBrightness`
-This value controls the brightness a Torch will be drawn with.
-
-### Torch Roundness
-#### `torchRoundness`
-This value controls the roundness a Torch will be drawn with.
-
-### Torch Radius
-#### `torchRadius`
-This value controls the radius a Torch will be drawn with.
-
-### Torch Falloff
-#### `torchFallOff`
-This value controls the falloff a Torch will be drawn with.
-
-### Command
-#### `Command`
-The name of the command.
+### Kick Cheaters
+#### `ic_torches_kickCheaters`
+When `true`, Torches kicks players who attempt unauthorized actions. Suspected actions are logged when this is `false`.
 
 ### Default Keybind
-#### `defaultKeybind`
-The keyboard mapping name for the key to use for the keybind.  
-For a full list of options, [see here](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/).
+#### `ic_torches_defaultKeybind`
+The default keyboard mapping for the torch keybind. By default, no keybind is configured. Players can add one through **Pause Menu → Settings → Key Bindings → FiveM**.
 
-By default, no default is provided, meaning there is no keybind.  
-Players can add one via their GTA V/FiveM Keybind Settings
-
-### Disable Head Movement
-#### `disableHeadMovement`
-When enabled, prevents head movement when moving third-person camera, allowing light source to stay "attached" to helmets.
-
-| `DisableHeadMovement` Disabled       | `DisableHeadMovement` Enabled       |
-|--------------------------------------|-------------------------------------|
-| ![Disabled](assets/head_before.webp) | ![Disabled](assets/head_after.webp) |
+For available keyboard values, see the [FiveM documentation](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/).
 
 ### Disable Keybind in Vehicles
-#### `disableKeybindInVehicles`
-When enabled, the keybind to toggle the torch will be disabled.
+#### `ic_torches_disableKeybindInVehicles`
+When `true`, the keybind for toggling a torch is disabled inside vehicles. The command and inventory toggles are not affected.
 
-:::note
-The command and inventory toggles (if configured) are not impacted, and can still be used in vehicles.
-:::
+### Disable Head Movement
+#### `ic_torches_disableHeadMovement`
+When `true`, prevents head movement while moving the third-person camera, allowing the light source to stay attached to helmets.
 
 ### Inventory Support
-#### `inventorySupport`
-When this value is `true`, inventory support for resources such as [OxInventory](https://overextended.dev/ox_inventory) and [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory) will be enabled.
+#### `ic_torches_inventorySupport`
+When `true`, enables inventory support for resources such as [OxInventory](https://overextended.dev/ox_inventory) and [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory).
 
-:::note
-You must also uncomment/edit the `editable/server/inventory.lua` file in addition to setting this value to `true` in order for inventory resources to work.
-Code inside `editable/server/inventory.lua` will not run unless `inventorySupport` is `true`.
-:::
+You must also configure `editable/server/inventory.lua`. That file is not run unless inventory support is enabled.
 
-Inside the `editable/server/inventory.lua` file, server owners/developers can either uncomment the code for [OxInventory](https://overextended.dev/ox_inventory) or [QBInventory](https://docs.qbcore.org/qbcore-documentation/qbcore-resources/qb-inventory), or add their own inventory code as required.
-Reach out in [Discord](https://inferno.codes/discord) if you need help adding other resources.
+### Default Torch Configuration
+#### `ic_torches_defaultTorchConfiguration`
+Sets the default appearance of torches.
 
-:::tip
-The "items.lua" entry for both Ox and QB are located at the top of `editables/server/inventory.lua`, and 100x100 png images are located in the download root directory.
-:::
+| Property | Description | Default |
+|:---|:---|:---:|
+| `brightness` | Torch brightness. | `1.5` |
+| `radius` | Torch radius. | `20` |
+| `fallOff` | Torch falloff. | `100` |
+| `innerCone` | Inner cone angle. | `20` |
+| `outerCone` | Outer cone angle. | `100` |
+| `rgb` | Torch color using `red`, `green`, and `blue` values. | `221`, `221`, `221` |
+
+### Command
+#### `ic_torches_command`
+Changes the command used to toggle a torch. The default is `/torch`.
+
+### Allow Any Ped
+#### `ic_torches_allowAnyPed`
+When `false`, only Peds and MP Peds with a matching preset in `torches.json` can use torches. When `true`, any Ped or MP Ped can use torches, using the values in [`ic_torches_defaults`](#defaults) when no preset exists.
 
 ### Defaults
-#### `defaults`
-The values listed in the `defaults` are values used when no other matching preset can be found.  
-There are two default entries, one for `head` and one for `chest`.  
-Changing these values will change the default torch positions on a ped.
+#### `ic_torches_defaults`
+Sets the head and chest torch positions used when no matching preset exists. Each position contains `x`, `y`, and `z` offsets relative to the Ped.
 
-### Peds
-#### `peds`
-This config option is where you list presets for non-MP Peds, such as base game peds or addon peds.  
-Unlike [MP Peds](#mp-peds), this config option **is not** split into Male and Female.
+### Debug
+#### `ic_torches_debug`
+When `true`, writes additional debug information to the client and server consoles. This is not recommended for production servers.
 
-Entries for this config option can be created in-game using the Tool. [See here](developers/tool.md) for more info.
+## Permissions
 
-Below is an example of an entry:
-```json
+### Use Torches
+#### `InfernoTorches.UseTorches`
+Allows a player to use torches. The default config grants this permission to everyone.
+
+### Use Torch Tool
+#### `InfernoTorches.Tool`
+Allows a player to open the Torch Tool. The default config grants this permission to `group.admin`.
+
+## Preset Files
+
+`torches.json` contains two preset collections:
+
+- `peds` - presets for non-MP Peds. Each entry uses `model`, `componentId`, `drawableId`, `mountType`, and `position`.
+- `mppeds` - presets for `male` and `female` freemode Peds. Each entry uses `collectionName`, `localIndex`, `isProp`, `variationId`, `mountType`, and `position`.
+
+Each `position` contains `x`, `y`, and `z` offsets. Use the [Torch Tool](developers/tool.md) to generate valid entries. The tool reads existing entries from both `torches.json` and `torches.draft.json`, and saves new or edited entries to `torches.draft.json`.
+
+```json showLineNumbers title="torches.json"
 {
-  "model": "s_m_y_fireman_01",
-  "mountType": "Chest",
-  "source": {
-    "X": 0.16,
-    "Y": 0.212,
-    "Z": 0.148
-  },
-  "corona": {
-    "X": 0.16,
-    "Y": 0.212,
-    "Z": 0.148
+  "peds": [
+    {
+      "model": "s_m_y_fireman_01",
+      "componentId": 0,
+      "drawableId": 0,
+      "mountType": "chest",
+      "position": {
+        "x": 0.16,
+        "y": 0.212,
+        "z": 0.148
+      }
+    }
+  ],
+  "mppeds": {
+    "male": [
+      {
+        "collectionName": "mp_m_smuggler_01",
+        "localIndex": 6,
+        "isProp": true,
+        "variationId": 0,
+        "mountType": "head",
+        "position": {
+          "x": 0.15,
+          "y": 0,
+          "z": 0.15
+        }
+      },
+      {
+        "collectionName": "mp_m_heist3",
+        "localIndex": 0,
+        "isProp": false,
+        "variationId": 8,
+        "mountType": "chest",
+        "position": {
+          "x": 0.157,
+          "y": 0.22,
+          "z": 0.15
+        }
+      }
+    ],
+    "female": [
+      {
+        "collectionName": "mp_f_smuggler_01",
+        "localIndex": 6,
+        "isProp": true,
+        "variationId": 0,
+        "mountType": "head",
+        "position": {
+          "x": 0.1475,
+          "y": 0.0575,
+          "z": 0.1199
+        }
+      },
+      {
+        "collectionName": "mp_f_heist3",
+        "localIndex": 0,
+        "isProp": false,
+        "variationId": 8,
+        "mountType": "chest",
+        "position": {
+          "x": 0.155,
+          "y": 0.222,
+          "z": 0.15
+        }
+      }
+    ]
   }
 }
+
 ```
-
-- `model` is the spawn name of the model
-- `mountType` is either `head` or `chest`
-- `source` is a Vector3 offset from the ped for where the torch's light source should appear from
-- `corona` is a Vector3 offset from the ped for where the torch's corona should appear from
-
-### MP Peds
-#### `mppeds`
-This config option is where you list presets for MP Peds.  
-This config option is split into Male and Female.
-
-Entries for this config option can be created in-game using the Tool. [See here](developers/tool.md) for more info.
-
-Below is an example of an entry:
-```json
-{
-	"collectionName": "mp_m_smuggler_01",
-	"localIndex": 6,
-	"isProp": true,
-	"variationId": 0,
-	"mountType": "Head",
-	"source": {
-		"X": 0.15,
-		"Y": 0,
-		"Z": 0.15
-	},
-	"corona": {
-		"X": 0.148,
-		"Y": 0.0735,
-		"Z": 0.115
-	}
-}
-```
-
-- `collectionName` is the cloth collection the preset item is set to
-- `localIndex` is the local id of the selected cloth item within the selected collection
-- `isProp` is `true` if using a prop, or `false` if using a component
-- `variationId` is the type of prop or component of the preset item
-- `mountType` is either `head` or `chest`
-- `source` is a Vector3 offset from the ped for where the torch's light source should appear from
-- `corona` is a Vector3 offset from the ped for where the torch's corona should appear from
 
 ## Default Config File
-```json showLineNumbers title="config.json"
-{
-	"allowAnyPed": false,
 
-	"torchDistance": "30",
-	"torchBrightness": "1.5",
-	"torchRoundness": "0.5",
-	"torchRadius": "20",
-	"torchFallOff": "100",
+```text showLineNumbers title="config.cfg"
+# Inferno Collection Torches
+# 
+# Copyright (c) 2019-2026, Christopher M, Inferno Collection. All rights reserved.
 
-	"command": "torch",
-	"defaultKeybind": "",
+############################################################################
+###                              NOTICE                                  ###
+###   Be sure to check the documentation before changing these values    ###
+###    https://docs.inferno-collection.com/resources/torches/config/     ###
+############################################################################
 
-	"disableHeadMovement": true,
-	"inventorySupport": false,
-	"disableKeybindInVehicles": false,
+#####################
+### Configuration ###
+#####################
 
-	"defaults": {
-		"head": {
-			"source": {
-				"X": 0.15,
-				"Y": 0,
-				"Z": -0.15
-			},
-			"corona": {
-				"X": 0.15,
-				"Y": 0,
-				"Z": -0.15
-			}
-		},
+### General ###
+###############
 
-		"chest": {
-			"source": {
-				"X": 0.16,
-				"Y": 0.225,
-				"Z": 0.15
-			},
-			"corona": {
-				"X": 0.16,
-				"Y": 0.2,
-				"Z": 0.15
-			}
-		}
-	},
+# Select language
+setr ic_torches_language "en-us"
 
-	"peds": [
-		{
-			"model": "s_m_y_fireman_01",
-			"mountType": "Chest",
-			"source": {
-				"X": 0.16,
-				"Y": 0.212,
-				"Z": 0.148
-			},
-			"corona": {
-				"X": 0.16,
-				"Y": 0.212,
-				"Z": 0.148
-			}
-		}
-	],
+# Kick suspected cheaters
+set ic_torches_kickCheaters "false"
 
-	"mppeds": {
-		"male": [
-			{
-				"collectionName": "mp_m_smuggler_01",
-				"localIndex": 6,
-				"isProp": true,
-				"variationId": 0,
-				"mountType": "Head",
-				"source": {
-					"X": 0.15,
-					"Y": 0,
-					"Z": 0.15
-				},
-				"corona": {
-					"X": 0.148,
-					"Y": 0.0735,
-					"Z": 0.115
-				}
-			},
-			{
-				"collectionName": "mp_m_heist3",
-				"localIndex": 0,
-				"isProp": false,
-				"variationId": 8,
-				"mountType": "Chest",
-				"source": {
-					"X": 0.157,
-					"Y": 0.22,
-					"Z": 0.15
-				},
-				"corona": {
-					"X": 0.157,
-					"Y": 0.215,
-					"Z": 0.15
-				}
-			}
-		],
+# Default key (none, by default)
+# Players can change via Pause Menu -> Keybinds
+# https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+setr ic_torches_defaultKeybind ""
 
-		"female": [
-			{
-				"CollectionName": "mp_f_smuggler_01",
-				"LocalIndex": 6,
-				"IsProp": true,
-				"VariationId": 0,
-				"MountType": "Head",
-				"Source": {
-					"X": 0.1475,
-					"Y": 0.0575,
-					"Z": 0.1199
-				},
-				"Corona": {
-					"X": 0.1475,
-					"Y": 0.0525,
-					"Z": 0.1199
-				}
-			},
+setr ic_torches_disableKeybindInVehicles "false"
 
-			{
-				"collectionName": "mp_f_heist3",
-				"localIndex": 0,
-				"isProp": false,
-				"variationId": 8,
-				"mountType": "Chest",
-				"source": {
-					"X": 0.155,
-					"Y": 0.222,
-					"Z": 0.15
-				},
-				"corona": {
-					"X": 0.155,
-					"Y": 0.217,
-					"Z": 0.15
-				}
-			}
-		]
-	}
+# Prevents head movement when moving third-person camera
+setr ic_torches_disableHeadMovement "true"
+
+setr ic_torches_inventorySupport "false"
+
+### Advanced ###
+################
+
+setr ic_torches_defaultTorchConfiguration {
+    "brightness": 1.5,
+    "radius": 20,
+    "fallOff": 100,
+    "innerCone": 20,
+    "outerCone": 100,
+    "rgb": {
+        "red": 221,
+        "green": 221,
+        "blue": 221
+    }
 }
+
+# Change command name
+set ic_torches_command "torch"
+
+# Allow any ped to use a Torch, even if no preset exists
+setr ic_torches_allowAnyPed "false"
+
+# Torch positions when none provided
+setr ic_torches_defaults {
+    "head": { "x": 0.15, "y": 0.0, "z": -0.15 },
+    "chest": { "x": 0.16, "y": 0.225, "z": 0.15 }
+}
+
+setr ic_torches_debug "false"
+
+###################
+### Permissions ###
+###################
+
+add_ace builtin.everyone "InfernoTorches.UseTorches" allow
+
+add_ace group.admin "InfernoTorches.Tool" allow
+
 ```
