@@ -13,12 +13,11 @@ This page documents the changes made to Torches.
 
 ## v1.1.\*
 
-### v1.1.0 - TBD
+### v1.1.0 - 08/26/2026
 
 :::danger
 v1.1.0 has several breaking changes, see the [Migration Guide](migration.md) for info on how to upgrade from v1.0.3 → v1.1.0.
 :::
-
 
 **Added**:
 - [ACE permissions](config.md#permissions).
