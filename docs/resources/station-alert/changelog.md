@@ -8,6 +8,21 @@ This page documents the changes made to SA.
 
 ## v1.3.\*
 
+### v1.3.4 - 08/27/2026
+
+**Added**:
+- Sonoran Radio debug information to the [Health Check command](usage/commands.md#health-check).
+- Additional logging to Voice Turn Addon validation to assist with issue resolution.
+
+**Changed**:
+- When Sonoran Radio support is enabled, the required config values are now checked on resource start.
+  - Previously they were not checked till the first radio request was sent.
+  - The intention of this change is to make spotting configuration issues easier.
+
+**Fixed**:
+- SSL Certificate issue causing Sonoran API calls to fail.
+- Replaced left-over INFO log  in door control logic with DEBUG log.
+
 ### v1.3.3 - 06/25/2026
 
 **Added**:
