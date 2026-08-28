@@ -8,6 +8,30 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.7 - 08/28/2026
+
+**Added**:
+- "Reset to Default" option in the Pager Capcode UI.
+	- Restores the player's capcode assignments to their default assignments.
+- [`getPlayerCapcodes`](developers/exports/server.md#get-player-capcodes) server export. For more info, [see here](developers/exports/server.md#get-player-capcodes).
+	- Returns a player's joined, allowed, disallowed, default, and pageable capcodes.
+- [`updatePlayerCapcodes`](developers/exports/server.md#update-player-capcodes) server export. For more info, [see here](developers/exports/server.md#update-player-capcodes).
+  - Adds, removes, or replaces a player's capcodes.
+- [`resetPlayerPermissions`](developers/exports/server.md#reset-player-permissions) server export. For more info, [see here](developers/exports/server.md#reset-player-permissions).
+  - Restores the player's capcode assignments to their default assignments.
+
+**Changed**:
+- Resource no longer silently rejects empty Permission Roles.
+  - Empty roles can now be provided and used with the [`setPlayerRoles`](developers/exports/server.md#set-player-roles) server export at runtime. For more info, [see here](developers/exports/server.md#set-player-roles).
+- "Reset" option is now named "Discard Changes" in Pager Capcode UI.
+  - It only reverts unapplied changes made in the UI, while the new "Reset to Default" restores the player's default capcodes.
+- [`setPlayerRoles`](developers/exports/server.md#set-player-roles) now retains configured player overrides, global default addresses, and `PageAnyAddress` permissions.
+  - Existing capcodes are retained unless explicitly disallowed by the replacement role permissions.
+
+**Fixed**:
+- Invalid player check in server exports.
+- SSL Certificate issue causing Sonoran API calls to fail.
+
 ### v1.1.6 - 05/28/2026
 
 **Added**:

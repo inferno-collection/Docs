@@ -154,9 +154,114 @@ exports["inferno-pager-reborn"]:setPlayerRoles(player, {"Dispatch", "EMS"})
 #### Return Value
 `void`
 
+:::tip
+Configured player overrides, global default addresses, and `PageAnyAddress` permissions are retained. Existing capcode assignments stay assigned unless the replacement role permissions explicitly disallow them. Default assignments take precedence over matching disallows.
+:::
+
+### Reset Player Permissions
+Use this export to restore a player to the permissions, roles, and capcode assignments they would receive when joining the server.
+
+#### Export Name
+```
+resetPlayerPermissions
+```
+
+#### Parameters
+- `player` - `string`
+	- The player's server ID as a string.
+
+#### Example
+```lua
+exports["inferno-pager-reborn"]:resetPlayerPermissions(player)
+```
+
+#### Return Value
+`void`
+
 ***
 
 ## Capcode Management
+
+### Get Player Capcodes
+Use this export to get a player's current capcode assignments and capcode permissions.
+
+#### Export Name
+```
+getPlayerCapcodes
+```
+
+#### Parameters
+- `player` - `string`
+	- The player's server ID as a string.
+
+#### Example
+```lua
+local capcodes = exports["inferno-pager-reborn"]:getPlayerCapcodes(player)
+
+print(json.encode(capcodes))
+-- {
+--   joined = {"emg.fire.bc"},
+--   allowed = {"emg.fire.bc"},
+--   disallowed = {},
+--   default = {"emg.fire.bc"},
+--   pageable = {"emg.fire.bc"}
+-- }
+```
+
+#### Return Value
+`table`
+	- `joined` - `table`
+		- The capcode and pageable group addresses currently assigned to the player.
+	- `allowed` - `table`
+		- The capcode and pageable group addresses the player may join.
+	- `disallowed` - `table`
+		- The capcode and pageable group addresses the player may not join.
+	- `default` - `table`
+		- The capcode and pageable group addresses assigned by default.
+	- `pageable` - `table`
+		- The capcode and pageable group addresses the player may page.
+
+Each field is an empty table for an invalid or disconnected player.
+
+### Update Player Capcodes
+Use this export to add, remove, or replace a player's capcode assignments.
+
+#### Export Name
+```
+updatePlayerCapcodes
+```
+
+#### Parameters
+- `player` - `string`
+	- The player's server ID as a string.
+- `update` - `table`
+	- At least one of `add` or `remove` is required.
+	- `add` - `table` (optional)
+		- Pageable capcode or group addresses to assign.
+	- `remove` - `table` (optional)
+		- Pageable capcode or group addresses to remove.
+	- `replace` - `boolean` (optional)
+		- When `true`, removes all current assignments before applying `add`. `remove` is ignored.
+
+Addresses may be individual pageable capcodes or groups, or a wildcard such as `emg.fire.*`. A wildcard applies to every pageable address below the matching folder or group.
+
+#### Examples
+```lua
+-- Add and remove assignments without affecting any others.
+exports["inferno-pager-reborn"]:updatePlayerCapcodes(player, {
+    add = {"emg.fire.bc"},
+    remove = {"emg.ems.bc"}
+})
+
+-- Replace all assignments with every pageable address under emg.fire.
+exports["inferno-pager-reborn"]:updatePlayerCapcodes(player, {
+    add = {"emg.fire.*"},
+    replace = true
+})
+```
+
+#### Return Value
+`void`
 
 ### Get All Capcodes
 Use this export to get all capcodes/addresses and the players currently assigned to each one.
