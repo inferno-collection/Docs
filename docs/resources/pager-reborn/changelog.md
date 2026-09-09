@@ -8,6 +8,14 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.8 - 09/09/2026
+
+**Fixed**:
+- All players with pagers being listed on the same line when using [`/pager health`](usage/commands.md#health-check).
+- Other players hearing a pager's full alert sound when the paged player already had their pager open.
+- Paging Groups contained within valid wildcards listed under Roles within `permissions.lua` not being added to players on server join and throwing an erroneous error.
+- Edge case where receiving multiple page messages at the same time as trying to acknowledge one could cause other players to continue to hear the pager after the messages were acknowledged.
+
 ### v1.1.7 - 08/28/2026
 
 **Added**:
