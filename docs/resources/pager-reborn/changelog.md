@@ -8,6 +8,11 @@ This page documents the changes made to Pager Reborn.
 
 ## v1.1.*
 
+### v1.1.9 - 09/17/2026
+
+**Fixed**:
+- Issue when [`ic_pr_inventorySupport`](config.md#inventory-support) was enabled, preventing players from opening the pager via command.
+
 ### v1.1.8 - 09/09/2026
 
 **Fixed**:
