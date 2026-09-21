@@ -8,7 +8,7 @@
 	"scripts": {
 		"docusaurus": "docusaurus",
 		"start": "docusaurus start",
-		"build": "docusaurus build",
+		"build": "docusaurus build && node scripts/link-preview-descriptions.mjs",
 		"swizzle": "docusaurus swizzle",
 		"deploy": "docusaurus deploy",
 		"clear": "docusaurus clear",
@@ -33,6 +33,7 @@
 		"@docusaurus/tsconfig": "^3.10.2",
 		"@docusaurus/types": "^3.10.2",
 		"@types/node": "^25.9.3",
+		"cheerio": "^1.2.0",
 		"stylelint": "^17.14.1",
 		"stylelint-config-standard": "^40.0.0",
 		"typescript": "^7.0.2",
