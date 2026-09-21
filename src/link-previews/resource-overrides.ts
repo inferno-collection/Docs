@@ -23,6 +23,33 @@ const RESOURCE_PREVIEW_OVERRIDES: Record<string, DocsPreviewDefinition> = {
   'fire-alarm-reborn': {
     imagePath: '/img/links/far.png',
     imageAlt: 'Fire Alarm Reborn',
+	buttons: [
+		{
+		  label: 'Install',
+		  url: 'https://docs.inferno-collection.com/resources/fire-alarm-reborn/install',
+		},
+		{
+			label: 'Config',
+			url: 'https://docs.inferno-collection.com/resources/fire-alarm-reborn/config',
+		},
+		{
+			label: 'Devs',
+			url: 'https://docs.inferno-collection.com/resources/fire-alarm-reborn/developers/',
+		},
+		{
+			label: 'Changelog',
+			url: 'https://docs.inferno-collection.com/resources/fire-alarm-reborn/changelog',
+		},
+		{
+		  label: 'Discord',
+		  url: 'https://discord.com/invite/5GZ3Jzt',
+		  emoji: {
+			  name: 'discord',
+			  id: '1551442516341956638',
+			  animated: true,
+		  },
+		},
+	],
   },
   'hands-free-siren': {
     imagePath: '/img/links/hfs.png',
