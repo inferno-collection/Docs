@@ -690,6 +690,13 @@ This is achieved using the Voice Turnout Addon, which is an optional, subscripti
 **YouTube Video**:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OAIQunhayP8?si=vlKUKOGKq4Ga98kJ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+### Configure Your Sonoran Radio Server ID
+On the Sonoran Radio website, find your **Sonoran Radio Server ID** under **Customization**. Add it to `sonoranradio.cfg` using the following command, replacing `1` with your Server ID:
+
+```
+set sonoranradio_serverId "1"
+```
+
 ### Enable Radio Broadcasts
 #### `enabled`
 Set this value to `true` to enable the Sonoran Radio integration.
