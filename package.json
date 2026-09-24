@@ -55,6 +55,8 @@
 		"node": ">=20.0"
 	},
 	"allowScripts": {
-		"core-js@3.50.0": true
+		"core-js@3.50.0": true,
+		"esbuild@0.28.1": true,
+		"workerd@1.20260921.1": true
 	}
 }
