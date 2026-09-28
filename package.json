@@ -57,6 +57,6 @@
 	"allowScripts": {
 		"core-js@3.50.0": true,
 		"esbuild@0.28.1": true,
-		"workerd@1.20260921.1": true
+		"workerd@1.20260926.1": true
 	}
 }
