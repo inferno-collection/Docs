@@ -6,6 +6,16 @@ sidebar_position: 999
 
 This page documents the changes made to Pager Reborn.
 
+## v1.2.*
+
+### v1.2.0 - TBD
+
+**Changed**:
+- Improved NUI Audio.
+
+**Fixed**:
+- Bug where a player would hear the Unread Messages chirp, even when they did not have a pager in their inventory.
+
 ## v1.1.*
 
 ### v1.1.9 - 09/17/2026
