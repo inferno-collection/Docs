@@ -12,6 +12,35 @@ All parameters listed are required, none are optional.
 All the exports listed below are **server** exports, not client exports.  
 For client exports, see [here](client.md).
 
+## Player Permissions
+
+### Refresh Player Permissions
+Use this export after changing a connected player's ACE permissions to send their current FAR permissions to their client.
+
+#### Export Name
+```
+refreshPlayerPermissions
+```
+
+#### Parameters
+
+- `playerId` - `string`
+	- The connected player's server ID as a string.
+
+#### Example
+```lua
+exports["inferno-fire-alarm-reborn"]:refreshPlayerPermissions(tostring(playerId))
+```
+
+#### Return Value
+`void`
+
+:::note
+If a player's permissions are changed at runtime and this export is not called, their client will not receive the updated permissions.
+:::
+
+***
+
 ## Alarm Systems
 
 ### Get all Systems

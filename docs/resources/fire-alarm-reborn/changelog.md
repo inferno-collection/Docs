@@ -8,6 +8,16 @@ This page documents the changes made to FAR.
 
 ## v1.5.\*
 
+### v1.5.8 - TBD
+
+**Added**:
+- Optional support for both ESX & QBCore job restrictions.
+  - For ESX, [see here](developers/third-party.md#esx-jobs).
+  - For QBCore, [see here](developers/third-party.md#qbcore-jobs).
+  - This allows you to restrict specific ACE Permissions to specific ESX or QBCore Jobs.
+    - For example, only allowing players with the "fire" job to reset Pull Stations or access Control Panels.
+- [`refreshPlayerPermissions`](developers/exports/server.md#refresh-player-permissions) server export to force a player's client to refresh their permissions. For more info, [see here](developers/exports/server.md#refresh-player-permissions).
+
 ### v1.5.7 - 06/11/2026
 
 **Added**:
