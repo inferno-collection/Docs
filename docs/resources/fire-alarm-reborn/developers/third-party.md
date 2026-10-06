@@ -55,7 +55,6 @@ Follow the steps below to create calls in LoveRP's Emergency Dispatch when a fir
 
 You can customize the call details to your liking by editing `editables/server/loverp.lua`. For more information, see [here](https://docs.codesign.pro/paid-scripts/dispatch/resource-integration#paid-resources).
 
-
 ## ESX (Jobs)
 Follow the steps below to restrict specific ACE Permissions to specific ESX Jobs.
 

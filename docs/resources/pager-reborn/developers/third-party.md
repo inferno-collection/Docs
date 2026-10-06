@@ -79,3 +79,37 @@ Sonoran CAD detected
 ```
 
 You can now use Sonoran CAD to send Page messages. For more info, [see here](https://sonoran.link/Y3HffqTd).
+
+## ESX (Jobs)
+Follow the steps below to restrict specific ACE Permissions to specific ESX Jobs.
+
+1. Inside your `server.cfg`, above the `exec` line for PR's `config.cfg`, add the lines below. This allows PR to edit player ACE Permissions while the server is running.
+```
+add_ace resource.inferno-pager-reborn command.add_ace allow
+add_ace resource.inferno-pager-reborn command.remove_ace allow
+```
+
+2. Inside `inferno-pager-reborn`, open `editable/server/esx-jobs.lua`.
+3. Change `enableJobPermissionIntegration` from `false` to `true`.
+4. Edit `jobPermissions` as required; permissions can be found [here](../config.md#permissions).
+	- :::tip
+	  Permissions added here should be commented out/removed from PR's `config.cfg` to avoid conflicts.
+	  :::
+5. Edit `requireOnDutyForPermissions` as required.
+
+## QBCore (Jobs)
+Follow the steps below to restrict specific ACE Permissions to specific QBCore Jobs.
+
+1. Inside your `server.cfg`, above the `exec` line for PR's `config.cfg`, add the lines below. This allows PR to edit player ACE Permissions while the server is running.
+```
+add_ace resource.inferno-pager-reborn command.add_ace allow
+add_ace resource.inferno-pager-reborn command.remove_ace allow
+```
+
+2. Inside `inferno-pager-reborn`, open `editable/server/qb-jobs.lua`.
+3. Change `enableJobPermissionIntegration` from `false` to `true`.
+4. Edit `jobPermissions` as required; permissions can be found [here](../config.md#permissions).
+	- :::tip
+	  Permissions added here should be commented out/removed from PR's `config.cfg` to avoid conflicts.
+	  :::
+5. Edit `requireOnDutyForPermissions` as required.

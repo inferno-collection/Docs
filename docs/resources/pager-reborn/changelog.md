@@ -10,6 +10,15 @@ This page documents the changes made to Pager Reborn.
 
 ### v1.2.0 - TBD
 
+**Added**:
+- Optional support for both ESX & QBCore job restrictions.
+	- For ESX, [see here](developers/third-party.md#esx-jobs).
+	- For QBCore, [see here](developers/third-party.md#qbcore-jobs).
+	- This allows you to restrict specific ACE Permissions to specific ESX or QBCore Jobs.
+		- For example, only allowing players with the "fire" job to open the Pager UI.
+    - Also supports per-grade/rank permissions.
+      - For example, only allowing command staff to send page messages.
+
 **Changed**:
 - Improved NUI Audio.
 
